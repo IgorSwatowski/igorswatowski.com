@@ -1,6 +1,15 @@
 import React from 'react'
 
+import { useTranslation } from 'react-i18next';
+
 const Navbar = () => {
+    const { t, i18n } = useTranslation();
+
+    const changeLanguage = (lng: string) => {
+      i18n.changeLanguage(lng);
+    };
+    
+  
   return (
     <header
     className="header"
@@ -13,6 +22,8 @@ const Navbar = () => {
     ></label>
     <div className="menu">
       <div className="menu-item">
+      <button onClick={() => changeLanguage('en')}>English</button>
+    <button onClick={() => changeLanguage('pl')}>Polish</button>
         <a
           href="about.html"
           data-c="About me"
