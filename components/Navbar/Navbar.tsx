@@ -1,4 +1,5 @@
 import React from 'react'
+import Link from 'next/link'
 
 import { useTranslation } from 'react-i18next';
 
@@ -22,30 +23,19 @@ const Navbar = () => {
     ></label>
     <div className="menu">
       <div className="menu-item">
-      <button onClick={() => changeLanguage('en')}>English</button>
-    <button onClick={() => changeLanguage('pl')}>Polish</button>
-        <a
-          href="/about"
-          data-c="About me"
-          aria-label="About me"
-        >
-          About me
-        </a>
+        <button onClick={() => changeLanguage('en')}>English</button>
+        <button onClick={() => changeLanguage('pl')}>Polish</button>
+        <Link href="/about" data-c="About me"
+        aria-label="About me">About me</Link>
+      </div>
+      <div className="menu-item" data-c="Packages" aria-label="Packages">
+        <Link href="/packages">Packages</Link>
       </div>
       <div className="menu-item">
-        <a href="/packages" data-c="Packages" aria-label="Packages">
-          Packages
-        </a>
-      </div>
-      <div className="menu-item">
-        <a href="/contact" data-c="Contact" aria-label="Contact">
-          Contact
-        </a>
+        <Link href="/contact"  data-c="Contact" aria-label="Contact">Contact</Link>
       </div>
       <div className="menu-contact">
-        <a href="mailto: hello@igorswatowski.com" data-c="Inquire here" aria-label="Inquire here" className="btn-secondary">
-          Inquire here
-        </a>
+        <Link href="mailto: hello@igorswatowski.com" data-c="Inquire here" aria-label="Inquire here" className="btn-secondary">Inquire here</Link>
       </div>
     </div>
     </header>
