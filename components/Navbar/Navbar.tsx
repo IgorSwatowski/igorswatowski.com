@@ -25,7 +25,7 @@ const Navbar = () => {
       <button onClick={() => changeLanguage('en')}>English</button>
     <button onClick={() => changeLanguage('pl')}>Polish</button>
         <a
-          href="about.html"
+          href="/about"
           data-c="About me"
           aria-label="About me"
         >
@@ -33,12 +33,12 @@ const Navbar = () => {
         </a>
       </div>
       <div className="menu-item">
-        <a href="packages.html" data-c="Packages" aria-label="Packages">
+        <a href="/packages" data-c="Packages" aria-label="Packages">
           Packages
         </a>
       </div>
       <div className="menu-item">
-        <a href="contact.html" data-c="Contact" aria-label="Contact">
+        <a href="/contact" data-c="Contact" aria-label="Contact">
           Contact
         </a>
       </div>
