@@ -10,12 +10,13 @@ export default function Home() {
   const changeLanguage = (lng: string) => {
     i18n.changeLanguage(lng);
   };
+  
 
   return (
     <div>
-    <h1>{t('hello-world')}</h1>
+      <h1>{t('hello-world')}</h1>
       <button onClick={() => changeLanguage('en')}>English</button>
-      <button onClick={() => changeLanguage('pl')}>Polish</button>
+    <button onClick={() => changeLanguage('pl')}>Polish</button>
     </div>
-  )
-}
+)};
+
