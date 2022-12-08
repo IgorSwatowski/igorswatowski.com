@@ -1,7 +1,4 @@
-import Footer from '../components/Footer/Footer';
-import Navbar from '../components/Navbar/Navbar';
 import Image from 'next/image';
-import Link from 'next/link';
 import { useRouter } from 'next/router';
 
 import { en } from '../i18n/locales/en';
@@ -16,17 +13,16 @@ export default function Home() {
     <main>
       <section className="banner container-box">
         <div className="banner-block-left" data-aos="fade-up">
-          <h1 className="banner-block-left--title heading-primary">{t.headingPrimaryHome}</h1>
+          <h1 className="banner-block-left--title heading-primary">{t.hero}</h1>
           <p className="banner-block-left--sub paragraph-primary">
-            My mission is to make sure that all of my clients achieve their goals with online
-            presence they want.
+            {t.heroText}
             <br />
             <br />
-            Start with how I can help you.
+            {t.heroTextSecond}
           </p>
           <div className="banner-block-left-buttons">
             <a href="about.html" className="banner-block-left-buttons-first btn-primary">
-              <span>How can I help</span>
+              <span>{t.heroBtn}</span>
               <svg width="13px" height="10px" viewBox="0 0 13 10">
                 <path d="M1,5 L11,5"></path>
                 <polyline points="8 1 12 5 8 9"></polyline>
@@ -34,7 +30,7 @@ export default function Home() {
             </a>
           </div>
           <div className="banner-block-left-trusted">
-            <span className="banner-block-left-trusted--small">Ive been trusted by:</span>
+            <span className="banner-block-left-trusted--small">{t.trustedBy}</span>
             <div className="banner-block-left-trusted-logos">
               <Image
                 loading="lazy"
@@ -73,17 +69,16 @@ export default function Home() {
             <Image loading="lazy" src="/assets/lines.svg" alt="" width={100} height={100} />
           </div>
           <h2 className="collaborate-wrapper-heading heading-big" data-aos="fade-up">
-            I collaborate with brands, entrepreneurs and agencies to create{' '}
-            <span className="underline">memorable</span>
-            <span className="underline">experiences.</span>
+            {t.collaborate}
+            <span className="underline">{t.collaborateText}</span>
+            <span className="underline">{t.collaborateSecond}</span>
           </h2>
           <p
             className="collaborate-wrapper-text paragraph-primary"
             data-aos="fade-up"
             data-aos-delay="50"
           >
-            Consider me a creative partner, not just a resource. I bring fresh perspectives and
-            insights to our collaboration, and work with you to achieve your goals.
+            {t.collaborateTextMain}
           </p>
           <div className="collaborate-wrapper-arrow-img">
             <Image loading="lazy" src="/assets/arrow.svg" alt="" width={100} height={100} />
@@ -93,15 +88,14 @@ export default function Home() {
       <section className="implementation-process container-box">
         <div className="implementation-process-top">
           <h2 className="implementation-process-top-heading heading-secondary" data-aos="fade-up">
-            Heres an overview of my design and implementation process
+            {t.designProcess}
           </h2>
           <p
             className="implementation-process-top-text paragraph-primary"
             data-aos="fade-up"
             data-aos-delay="50"
           >
-            Are you curious about what to expect when we work together on a creative project? Here
-            are the four stages of our collaboration.
+            A{t.designProcessText}
           </p>
         </div>
         <div className="implementation-process-list">
@@ -116,13 +110,13 @@ export default function Home() {
                   height={100}
                 />
               </div>
-              <h3 className="implementation-process-list-item-top-text heading-third">Strategy</h3>
+              <h3 className="implementation-process-list-item-top-text heading-third">
+                {t.stageFirst}
+              </h3>
             </div>
             <div className="implementation-process-list-item-bottom">
               <p className="implementation-process-list-item-bottom-text paragraph-primary">
-                I always make sure to ask the right questions and address the right challenges
-                before designing. This helps me create a design that meets your needs and stands
-                out.
+                {t.stageFirstText}
               </p>
             </div>
           </div>
@@ -137,13 +131,13 @@ export default function Home() {
                   height={100}
                 />
               </div>
-              <h3 className="implementation-process-list-item-top-text heading-third">Design</h3>
+              <h3 className="implementation-process-list-item-top-text heading-third">
+                {t.stageSecond}
+              </h3>
             </div>
             <div className="implementation-process-list-item-bottom">
               <p className="implementation-process-list-item-bottom-text paragraph-primary">
-                At the end of this phase, you will have a pixel-perfect design for your app or
-                website. I create prototypes to simulate the final output before starting the
-                project.
+                {t.stageSecondText}
               </p>
             </div>
           </div>
@@ -159,13 +153,12 @@ export default function Home() {
                 />
               </div>
               <h3 className="implementation-process-list-item-top-text heading-third">
-                Development
+                {t.stageThird}
               </h3>
             </div>
             <div className="implementation-process-list-item-bottom">
               <p className="implementation-process-list-item-bottom-text paragraph-primary">
-                As a designer who can also code, I can easily work closely with developers from
-                start to finish. I also do front-end development for web projects.
+                {t.stageThirdText}
               </p>
             </div>
           </div>
@@ -181,14 +174,12 @@ export default function Home() {
                 />
               </div>
               <h3 className="implementation-process-list-item-top-text heading-third">
-                Quality assurance
+                {t.stageFourth}
               </h3>
             </div>
             <div className="implementation-process-list-item-bottom">
               <p className="implementation-process-list-item-bottom-text paragraph-primary">
-                Regular meetings provide full insight into my design process. After developing
-                initial design versions, I conduct user testing to ensure the best solutions for
-                your clients.
+                {t.stageFourthText}
               </p>
             </div>
           </div>
@@ -196,28 +187,24 @@ export default function Home() {
       </section>
       <section className="should-work container-box">
         <h2 className="should-work-heading heading-secondary" data-aos="fade-up">
-          We should work together if you are ...
+          {t.weShouldWorkHeading}
         </h2>
         <div className="should-work-list">
           <div className="should-work-list-item" data-aos="fade-up" data-aos-delay="50">
-            <h3 className="should-work-list-item-heading heading-third">An enterpreneur</h3>
+            <h3 className="should-work-list-item-heading heading-third">{t.weShouldWorkFirst}</h3>
             <p className="should-work-list-item-text paragraph-primary">
-              You have a great idea, and I can help you understand it, design it, and communicate it
-              to your customers.
+              {t.weShouldWorkFirstText}
             </p>
           </div>
           <div className="should-work-list-item" data-aos="fade-up" data-aos-delay="50">
-            <h3 className="should-work-list-item-heading heading-third">A company</h3>
+            <h3 className="should-work-list-item-heading heading-third">{t.weShouldWorkSecond}</h3>
             <p className="should-work-list-item-text paragraph-primary">
-              As a successful company, you want to improve the usability and looks of your products
-              to attract better clients.
+              {t.weShouldWorkSecondText}
             </p>
           </div>
         </div>
         <p className="should-work-end-text" data-aos="fade-up" data-aos-delay="50">
-          I understand your products and tailor them to your goals, creating an elegant and
-          eye-catching package. Youll be amazed by the results. Lets create something special and
-          effective together.
+          {t.weShouldWorkCTA}
         </p>
         <a
           href="about.html"
@@ -225,7 +212,7 @@ export default function Home() {
           data-aos="fade-up"
           data-aos-delay="150"
         >
-          <span>See how I make things</span>
+          <span>{t.weShouldWorkBtn}</span>
           <svg width="13px" height="10px" viewBox="0 0 13 10">
             <path d="M1,5 L11,5"></path>
             <polyline points="8 1 12 5 8 9"></polyline>
@@ -236,9 +223,7 @@ export default function Home() {
         <div className="references-wrapper">
           <div className="references-wrapper-left">
             <h3 className="references-wrapper-left-heading heading-references" data-aos="fade-up">
-              We have always enjoyed working with Igor – he brings creative ideas, delivers fast
-              results, and is a pleasure to collaborate with. Overall, our cooperation has been very
-              positive and successful.
+              {t.reference}
             </h3>
             <div className="references-wrapper-left-author" data-aos="fade-up" data-aos-delay="100">
               <div className="references-wrapper-left-author-top">
@@ -262,34 +247,31 @@ export default function Home() {
       <section className="cta">
         <div className="cta-wrapper container-box">
           <p className="cta-wrapper-text paragraph-primary" data-aos="fade-up">
-            You can reach your dream customers online. Lets create a winning website together and
-            achieve your goals. Its possible and within your reach.
+            {t.ctaFirstText}
           </p>
           <p className="cta-wrapper-text paragraph-primary" data-aos="fade-up">
-            Lets make it happen!
+            {t.ctaSecondText}
           </p>
         </div>
       </section>
       <section className="short-personal-info container-box">
         <div className="short-personal-info-left">
           <h2 className="short-personal-info-left-heading heading-secondary" data-aos="fade-up">
-            Get to know Igor – The person behind the brand
+            {t.meetIgor}
           </h2>
           <p
             className="short-personal-info-left-text paragraph-primary"
             data-aos="fade-up"
             data-aos-delay="100"
           >
-            Hi, Im Igor Swatowski, a self-taught web designer and programmer who uses the most
-            popular technologies and design tools.
+            {t.meetIgorTextFirst}
           </p>
           <p
             className="short-personal-info-left-text paragraph-primary"
             data-aos="fade-up"
             data-aos-delay="150"
           >
-            Im passionate about helping creative professionals improve their websites and work
-            processes, and increase their value and success.
+            {t.meetIgorTextSecond}
           </p>
           <a
             href="about.html"
@@ -297,7 +279,7 @@ export default function Home() {
             data-aos="fade-up"
             data-aos-delay="200"
           >
-            <span>More about me</span>
+            <span>{t.meetIgorBtn}</span>
             <svg width="13px" height="10px" viewBox="0 0 13 10">
               <path d="M1,5 L11,5"></path>
               <polyline points="8 1 12 5 8 9"></polyline>
@@ -311,14 +293,13 @@ export default function Home() {
       <section className="cta-second">
         <div className="cta-second-wrapper container-box">
           <p className="cta-second-text paragraph-primary" data-aos="fade-down">
-            Share your ideas with me and Ill create a website that is much more efficient and
-            effective for you.
+            {t.ctaSecondFirstText}
             <br />
             <br />
-            Less stress, more bookings for your customers.
+            {t.ctaSecondSecondText}
           </p>
           <h3 className="cta-second-heading heading-third" data-aos="fade-down" data-aos-delay="50">
-            Are you in?
+            {t.ctaSecondThirdText}
           </h3>
           <a
             href="packages.html"
@@ -326,7 +307,7 @@ export default function Home() {
             data-aos="fade-down"
             data-aos-delay="50"
           >
-            Yeah!
+            {t.ctaSecondBtn}
           </a>
         </div>
       </section>
