@@ -37,21 +37,21 @@
         flex-direction: row;
         gap: 4rem;
 
-        @include mediaquery('xs') {
+        @include respond(phone) {
           display: flex;
           flex-direction: column;
           justify-content: center;
           align-items: center;
           gap: 1rem;
         }
-        @include mediaquery('sm') {
+        @include respond(tablet-port) {
           display: flex;
           flex-direction: column;
           justify-content: center;
           align-items: center;
           gap: 1rem;
         }
-        @include mediaquery('lg') {
+        @include respond(tablet-land) {
           display: flex;
           flex-direction: column;
           justify-content: center;
@@ -73,13 +73,13 @@
             width: 85%;
             padding: 0 2rem;
 
-            @include mediaquery('xs') {
+            @include respond(phone) {
               width: unset;
             }
-            @include mediaquery('sm') {
+            @include respond(tablet-port) {
               width: unset;
             }
-            @include mediaquery('lg') {
+            @include respond(tablet-land) {
               width: unset;
             }
 
@@ -97,21 +97,21 @@
         flex-direction: row;
         gap: 4rem;
 
-        @include mediaquery('xs') {
+        @include respond(phone) {
           display: flex;
           flex-direction: column;
           justify-content: center;
           align-items: center;
           gap: 1rem;
         }
-        @include mediaquery('sm') {
+        @include respond(tablet-port) {
           display: flex;
           flex-direction: column;
           justify-content: center;
           align-items: center;
           gap: 1rem;
         }
-        @include mediaquery('lg') {
+        @include respond(tablet-land) {
           display: flex;
           flex-direction: column;
           justify-content: center;
@@ -133,13 +133,13 @@
             width: 85%;
             padding: 0 2rem;
 
-            @include mediaquery('xs') {
+            @include respond(phone) {
               width: unset;
             }
-            @include mediaquery('sm') {
+            @include respond(tablet-port) {
               width: unset;
             }
-            @include mediaquery('lg') {
+            @include respond(tablet-land) {
               width: unset;
             }
 
@@ -157,19 +157,19 @@
         flex-direction: row;
         gap: 4rem;
 
-        @include mediaquery('xs') {
+        @include respond(phone) {
           display: flex;
           flex-direction: column;
           justify-content: center;
           align-items: center;
         }
-        @include mediaquery('sm') {
+        @include respond(tablet-port) {
           display: flex;
           flex-direction: column;
           justify-content: center;
           align-items: center;
         }
-        @include mediaquery('lg') {
+        @include respond(tablet-land) {
           display: flex;
           flex-direction: column;
           justify-content: center;
@@ -183,13 +183,13 @@
           margin-bottom: 4rem;
           width: 849px;
 
-          @include mediaquery('xs') {
+          @include respond(phone) {
             width: 100%;
           }
-          @include mediaquery('sm') {
+          @include respond(tablet-port) {
             width: 100%;
           }
-          @include mediaquery('lg') {
+          @include respond(tablet-land) {
             width: 100%;
           }
 
@@ -200,13 +200,13 @@
             width: 100%;
             padding: 0 2rem;
 
-            @include mediaquery('xs') {
+            @include respond(phone) {
               width: unset;
             }
-            @include mediaquery('sm') {
+            @include respond(tablet-port) {
               width: unset;
             }
-            @include mediaquery('lg') {
+            @include respond(tablet-land) {
               width: unset;
             }
 
@@ -226,13 +226,13 @@
           width: 849px;
           gap: 1rem;
 
-          @include mediaquery('xs') {
+          @include respond(phone) {
             width: 100%;
           }
-          @include mediaquery('sm') {
+          @include respond(tablet-port) {
             width: 100%;
           }
-          @include mediaquery('lg') {
+          @include respond(tablet-land) {
             width: 100%;
           }
 
@@ -244,13 +244,13 @@
             padding: 2rem 2rem;
             resize: none;
 
-            @include mediaquery('xs') {
+            @include respond(phone) {
               width: unset;
             }
-            @include mediaquery('sm') {
+            @include respond(tablet-port) {
               width: unset;
             }
-            @include mediaquery('lg') {
+            @include respond(tablet-land) {
               width: unset;
             }
 

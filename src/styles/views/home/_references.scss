@@ -10,13 +10,13 @@
   width: 100%;
   margin-top: 8rem;
 
-  @include mediaquery('xs') {
+  @include respond(phone) {
     width: unset;
   }
-  @include mediaquery('sm') {
+  @include respond(tablet-port) {
     width: unset;
   }
-  @include mediaquery('lg') {
+  @include respond(tablet-land) {
     width: unset;
   }
 
@@ -30,15 +30,15 @@
     width: 100%;
     position: relative;
 
-    @include mediaquery('xs') {
+    @include respond(phone) {
       padding: 6rem 2rem;
       width: unset;
     }
-    @include mediaquery('sm') {
+    @include respond(tablet-port) {
       padding: 6rem 3rem;
       width: unset;
     }
-    @include mediaquery('lg') {
+    @include respond(tablet-land) {
       padding: 6rem 3rem;
       width: unset;
     }
@@ -47,7 +47,7 @@
       padding-left: 9rem;
       width: 70%;
 
-      @include mediaquery('xs') {
+      @include respond(phone) {
         width: 100%;
         padding-left: 0;
         display: flex;
@@ -55,7 +55,7 @@
         margin: 0 auto;
         text-align: center;
       }
-      @include mediaquery('sm') {
+      @include respond(tablet-port) {
         width: 100%;
         padding-left: 0;
         display: flex;
@@ -63,7 +63,7 @@
         margin: 0 auto;
         text-align: center;
       }
-      @include mediaquery('lg') {
+      @include respond(tablet-land) {
         width: 100%;
         padding-left: 0;
         display: flex;
@@ -85,15 +85,15 @@
         display: flex;
         flex-direction: column;
         margin-top: 1.5rem;
-        @include mediaquery('xs') {
+        @include respond(phone) {
           margin: 0 auto;
           text-align: center;
         }
-        @include mediaquery('sm') {
+        @include respond(tablet-port) {
           margin: 0 auto;
           text-align: center;
         }
-        @include mediaquery('lg') {
+        @include respond(tablet-land) {
           margin: 0 auto;
           text-align: center;
         }
@@ -125,13 +125,13 @@
       width: 30%;
       display: flex;
       margin-right: 3rem;
-      @include mediaquery('xs') {
+      @include respond(phone) {
         display: none;
       }
-      @include mediaquery('sm') {
+      @include respond(tablet-port) {
         display: none;
       }
-      @include mediaquery('lg') {
+      @include respond(tablet-land) {
         display: none;
       }
 

@@ -1,20 +1,36 @@
-@import "./variables";
+@import './variables';
 
-@mixin mediaquery($query) {
-  $breakpoints: (
-    'xs': '(max-width: 600px)',
-    'sm': '(min-width: 601px)',
-    'lg': '(min-width: 901px)',
-    'xl': '(min-width: 1201px)',
-    'xxl': '(min-width: 1441px)',
-);
+@import './variables';
 
-@if map-has-key($breakpoints, $query) {
-    @media screen and #{map-get($breakpoints, $query)} {
+@mixin list-style() {
+  list-style-type: none;
+  padding-bottom: 0;
+}
+
+@mixin respond($breakpoint) {
+  @if $breakpoint == phone {
+    @media only screen and (max-width: 600px) {
       @content;
     }
-  } 
-@else {
-    @error "No breakpoint specified '#{$query}'";
-  } 
+  }
+  @if $breakpoint == tablet-port {
+    @media only screen and (min-width: 601px) and (max-width: 900px) {
+      @content;
+    }
+  }
+  @if $breakpoint == tablet-land {
+    @media only screen and (min-width: 901px) and (max-width: 1200px) {
+      @content;
+    }
+  }
+  @if $breakpoint == desktop-big {
+    @media only screen and (min-width: 1201px) and (max-width: 1440px) {
+      @content;
+    }
+  }
+  @if $breakpoint == desktop-bigger {
+    @media only screen and (min-width: 1441px) and (max-width: 1640px) {
+      @content;
+    }
+  }
 }

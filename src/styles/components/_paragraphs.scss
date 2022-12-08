@@ -8,12 +8,12 @@
   letter-spacing: 0em;
   margin-top: 2rem;
 
-  @include mediaquery('xs') {
+  @include respond(phone) {
     font-size: 20px;
     line-height: 32px;
     font-weight: 400;
   }
-  @include mediaquery('lg') {
+  @include respond(tablet-land) {
     width: 100%;
   }
 }
@@ -22,7 +22,7 @@
   font-size: 1.8rem;
   color: var(--gray)-2;
 
-  @include mediaquery('xs') {
+  @include respond(phone) {
     width: 100%;
     font-size: 18px;
     line-height: 32px;
@@ -37,7 +37,7 @@
   font-size: 1.8rem;
   color: var(--gray)-2;
 
-  @include mediaquery('xs') {
+  @include respond(phone) {
     width: 100%;
     font-size: 18px;
     line-height: 32px;

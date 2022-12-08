@@ -13,15 +13,15 @@
     position: relative;
     padding: 8rem 0 4rem 0;
 
-    @include mediaquery('xs') {
+    @include respond(phone) {
       width: unset;
       padding: 8rem 1.6rem;
     }
-    @include mediaquery('sm') {
+    @include respond(tablet-port) {
       width: unset;
       padding: 8rem 1.6rem;
     }
-    @include mediaquery('lg') {
+    @include respond(tablet-land) {
       width: unset;
       padding: 8rem 1.6rem;
     }
@@ -50,13 +50,13 @@
       justify-content: space-between;
       gap: 14rem;
 
-      @include mediaquery('xs') {
+      @include respond(phone) {
         display: none;
       }
-      @include mediaquery('sm') {
+      @include respond(tablet-port) {
         display: none;
       }
-      @include mediaquery('lg') {
+      @include respond(tablet-land) {
         display: none;
       }
 

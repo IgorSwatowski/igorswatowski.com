@@ -5,10 +5,10 @@
   margin-top: 10rem;
   background-color: var(--gray);
 
-  @include mediaquery('xs') {
+  @include respond(phone) {
     margin-top: 7rem;
   }
-  @include mediaquery('sm') {
+  @include respond(tablet-port) {
     margin-top: 7rem;
   }
   &-wrapper {
@@ -21,19 +21,19 @@
     position: relative;
     padding: 6rem 0;
 
-    @include mediaquery('xs') {
+    @include respond(phone) {
       width: unset;
       padding: 8rem 1.6rem;
       margin: 0 auto;
       text-align: center;
     }
-    @include mediaquery('sm') {
+    @include respond(tablet-port) {
       width: unset;
       padding: 8rem 1.6rem;
       margin: 0 auto;
       text-align: center;
     }
-    @include mediaquery('lg') {
+    @include respond(tablet-land) {
       width: unset;
       padding: 8rem 1.6rem;
       margin: 0 auto;

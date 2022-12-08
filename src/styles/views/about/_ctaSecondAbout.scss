@@ -11,13 +11,13 @@
   margin-top: 15rem;
   background-color: var(--gray);
 
-  @include mediaquery('xs') {
+  @include respond(phone) {
     width: unset;
   }
-  @include mediaquery('sm') {
+  @include respond(tablet-port) {
     width: unset;
   }
-  @include mediaquery('lg') {
+  @include respond(tablet-land) {
     width: unset;
   }
 
@@ -31,17 +31,17 @@
     position: relative;
     padding: 8rem 0;
 
-    @include mediaquery('xs') {
+    @include respond(phone) {
       padding: 6rem 2rem;
       width: unset;
       flex-direction: column;
     }
-    @include mediaquery('sm') {
+    @include respond(tablet-port) {
       padding: 6rem 3rem;
       width: unset;
       flex-direction: column;
     }
-    @include mediaquery('lg') {
+    @include respond(tablet-land) {
       padding: 6rem 3rem;
       width: unset;
       flex-direction: column;
@@ -52,13 +52,13 @@
       bottom: 0;
       height: 100%;
 
-      @include mediaquery('xs') {
+      @include respond(phone) {
         display: none;
       }
-      @include mediaquery('sm') {
+      @include respond(tablet-port) {
         display: none;
       }
-      @include mediaquery('lg') {
+      @include respond(tablet-land) {
         display: none;
       }
       img {
@@ -75,7 +75,7 @@
       flex-direction: column;
       align-items: center;
       text-align: center;
-      @include mediaquery('xs') {
+      @include respond(phone) {
         width: 100%;
         padding-left: 0;
         display: flex;
@@ -83,7 +83,7 @@
         margin: 0 auto;
         text-align: center;
       }
-      @include mediaquery('sm') {
+      @include respond(tablet-port) {
         width: 100%;
         padding-left: 0;
         display: flex;
@@ -91,7 +91,7 @@
         margin: 0 auto;
         text-align: center;
       }
-      @include mediaquery('lg') {
+      @include respond(tablet-land) {
         width: 100%;
         padding-left: 0;
         display: flex;

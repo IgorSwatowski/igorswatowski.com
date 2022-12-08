@@ -4,13 +4,13 @@
 .prices {
   margin-top: 18rem;
 
-  @include mediaquery('xs') {
+  @include respond(phone) {
     margin-top: 8rem;
   }
-  @include mediaquery('sm') {
+  @include respond(tablet-port) {
     margin-top: 8rem;
   }
-  @include mediaquery('lg') {
+  @include respond(tablet-land) {
     margin-top: 8rem;
   }
   &-wrapper {
@@ -20,10 +20,10 @@
     justify-content: center;
     margin: 0 auto;
 
-    @include mediaquery('xs') {
+    @include respond(phone) {
       align-items: unset;
     }
-    @include mediaquery('sm') {
+    @include respond(tablet-port) {
       align-items: unset;
     }
 
@@ -43,19 +43,19 @@
       gap: 4.7rem;
       padding-top: 18rem;
 
-      @include mediaquery('xs') {
+      @include respond(phone) {
         display: flex;
         flex-direction: column;
         padding-top: 6rem;
       }
 
-      @include mediaquery('sm') {
+      @include respond(tablet-port) {
         display: flex;
         flex-direction: column;
         padding-top: 6rem;
       }
 
-      @include mediaquery('lg') {
+      @include respond(tablet-land) {
         display: flex;
         flex-direction: column;
         padding-top: 6rem;
@@ -70,15 +70,15 @@
         &:nth-child(2) {
           margin-top: -8rem;
 
-          @include mediaquery('xs') {
+          @include respond(phone) {
             margin-top: unset;
           }
 
-          @include mediaquery('sm') {
+          @include respond(tablet-port) {
             margin-top: unset;
           }
 
-          @include mediaquery('lg') {
+          @include respond(tablet-land) {
             margin-top: unset;
           }
         }

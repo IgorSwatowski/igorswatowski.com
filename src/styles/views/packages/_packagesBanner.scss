@@ -4,13 +4,13 @@
 .packages-banner {
   margin-top: 24rem;
 
-  @include mediaquery('xs') {
+  @include respond(phone) {
     margin-top: 18rem;
   }
-  @include mediaquery('sm') {
+  @include respond(tablet-port) {
     margin-top: 18rem;
   }
-  @include mediaquery('lg') {
+  @include respond(tablet-land) {
     margin-top: 18rem;
   }
 
@@ -22,19 +22,19 @@
     margin: 0 auto;
     gap: 20rem;
 
-    @include mediaquery('xs') {
+    @include respond(phone) {
       flex-direction: column;
       align-items: center;
       justify-content: center;
       gap: 7rem;
     }
-    @include mediaquery('sm') {
+    @include respond(tablet-port) {
       flex-direction: column;
       align-items: center;
       justify-content: center;
       gap: 7rem;
     }
-    @include mediaquery('lg') {
+    @include respond(tablet-land) {
       flex-direction: column;
       align-items: center;
       justify-content: center;
@@ -47,7 +47,7 @@
       flex-direction: column;
       gap: 2rem;
 
-      @include mediaquery('xs') {
+      @include respond(phone) {
         width: 100%;
         display: flex;
         flex-direction: column;
@@ -55,7 +55,7 @@
         justify-content: center;
         gap: 2rem;
       }
-      @include mediaquery('sm') {
+      @include respond(tablet-port) {
         width: 100%;
         display: flex;
         flex-direction: column;
@@ -63,7 +63,7 @@
         justify-content: center;
         gap: 2rem;
       }
-      @include mediaquery('lg') {
+      @include respond(tablet-land) {
         width: 100%;
         display: flex;
         flex-direction: column;
@@ -78,13 +78,13 @@
       }
     }
     &-right {
-      @include mediaquery('xs') {
+      @include respond(phone) {
         width: 100%;
       }
-      @include mediaquery('sm') {
+      @include respond(tablet-port) {
         width: 100%;
       }
-      @include mediaquery('lg') {
+      @include respond(tablet-land) {
         width: 100%;
       }
 

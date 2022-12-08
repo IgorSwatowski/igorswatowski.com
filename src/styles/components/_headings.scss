@@ -9,16 +9,16 @@
   font-family: 'Poppins', sans-serif;
   margin: 0;
 
-  @include mediaquery('xs') {
+  @include respond(phone) {
     font-size: 42px;
     line-height: 6rem;
     font-weight: 600;
     letter-spacing: -1px;
   }
-  @include mediaquery('sm') {
+  @include respond(tablet-port) {
     width: 100%;
   }
-  @include mediaquery('lg') {
+  @include respond(tablet-land) {
     font-size: 54px;
   }
 }
@@ -31,18 +31,18 @@
   letter-spacing: -1px;
   margin: 0;
 
-  @include mediaquery('xs') {
+  @include respond(phone) {
     width: 100%;
     font-size: 32px;
     line-height: 1.212em;
     font-weight: 600;
     letter-spacing: -1px;
   }
-  @include mediaquery('sm') {
+  @include respond(tablet-port) {
     width: 100%;
     font-size: 36px;
   }
-  @include mediaquery('lg') {
+  @include respond(tablet-land) {
     font-size: 54px;
   }
 }
@@ -54,17 +54,17 @@
   letter-spacing: -1px;
   margin: 0;
 
-  @include mediaquery('xs') {
+  @include respond(phone) {
     width: 100%;
     font-size: 32px;
     line-height: 1.31em;
     font-weight: 600;
     letter-spacing: -1px;
   }
-  @include mediaquery('sm') {
+  @include respond(tablet-port) {
     width: 100%;
   }
-  @include mediaquery('lg') {
+  @include respond(tablet-land) {
     width: 100%;
     font-size: 42px;
     margin-top: 0px;
@@ -82,17 +82,17 @@
   letter-spacing: -1px;
   margin: 0;
 
-  @include mediaquery('xs') {
+  @include respond(phone) {
     width: 100%;
     font-size: 28px;
     line-height: 1.212em;
     font-weight: 600;
     letter-spacing: -1px;
   }
-  @include mediaquery('sm') {
+  @include respond(tablet-port) {
     width: 100%;
   }
-  @include mediaquery('lg') {
+  @include respond(tablet-land) {
     font-size: 54px;
   }
 }
@@ -104,17 +104,17 @@
   letter-spacing: -1px;
   margin: 0;
 
-  @include mediaquery('xs') {
+  @include respond(phone) {
     width: 100%;
     font-size: 24px;
     line-height: 1.212em;
     font-weight: 600;
     letter-spacing: -1px;
   }
-  @include mediaquery('sm') {
+  @include respond(tablet-port) {
     width: 100%;
   }
-  @include mediaquery('lg') {
+  @include respond(tablet-land) {
     width: 100%;
   }
 }
@@ -126,17 +126,17 @@
   letter-spacing: -1px;
   margin: 0;
 
-  @include mediaquery('xs') {
+  @include respond(phone) {
     width: 100%;
     font-size: 24px;
     line-height: 1.212em;
     font-weight: 600;
     letter-spacing: -1px;
   }
-  @include mediaquery('sm') {
+  @include respond(tablet-port) {
     width: 100%;
   }
-  @include mediaquery('lg') {
+  @include respond(tablet-land) {
     width: 100%;
   }
 }
@@ -148,13 +148,13 @@
   letter-spacing: -1px;
   margin: 0;
 
-  @include mediaquery('xs') {
+  @include respond(phone) {
     width: 100%;
   }
-  @include mediaquery('sm') {
+  @include respond(tablet-port) {
     width: 100%;
   }
-  @include mediaquery('lg') {
+  @include respond(tablet-land) {
     width: 100%;
   }
 }

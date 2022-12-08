@@ -15,15 +15,15 @@
     padding: 5rem 0px;
     gap: 3rem;
 
-    @include mediaquery('xs') {
+    @include respond(phone) {
       width: unset;
       padding: 8rem 1.6rem;
     }
-    @include mediaquery('sm') {
+    @include respond(tablet-port) {
       width: unset;
       padding: 8rem 1.6rem;
     }
-    @include mediaquery('lg') {
+    @include respond(tablet-land) {
       width: unset;
       padding: 8rem 1.6rem;
     }

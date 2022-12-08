@@ -12,7 +12,7 @@ body {
   width: 100%;
   max-width: 100%;
   position: relative;
-  background-color: var(--gray-1200);
+  background: #f8f8f9;
 }
 
 h1,
@@ -61,33 +61,33 @@ a {
   max-width: 1620px;
   padding: 0 1rem;
 
-  @include mediaquery('xs') {
+  @include respond(phone) {
     padding-left: 16px;
     padding-right: 16px;
     width: unset;
     max-width: unset;
   }
 
-  @include mediaquery('sm') {
+  @include respond(tablet-port) {
     padding-left: 32px;
     padding-right: 32px;
     width: unset;
     max-width: unset;
   }
 
-  @include mediaquery('lg') {
+  @include respond(tablet-land) {
     padding-left: 64px;
     padding-right: 64px;
     width: unset;
     max-width: unset;
   }
-  @include mediaquery('xl') {
+  @include respond(desktop-big) {
     padding-left: 32px;
     padding-right: 32px;
     width: unset;
     max-width: unset;
   }
-  @include mediaquery('xxl') {
+  @include respond(desktop-bigger) {
     width: 100%;
     max-width: 1120px;
     padding: 0 1rem;
@@ -126,12 +126,12 @@ a {
     width: 100%;
     z-index: -1;
 
-    @include mediaquery('xs') {
+    @include respond(phone) {
       bottom: 17%;
       height: 10px;
     }
 
-    @include mediaquery('sm') {
+    @include respond(tablet-port) {
       bottom: 17%;
       height: 10px;
     }

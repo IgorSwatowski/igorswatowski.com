@@ -21,7 +21,7 @@
   line-height: 2;
   padding: 10px 100px 10px 100px;
 
-  @include mediaquery('xs') {
+  @include respond(phone) {
     background-color: var(--white);
     position: fixed;
     width: 100%;
@@ -33,7 +33,7 @@
     display: block;
   }
 
-  @include mediaquery('sm') {
+  @include respond(tablet-port) {
     background-color: var(--white);
     position: fixed;
     width: 100%;
@@ -45,7 +45,7 @@
     display: block;
   }
 
-  @include mediaquery('lg') {
+  @include respond(tablet-land) {
     background-color: var(--white);
     position: fixed;
     width: 100%;
@@ -57,11 +57,8 @@
     display: block;
   }
 
-  @include mediaquery('xl') {
+  @include respond(desktop-big) {
     padding: 10px 64px 0 64px;
-  }
-  @include mediaquery('xxl') {
-    padding: 10px 100px 10px 100px;
   }
 
   .menu {
@@ -73,17 +70,17 @@
     list-style: none;
     background-color: var(--white);
 
-    @include mediaquery('xs') {
+    @include respond(phone) {
       overflow: hidden;
       display: block;
     }
 
-    @include mediaquery('sm') {
+    @include respond(tablet-port) {
       overflow: hidden;
       display: block;
     }
 
-    @include mediaquery('lg') {
+    @include respond(tablet-land) {
       overflow: hidden;
       display: block;
     }
@@ -112,25 +109,25 @@
         -o-transition: opacity 0.2s ease;
         transition: opacity 0.2s ease;
 
-        @include mediaquery('xs') {
+        @include respond(phone) {
           display: none;
         }
-        @include mediaquery('sm') {
+        @include respond(tablet-port) {
           display: none;
         }
-        @include mediaquery('xl') {
+        @include respond(desktop-big) {
           display: none;
         }
       }
 
       &:hover {
-        @include mediaquery('xs') {
+        @include respond(phone) {
           color: var(--primary);
         }
-        @include mediaquery('sm') {
+        @include respond(tablet-port) {
           color: var(--primary);
         }
-        @include mediaquery('xl') {
+        @include respond(desktop-big) {
           color: var(--primary);
         }
       }
@@ -140,19 +137,19 @@
         opacity: 1;
       }
 
-      @include mediaquery('xs') {
+      @include respond(phone) {
         padding: 15px 0;
         margin: 0;
       }
-      @include mediaquery('sm') {
+      @include respond(tablet-port) {
         padding: 15px 0;
         margin: 0;
       }
-      @include mediaquery('xl') {
+      @include respond(desktop-big) {
         padding: 15px 0;
         margin: 0;
       }
-      @include mediaquery('xxl') {
+      @include respond(desktop-bigger) {
         font-size: 1.5rem;
       }
       text-decoration: none;
@@ -161,7 +158,7 @@
   .menu-contact {
     margin: 15px 32px;
 
-    @include mediaquery('xs') {
+    @include respond(phone) {
       margin: 15px 0;
     }
   }
@@ -205,22 +202,22 @@
     font-size: 2rem;
     text-decoration: none;
     padding: 15px 0 14px 0;
-    @include mediaquery('xxl') {
+    @include respond(desktop-bigger) {
       font-size: 1.5rem;
     }
   }
   .menu {
-    @include mediaquery('xs') {
+    @include respond(phone) {
       clear: both;
       max-height: 0;
       transition: max-height 0.2s ease-out;
     }
-    @include mediaquery('sm') {
+    @include respond(tablet-port) {
       clear: both;
       max-height: 0;
       transition: max-height 0.2s ease-out;
     }
-    @include mediaquery('xl') {
+    @include respond(desktop-big) {
       clear: both;
       max-height: 0;
       transition: max-height 0.2s ease-out;
@@ -228,7 +225,7 @@
   }
   .menu-icon {
     display: none;
-    @include mediaquery('xs') {
+    @include respond(phone) {
       cursor: pointer;
       display: inline-block;
       float: right;
@@ -236,7 +233,7 @@
       user-select: none;
       padding: 32px 40px 28px 0;
     }
-    @include mediaquery('sm') {
+    @include respond(tablet-port) {
       cursor: pointer;
       display: inline-block;
       float: right;
@@ -244,7 +241,7 @@
       position: relative;
       user-select: none;
     }
-    @include mediaquery('xl') {
+    @include respond(desktop-big) {
       cursor: pointer;
       display: inline-block;
       float: right;
@@ -253,7 +250,7 @@
       user-select: none;
     }
     .navicon {
-      @include mediaquery('xs') {
+      @include respond(phone) {
         background: #333;
         display: block;
         height: 2px;
@@ -281,7 +278,7 @@
           top: -5px;
         }
       }
-      @include mediaquery('sm') {
+      @include respond(tablet-port) {
         background: #333;
         display: block;
         height: 2px;
@@ -309,7 +306,7 @@
           top: -5px;
         }
       }
-      @include mediaquery('xl') {
+      @include respond(desktop-big) {
         background: #333;
         display: block;
         height: 2px;
