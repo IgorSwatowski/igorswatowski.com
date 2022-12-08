@@ -1,0 +1,92 @@
+@import '../../abstracts/mixins';
+@import '../../abstracts/variables';
+
+.trusted-by {
+  margin-top: 13rem;
+  background-color: var(--gray);
+  padding: 4rem;
+
+  @include mediaquery('xs') {
+    margin-top: unset;
+  }
+
+  &-wrapper {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+    margin: 0 auto;
+
+    @include mediaquery('xs') {
+      flex-direction: column;
+      gap: 8rem;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto;
+    }
+    @include mediaquery('sm') {
+      flex-direction: column;
+      gap: 8rem;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto;
+    }
+    &-text {
+      color: var(--black);
+      margin: 0;
+      font-size: 24px;
+      font-family: 'Poppins', sans-serif;
+      position: relative;
+      font-weight: 600;
+      margin-right: 8rem;
+      text-transform: uppercase;
+      margin-right: auto;
+
+      @include mediaquery('xs') {
+        margin-right: 0;
+      }
+      @include mediaquery('sm') {
+        margin-right: 0;
+      }
+      @include mediaquery('lg') {
+        margin-right: 0;
+      }
+
+      img {
+        position: absolute;
+        bottom: -17px;
+        right: -10px;
+      }
+    }
+    &-companies {
+      display: flex;
+      flex-direction: row;
+      gap: 17rem;
+      justify-content: center;
+      align-items: center;
+
+      @include mediaquery('xs') {
+        gap: 7rem;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 50% 50%;
+        padding: 0 6rem;
+      }
+      @include mediaquery('sm') {
+        gap: 7rem;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 50% 50%;
+        padding: 0 6rem;
+      }
+      @include mediaquery('lg') {
+        gap: 6rem;
+        margin: 0 auto;
+      }
+
+      img {
+        width: 100%;
+      }
+    }
+  }
+}

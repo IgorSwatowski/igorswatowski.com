@@ -1,0 +1,297 @@
+@import '../../abstracts/mixins';
+@import '../../abstracts/variables';
+
+.contact-form {
+  margin-top: 19rem;
+  padding-bottom: 8rem;
+  &-wrapper {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+
+    &-heading {
+      margin-bottom: 2rem;
+      width: 100%;
+    }
+
+    &-text {
+      max-width: 832px;
+      margin-bottom: 2rem;
+      a {
+        color: var(--black);
+        font-weight: 600;
+        transition: 0.3s all ease;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+
+    &-form {
+      margin-top: 4rem;
+      max-width: 913px;
+
+      &-personal {
+        display: flex;
+        flex-direction: row;
+        gap: 4rem;
+
+        @include mediaquery('xs') {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          gap: 1rem;
+        }
+        @include mediaquery('sm') {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          gap: 1rem;
+        }
+        @include mediaquery('lg') {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          gap: 1rem;
+        }
+
+        &-item {
+          display: flex;
+          flex-direction: column;
+          gap: 1rem;
+          margin-bottom: 4rem;
+          width: 100%;
+
+          input {
+            border-radius: 5px;
+            border: 1px solid #a9a9a9;
+            height: 47px;
+            width: 85%;
+            padding: 0 2rem;
+
+            @include mediaquery('xs') {
+              width: unset;
+            }
+            @include mediaquery('sm') {
+              width: unset;
+            }
+            @include mediaquery('lg') {
+              width: unset;
+            }
+
+            :is(&:focus, &:hover) {
+              outline: 1px solid var(--primary);
+            }
+            &:valid {
+              background: var(--white);
+            }
+          }
+        }
+      }
+      &-contact {
+        display: flex;
+        flex-direction: row;
+        gap: 4rem;
+
+        @include mediaquery('xs') {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          gap: 1rem;
+        }
+        @include mediaquery('sm') {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          gap: 1rem;
+        }
+        @include mediaquery('lg') {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          gap: 1rem;
+        }
+
+        &-item {
+          display: flex;
+          flex-direction: column;
+          gap: 1rem;
+          margin-bottom: 4rem;
+          width: 100%;
+
+          input {
+            border-radius: 5px;
+            border: 1px solid #a9a9a9;
+            height: 47px;
+            width: 85%;
+            padding: 0 2rem;
+
+            @include mediaquery('xs') {
+              width: unset;
+            }
+            @include mediaquery('sm') {
+              width: unset;
+            }
+            @include mediaquery('lg') {
+              width: unset;
+            }
+
+            :is(&:focus, &:hover) {
+              outline: 1px solid var(--primary);
+            }
+            &:valid {
+              background: var(--white);
+            }
+          }
+        }
+      }
+      &-topic {
+        display: flex;
+        flex-direction: row;
+        gap: 4rem;
+
+        @include mediaquery('xs') {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+        }
+        @include mediaquery('sm') {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+        }
+        @include mediaquery('lg') {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+        }
+
+        &-item {
+          display: flex;
+          flex-direction: column;
+          gap: 1rem;
+          margin-bottom: 4rem;
+          width: 849px;
+
+          @include mediaquery('xs') {
+            width: 100%;
+          }
+          @include mediaquery('sm') {
+            width: 100%;
+          }
+          @include mediaquery('lg') {
+            width: 100%;
+          }
+
+          input {
+            border-radius: 5px;
+            border: 1px solid #a9a9a9;
+            height: 47px;
+            width: 100%;
+            padding: 0 2rem;
+
+            @include mediaquery('xs') {
+              width: unset;
+            }
+            @include mediaquery('sm') {
+              width: unset;
+            }
+            @include mediaquery('lg') {
+              width: unset;
+            }
+
+            :is(&:focus, &:hover) {
+              outline: 1px solid var(--primary);
+            }
+            &:valid {
+              background: var(--white);
+            }
+          }
+        }
+      }
+      &-message {
+        &-item {
+          display: flex;
+          flex-direction: column;
+          width: 849px;
+          gap: 1rem;
+
+          @include mediaquery('xs') {
+            width: 100%;
+          }
+          @include mediaquery('sm') {
+            width: 100%;
+          }
+          @include mediaquery('lg') {
+            width: 100%;
+          }
+
+          textarea {
+            border-radius: 5px;
+            border: 1px solid #a9a9a9;
+            height: 47px;
+            width: 100%;
+            padding: 2rem 2rem;
+            resize: none;
+
+            @include mediaquery('xs') {
+              width: unset;
+            }
+            @include mediaquery('sm') {
+              width: unset;
+            }
+            @include mediaquery('lg') {
+              width: unset;
+            }
+
+            :is(&:focus, &:hover) {
+              outline: 1px solid var(--primary);
+            }
+          }
+        }
+      }
+
+      #msg {
+        margin-top: 3rem;
+      }
+
+      .alert-danger {
+        padding: 2rem 4rem;
+        background: red;
+        color: var(--white);
+        font-size: 18px;
+        font-weight: bold;
+        border-radius: 5px;
+        width: max-content;
+      }
+      .alert-success {
+        padding: 2rem 4rem;
+        background: green;
+        color: var(--white);
+        font-size: 18px;
+        font-weight: bold;
+        border-radius: 5px;
+        width: max-content;
+      }
+
+      label {
+        font-weight: 600;
+      }
+
+      button {
+        margin-top: 4rem;
+        width: max-content;
+      }
+    }
+  }
+}

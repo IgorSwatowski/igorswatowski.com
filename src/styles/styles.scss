@@ -1,8 +1,13 @@
 // BASE
-@import "./base/base.scss";
+@import './base/base';
 
 // ABSTRACTS
-@import "./abstracts/mixins.scss";
+@import './abstracts/mixins';
 
 // VIEWS
-@import "./views/home.scss";
+@import './views/home';
+@import './layout/header';
+@import './layout/footer';
+@import './components/buttons';
+@import './components/headings';
+@import './components/paragraphs';

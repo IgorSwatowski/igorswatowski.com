@@ -1,6 +1,8 @@
+@import '../abstracts/mixins';
+@import '../abstracts/variables';
 
 body {
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-style: normal;
   margin: 0;
   padding: 0;
@@ -10,11 +12,16 @@ body {
   width: 100%;
   max-width: 100%;
   position: relative;
-  background-color: var(--black);
-
+  background-color: var(--gray-1200);
 }
 
-h1, h2, h3, h4, h5, h6, p {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
   margin: 0;
 }
 
@@ -46,7 +53,7 @@ ul {
 
 a {
   text-decoration: none;
-  color: colorBlack;
+  color: var(--black);
 }
 
 .container-box {
@@ -89,7 +96,7 @@ a {
 
 .bolden {
   font-weight: bold;
-  color: $primary;
+  color: var(--primary);
 }
 
 .text-center {
@@ -97,36 +104,36 @@ a {
 }
 
 .small-text {
-  color: $color-gray;
+  color: var(--gray);
   font-size: 1.3rem;
 }
 
 .header.scrollss {
-  box-shadow: 0 3px 6px $color-gray-8;
+  box-shadow: 0 3px 6px var(--gray-800);
 }
 
 .underline {
   position: relative;
   z-index: 1;
   &:after {
-      content: "";
-      position: absolute;
-      background-color: $primary;
-      bottom: 15%;
-      height: 20px;
-      position: absolute;
-      left: 0;
-      width: 100%;
-      z-index: -1;
+    content: '';
+    position: absolute;
+    background-color: var(--primary);
+    bottom: 15%;
+    height: 20px;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    z-index: -1;
 
-      @include mediaquery('xs') {
-        bottom: 17%;
-        height: 10px;
-      }
-    
-      @include mediaquery('sm') {
-        bottom: 17%;
-        height: 10px;
-      }
+    @include mediaquery('xs') {
+      bottom: 17%;
+      height: 10px;
+    }
+
+    @include mediaquery('sm') {
+      bottom: 17%;
+      height: 10px;
+    }
   }
 }

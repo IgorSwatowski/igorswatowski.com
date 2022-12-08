@@ -1,0 +1,128 @@
+@import '../../abstracts/mixins';
+@import '../../abstracts/variables';
+
+.portfolio-list {
+  padding-top: 24rem;
+  padding-bottom: 12rem;
+
+  @include mediaquery('xs') {
+    padding-top: 15rem;
+    padding-bottom: 10rem;
+  }
+  @include mediaquery('sm') {
+    padding-top: 15rem;
+    padding-bottom: 10rem;
+  }
+  @include mediaquery('lg') {
+    padding-top: 15rem;
+    padding-bottom: 10rem;
+  }
+
+  &-wrapper {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+
+    @include mediaquery('xs') {
+      gap: 4rem;
+    }
+    @include mediaquery('sm') {
+      gap: 4rem;
+    }
+    @include mediaquery('lg') {
+      gap: 4rem;
+    }
+
+    &-heading {
+      max-width: 813px;
+
+      .color-text {
+        color: var(--primary);
+      }
+    }
+
+    &-item {
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+      gap: 20rem;
+      margin-top: 10rem;
+
+      @include mediaquery('xs') {
+        flex-direction: column;
+        gap: 4rem;
+        margin-top: 5rem;
+      }
+      @include mediaquery('sm') {
+        flex-direction: column;
+        gap: 4rem;
+        margin-top: 5rem;
+      }
+      @include mediaquery('lg') {
+        flex-direction: column;
+        gap: 4rem;
+        margin-top: 5rem;
+      }
+
+      &:nth-child(2n + 1) {
+        flex-direction: row-reverse;
+
+        @include mediaquery('xs') {
+          flex-direction: column;
+          gap: 4rem;
+          margin-top: 5rem;
+        }
+        @include mediaquery('sm') {
+          flex-direction: column;
+          gap: 4rem;
+          margin-top: 5rem;
+        }
+        @include mediaquery('lg') {
+          flex-direction: column;
+          gap: 4rem;
+          margin-top: 5rem;
+        }
+      }
+      &-left {
+        width: 35%;
+
+        @include mediaquery('xs') {
+          width: 100%;
+        }
+        @include mediaquery('sm') {
+          width: 100%;
+        }
+        @include mediaquery('lg') {
+          width: 100%;
+        }
+
+        img {
+          @include mediaquery('xs') {
+            width: 100%;
+            object-fit: cover;
+            height: auto;
+          }
+        }
+      }
+
+      &-right {
+        width: 65%;
+
+        @include mediaquery('xs') {
+          width: 100%;
+        }
+        @include mediaquery('sm') {
+          width: 100%;
+        }
+        @include mediaquery('lg') {
+          width: 100%;
+        }
+
+        p {
+          margin-bottom: 4rem;
+          margin-top: 2rem;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,131 @@
+@import '../../abstracts/mixins';
+@import '../../abstracts/variables';
+
+.implementation-process {
+  padding-top: 13rem;
+  display: flex;
+  margin: 0 auto;
+  flex-direction: column;
+  &-top {
+    &-text {
+      max-width: 626px;
+    }
+    &-heading {
+      margin-bottom: 14px;
+      max-width: 899px;
+    }
+  }
+  &-list {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 6rem 0;
+    padding-top: 9rem;
+
+    @include mediaquery('xs') {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    @include mediaquery('sm') {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    @include mediaquery('lg') {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    &-item {
+      width: 50%;
+      @include mediaquery('xs') {
+        width: 100%;
+      }
+      @include mediaquery('sm') {
+        width: 100%;
+      }
+      @include mediaquery('lg') {
+        width: 100%;
+      }
+      &-top {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 3rem;
+        @include mediaquery('xs') {
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 2rem;
+        }
+        @include mediaquery('sm') {
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 2rem;
+        }
+        @include mediaquery('lg') {
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 2rem;
+        }
+
+        &-img {
+          img {
+            width: 54px;
+            height: 54px;
+            object-fit: cover;
+            @include mediaquery('xs') {
+              width: 50px;
+              height: 50px;
+            }
+            @include mediaquery('sm') {
+              width: 50px;
+              height: 50px;
+            }
+            @include mediaquery('lg') {
+              width: 50px;
+              height: 50px;
+            }
+          }
+        }
+
+        &-heading {
+          width: 729px;
+        }
+
+        &-text {
+          @include mediaquery('xs') {
+            margin-top: 2.5rem;
+            margin-bottom: 2.5rem;
+          }
+          @include mediaquery('sm') {
+            margin-top: 2.5rem;
+            margin-bottom: 2.5rem;
+          }
+          @include mediaquery('lg') {
+            margin-top: 2.5rem;
+            margin-bottom: 2.5rem;
+          }
+        }
+      }
+      &-bottom {
+        max-width: 634px;
+        width: 100%;
+
+        &-text {
+          margin-top: 24px;
+
+          @include mediaquery('xs') {
+            margin-top: 0;
+          }
+          @include mediaquery('sm') {
+            margin-top: 0;
+          }
+          @include mediaquery('lg') {
+            margin-top: 0;
+          }
+        }
+      }
+    }
+  }
+}

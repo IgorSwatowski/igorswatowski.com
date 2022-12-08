@@ -1,5 +1,5 @@
-@import "../abstracts/mixins";
-@import "../abstracts/variables";
+@import '../abstracts/mixins';
+@import '../abstracts/variables';
 
 .header {
   display: flex;
@@ -16,13 +16,13 @@
   left: 0;
   max-width: 100%;
   z-index: 2;
-  background: $white;
+  background: var(--white);
   transition: 0.6s ease;
   line-height: 2;
   padding: 10px 100px 10px 100px;
 
   @include mediaquery('xs') {
-    background-color: $white;
+    background-color: var(--white);
     position: fixed;
     width: 100%;
     z-index: 999;
@@ -34,7 +34,7 @@
   }
 
   @include mediaquery('sm') {
-    background-color: $white;
+    background-color: var(--white);
     position: fixed;
     width: 100%;
     z-index: 999;
@@ -46,7 +46,7 @@
   }
 
   @include mediaquery('lg') {
-    background-color: $white;
+    background-color: var(--white);
     position: fixed;
     width: 100%;
     z-index: 999;
@@ -62,7 +62,6 @@
   }
   @include mediaquery('xxl') {
     padding: 10px 100px 10px 100px;
-
   }
 
   .menu {
@@ -72,18 +71,18 @@
     margin: 0;
     padding: 0;
     list-style: none;
-    background-color: $white;
+    background-color: var(--white);
 
     @include mediaquery('xs') {
       overflow: hidden;
       display: block;
     }
-  
+
     @include mediaquery('sm') {
       overflow: hidden;
       display: block;
     }
-  
+
     @include mediaquery('lg') {
       overflow: hidden;
       display: block;
@@ -94,45 +93,45 @@
       display: block;
       margin: 15px 32px;
       transition: 0.2s all ease-in-out;
-      color: colorBlack;
+      color: var(--black);
       position: relative;
       z-index: 1;
 
       &:before {
-        content: "";
+        content: '';
         position: absolute;
         z-index: 1;
         bottom: 8px;
         width: 100%;
         height: 10px;
-        background-color: $primary-light;
+        background-color: var(--primary-light);
         opacity: 0;
-        -webkit-transition: opacity .2s ease;
-        -moz-transition: opacity .2s ease;
-        -ms-transition: opacity .2s ease;
-        -o-transition: opacity .2s ease;
-        transition:  opacity .2s ease;
+        -webkit-transition: opacity 0.2s ease;
+        -moz-transition: opacity 0.2s ease;
+        -ms-transition: opacity 0.2s ease;
+        -o-transition: opacity 0.2s ease;
+        transition: opacity 0.2s ease;
 
-        @include respond(phone){
+        @include mediaquery('xs') {
           display: none;
         }
-        @include respond(tablet-port){
+        @include mediaquery('sm') {
           display: none;
         }
-        @include respond(tablet-land){
+        @include mediaquery('xl') {
           display: none;
         }
       }
 
       &:hover {
-        @include respond(phone){
-          color: $primary;
+        @include mediaquery('xs') {
+          color: var(--primary);
         }
-        @include respond(tablet-port){
-          color: $primary;
+        @include mediaquery('sm') {
+          color: var(--primary);
         }
-        @include respond(tablet-land){
-          color: $primary;
+        @include mediaquery('xl') {
+          color: var(--primary);
         }
       }
 
@@ -141,19 +140,19 @@
         opacity: 1;
       }
 
-      @include respond(phone) {
+      @include mediaquery('xs') {
         padding: 15px 0;
         margin: 0;
       }
-      @include respond(tablet-port) {
+      @include mediaquery('sm') {
         padding: 15px 0;
         margin: 0;
       }
-      @include respond(tablet-land) {
+      @include mediaquery('xl') {
         padding: 15px 0;
         margin: 0;
       }
-      @include respond(desktop-big) {
+      @include mediaquery('xxl') {
         font-size: 1.5rem;
       }
       text-decoration: none;
@@ -162,7 +161,7 @@
   .menu-contact {
     margin: 15px 32px;
 
-    @include respond(phone) {
+    @include mediaquery('xs') {
       margin: 15px 0;
     }
   }
@@ -206,22 +205,22 @@
     font-size: 2rem;
     text-decoration: none;
     padding: 15px 0 14px 0;
-    @include respond(desktop-big) {
+    @include mediaquery('xxl') {
       font-size: 1.5rem;
     }
   }
   .menu {
-    @include respond(phone) {
+    @include mediaquery('xs') {
       clear: both;
       max-height: 0;
       transition: max-height 0.2s ease-out;
     }
-    @include respond(tablet-port) {
+    @include mediaquery('sm') {
       clear: both;
       max-height: 0;
       transition: max-height 0.2s ease-out;
     }
-    @include respond(tablet-land) {
+    @include mediaquery('xl') {
       clear: both;
       max-height: 0;
       transition: max-height 0.2s ease-out;
@@ -229,7 +228,7 @@
   }
   .menu-icon {
     display: none;
-    @include respond(phone) {
+    @include mediaquery('xs') {
       cursor: pointer;
       display: inline-block;
       float: right;
@@ -237,7 +236,7 @@
       user-select: none;
       padding: 32px 40px 28px 0;
     }
-    @include respond(tablet-port) {
+    @include mediaquery('sm') {
       cursor: pointer;
       display: inline-block;
       float: right;
@@ -245,7 +244,7 @@
       position: relative;
       user-select: none;
     }
-    @include respond(tablet-land) {
+    @include mediaquery('xl') {
       cursor: pointer;
       display: inline-block;
       float: right;
@@ -254,7 +253,7 @@
       user-select: none;
     }
     .navicon {
-      @include respond(phone) {
+      @include mediaquery('xs') {
         background: #333;
         display: block;
         height: 2px;
@@ -263,7 +262,7 @@
         width: 18px;
         &:before {
           background: #333;
-          content: "";
+          content: '';
           display: block;
           height: 100%;
           position: absolute;
@@ -273,7 +272,7 @@
         }
         &:after {
           background: #333;
-          content: "";
+          content: '';
           display: block;
           height: 100%;
           position: absolute;
@@ -282,7 +281,7 @@
           top: -5px;
         }
       }
-      @include respond(tablet-port) {
+      @include mediaquery('sm') {
         background: #333;
         display: block;
         height: 2px;
@@ -291,7 +290,7 @@
         width: 18px;
         &:before {
           background: #333;
-          content: "";
+          content: '';
           display: block;
           height: 100%;
           position: absolute;
@@ -301,7 +300,7 @@
         }
         &:after {
           background: #333;
-          content: "";
+          content: '';
           display: block;
           height: 100%;
           position: absolute;
@@ -310,7 +309,7 @@
           top: -5px;
         }
       }
-      @include respond(tablet-land) {
+      @include mediaquery('xl') {
         background: #333;
         display: block;
         height: 2px;
@@ -319,7 +318,7 @@
         width: 18px;
         &:before {
           background: #333;
-          content: "";
+          content: '';
           display: block;
           height: 100%;
           position: absolute;
@@ -329,7 +328,7 @@
         }
         &:after {
           background: #333;
-          content: "";
+          content: '';
           display: block;
           height: 100%;
           position: absolute;

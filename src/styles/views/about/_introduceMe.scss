@@ -1,0 +1,67 @@
+@import '../../abstracts/mixins';
+@import '../../abstracts/variables';
+
+.introduce-me {
+  margin-top: 5.6rem;
+
+  &-wrapper {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    align-items: flex-start;
+    margin: 0 auto;
+    max-width: 799px;
+    width: 100%;
+
+    @include mediaquery('xs') {
+      padding-left: 16px;
+      padding-right: 16px;
+      width: unset;
+      max-width: unset;
+    }
+    @include mediaquery('sm') {
+      padding-left: 32px;
+      padding-right: 32px;
+      width: unset;
+      max-width: unset;
+    }
+    @include mediaquery('lg') {
+      padding-left: 64px;
+      padding-right: 64px;
+      width: unset;
+      max-width: unset;
+    }
+    @include mediaquery('xl') {
+      width: 100%;
+      max-width: 1280px;
+      padding: 0 1rem;
+    }
+    &-heading {
+      margin-bottom: 34px;
+    }
+    &-text {
+      max-width: 846px;
+      margin-bottom: 34px;
+    }
+    &-subheading {
+      max-width: 791px;
+    }
+    &-list {
+      display: flex;
+      flex-direction: column;
+      gap: 4rem;
+      margin-top: 4rem;
+      &-item {
+        display: flex;
+        flex-direction: row;
+        gap: 3rem;
+        align-items: center;
+        max-width: 650px;
+        &-text {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+}

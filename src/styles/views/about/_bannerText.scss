@@ -1,0 +1,56 @@
+@import '../../abstracts/mixins';
+@import '../../abstracts/variables';
+
+.banner-text {
+  background-color: var(--gray);
+  &-wrapper {
+    padding-top: 22.6rem;
+    padding-bottom: 6rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 0 auto;
+    @include mediaquery('xs') {
+      flex-direction: column;
+      padding-top: 20rem;
+      text-align: left;
+    }
+    @include mediaquery('sm') {
+      flex-direction: column;
+      padding-top: 20rem;
+    }
+    @include mediaquery('lg') {
+      flex-direction: column;
+      padding-top: 20rem;
+    }
+    @include mediaquery('xl') {
+      padding-top: 27rem;
+    }
+    &-heading {
+      margin-bottom: 4rem;
+      width: 1132px;
+
+      @include mediaquery('xs') {
+        width: 100%;
+      }
+      @include mediaquery('sm') {
+        width: 100%;
+      }
+      @include mediaquery('lg') {
+        width: 100%;
+      }
+    }
+    &-text {
+      margin-top: 4rem;
+      max-width: 781px;
+    }
+    img {
+      margin: 2rem 0 0.5rem 0;
+      @include mediaquery('xs') {
+        width: 100%;
+      }
+    }
+  }
+}

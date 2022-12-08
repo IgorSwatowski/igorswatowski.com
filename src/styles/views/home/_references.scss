@@ -1,0 +1,143 @@
+@import '../../abstracts/mixins';
+@import '../../abstracts/variables';
+
+.references {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  width: 100%;
+  margin-top: 8rem;
+
+  @include mediaquery('xs') {
+    width: unset;
+  }
+  @include mediaquery('sm') {
+    width: unset;
+  }
+  @include mediaquery('lg') {
+    width: unset;
+  }
+
+  &-wrapper {
+    background-color: var(--white);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    width: 100%;
+    position: relative;
+
+    @include mediaquery('xs') {
+      padding: 6rem 2rem;
+      width: unset;
+    }
+    @include mediaquery('sm') {
+      padding: 6rem 3rem;
+      width: unset;
+    }
+    @include mediaquery('lg') {
+      padding: 6rem 3rem;
+      width: unset;
+    }
+
+    &-left {
+      padding-left: 9rem;
+      width: 70%;
+
+      @include mediaquery('xs') {
+        width: 100%;
+        padding-left: 0;
+        display: flex;
+        flex-direction: column;
+        margin: 0 auto;
+        text-align: center;
+      }
+      @include mediaquery('sm') {
+        width: 100%;
+        padding-left: 0;
+        display: flex;
+        flex-direction: column;
+        margin: 0 auto;
+        text-align: center;
+      }
+      @include mediaquery('lg') {
+        width: 100%;
+        padding-left: 0;
+        display: flex;
+        flex-direction: column;
+        margin: 0 auto;
+        text-align: center;
+      }
+
+      &-heading {
+        max-width: 1180px;
+        margin: 0;
+      }
+
+      &-text {
+        max-width: 958px;
+        width: 100%;
+      }
+      &-author {
+        display: flex;
+        flex-direction: column;
+        margin-top: 1.5rem;
+        @include mediaquery('xs') {
+          margin: 0 auto;
+          text-align: center;
+        }
+        @include mediaquery('sm') {
+          margin: 0 auto;
+          text-align: center;
+        }
+        @include mediaquery('lg') {
+          margin: 0 auto;
+          text-align: center;
+        }
+        &-top {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          gap: 2.5rem;
+          margin: 2.3rem 0;
+
+          h4 {
+            font-size: 24px;
+          }
+          img {
+            object-fit: cover;
+            width: 58px;
+            height: 58px;
+          }
+        }
+        &-company {
+          color: var(--gray)-2;
+          font-size: 20px;
+          font-weight: 400;
+        }
+      }
+    }
+
+    &-right {
+      width: 30%;
+      display: flex;
+      margin-right: 3rem;
+      @include mediaquery('xs') {
+        display: none;
+      }
+      @include mediaquery('sm') {
+        display: none;
+      }
+      @include mediaquery('lg') {
+        display: none;
+      }
+
+      img {
+        margin-left: auto;
+      }
+    }
+  }
+}

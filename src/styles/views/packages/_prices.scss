@@ -1,0 +1,132 @@
+@import '../../abstracts/mixins';
+@import '../../abstracts/variables';
+
+.prices {
+  margin-top: 18rem;
+
+  @include mediaquery('xs') {
+    margin-top: 8rem;
+  }
+  @include mediaquery('sm') {
+    margin-top: 8rem;
+  }
+  @include mediaquery('lg') {
+    margin-top: 8rem;
+  }
+  &-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+
+    @include mediaquery('xs') {
+      align-items: unset;
+    }
+    @include mediaquery('sm') {
+      align-items: unset;
+    }
+
+    &-heading {
+      margin-bottom: 2rem;
+    }
+    &-text {
+      text-align: left;
+    }
+
+    &-list {
+      display: grid;
+      grid-template-columns: 31% 31% 31%;
+      align-items: flex-start;
+      justify-content: center;
+      margin: 0 auto;
+      gap: 4.7rem;
+      padding-top: 18rem;
+
+      @include mediaquery('xs') {
+        display: flex;
+        flex-direction: column;
+        padding-top: 6rem;
+      }
+
+      @include mediaquery('sm') {
+        display: flex;
+        flex-direction: column;
+        padding-top: 6rem;
+      }
+
+      @include mediaquery('lg') {
+        display: flex;
+        flex-direction: column;
+        padding-top: 6rem;
+      }
+
+      &-item {
+        background-color: var(--white);
+        padding: 7rem 4rem;
+        box-shadow: 0px 0px 40px 0px #0000000d;
+        border-radius: 5px;
+
+        &:nth-child(2) {
+          margin-top: -8rem;
+
+          @include mediaquery('xs') {
+            margin-top: unset;
+          }
+
+          @include mediaquery('sm') {
+            margin-top: unset;
+          }
+
+          @include mediaquery('lg') {
+            margin-top: unset;
+          }
+        }
+
+        &-heading {
+          margin-bottom: 18px;
+        }
+        &-text {
+          margin-bottom: 28px;
+        }
+        &-price {
+          margin-bottom: 10px;
+        }
+        span {
+          font-size: 18px;
+          font-weight: 400;
+          line-height: 26px;
+          letter-spacing: 0em;
+          text-align: left;
+          color: var(--gray)-2;
+          margin-top: 10px;
+        }
+        a {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin: 0 auto;
+          margin: 24px 0;
+        }
+        .small-line {
+          height: 1px;
+          background-color: #d9d9d9;
+          margin-bottom: 24px;
+        }
+
+        .offer-whats-included-list {
+          display: flex;
+          text-align: left;
+          justify-content: center;
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 1.5rem;
+
+          &-heading {
+            text-align: center;
+          }
+        }
+      }
+    }
+  }
+}

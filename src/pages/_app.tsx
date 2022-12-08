@@ -13,6 +13,10 @@ export default function App({ Component, pageProps }: AppProps) {
       <Head>
         <title>Igor Swatowski | Web Designer & Developer</title>
         <link rel="icon" type="image/png" href="../../public/favicon.png" />
+        <meta
+          name="viewport"
+          content="width=device-width, user-scalable=yes, initial-scale=1.0, viewport-fit=cover"
+        />
       </Head>
       <I18nextProvider i18n={i18n}>
         <Navbar />

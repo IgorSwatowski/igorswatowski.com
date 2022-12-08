@@ -1,0 +1,96 @@
+@import '../../abstracts/mixins';
+@import '../../abstracts/variables';
+
+.packages-banner {
+  margin-top: 24rem;
+
+  @include mediaquery('xs') {
+    margin-top: 18rem;
+  }
+  @include mediaquery('sm') {
+    margin-top: 18rem;
+  }
+  @include mediaquery('lg') {
+    margin-top: 18rem;
+  }
+
+  &-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    gap: 20rem;
+
+    @include mediaquery('xs') {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 7rem;
+    }
+    @include mediaquery('sm') {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 7rem;
+    }
+    @include mediaquery('lg') {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 7rem;
+    }
+
+    &-left {
+      width: 40%;
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+
+      @include mediaquery('xs') {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 2rem;
+      }
+      @include mediaquery('sm') {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 2rem;
+      }
+      @include mediaquery('lg') {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 2rem;
+      }
+
+      h1 {
+        width: max-content;
+        text-transform: uppercase;
+      }
+    }
+    &-right {
+      @include mediaquery('xs') {
+        width: 100%;
+      }
+      @include mediaquery('sm') {
+        width: 100%;
+      }
+      @include mediaquery('lg') {
+        width: 100%;
+      }
+
+      &-heading {
+        margin-bottom: 14px;
+      }
+    }
+  }
+}

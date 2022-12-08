@@ -1,0 +1,114 @@
+@import '../../abstracts/mixins';
+@import '../../abstracts/variables';
+
+.cta-about-me {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  width: 100%;
+  margin-top: 8rem;
+
+  @include mediaquery('xs') {
+    width: unset;
+  }
+  @include mediaquery('sm') {
+    width: unset;
+  }
+  @include mediaquery('lg') {
+    width: unset;
+  }
+
+  &-wrapper {
+    background-color: var(--white);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    width: 100%;
+    position: relative;
+    padding: 7rem 0;
+
+    @include mediaquery('xs') {
+      padding: 6rem 2rem;
+      width: unset;
+    }
+    @include mediaquery('sm') {
+      padding: 6rem 2rem;
+      width: unset;
+    }
+    @include mediaquery('lg') {
+      padding: 6rem 2rem;
+      width: unset;
+    }
+
+    &-heading {
+      max-width: 811px;
+      text-align: center;
+      margin: 3rem 0;
+    }
+
+    &-text {
+      max-width: 984px;
+      width: 100%;
+      text-align: center;
+      margin-bottom: 34px;
+
+      &--second {
+        max-width: 984px;
+        width: 100%;
+        text-align: center;
+        margin-bottom: 0;
+      }
+    }
+
+    &-lines-img {
+      position: absolute;
+      right: 9rem;
+      top: 7rem;
+
+      @include mediaquery('xs') {
+        display: none;
+      }
+      @include mediaquery('sm') {
+        display: none;
+      }
+      @include mediaquery('lg') {
+        display: none;
+      }
+    }
+    &-arrow-img {
+      position: absolute;
+      bottom: -13rem;
+      right: 0;
+
+      @include mediaquery('xs') {
+        bottom: -8rem;
+      }
+      @include mediaquery('sm') {
+        bottom: -8rem;
+      }
+      @include mediaquery('lg') {
+        bottom: -8rem;
+      }
+
+      img {
+        object-fit: cover;
+        @include mediaquery('xs') {
+          width: 99px;
+          height: auto;
+        }
+        @include mediaquery('sm') {
+          width: 99px;
+          height: auto;
+        }
+        @include mediaquery('lg') {
+          width: 99px;
+          height: auto;
+        }
+      }
+    }
+  }
+}
