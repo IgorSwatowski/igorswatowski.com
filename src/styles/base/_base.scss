@@ -1,0 +1,132 @@
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  font-size: 1.6rem;
+  height: 100vh;
+  width: 100%;
+  max-width: 100%;
+  position: relative;
+  background-color: var(--black);
+
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+}
+
+main {
+  overflow: hidden;
+  width: 100%;
+  max-width: 100%;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+p {
+  margin-top: 0;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: colorBlack;
+}
+
+.container-box {
+  width: 100%;
+  max-width: 1620px;
+  padding: 0 1rem;
+
+  @include mediaquery('xs') {
+    padding-left: 16px;
+    padding-right: 16px;
+    width: unset;
+    max-width: unset;
+  }
+
+  @include mediaquery('sm') {
+    padding-left: 32px;
+    padding-right: 32px;
+    width: unset;
+    max-width: unset;
+  }
+
+  @include mediaquery('lg') {
+    padding-left: 64px;
+    padding-right: 64px;
+    width: unset;
+    max-width: unset;
+  }
+  @include mediaquery('xl') {
+    padding-left: 32px;
+    padding-right: 32px;
+    width: unset;
+    max-width: unset;
+  }
+  @include mediaquery('xxl') {
+    width: 100%;
+    max-width: 1120px;
+    padding: 0 1rem;
+  }
+}
+
+.bolden {
+  font-weight: bold;
+  color: $primary;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.small-text {
+  color: $color-gray;
+  font-size: 1.3rem;
+}
+
+.header.scrollss {
+  box-shadow: 0 3px 6px $color-gray-8;
+}
+
+.underline {
+  position: relative;
+  z-index: 1;
+  &:after {
+      content: "";
+      position: absolute;
+      background-color: $primary;
+      bottom: 15%;
+      height: 20px;
+      position: absolute;
+      left: 0;
+      width: 100%;
+      z-index: -1;
+
+      @include mediaquery('xs') {
+        bottom: 17%;
+        height: 10px;
+      }
+    
+      @include mediaquery('sm') {
+        bottom: 17%;
+        height: 10px;
+      }
+  }
+}

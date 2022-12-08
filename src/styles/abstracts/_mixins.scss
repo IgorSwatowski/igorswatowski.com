@@ -1,0 +1,20 @@
+@import "./variables";
+
+@mixin mediaquery($query) {
+  $breakpoints: (
+    'xs': '(max-width: 600px)',
+    'sm': '(min-width: 601px)',
+    'lg': '(min-width: 901px)',
+    'xl': '(min-width: 1201px)',
+    'xxl': '(min-width: 1441px)',
+);
+
+@if map-has-key($breakpoints, $query) {
+    @media screen and #{map-get($breakpoints, $query)} {
+      @content;
+    }
+  } 
+@else {
+    @error "No breakpoint specified '#{$query}'";
+  } 
+}

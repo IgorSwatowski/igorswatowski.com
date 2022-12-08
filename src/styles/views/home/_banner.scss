@@ -1,0 +1,165 @@
+@import "../../abstracts/mixins";
+@import "../../abstracts/variables";
+
+.banner {
+  padding-top: 24.6rem;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+  margin: 0 auto;
+
+  @include respond(phone) {
+    flex-direction: column;
+    padding-top: 20rem;
+  }
+  @include respond(tablet-port) {
+    flex-direction: column;
+    padding-top: 20rem;
+  }
+  @include respond(tablet-land) {
+    flex-direction: row;
+    padding-top: 20rem;
+  }
+  @include respond(desktop-bigger) {
+    padding-top: 27rem;
+  }
+
+  &-block-left {
+    width: 70%;
+    position: relative;
+    @include respond(phone) {
+      width: 100%;
+    }
+    @include respond(tablet-port) {
+      width: 100%;
+    }
+    @include respond(tablet-land) {
+      margin-right: 5rem;
+    }
+    &--title {
+      margin-top: 1.2rem;
+      margin-bottom: 1rem;
+      width: 872px;
+
+      @include respond(phone) {
+        width: unset !important;
+      }
+      @include respond(tablet-port) {
+        width: 100%;
+      }
+      @include respond(tablet-land) {
+        width: 100%;
+      }
+      span {
+        display: inline-block;
+        position: relative;
+        z-index: 10;
+        &:after {
+          background: #f1ca89;
+          bottom: 8%;
+          content: "";
+          height: 12px;
+          position: absolute;
+          left: 0;
+          width: 100%;
+          z-index: -1;
+        }
+      }
+    }
+    &-buttons {
+      margin-top: 4.2rem;
+      margin-bottom: 4.2rem;
+      &-first {
+        margin-right: 0.8rem;
+      }
+    }
+    &--sub {
+      line-height: 171%;
+      max-width: 530px;
+      margin-top: 4rem;
+
+      
+      @include respond(phone) {
+        margin-top: unset;
+      }
+      @include respond(tablet-port) {
+        margin-top: unset;
+      }
+    }
+    &-trusted {
+      margin-top: 6.2rem;
+      &--small {
+        text-transform: uppercase;
+        color: $color-gray-2;
+      }
+      &-logos {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        flex-wrap: wrap;
+        margin-top: 3rem;
+        gap: 4rem;
+        img {
+          margin-right: 1.5rem;
+          width: 100px;
+          height: auto;
+          object-fit: cover;
+
+          @include respond(phone) {
+            width: 64px;
+          }
+        }
+
+        @include respond(phone) {
+          flex-wrap: wrap;
+        }
+      }
+    }
+  }
+  &-block-right {
+    width: 30%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    z-index: -1;
+
+    @include respond(phone) {
+      display: none;
+    }
+    @include respond(tablet-port) {
+      display: none;
+    }
+    @include respond(tablet-land) {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    &-img {
+    width: 70.1rem;
+    height: 54.2rem;
+    position: relative;
+    z-index: 10;
+    top: -10rem;
+      @include respond(phone) {
+        margin-top: 4rem;
+        width: 100%;
+        height: auto;
+      }
+      @include respond(tablet-port) {
+        margin-top: 4rem;
+        width: 100%;
+        height: auto;
+      }
+    }
+    img {
+      object-fit: cover;
+      width: 600px;
+      height: auto;
+      @include respond(tablet-land) {
+        width: 85%;
+      }
+    }
+  }
+}

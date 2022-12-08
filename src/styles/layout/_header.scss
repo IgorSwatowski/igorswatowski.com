@@ -1,0 +1,343 @@
+@import "../abstracts/mixins";
+@import "../abstracts/variables";
+
+.header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 1.9rem;
+  padding-bottom: 1.9rem;
+  font-size: 2rem;
+  font-weight: 500;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  max-width: 100%;
+  z-index: 2;
+  background: $white;
+  transition: 0.6s ease;
+  line-height: 2;
+  padding: 10px 100px 10px 100px;
+
+  @include mediaquery('xs') {
+    background-color: $white;
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+    font-size: 1.8rem;
+    font-weight: 500;
+    transition: 0.6s ease;
+    padding: 10px 16px;
+    display: block;
+  }
+
+  @include mediaquery('sm') {
+    background-color: $white;
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+    font-size: 1.8rem;
+    font-weight: 500;
+    transition: 0.6s ease;
+    padding: 10px 32px 0 32px;
+    display: block;
+  }
+
+  @include mediaquery('lg') {
+    background-color: $white;
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+    font-size: 1.8rem;
+    font-weight: 500;
+    transition: 0.6s ease;
+    padding: 10px 48px 0 48px;
+    display: block;
+  }
+
+  @include mediaquery('xl') {
+    padding: 10px 64px 0 64px;
+  }
+  @include mediaquery('xxl') {
+    padding: 10px 100px 10px 100px;
+
+  }
+
+  .menu {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    background-color: $white;
+
+    @include mediaquery('xs') {
+      overflow: hidden;
+      display: block;
+    }
+  
+    @include mediaquery('sm') {
+      overflow: hidden;
+      display: block;
+    }
+  
+    @include mediaquery('lg') {
+      overflow: hidden;
+      display: block;
+    }
+  }
+  .menu-item {
+    a {
+      display: block;
+      margin: 15px 32px;
+      transition: 0.2s all ease-in-out;
+      color: colorBlack;
+      position: relative;
+      z-index: 1;
+
+      &:before {
+        content: "";
+        position: absolute;
+        z-index: 1;
+        bottom: 8px;
+        width: 100%;
+        height: 10px;
+        background-color: $primary-light;
+        opacity: 0;
+        -webkit-transition: opacity .2s ease;
+        -moz-transition: opacity .2s ease;
+        -ms-transition: opacity .2s ease;
+        -o-transition: opacity .2s ease;
+        transition:  opacity .2s ease;
+
+        @include respond(phone){
+          display: none;
+        }
+        @include respond(tablet-port){
+          display: none;
+        }
+        @include respond(tablet-land){
+          display: none;
+        }
+      }
+
+      &:hover {
+        @include respond(phone){
+          color: $primary;
+        }
+        @include respond(tablet-port){
+          color: $primary;
+        }
+        @include respond(tablet-land){
+          color: $primary;
+        }
+      }
+
+      &:hover:before {
+        z-index: -1;
+        opacity: 1;
+      }
+
+      @include respond(phone) {
+        padding: 15px 0;
+        margin: 0;
+      }
+      @include respond(tablet-port) {
+        padding: 15px 0;
+        margin: 0;
+      }
+      @include respond(tablet-land) {
+        padding: 15px 0;
+        margin: 0;
+      }
+      @include respond(desktop-big) {
+        font-size: 1.5rem;
+      }
+      text-decoration: none;
+    }
+  }
+  .menu-contact {
+    margin: 15px 32px;
+
+    @include respond(phone) {
+      margin: 15px 0;
+    }
+  }
+  .menu-btn {
+    &:hover {
+      background-color: #f4f4f4;
+    }
+    display: none;
+    &:checked {
+      ~ {
+        .menu {
+          max-height: 2340px;
+        }
+        .menu-icon {
+          .navicon {
+            background: transparent;
+            &:before {
+              transform: rotate(-45deg);
+            }
+            &:after {
+              transform: rotate(45deg);
+            }
+          }
+          &:not(.steps) {
+            .navicon {
+              &:before {
+                top: 0;
+              }
+              &:after {
+                top: 0;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .logo {
+    display: block;
+    float: left;
+    font-size: 2rem;
+    text-decoration: none;
+    padding: 15px 0 14px 0;
+    @include respond(desktop-big) {
+      font-size: 1.5rem;
+    }
+  }
+  .menu {
+    @include respond(phone) {
+      clear: both;
+      max-height: 0;
+      transition: max-height 0.2s ease-out;
+    }
+    @include respond(tablet-port) {
+      clear: both;
+      max-height: 0;
+      transition: max-height 0.2s ease-out;
+    }
+    @include respond(tablet-land) {
+      clear: both;
+      max-height: 0;
+      transition: max-height 0.2s ease-out;
+    }
+  }
+  .menu-icon {
+    display: none;
+    @include respond(phone) {
+      cursor: pointer;
+      display: inline-block;
+      float: right;
+      position: relative;
+      user-select: none;
+      padding: 32px 40px 28px 0;
+    }
+    @include respond(tablet-port) {
+      cursor: pointer;
+      display: inline-block;
+      float: right;
+      padding: 33px 80px 28px 0;
+      position: relative;
+      user-select: none;
+    }
+    @include respond(tablet-land) {
+      cursor: pointer;
+      display: inline-block;
+      float: right;
+      padding: 33px 140px 28px 0;
+      position: relative;
+      user-select: none;
+    }
+    .navicon {
+      @include respond(phone) {
+        background: #333;
+        display: block;
+        height: 2px;
+        position: relative;
+        transition: background 0.2s ease-out;
+        width: 18px;
+        &:before {
+          background: #333;
+          content: "";
+          display: block;
+          height: 100%;
+          position: absolute;
+          transition: all 0.2s ease-out;
+          width: 100%;
+          top: 5px;
+        }
+        &:after {
+          background: #333;
+          content: "";
+          display: block;
+          height: 100%;
+          position: absolute;
+          transition: all 0.2s ease-out;
+          width: 100%;
+          top: -5px;
+        }
+      }
+      @include respond(tablet-port) {
+        background: #333;
+        display: block;
+        height: 2px;
+        position: relative;
+        transition: background 0.2s ease-out;
+        width: 18px;
+        &:before {
+          background: #333;
+          content: "";
+          display: block;
+          height: 100%;
+          position: absolute;
+          transition: all 0.2s ease-out;
+          width: 100%;
+          top: 5px;
+        }
+        &:after {
+          background: #333;
+          content: "";
+          display: block;
+          height: 100%;
+          position: absolute;
+          transition: all 0.2s ease-out;
+          width: 100%;
+          top: -5px;
+        }
+      }
+      @include respond(tablet-land) {
+        background: #333;
+        display: block;
+        height: 2px;
+        position: relative;
+        transition: background 0.2s ease-out;
+        width: 18px;
+        &:before {
+          background: #333;
+          content: "";
+          display: block;
+          height: 100%;
+          position: absolute;
+          transition: all 0.2s ease-out;
+          width: 100%;
+          top: 5px;
+        }
+        &:after {
+          background: #333;
+          content: "";
+          display: block;
+          height: 100%;
+          position: absolute;
+          transition: all 0.2s ease-out;
+          width: 100%;
+          top: -5px;
+        }
+      }
+    }
+  }
+}
