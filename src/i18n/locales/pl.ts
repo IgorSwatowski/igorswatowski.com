@@ -6,6 +6,15 @@ const pl = {
   blog: 'blog',
   inquireMe: 'Skontaktuj się',
 
+  //Footer
+  contactInformation: 'Informacje kontaktowe',
+  contactInformationText:
+    'Zapraszam do kontaktu ze mną w każdej chwili. Wolę rozmawiać przez e-mail, zwłaszcza, że może nas dzielić kilka stref czasowych.',
+  phone: 'Telefon',
+  copyright: 'Copyright © 2022 . Igor Swatowski . Wszelkie prawa zastrzeżone.',
+  menuHeading: 'Menu',
+  followMeOn: 'Śledź mnie na',
+
   //Homepage
   hero: 'Zbudujmy razem stronę, która przyniesie sukces w Twoim biznesie.',
   heroText:

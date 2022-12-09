@@ -6,6 +6,15 @@ const en = {
   blog: 'Blot',
   inquireMe: 'Inquire me',
 
+  //Footer
+  contactInformation: 'Contact Information',
+  contactInformationText:
+    'Feel free to reach out to me any time. I prefer to talk over email, especially since we may be a few time zones away.',
+  phone: 'Phone',
+  copyright: 'Copyright © 2022 . Igor Swatowski . All rights reserved.',
+  menuHeading: 'Menu',
+  followMeOn: 'Follow me on',
+
   //Homepage
   hero: 'Attract and retain clients with a professionally designed website.',
   heroText:
