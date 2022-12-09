@@ -1,4 +1,12 @@
 const en = {
+  //Navbar
+  about: 'About',
+  packages: 'Packages',
+  contact: 'Contact',
+  blog: 'Blot',
+  inquireMe: 'Inquire me',
+
+  //Homepage
   hero: 'Attract and retain clients with a professionally designed website.',
   heroText:
     'My mission is to make sure that all of my clients achieve their goals with online presence they want.',

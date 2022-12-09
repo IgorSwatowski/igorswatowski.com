@@ -29,15 +29,15 @@ const Navbar = () => {
       <div className="menu">
         <div className="menu-item">
           <Link href="/about" data-c="About me" aria-label="About me">
-            About me
+            {t.about}
           </Link>
         </div>
         <div className="menu-item" data-c="Packages" aria-label="Packages">
-          <Link href="/packages">Packages</Link>
+          <Link href="/packages">{t.packages}</Link>
         </div>
         <div className="menu-item">
           <Link href="/contact" data-c="Contact" aria-label="Contact">
-            Contact
+            {t.contact}
           </Link>
         </div>
         <div className="menu-contact">
@@ -47,7 +47,7 @@ const Navbar = () => {
             aria-label="Inquire here"
             className="btn-secondary"
           >
-            Inquire here
+            {t.inquireMe}
           </Link>
         </div>
         <CustomSelect

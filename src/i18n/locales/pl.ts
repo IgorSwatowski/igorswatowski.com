@@ -1,4 +1,12 @@
 const pl = {
+  //Navbar
+  about: 'O mnie',
+  packages: 'Oferta',
+  contact: 'Kontakt',
+  blog: 'blog',
+  inquireMe: 'Skontaktuj się',
+
+  //Homepage
   hero: 'Zbudujmy razem stronę, która przyniesie sukces w Twoim biznesie.',
   heroText:
     'Moją misją jest upewnienie się, że wszyscy moi klienci osiągają swoje cele z obecnością online, której pragną.',
