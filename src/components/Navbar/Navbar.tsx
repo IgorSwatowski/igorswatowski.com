@@ -4,6 +4,7 @@ import { useRouter } from 'next/router';
 
 import { en } from '../../i18n/locales/en';
 import { pl } from '../../i18n/locales/pl';
+import CustomSelect from '../CustomSelect/CustomSelect';
 
 type ChangeLanguageEvent = React.ChangeEvent<HTMLSelectElement>;
 
@@ -12,9 +13,8 @@ const Navbar = () => {
   const { locale } = router;
   const t = locale === 'en' ? en : pl;
 
-  const changeLanguage = (e: ChangeLanguageEvent) => {
-    const locale = e.target.value;
-    router.push('/', '/', { locale });
+  const changeLanguage = (locale: string) => {
+    router.push('/', '/', { locale: locale.toLowerCase() });
   };
 
   return (
@@ -28,10 +28,6 @@ const Navbar = () => {
       </label>
       <div className="menu">
         <div className="menu-item">
-          <select onChange={changeLanguage} defaultValue={locale}>
-            <option value="en">EN</option>
-            <option value="pl">PL</option>
-          </select>
           <Link href="/about" data-c="About me" aria-label="About me">
             About me
           </Link>
@@ -44,6 +40,11 @@ const Navbar = () => {
             Contact
           </Link>
         </div>
+        <CustomSelect
+          options={['EN', 'PL'].map((option) => option.toUpperCase())}
+          defaultValue={locale === 'en' ? 'EN' : 'PL'}
+          onChange={changeLanguage}
+        />
         <div className="menu-contact">
           <Link
             href="mailto: hello@igorswatowski.com"

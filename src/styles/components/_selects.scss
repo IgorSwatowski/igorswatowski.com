@@ -1,0 +1,64 @@
+@import '../abstracts/mixins';
+@import '../abstracts/variables';
+
+.custom-select {
+  display: block;
+  margin: 15px 32px;
+  transition: 0.2s all ease-in-out;
+  color: var(--black);
+  position: relative;
+  z-index: 1;
+  text-decoration: none;
+  border: 0;
+  font-size: 20px;
+  font-weight: 500;
+  font-family: 'Poppins', sans-serif;
+  width: 70px;
+
+  .selected-option {
+    cursor: pointer;
+    background: var(--white);
+    border: 1px solid #ccc;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex-direction: row-reverse;
+    justify-content: center;
+
+    &::before {
+      content: '';
+      display: inline-block;
+      width: 0;
+      height: 0;
+      border-left: 5px solid transparent;
+      border-right: 5px solid transparent;
+      border-top: 5px solid black;
+      transform: rotate(0deg);
+      transition: transform 0.3s ease-in-out;
+    }
+
+    &.is-open::before {
+      transform: rotate(180deg);
+    }
+  }
+
+  .options {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: var(--white);
+    border: 1px solid #ccc;
+    width: 90px;
+
+    .option {
+      cursor: pointer;
+      padding: 10px;
+
+      &:hover {
+        background: #ccc;
+      }
+    }
+  }
+}
