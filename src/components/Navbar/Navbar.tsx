@@ -40,11 +40,6 @@ const Navbar = () => {
             Contact
           </Link>
         </div>
-        <CustomSelect
-          options={['EN', 'PL'].map((option) => option.toUpperCase())}
-          defaultValue={locale === 'en' ? 'EN' : 'PL'}
-          onChange={changeLanguage}
-        />
         <div className="menu-contact">
           <Link
             href="mailto: hello@igorswatowski.com"
@@ -55,6 +50,11 @@ const Navbar = () => {
             Inquire here
           </Link>
         </div>
+        <CustomSelect
+          options={['EN', 'PL'].map((option) => option.toUpperCase())}
+          defaultValue={locale === 'en' ? 'EN' : 'PL'}
+          onChange={changeLanguage}
+        />
       </div>
     </header>
   );

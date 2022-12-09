@@ -29,7 +29,7 @@
     font-size: 1.8rem;
     font-weight: 500;
     transition: 0.6s ease;
-    padding: 10px 16px;
+    padding: 10px 0;
     display: block;
   }
 
@@ -57,10 +57,6 @@
     display: block;
   }
 
-  @include respond(desktop-big) {
-    padding: 10px 64px 0 64px;
-  }
-
   .menu {
     display: flex;
     flex-direction: row;
@@ -73,6 +69,8 @@
     @include respond(phone) {
       overflow: hidden;
       display: block;
+      height: 48rem;
+      padding: 0 1.6rem;
     }
 
     @include respond(tablet-port) {
@@ -115,6 +113,9 @@
         @include respond(tablet-port) {
           display: none;
         }
+        @include respond(tablet-land) {
+          display: none;
+        }
         @include respond(desktop-big) {
           display: none;
         }
@@ -138,15 +139,15 @@
       }
 
       @include respond(phone) {
-        padding: 15px 0;
+        padding: 0;
         margin: 0;
       }
       @include respond(tablet-port) {
-        padding: 15px 0;
+        padding: 0;
         margin: 0;
       }
-      @include respond(desktop-big) {
-        padding: 15px 0;
+      @include respond(tablet-land) {
+        padding: 0;
         margin: 0;
       }
       @include respond(desktop-bigger) {
@@ -170,7 +171,12 @@
     &:checked {
       ~ {
         .menu {
-          max-height: 2340px;
+          max-height: 2400px;
+          display: flex;
+          align-items: center;
+          flex-direction: column;
+          gap: 3rem;
+          padding-top: 3rem;
         }
         .menu-icon {
           .navicon {
@@ -202,6 +208,15 @@
     font-size: 2rem;
     text-decoration: none;
     padding: 15px 0 14px 0;
+    @include respond(phone) {
+      padding: 15px 16px;
+    }
+    @include respond(tablet-port) {
+      padding: 15px 3.2rem;
+    }
+    @include respond(tablet-land) {
+      padding: 15px 4.8rem;
+    }
     @include respond(desktop-bigger) {
       font-size: 1.5rem;
     }
@@ -217,7 +232,7 @@
       max-height: 0;
       transition: max-height 0.2s ease-out;
     }
-    @include respond(desktop-big) {
+    @include respond(tablet-land) {
       clear: both;
       max-height: 0;
       transition: max-height 0.2s ease-out;
@@ -241,7 +256,7 @@
       position: relative;
       user-select: none;
     }
-    @include respond(desktop-big) {
+    @include respond(tablet-land) {
       cursor: pointer;
       display: inline-block;
       float: right;
@@ -306,7 +321,7 @@
           top: -5px;
         }
       }
-      @include respond(desktop-big) {
+      @include respond(tablet-land) {
         background: #333;
         display: block;
         height: 2px;
