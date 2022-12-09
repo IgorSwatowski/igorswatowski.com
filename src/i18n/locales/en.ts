@@ -68,6 +68,35 @@ const en = {
   ctaSecondSecondText: 'Less stress, more bookings for your customers.',
   ctaSecondThirdText: 'Are you in? ',
   ctaSecondBtn: 'Yeah!',
+
+  //About
+  bannerHeading: 'Meet the top-shelf web developer & designer who does it all*',
+  bannerText:
+    "*I may not be able to do everything, but I know how to identify good solutions and avoid bad ones. That's what really matters to you, isn't it?",
+  timeToIntroduceHeading: "I guess it's time to introduce myself.",
+  timeToIntroduceText:
+    "Let me introduce myself. I'm Igor Swatowski, and I'm here to help you increase your value and success by creating stunning websites and improving your work process. I have the skills and experience to help you achieve your goals, no matter where you're starting from. Are you ready to get started?",
+  timeToIntroduceHeadingSecond:
+    'That said, to best help you I need to know: which of the following sounds the most like you…',
+  timeToIntroduceStageFirst:
+    "I need a website for my brand or business but don't know how to get started...",
+  timeToIntroduceStageSecond:
+    "I want to improve my current website because it doesn't look very good and doesn't attract customers...",
+  timeToIntroduceStageThird: 'I want my website to look beautiful and bring in customers...',
+  ctaHeading: "I'm a big believer in keeping things",
+  ctaHeadingUnderline: 'simple',
+  ctaTextFirst:
+    "I understand how you feel. The thought of updating your website can be daunting, especially when you have so much on your plate already. But don't worry, I'm here to help. Let me take the burden off your shoulders and create a beautiful, high-converting website for you.",
+  ctaTextSecond:
+    "You'll be amazed at how easy and stress-free the process can be, and how much value and success it can bring to your business. Contact me today to learn more and schedule a consultation. Simple and easy.",
+  whoIAm: 'Who I’am?',
+  whoIAmText:
+    'Hello - nice to meet you, and I’m very glad to see you there. I’m Igor and I help people to create amazing websites.',
+  whoIAmTextSecond:
+    "I'm passionate about helping entrepreneurs and small businesses like you create a sustainable and ethical marketplace. Let's work together to create beautiful, purposeful, and strategic designs and websites that reflect your values and goals, and engage and inspire your customers. I'm committed to helping you grow and succeed.",
+  aboutCtaSecondHeading: 'Interested in working with me?',
+  aboutCtaSecondText: 'Amazing! Take some time to explore the packages I offer.',
+  aboutCtaSecondBtn: 'Discover packages',
 };
 
 export { en };

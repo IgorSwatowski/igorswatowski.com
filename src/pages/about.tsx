@@ -2,7 +2,26 @@ import React from 'react';
 import Image from 'next/image';
 import Button from '../components/Button/Button';
 
+import { useRouter } from 'next/router';
+
+import { en } from '../i18n/locales/en';
+import { pl } from '../i18n/locales/pl';
+
+import LinesImg from '../assets/lines.png';
+import NumberFirstImg from '../assets/number_first.png';
+import NumberSecondImg from '../assets/number_second.png';
+import NumberThirdImg from '../assets/number_third.png';
+import LinesSvg from '../assets/lines.svg';
+import TrustedLinesImg from '../assets/trusted-lines-about.png';
+
+import GammasoftLogo from '../assets/trusted/gammasoft.png';
+import CodemaLogo from '../assets/trusted/codema.png';
+import AionlineLogo from '../assets/trusted/aionline.png';
+
 const About = () => {
+  const router = useRouter();
+  const { locale } = router;
+  const t = locale === 'en' ? en : pl;
   return (
     <main>
       <section className="banner-text">
@@ -12,24 +31,15 @@ const About = () => {
             data-aos="fade-down"
             data-aos-delay="50"
           >
-            Meet the top-shelf web developer & designer who does it all*
+            {t.bannerHeading}
           </h1>
-          <Image
-            loading="lazy"
-            src="/assets/lines.png"
-            alt=""
-            data-aos="fade-down"
-            data-aos-delay="50"
-            width={100}
-            height={100}
-          />
+          <Image loading="lazy" src={LinesImg} alt="" data-aos="fade-down" data-aos-delay="50" />
           <p
             className="banner-text-wrapper-text paragraph-primary"
             data-aos="fade-down"
             data-aos-delay="100"
           >
-            *I may not be able to do everything, but I know how to identify good solutions and avoid
-            bad ones. That`&:apos;`s what really matters to you, isn`&:apos;`t it?
+            {t.bannerText}
           </p>
         </div>
       </section>
@@ -40,25 +50,21 @@ const About = () => {
             data-aos="fade-down"
             data-aos-delay="150"
           >
-            I guess it`&:apos;`s time to introduce myself.
+            {t.timeToIntroduceHeading}
           </h2>
           <p
             className="introduce-me-wrapper-text paragraph-primary"
             data-aos="fade-down"
             data-aos-delay="50"
           >
-            Let me introduce myself. I`&:apos;`m Igor Swatowski, and I`&:apos;`m here to help you
-            increase your value and success by creating stunning websites and improving your work
-            process. I have the skills and experience to help you achieve your goals, no matter
-            where you`&:apos;`re starting from. Are you ready to get started?
+            {t.timeToIntroduceText}
           </p>
           <h3
             className="introduce-me-wrapper-subheading heading-fourth"
             data-aos="fade-down"
             data-aos-delay="50"
           >
-            That said, to best help you I need to know: which of the following sounds the most like
-            you…
+            {t.timeToIntroduceHeadingSecond}
           </h3>
           <div className="introduce-me-wrapper-list">
             <div
@@ -68,15 +74,14 @@ const About = () => {
             >
               <Image
                 loading="lazy"
-                src="/assets/number_first.png"
+                src={NumberFirstImg}
                 alt=""
                 className="introduce-me-wrapper-list-item-img"
                 width={100}
                 height={100}
               />
               <p className="introduce-me-wrapper-list-item-text paragraph-primary">
-                I need a website for my brand or business but don`&:apos;`t know how to get
-                started...
+                {t.timeToIntroduceStageFirst}
               </p>
             </div>
             <div
@@ -86,15 +91,14 @@ const About = () => {
             >
               <Image
                 loading="lazy"
-                src="/assets/number_second.png"
+                src={NumberSecondImg}
                 alt=""
                 className="introduce-me-wrapper-list-item-img"
                 width={100}
                 height={100}
               />
               <p className="introduce-me-wrapper-list-item-text paragraph-primary">
-                I want to improve my current website because it doesn`&:apos;`t look very good and
-                doesn`&:apos;`t attract customers...
+                {t.timeToIntroduceStageSecond}
               </p>
             </div>
             <div
@@ -104,14 +108,14 @@ const About = () => {
             >
               <Image
                 loading="lazy"
-                src="/assets/number_third.png"
+                src={NumberThirdImg}
                 alt=""
                 className="introduce-me-wrapper-list-item-img"
                 width={100}
                 height={100}
               />
               <p className="introduce-me-wrapper-list-item-text paragraph-primary">
-                I want my website to look beautiful and bring in customers...
+                {t.timeToIntroduceStageThird}
               </p>
             </div>
           </div>
@@ -120,46 +124,42 @@ const About = () => {
       <section className="cta-about-me">
         <div className="cta-about-me-wrapper container-box">
           <div className="cta-about-me-wrapper-lines-img">
-            <Image loading="lazy" src="/assets/lines.svg" alt="" width={100} height={100} />
+            <Image loading="lazy" src={LinesSvg} alt="" width={100} height={100} />
           </div>
           <h2
             className="cta-about-me-wrapper-heading heading-big"
             data-aos="fade-down"
             data-aos-delay="50"
           >
-            I`&:apos;`m a big believer in keeping things <span className="underline">simple</span>
+            {t.ctaHeading}
+            <span className="underline">{t.ctaHeadingUnderline}</span>
           </h2>
           <p
             className="cta-about-me-wrapper-text paragraph-primary"
             data-aos="fade-down"
             data-aos-delay="100"
           >
-            I understand how you feel. The thought of updating your website can be daunting,
-            especially when you have so much on your plate already. But don`&:apos;`t worry,
-            I`&:apos;`m here to help. Let me take the burden off your shoulders and create a
-            beautiful, high-converting website for you.
+            {t.ctaTextFirst}
           </p>
           <p
             className="cta-about-me-wrapper-text--second paragraph-primary"
             data-aos="fade-down"
             data-aos-delay="150"
           >
-            You`&:apos;`ll be amazed at how easy and stress-free the process can be, and how much
-            value and success it can bring to your business. Contact me today to learn more and
-            schedule a consultation. Simple and easy.
+            {t.ctaTextSecond}
           </p>
         </div>
       </section>
       <section className="trusted-by">
         <div className="trusted-by-wrapper container-box">
           <p className="trusted-by-wrapper-text" data-aos="fade-right">
-            Trusted by{' '}
-            <Image loading="lazy" src="/assets/trusted-lines.png" alt="" width={100} height={100} />
+            {t.trustedBy}
+            <Image loading="lazy" src={TrustedLinesImg} alt="" width={100} height={100} />
           </p>
           <div className="trusted-by-wrapper-companies">
             <Image
               loading="lazy"
-              src="/assets/trusted/gammasoft.png"
+              src={GammasoftLogo}
               alt=""
               data-aos="fade-in"
               width={100}
@@ -167,7 +167,7 @@ const About = () => {
             />
             <Image
               loading="lazy"
-              src="/assets/trusted/codema.png"
+              src={CodemaLogo}
               alt=""
               data-aos="fade-in"
               width={100}
@@ -175,7 +175,7 @@ const About = () => {
             />
             <Image
               loading="lazy"
-              src="/assets/trusted/aionline.png"
+              src={AionlineLogo}
               alt=""
               data-aos="fade-in"
               width={100}
@@ -191,26 +191,21 @@ const About = () => {
             data-aos="fade-down"
             data-aos-delay="50"
           >
-            Who I’am?
+            {t.whoIAm}
           </h2>
           <p
             className="who-i-am-left-text paragraph-primary"
             data-aos="fade-down"
             data-aos-delay="50"
           >
-            Hello - nice to meet you, and I’m very glad to see you there. I’m Igor and I help people
-            to create amazing websites.
+            {t.whoIAmText}
           </p>
           <p
             className="who-i-am-left-text paragraph-primary"
             data-aos="fade-down"
             data-aos-delay="50"
           >
-            I`&:apos;`m passionate about helping entrepreneurs and small businesses like you create
-            a sustainable and ethical marketplace. Let `&:apos;` s work together to create
-            beautiful, purposeful, and strategic designs and websites that reflect your values and
-            goals, and engage and inspire your customers. I`&:apos;`m committed to helping you grow
-            and succeed.
+            {t.whoIAmTextSecond}
           </p>
           <div className="social-links" data-aos="fade-down" data-aos-delay="70">
             <a href="https://github.com/IgorSwatowski">
@@ -262,16 +257,16 @@ const About = () => {
               data-aos="fade-down"
               data-aos-delay="50"
             >
-              Interested in working with me?
+              {t.aboutCtaSecondHeading}
             </h2>
             <p
               className="cta-second-about-me-wrapper-right-text paragraph-primary"
               data-aos="fade-down"
               data-aos-delay="100"
             >
-              Amazing! Take some time to explore the packages I offer.
+              {t.aboutCtaSecondText}
             </p>
-            <Button buttonHref="packages">Packages</Button>
+            <Button buttonHref="packages">{t.aboutCtaSecondBtn}</Button>
           </div>
         </div>
       </section>
