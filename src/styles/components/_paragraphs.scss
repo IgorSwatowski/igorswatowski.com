@@ -3,7 +3,7 @@
 
 .paragraph-primary {
   font-size: 20px;
-  color: var(--gray)-2;
+  color: var(--gray-200);
   line-height: 3rem;
   letter-spacing: 0em;
   margin-top: 2rem;
@@ -20,7 +20,7 @@
 
 .paragraph-secondary {
   font-size: 1.8rem;
-  color: var(--gray)-2;
+  color: var(--gray-200);
 
   @include respond(phone) {
     width: 100%;
@@ -35,7 +35,7 @@
 
 .paragraph-third {
   font-size: 1.8rem;
-  color: var(--gray)-2;
+  color: var(--gray-200);
 
   @include respond(phone) {
     width: 100%;

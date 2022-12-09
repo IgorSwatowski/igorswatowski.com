@@ -4,6 +4,20 @@ import { useRouter } from 'next/router';
 import { en } from '../i18n/locales/en';
 import { pl } from '../i18n/locales/pl';
 
+import StrategyIcon from '../assets/horse-icon.svg';
+import DesignIcon from '../assets/design-icon.png';
+import DevelopmentIcon from '../assets/development-icon.png';
+import QualityIcon from '../assets/quality-icon.png';
+import GammasoftLogo from '../assets/trusted/gammasoft.png';
+import AionlineLogo from '../assets/trusted/aionline.png';
+import CodemaLogo from '../assets/trusted/codema.png';
+import MeImg from '../assets/me.png';
+import LinesSvg from '../assets/lines.svg';
+import ArrowDownSvg from '../assets/arrow.svg';
+import QuoteSvg from '../assets/quote.png';
+import ColorfulThreeLinesSvg from '../assets/colorful-three-lines.png';
+import MeSecondPng from '../assets/me-second.webp';
+
 export default function Home() {
   const router = useRouter();
   const { locale } = router;
@@ -32,33 +46,15 @@ export default function Home() {
           <div className="banner-block-left-trusted">
             <span className="banner-block-left-trusted--small">{t.trustedBy}</span>
             <div className="banner-block-left-trusted-logos">
-              <Image
-                loading="lazy"
-                src="/assets/trusted/gammasoft.png"
-                alt="Gammasoft"
-                width={100}
-                height={100}
-              />
-              <Image
-                loading="lazy"
-                src="/assets/trusted/aionline.png"
-                alt="aoinline"
-                width={100}
-                height={100}
-              />
-              <Image
-                loading="lazy"
-                src="/assets/trusted/codema.png"
-                alt="Codema"
-                width={100}
-                height={100}
-              />
+              <Image loading="lazy" src={GammasoftLogo} alt="Gammasoft" width={100} height={100} />
+              <Image loading="lazy" src={AionlineLogo} alt="aoinline" width={100} height={100} />
+              <Image loading="lazy" src={CodemaLogo} alt="Codema" width={100} height={100} />
             </div>
           </div>
         </div>
         <div className="banner-block-right" data-aos="fade-up">
           <div className="banner-block-right-img">
-            <Image src="/assets/me.png" alt="Personal photo" width={100} height={100} />
+            <Image src={MeImg} alt="Personal photo" />
             <span className="circle"></span>
           </div>
         </div>
@@ -66,7 +62,7 @@ export default function Home() {
       <section className="collaborate container-box">
         <div className="collaborate-wrapper">
           <div className="collaborate-wrapper-lines-img">
-            <Image loading="lazy" src="/assets/lines.svg" alt="" width={100} height={100} />
+            <Image loading="lazy" src={LinesSvg} alt="" width={100} height={100} />
           </div>
           <h2 className="collaborate-wrapper-heading heading-big" data-aos="fade-up">
             {t.collaborate}
@@ -81,7 +77,7 @@ export default function Home() {
             {t.collaborateTextMain}
           </p>
           <div className="collaborate-wrapper-arrow-img">
-            <Image loading="lazy" src="/assets/arrow.svg" alt="" width={100} height={100} />
+            <Image loading="lazy" src={ArrowDownSvg} alt="" width={100} height={100} />
           </div>
         </div>
       </section>
@@ -95,20 +91,14 @@ export default function Home() {
             data-aos="fade-up"
             data-aos-delay="50"
           >
-            A{t.designProcessText}
+            {t.designProcessText}
           </p>
         </div>
         <div className="implementation-process-list">
           <div className="implementation-process-list-item" data-aos="fade-up">
             <div className="implementation-process-list-item-top">
               <div className="implementation-process-list-item-top-img">
-                <Image
-                  loading="lazy"
-                  src="/assets/horse-icon.svg"
-                  alt=""
-                  width={100}
-                  height={100}
-                />
+                <Image loading="lazy" src={StrategyIcon} alt="" width={100} height={100} />
               </div>
               <h3 className="implementation-process-list-item-top-text heading-third">
                 {t.stageFirst}
@@ -123,13 +113,7 @@ export default function Home() {
           <div className="implementation-process-list-item" data-aos="fade-up" data-aos-delay="50">
             <div className="implementation-process-list-item-top">
               <div className="implementation-process-list-item-top-img">
-                <Image
-                  loading="lazy"
-                  src="/assets/design-icon.png"
-                  alt=""
-                  width={100}
-                  height={100}
-                />
+                <Image loading="lazy" src={DesignIcon} alt="" width={100} height={100} />
               </div>
               <h3 className="implementation-process-list-item-top-text heading-third">
                 {t.stageSecond}
@@ -144,13 +128,7 @@ export default function Home() {
           <div className="implementation-process-list-item" data-aos="fade-up" data-aos-delay="100">
             <div className="implementation-process-list-item-top">
               <div className="implementation-process-list-item-top-img">
-                <Image
-                  loading="lazy"
-                  src="/assets/development-icon.png"
-                  alt=""
-                  width={100}
-                  height={100}
-                />
+                <Image loading="lazy" src={DevelopmentIcon} alt="" width={100} height={100} />
               </div>
               <h3 className="implementation-process-list-item-top-text heading-third">
                 {t.stageThird}
@@ -165,13 +143,7 @@ export default function Home() {
           <div className="implementation-process-list-item" data-aos="fade-up" data-aos-delay="150">
             <div className="implementation-process-list-item-top">
               <div className="implementation-process-list-item-top-img">
-                <Image
-                  loading="lazy"
-                  src="/assets/quality-icon.png"
-                  alt=""
-                  width={100}
-                  height={100}
-                />
+                <Image loading="lazy" src={QualityIcon} alt="" width={100} height={100} />
               </div>
               <h3 className="implementation-process-list-item-top-text heading-third">
                 {t.stageFourth}
@@ -227,20 +199,14 @@ export default function Home() {
             </h3>
             <div className="references-wrapper-left-author" data-aos="fade-up" data-aos-delay="100">
               <div className="references-wrapper-left-author-top">
-                <Image loading="lazy" src="/assets//quote.png" alt="" width={100} height={100} />
+                <Image loading="lazy" src={QuoteSvg} alt="" width={100} height={100} />
                 <h4 className="heading-fourth">Agnieszka</h4>
               </div>
               <p className="references-wrapper-left-author-company">CEO | Agavaske AS</p>
             </div>
           </div>
           <div className="references-wrapper-right">
-            <Image
-              loading="lazy"
-              src="/assets/colorful-three-lines.png"
-              alt=""
-              width={100}
-              height={100}
-            />
+            <Image loading="lazy" src={ColorfulThreeLinesSvg} alt="" width={100} height={100} />
           </div>
         </div>
       </section>
@@ -287,7 +253,7 @@ export default function Home() {
           </a>
         </div>
         <div className="short-personal-info-right" data-aos="fade-down">
-          <Image loading="lazy" src="/assets/me-second.webp" alt="" width={100} height={100} />
+          <Image loading="lazy" src={MeSecondPng} alt="" />
         </div>
       </section>
       <section className="cta-second">
