@@ -19,20 +19,21 @@ const en = {
   hero: 'Attract and retain clients with a professionally designed website.',
   heroText:
     'My mission is to make sure that all of my clients achieve their goals with online presence they want.',
-  heroTextSecond: 'Start with how I can help you.',
+  heroTextSecond:
+    'I know how important it is for them to succeed, so I provide them with professional and effective support to help them do so.',
   heroBtn: 'How can I help',
   trustedBy: "I've been trusted by:",
   collaborate: 'I collaborate with brands, entrepreneurs and agencies to create',
   collaborateText: 'memorable',
   collaborateSecond: 'experiences.',
   collaborateTextMain:
-    'Consider me a creative partner, not just a resource. I bring fresh perspectives and insights to our collaboration, and work with you to achieve your goals.',
+    'My unique perspective and creativity will help you stand out in the marketplace and save your customers memories. I am ready to provide solutions to help you succeed.',
   designProcess: 'Heres an overview of my design and implementation process  ',
   designProcessText:
     'Are you curious about what to expect when we work together on a creative project? Here are the four stages of our collaboration.',
   stageFirst: 'Strategy',
   stageFirstText:
-    'I always make sure to ask the right questions and address the right challenges before designing. This helps me create a design that meets your needs and stands out.',
+    'I always make sure I ask the right questions and address the right challenges before I start designing. This helps me create a design that meets your needs and stands out from the competition.',
   stageSecond: 'Design',
   stageSecondText:
     'At the end of this phase, you will have a pixel-perfect design for your app or website. I create prototypes to simulate the final output before starting the project.',
@@ -59,10 +60,10 @@ const en = {
   ctaSecondText: "Let's make it happen!",
   meetIgor: 'Get to know Igor – The person behind the brand',
   meetIgorTextFirst:
-    "Hi, I'm Igor Swatowski, a self-taught web designer and programmer who uses the most popular technologies and design tools.",
+    "Hi, I'm Igor Swatowski, a Web Designer and FrontEnd Developer who uses the most popular technologies and design tools.",
   meetIgorTextSecond:
     "I'm passionate about helping creative professionals improve their websites and work processes, and increase their value and success.",
-  meetIgorBtn: 'More about me',
+  meetIgorBtn: 'Discover my background',
   ctaSecondFirstText:
     "Share your ideas with me and I'll create a website that is much more efficient and effective for you.",
   ctaSecondSecondText: 'Less stress, more bookings for your customers.',
@@ -70,7 +71,8 @@ const en = {
   ctaSecondBtn: 'Yeah!',
 
   //About
-  bannerHeading: 'Meet the top-shelf web developer & designer who does it all*',
+  bannerHeading: "Hello, I'm Igor!",
+  bannerHeadingSecond: 'Front End Developer & Web Designer.',
   bannerText:
     "*I may not be able to do everything, but I know how to identify good solutions and avoid bad ones. That's what really matters to you, isn't it?",
   timeToIntroduceHeading: "I guess it's time to introduce myself.",
@@ -89,11 +91,12 @@ const en = {
     "I understand how you feel. The thought of updating your website can be daunting, especially when you have so much on your plate already. But don't worry, I'm here to help. Let me take the burden off your shoulders and create a beautiful, high-converting website for you.",
   ctaTextSecond:
     "You'll be amazed at how easy and stress-free the process can be, and how much value and success it can bring to your business. Contact me today to learn more and schedule a consultation. Simple and easy.",
-  whoIAm: 'Who I’am?',
+  whoIAm: 'Building websites for an enjoyable user experience.',
   whoIAmText:
-    'Hello - nice to meet you, and I’m very glad to see you there. I’m Igor and I help people to create amazing websites.',
+    'As a Front End Developer my goal is to create and build websites that give users a sense of joy and comfort, encouraging them to return. ',
   whoIAmTextSecond:
-    "I'm passionate about helping entrepreneurs and small businesses like you create a sustainable and ethical marketplace. Let's work together to create beautiful, purposeful, and strategic designs and websites that reflect your values and goals, and engage and inspire your customers. I'm committed to helping you grow and succeed.",
+    "While the visual design of a website is important, I'm particularly interested in the tech stack and implementation behind it. My main technologies that I work with on a daily basis are React, Javascript, Typescript, Next and Graphql. The development aspect of my work is important to me because it allows me to improve my skills and stay current with new technologies. In addition, it provides a nice balance to the design aspect of my work.",
+  whoIAmTextThird: "Don't forget to visit my social media :)",
   aboutCtaSecondHeading: 'Interested in working with me?',
   aboutCtaSecondText: 'Amazing! Take some time to explore the packages I offer.',
   aboutCtaSecondBtn: 'Discover packages',

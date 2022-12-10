@@ -199,14 +199,14 @@ export default function Home() {
             </h3>
             <div className="references-wrapper-left-author" data-aos="fade-up" data-aos-delay="100">
               <div className="references-wrapper-left-author-top">
-                <Image loading="lazy" src={QuoteSvg} alt="" width={100} height={100} />
+                <Image loading="lazy" src={QuoteSvg} alt="" />
                 <h4 className="heading-fourth">Agnieszka</h4>
               </div>
               <p className="references-wrapper-left-author-company">CEO | Agavaske AS</p>
             </div>
           </div>
           <div className="references-wrapper-right">
-            <Image loading="lazy" src={ColorfulThreeLinesSvg} alt="" width={100} height={100} />
+            <Image loading="lazy" src={ColorfulThreeLinesSvg} alt="" />
           </div>
         </div>
       </section>
@@ -240,7 +240,7 @@ export default function Home() {
             {t.meetIgorTextSecond}
           </p>
           <a
-            href="about.html"
+            href="/about"
             className="more-about-me-end-link btn-primary"
             data-aos="fade-up"
             data-aos-delay="200"

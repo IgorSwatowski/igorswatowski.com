@@ -16,6 +16,11 @@
   @include respond(tablet-land) {
     width: 100%;
   }
+
+  &::selection {
+    color: var(--black);
+    background-color: var(--primary);
+  }
 }
 
 .paragraph-secondary {
@@ -31,11 +36,15 @@
     padding: 0;
     text-align: center;
   }
+  &::selection {
+    color: var(--black);
+    background-color: var(--primary);
+  }
 }
 
 .paragraph-third {
   font-size: 1.8rem;
-  color: var(--gray-200);
+  color: var(var(--gray-200));
 
   @include respond(phone) {
     width: 100%;
@@ -44,5 +53,9 @@
     font-weight: 400;
     letter-spacing: -0.01em;
     padding: 0;
+  }
+  &::selection {
+    color: var(--black);
+    background-color: var(--primary);
   }
 }

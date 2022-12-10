@@ -18,6 +18,12 @@ import GammasoftLogo from '../assets/trusted/gammasoft.png';
 import CodemaLogo from '../assets/trusted/codema.png';
 import AionlineLogo from '../assets/trusted/aionline.png';
 
+import ColorfulThreeLinesSvg from '../assets/colorful-three-lines.png';
+import InstagramIcon from '../assets/icons/instagram-icon.png';
+import MeAboutImg from '../assets/about-igor.webp';
+import FacebookIcon from '../assets/icons/facebook-icon.png';
+import LinkedinIcon from '../assets/icons/linkedin-icon.png';
+
 const About = () => {
   const router = useRouter();
   const { locale } = router;
@@ -32,6 +38,8 @@ const About = () => {
             data-aos-delay="50"
           >
             {t.bannerHeading}
+            <br />
+            {t.bannerHeadingSecond}
           </h1>
           <Image loading="lazy" src={LinesImg} alt="" data-aos="fade-down" data-aos-delay="50" />
           <p
@@ -77,8 +85,6 @@ const About = () => {
                 src={NumberFirstImg}
                 alt=""
                 className="introduce-me-wrapper-list-item-img"
-                width={100}
-                height={100}
               />
               <p className="introduce-me-wrapper-list-item-text paragraph-primary">
                 {t.timeToIntroduceStageFirst}
@@ -94,8 +100,6 @@ const About = () => {
                 src={NumberSecondImg}
                 alt=""
                 className="introduce-me-wrapper-list-item-img"
-                width={100}
-                height={100}
               />
               <p className="introduce-me-wrapper-list-item-text paragraph-primary">
                 {t.timeToIntroduceStageSecond}
@@ -111,8 +115,6 @@ const About = () => {
                 src={NumberThirdImg}
                 alt=""
                 className="introduce-me-wrapper-list-item-img"
-                width={100}
-                height={100}
               />
               <p className="introduce-me-wrapper-list-item-text paragraph-primary">
                 {t.timeToIntroduceStageThird}
@@ -154,33 +156,12 @@ const About = () => {
         <div className="trusted-by-wrapper container-box">
           <p className="trusted-by-wrapper-text" data-aos="fade-right">
             {t.trustedBy}
-            <Image loading="lazy" src={TrustedLinesImg} alt="" width={100} height={100} />
+            <Image loading="lazy" src={TrustedLinesImg} alt="" />
           </p>
           <div className="trusted-by-wrapper-companies">
-            <Image
-              loading="lazy"
-              src={GammasoftLogo}
-              alt=""
-              data-aos="fade-in"
-              width={100}
-              height={100}
-            />
-            <Image
-              loading="lazy"
-              src={CodemaLogo}
-              alt=""
-              data-aos="fade-in"
-              width={100}
-              height={100}
-            />
-            <Image
-              loading="lazy"
-              src={AionlineLogo}
-              alt=""
-              data-aos="fade-in"
-              width={100}
-              height={100}
-            />
+            <Image loading="lazy" src={GammasoftLogo} alt="" data-aos="fade-in" />
+            <Image loading="lazy" src={CodemaLogo} alt="" data-aos="fade-in" />
+            <Image loading="lazy" src={AionlineLogo} alt="" data-aos="fade-in" />
           </div>
         </div>
       </section>
@@ -207,6 +188,13 @@ const About = () => {
           >
             {t.whoIAmTextSecond}
           </p>
+          <p
+            className="who-i-am-left-text paragraph-primary"
+            data-aos="fade-down"
+            data-aos-delay="50"
+          >
+            {t.whoIAmTextThird}
+          </p>
           <div className="social-links" data-aos="fade-down" data-aos-delay="70">
             <a href="https://github.com/IgorSwatowski">
               <svg
@@ -226,30 +214,24 @@ const About = () => {
               </svg>
             </a>
             <a href="https://instagram.com/igor.websites" target="_blank" rel="noreferrer">
-              <Image
-                loading="lazy"
-                src="/assets/icons/instagram-icon.png"
-                alt=""
-                width={100}
-                height={100}
-              />
+              <Image loading="lazy" src={InstagramIcon} alt="" />
+            </a>
+            <a href="https://facebook/igor.websites" target="_blank" rel="noreferrer">
+              <Image loading="lazy" src={FacebookIcon} alt="" />
+            </a>
+            <a href="https://www.linkedin.com/in/igorSwatowski" target="_blank" rel="noreferrer">
+              <Image loading="lazy" src={LinkedinIcon} alt="" width="24" height="24" />
             </a>
           </div>
         </div>
         <div className="who-i-am-right" data-aos="fade-down" data-aos-delay="50">
-          <Image loading="lazy" src="/assets/about-igor.jpg" alt="" width={100} height={100} />
+          <Image loading="lazy" src={MeAboutImg} alt="" />
         </div>
       </section>
       <section className="cta-second-about-me">
         <div className="cta-second-about-me-wrapper container-box">
           <div className="cta-second-about-me-wrapper-left">
-            <Image
-              loading="lazy"
-              src="/assets/colorful-three-lines.png"
-              alt=""
-              width={100}
-              height={100}
-            />
+            <Image loading="lazy" src={ColorfulThreeLinesSvg} alt="" />
           </div>
           <div className="cta-second-about-me-wrapper-right">
             <h2

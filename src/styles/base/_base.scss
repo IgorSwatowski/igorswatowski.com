@@ -15,6 +15,13 @@ body {
   background: #f8f8f9;
 }
 
+* {
+  &::selection {
+    color: var(--black);
+    background-color: var(--primary);
+  }
+}
+
 h1,
 h2,
 h3,

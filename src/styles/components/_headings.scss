@@ -21,6 +21,10 @@
   @include respond(tablet-land) {
     font-size: 54px;
   }
+  &::selection {
+    color: var(--black);
+    background-color: var(--primary);
+  }
 }
 
 .heading-big {
@@ -44,6 +48,10 @@
   }
   @include respond(tablet-land) {
     font-size: 54px;
+  }
+  &::selection {
+    color: var(--black);
+    background-color: var(--primary);
   }
 }
 
@@ -73,6 +81,10 @@
     font-weight: 600;
     letter-spacing: -1px;
   }
+  &::selection {
+    color: var(--black);
+    background-color: var(--primary);
+  }
 }
 
 .heading-third {
@@ -94,6 +106,10 @@
   }
   @include respond(tablet-land) {
     font-size: 54px;
+  }
+  &::selection {
+    color: var(--black);
+    background-color: var(--primary);
   }
 }
 
@@ -117,6 +133,10 @@
   @include respond(tablet-land) {
     width: 100%;
   }
+  &::selection {
+    color: var(--black);
+    background-color: var(--primary);
+  }
 }
 
 .heading-fourth {
@@ -139,6 +159,10 @@
   @include respond(tablet-land) {
     width: 100%;
   }
+  &::selection {
+    color: var(--black);
+    background-color: var(--primary);
+  }
 }
 
 .heading-fifth {
@@ -156,5 +180,9 @@
   }
   @include respond(tablet-land) {
     width: 100%;
+  }
+  &::selection {
+    color: var(--black);
+    background-color: var(--primary);
   }
 }
