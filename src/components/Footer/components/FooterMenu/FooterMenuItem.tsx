@@ -1,18 +1,19 @@
 import React from 'react';
+import Link from 'next/link';
 
 type FooterMenuProps = {
   children: React.ReactNode;
   target?: string;
   rel?: string;
-  footerMenuLink?: string;
+  href?: string;
 };
 
-const FooterMenuItem = ({ children, footerMenuLink, target, rel }: FooterMenuProps) => {
+const FooterMenuItem = ({ children, href, target, rel }: FooterMenuProps) => {
   return (
     <li>
-      <a className="paragraph-primary" href={footerMenuLink} rel={rel} target={target}>
+      <Link className="paragraph-primary" href={href || ''} rel={rel} target={target}>
         {children}
-      </a>
+      </Link>
     </li>
   );
 };
