@@ -58,11 +58,11 @@ const pl = {
   ctaFirstText:
     'Możesz dotrzeć do swoich wymarzonych klientów online. Stwórzmy razem zwycięską stronę internetową i osiągnijmy Twoje cele. To jest możliwe i w Twoim zasięgu.',
   ctaSecondText: 'Zróbmy to!',
-  meetIgor: 'Poznaj Igora - osobę stojącą za marką',
+  meetIgor: 'Unikalne projekty stron internetowych dla Twojej firmy.',
   meetIgorTextFirst:
-    'Cześć, jestem Igor Swatowski, Web Designer i FrontEnd Developer, który wykorzystuje najpopularniejsze technologie i narzędzia projektowe.',
+    'Cześć, jestem Igor Swatowski, FrontEnd Developer & Web Designer, który korzysta z najpopularniejszych technologii i narzędzi projektowych.',
   meetIgorTextSecond:
-    'Jestem pasjonatem pomagania kreatywnym profesjonalistom w ulepszaniu ich stron internetowych i procesów pracy oraz zwiększaniu ich wartości i sukcesu.',
+    'Moim celem jest pomaganie kreatywnym profesjonalistom w ulepszaniu ich stron internetowych i procesów pracy, a także zwiększanie ich wartości i sukcesu. Jako FrontEnd Developer & Web Designer zawsze szukam nowych sposobów na tworzenie atrakcyjnych, funkcjonalnych i responsywnych stron internetowych, które pomogą moim klientom w osiągnięciu sukcesu w dzisiejszym wirtualnym świecie.',
   meetIgorBtn: 'Poznaj mnie bliżej',
   ctaSecondFirstText:
     'Podziel się ze mną swoimi pomysłami, a ja stworzę dla Ciebie stronę internetową, która będzie znacznie bardziej wydajna i skuteczna.',

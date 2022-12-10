@@ -9,6 +9,7 @@
   margin: 0 auto;
   width: 100%;
   margin-top: 8rem;
+  margin-bottom: 8rem;
 
   @include respond(phone) {
     width: unset;

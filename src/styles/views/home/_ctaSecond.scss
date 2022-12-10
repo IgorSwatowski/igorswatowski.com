@@ -2,14 +2,14 @@
 @import '../../abstracts/variables';
 
 .cta-second {
-  margin-top: 10rem;
+  margin-top: 8rem;
   background-color: var(--gray);
 
   @include respond(phone) {
-    margin-top: 7rem;
+    margin-top: 6rem;
   }
   @include respond(tablet-port) {
-    margin-top: 7rem;
+    margin-top: 6rem;
   }
   &-wrapper {
     display: flex;
@@ -19,7 +19,7 @@
     margin: 0 auto;
     width: 100%;
     position: relative;
-    padding: 6rem 0;
+    padding: 8rem 0;
 
     @include respond(phone) {
       width: unset;

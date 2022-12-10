@@ -62,7 +62,7 @@ export default function Home() {
       <section className="collaborate container-box">
         <div className="collaborate-wrapper">
           <div className="collaborate-wrapper-lines-img">
-            <Image loading="lazy" src={LinesSvg} alt="" width={100} height={100} />
+            <Image loading="lazy" src={LinesSvg} alt="" />
           </div>
           <h2 className="collaborate-wrapper-heading heading-big" data-aos="fade-up">
             {t.collaborate}
@@ -77,7 +77,7 @@ export default function Home() {
             {t.collaborateTextMain}
           </p>
           <div className="collaborate-wrapper-arrow-img">
-            <Image loading="lazy" src={ArrowDownSvg} alt="" width={100} height={100} />
+            <Image loading="lazy" src={ArrowDownSvg} alt="" />
           </div>
         </div>
       </section>

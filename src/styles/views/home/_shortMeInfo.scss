@@ -7,7 +7,7 @@
   align-items: center;
   justify-content: center;
   margin: 0 auto;
-  padding-top: 7rem;
+  padding: 8rem 0;
   &-left {
     width: 50%;
     display: flex;
@@ -23,12 +23,7 @@
     @include respond(tablet-land) {
       width: 100%;
     }
-
-    &-heading {
-      max-width: 623px;
-    }
     &-text {
-      max-width: 519px;
       margin-top: 3rem;
     }
     .more-about-me-end-link {
@@ -43,6 +38,7 @@
     width: 50%;
     display: flex;
     justify-content: flex-end;
+    position: relative;
 
     @include respond(phone) {
       display: none;
@@ -52,6 +48,28 @@
     }
     @include respond(tablet-land) {
       display: none;
+    }
+
+    &::before {
+      content: '';
+      border: 10px solid var(--primary);
+      background: transparent;
+      width: 396px;
+      height: 500px;
+      position: absolute;
+      z-index: -1;
+      top: 7rem;
+      left: 25rem;
+
+      @include respond(phone) {
+        content: unset;
+      }
+      @include respond(tablet-port) {
+        content: unset;
+      }
+      @include respond(tablet-land) {
+        content: unset;
+      }
     }
   }
 }
