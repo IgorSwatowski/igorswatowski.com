@@ -71,15 +71,14 @@ const en = {
   ctaSecondBtn: 'Yeah!',
 
   //About
-  bannerHeading: "Hello, I'm Igor!",
-  bannerHeadingSecond: 'Front End Developer & Web Designer.',
+  bannerHeading: 'How can I contribute to the success of your company?',
   bannerText:
-    "*I may not be able to do everything, but I know how to identify good solutions and avoid bad ones. That's what really matters to you, isn't it?",
-  timeToIntroduceHeading: "I guess it's time to introduce myself.",
-  timeToIntroduceText:
-    "Let me introduce myself. I'm Igor Swatowski, and I'm here to help you increase your value and success by creating stunning websites and improving your work process. I have the skills and experience to help you achieve your goals, no matter where you're starting from. Are you ready to get started?",
-  timeToIntroduceHeadingSecond:
-    'That said, to best help you I need to know: which of the following sounds the most like you…',
+    'If you are looking for a professional and aesthetically pleasing website for your business, then I am able to help you. I have been working in this field for many years and have experience in designing websites for various industries.',
+  bannerTextSecond:
+    'With my skills, I can create a website for you that will attract attention and encourage people to use your services or products.',
+  bannerTextThird:
+    'If the information you just heard has convinced you, be sure to check out what I can offer you :)',
+  timeToIntroduceHeading: 'Which of the following sounds the most like you…',
   timeToIntroduceStageFirst:
     "I need a website for my brand or business but don't know how to get started...",
   timeToIntroduceStageSecond:

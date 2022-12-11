@@ -8,16 +8,19 @@
   justify-content: center;
   margin: 0 auto;
   width: 100%;
-  margin-top: 8rem;
+  margin-top: 18rem;
 
   @include respond(phone) {
     width: unset;
+    margin-top: unset;
   }
   @include respond(tablet-port) {
     width: unset;
+    margin-top: unset;
   }
   @include respond(tablet-land) {
     width: unset;
+    margin-top: unset;
   }
 
   &-wrapper {
@@ -51,13 +54,13 @@
     }
 
     &-text {
-      max-width: 984px;
+      max-width: 1150px;
       width: 100%;
       text-align: center;
       margin-bottom: 34px;
 
       &--second {
-        max-width: 984px;
+        max-width: 1150px;
         width: 100%;
         text-align: center;
         margin-bottom: 0;

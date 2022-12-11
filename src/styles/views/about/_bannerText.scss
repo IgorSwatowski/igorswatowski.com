@@ -7,15 +7,12 @@
     padding-top: 22.6rem;
     padding-bottom: 6rem;
     display: flex;
+    flex-direction: row;
     justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
     margin: 0 auto;
     @include respond(phone) {
       flex-direction: column;
       padding-top: 20rem;
-      text-align: left;
     }
     @include respond(tablet-port) {
       flex-direction: column;
@@ -28,9 +25,16 @@
     @include respond(desktop-big) {
       padding-top: 27rem;
     }
-    &-heading {
-      margin-bottom: 4rem;
-      width: 1132px;
+
+    &-text {
+      margin-top: 4rem;
+      max-width: 750px;
+    }
+
+    &-left {
+      width: 55%;
+      display: flex;
+      flex-direction: column;
 
       @include respond(phone) {
         width: 100%;
@@ -41,15 +45,96 @@
       @include respond(tablet-land) {
         width: 100%;
       }
+
+      &-heading {
+        margin-bottom: 4rem;
+        width: 1132px;
+
+        @include respond(phone) {
+          width: 100%;
+        }
+        @include respond(tablet-port) {
+          width: 100%;
+        }
+        @include respond(tablet-land) {
+          width: 100%;
+        }
+      }
+      a {
+        margin-top: 3rem;
+        display: block;
+        width: max-content;
+      }
     }
-    &-text {
-      margin-top: 4rem;
-      max-width: 781px;
-    }
-    img {
-      margin: 2rem 0 0.5rem 0;
+
+    &-right {
+      width: 45%;
+      position: relative;
+      top: 10rem;
+
       @include respond(phone) {
         width: 100%;
+        margin-top: 4rem;
+        top: unset;
+      }
+      @include respond(tablet-port) {
+        width: 100%;
+        margin-top: 4rem;
+        top: unset;
+      }
+      @include respond(tablet-land) {
+        width: 100%;
+        margin-top: 4rem;
+        top: unset;
+      }
+      img {
+        margin-left: auto;
+        width: 100%;
+        max-width: 100%;
+        height: 550px;
+        object-fit: contain;
+        z-index: 2;
+        position: relative;
+
+        @include respond(phone) {
+          width: 100%;
+          height: 500px;
+          object-fit: contain;
+          margin-left: 0;
+        }
+        @include respond(tablet-port) {
+          width: 100%;
+          height: 500px;
+          object-fit: contain;
+          margin-left: 0;
+        }
+        @include respond(tablet-land) {
+          width: 100%;
+          height: 500px;
+          object-fit: contain;
+          margin-left: 0;
+        }
+      }
+      &::before {
+        content: '';
+        border: 10px solid var(--primary);
+        background: transparent;
+        width: 396px;
+        height: 500px;
+        position: absolute;
+        z-index: 1;
+        top: 7rem;
+        left: 12rem;
+
+        @include respond(phone) {
+          content: unset;
+        }
+        @include respond(tablet-port) {
+          content: unset;
+        }
+        @include respond(tablet-land) {
+          content: unset;
+        }
       }
     }
   }

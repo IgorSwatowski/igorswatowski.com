@@ -20,7 +20,7 @@ const pl = {
   heroText:
     'Moim zadaniem jest wspieranie moich klientów w osiąganiu ich celów związanych z obecnością online.',
   heroTextSecond:
-    'Wiem, jak ważne jest dla nich osiągnięcie sukcesu, dlatego zapewniam im profesjonalne i skuteczne wsparcie, które im w tym pomoże.',
+    'Wiem, jak ważne jest dla Ciebie osiągnięcie sukcesu, dlatego zapewniam profesjonalne i skuteczne wsparcie, które Ci w tym pomoże.',
   heroBtn: 'Jak mogę Ci pomóc?',
   trustedBy: 'Zaufali mi:',
   collaborate: 'Współpracuję z markami, przedsiębiorcami i agencjami, aby stworzyć',
@@ -71,15 +71,14 @@ const pl = {
   ctaSecondBtn: 'Pewnie!',
 
   //About
-  bannerHeading: 'Cześć, jestem Igor!',
-  bannerHeadingSecond: 'Front End Developer & Web Designer.',
+  bannerHeading: 'Jak mogę przyczynić się do sukcesu Twojej firmy?',
   bannerText:
-    '*Może nie jestem w stanie zrobić wszystkiego, ale wiem jak wskazać dobre rozwiązania i uniknąć złych. To jest to, co naprawdę się dla ciebie liczy, prawda?',
-  timeToIntroduceHeading: 'Chyba nadszedł czas, aby się przedstawić.',
-  timeToIntroduceText:
-    'Jestem tutaj, aby pomóc Ci zwiększyć Twoją wartość i sukces poprzez tworzenie oszałamiających stron internetowych i usprawnienie procesu pracy. Mam umiejętności i doświadczenie, które pomogą Ci osiągnąć Twoje cele, niezależnie od tego, z jakiego miejsca zaczynasz. Czy jesteś gotowy, aby zacząć?',
-  timeToIntroduceHeadingSecond:
-    'Aby najlepiej ci pomóc, muszę wiedzieć: które z poniższych brzmi najbardziej jak ty...',
+    'Jeśli szukasz profesjonalnej i estetycznej strony internetowej dla swojej firmy, to jestem w stanie Ci pomóc. Pracuję w tej branży od wielu lat i mam doświadczenie w projektowaniu stron internetowych dla różnych branż. ',
+  bannerTextSecond:
+    'Dzięki moim umiejętnościom mogę stworzyć dla Ciebie stronę internetową, która przyciągnie uwagę i zachęci ludzi do skorzystania z Twoich usług lub produktów.',
+  bannerTextThird:
+    'Jeśli informacje, które właśnie usłyszałeś, przekonały Cię, koniecznie sprawdź, co mogę Ci zaoferować :)',
+  timeToIntroduceHeading: 'Które z poniższych brzmi najbardziej jak ty...',
   timeToIntroduceStageFirst:
     'Potrzebuję strony internetowej dla swojej marki lub firmy, ale nie wiem jak zacząć...',
   timeToIntroduceStageSecond:
@@ -88,7 +87,7 @@ const pl = {
   ctaHeading: 'Jestem wielkim zwolennikiem utrzymywania rzeczy w',
   ctaHeadingUnderline: 'prostocie.',
   ctaTextFirst:
-    'Rozumiem, jak się czujesz. Myśl o aktualizacji swojej strony internetowej może być zniechęcająca, zwłaszcza gdy masz tak wiele na swoim talerzu już. Ale nie martw się, jestem tutaj, aby pomóc. Pozwól mi wziąć ciężar z twoich ramion i stworzyć piękną, wysoko konwertującą stronę internetową dla ciebie.',
+    'Rozumiem, jak się czujesz. Myśl o aktualizacji swojej strony internetowej może być zniechęcająca, zwłaszcza gdy masz tak wiele już do zrobienia. Ale nie martw się, jestem tutaj, aby pomóc. Pozwól mi wziąć ciężar z twoich ramion i stworzyć piękną, wysoko konwertującą stronę internetową dla ciebie.',
   ctaTextSecond:
     'Będziesz zaskoczony, jak łatwy i bezstresowy może być ten proces i jak wiele wartości i sukcesów może przynieść Twojej firmie. Skontaktuj się ze mną już dziś, aby dowiedzieć się więcej i umówić na konsultacje. Proste i łatwe.',
   whoIAm: 'Budowanie stron internetowych przyjaznych dla użytkownika.',

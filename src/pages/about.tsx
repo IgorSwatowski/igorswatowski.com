@@ -11,7 +11,6 @@ import LinesImg from '../assets/lines.png';
 import NumberFirstImg from '../assets/number_first.png';
 import NumberSecondImg from '../assets/number_second.png';
 import NumberThirdImg from '../assets/number_third.png';
-import LinesSvg from '../assets/lines.svg';
 import TrustedLinesImg from '../assets/trusted-lines-about.png';
 
 import GammasoftLogo from '../assets/trusted/gammasoft.png';
@@ -20,7 +19,8 @@ import AionlineLogo from '../assets/trusted/aionline.png';
 
 import ColorfulThreeLinesSvg from '../assets/colorful-three-lines.png';
 import InstagramIcon from '../assets/icons/instagram-icon.png';
-import MeAboutImg from '../assets/about-igor.webp';
+import MeAboutImg from '../assets/me-second.webp';
+import BannerMeImg from '../assets/about-igor.webp';
 import FacebookIcon from '../assets/icons/facebook-icon.png';
 import LinkedinIcon from '../assets/icons/linkedin-icon.png';
 
@@ -32,27 +32,44 @@ const About = () => {
     <main>
       <section className="banner-text">
         <div className="banner-text-wrapper container-box">
-          <h1
-            className="banner-text-wrapper-heading heading-primary"
-            data-aos="fade-down"
-            data-aos-delay="50"
-          >
-            {t.bannerHeading}
-            <br />
-            {t.bannerHeadingSecond}
-          </h1>
-          <Image loading="lazy" src={LinesImg} alt="" data-aos="fade-down" data-aos-delay="50" />
-          <p
-            className="banner-text-wrapper-text paragraph-primary"
-            data-aos="fade-down"
-            data-aos-delay="100"
-          >
-            {t.bannerText}
-          </p>
+          <div className="banner-text-wrapper-left">
+            <h1
+              className="banner-text-wrapper-heading heading-primary"
+              data-aos="fade-down"
+              data-aos-delay="50"
+            >
+              {t.bannerHeading}
+            </h1>
+            <p
+              className="banner-text-wrapper-text paragraph-primary"
+              data-aos="fade-down"
+              data-aos-delay="100"
+            >
+              {t.bannerText}
+            </p>
+            <p
+              className="banner-text-wrapper-text paragraph-primary"
+              data-aos="fade-down"
+              data-aos-delay="100"
+            >
+              {t.bannerTextSecond}
+            </p>
+            <p
+              className="banner-text-wrapper-text paragraph-primary"
+              data-aos="fade-down"
+              data-aos-delay="100"
+            >
+              {t.bannerTextThird}
+            </p>
+            <Button buttonHref="packages">{t.aboutCtaSecondBtn}</Button>
+          </div>
+          <div className="banner-text-wrapper-right">
+            <Image loading="lazy" src={BannerMeImg} alt="" />
+          </div>
         </div>
       </section>
-      <section className="introduce-me">
-        <div className="introduce-me-wrapper">
+      {/* <section className="introduce-me">
+        <div className="introduce-me-wrapper container-box">
           <h2
             className="introduce-me-wrapper-heading heading-secondary"
             data-aos="fade-down"
@@ -60,20 +77,6 @@ const About = () => {
           >
             {t.timeToIntroduceHeading}
           </h2>
-          <p
-            className="introduce-me-wrapper-text paragraph-primary"
-            data-aos="fade-down"
-            data-aos-delay="50"
-          >
-            {t.timeToIntroduceText}
-          </p>
-          <h3
-            className="introduce-me-wrapper-subheading heading-fourth"
-            data-aos="fade-down"
-            data-aos-delay="50"
-          >
-            {t.timeToIntroduceHeadingSecond}
-          </h3>
           <div className="introduce-me-wrapper-list">
             <div
               className="introduce-me-wrapper-list-item"
@@ -122,12 +125,9 @@ const About = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
       <section className="cta-about-me">
         <div className="cta-about-me-wrapper container-box">
-          <div className="cta-about-me-wrapper-lines-img">
-            <Image loading="lazy" src={LinesSvg} alt="" width={100} height={100} />
-          </div>
           <h2
             className="cta-about-me-wrapper-heading heading-big"
             data-aos="fade-down"
