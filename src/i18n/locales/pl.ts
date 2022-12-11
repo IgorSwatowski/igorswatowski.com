@@ -99,6 +99,21 @@ const pl = {
   aboutCtaSecondHeading: 'Jesteś zainteresowany współpracą?',
   aboutCtaSecondText: 'Super! Poświęć trochę czasu na poznanie pakietów, które oferuję.',
   aboutCtaSecondBtn: 'Sprawdź ofertę',
+
+  //Contact
+  contactHeading: 'Wszystko zaczyna się od rozmowy',
+  contactText:
+    'Jestem tutaj, aby poprowadzić Cię krok po kroku w podróży, jaką jest budowa rzetelnej, wiarygodnej strony internetowej. Nie mogę się doczekać, aby poznać Twój biznes i zabrać Cię w to ekscytujące doświadczenie, które sprawi, że poczujesz, że Twoje możliwości są nieograniczone.',
+  contactInstagram: 'Możesz się ze mną skontaktować również poprzez Instagram',
+  contactEmail: 'możesz również skontaktować się bezpośrednio poprzez',
+  contactForm: 'bez wypełniania formularza kontaktowego.',
+  contactFirstName: 'Imie',
+  contactSecondName: 'Nazwisko',
+  contactCompany: 'Firma (opcjonalne)',
+  contactTopic: 'Temat',
+  contactMessage: 'Wiadomość',
+  contactBtn: 'Wyślij wiadomość',
+  contactError: 'Wypełnij wszystkie pola',
 };
 
 export { pl };

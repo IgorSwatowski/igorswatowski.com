@@ -99,6 +99,21 @@ const en = {
   aboutCtaSecondHeading: 'Interested in working with me?',
   aboutCtaSecondText: 'Amazing! Take some time to explore the packages I offer.',
   aboutCtaSecondBtn: 'Discover packages',
+
+  //Contact
+  contactHeading: 'It starts with a conversation',
+  contactText:
+    "I'm here to guide you step by step on the journey that is building a reliable, credible website. I can't wait to learn about your business and take you on this exciting experience that will make you feel that your possibilities are limitless.",
+  contactInstagram: 'You can also contact me via Instagram',
+  contactEmail: ' it doesn’t suit you can also contact directly via',
+  contactForm: 'without complete the contact form.',
+  contactFirstName: 'First name',
+  contactSecondName: 'Last name',
+  contactCompany: 'Company name (optional)',
+  contactTopic: 'Topic',
+  contactMessage: 'Message',
+  contactBtn: 'Send form',
+  contactError: 'Please fill out all fields.',
 };
 
 export { en };
