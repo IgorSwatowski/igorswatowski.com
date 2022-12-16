@@ -15,6 +15,6 @@ const query = `
 `;
 
 export const getAllPosts = async () => {
-    const { posts } = await hygraph.request(query);
-    return posts;
-}
+  const { posts } = await hygraph.request(query);
+  return posts;
+};

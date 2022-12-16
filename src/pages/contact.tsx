@@ -4,33 +4,61 @@ import { useRouter } from 'next/router';
 import { en } from '../i18n/locales/en';
 import { pl } from '../i18n/locales/pl';
 
-import { sendContactForm } from "../lib/api";
+import { sendContactForm } from '../lib/api';
 
-const initValues = { firstName: "", lastName:"", topic: "", email: "", company: "", message: "" };
+interface FormValues {
+  firstName: string;
+  lastName: string;
+  topic: string;
+  email: string;
+  company: string;
+  message: string;
+  [key: string]: any;
+}
 
-const initState = { isLoading: false, error: "", values: initValues };
+const initValues: FormValues = {
+  firstName: '',
+  lastName: '',
+  topic: '',
+  email: '',
+  company: '',
+  message: '',
+};
 
-const Contact = () => {
+interface State {
+  isLoading: boolean;
+  error: string;
+  values: FormValues;
+}
+
+const initState: State = {
+  isLoading: false,
+  error: '',
+  values: initValues,
+};
+
+const Contact: React.FC = () => {
   const router = useRouter();
   const { locale } = router;
   const t = locale === 'en' ? en : pl;
 
-  const [state, setState] = useState(initState);
+  const [state, setState] = useState<State>(initState);
 
   const { values, error } = state;
 
-  const handleChange = ({ target }: any) =>
+  const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const { name, value } = event.target;
     setState((prev) => ({
       ...prev,
       values: {
         ...prev.values,
-        [target.name]: target.value,
+        [name]: value,
       },
     }));
+  };
 
-
-  const onSubmit = async (e: any) => {
-    e.preventDefault();
+  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
     setState((prev) => ({
       ...prev,
       isLoading: true,
@@ -38,11 +66,11 @@ const Contact = () => {
     try {
       await sendContactForm(values);
       setState(initState);
-    } catch (error) {
+    } catch (error: any) {
       setState((prev) => ({
         ...prev,
         isLoading: false,
-        error: error.message
+        error: error.message,
       }));
     }
   };
@@ -80,60 +108,86 @@ const Contact = () => {
             </a>
             {t.contactForm}
           </p>
+          {error && <div className="contact-form-error">Problem z wyslaniem formularza </div>}
+
           <form
             className="contact-form-wrapper-form"
             id="contact-form"
             data-aos="fade-down"
             data-aos-delay="125"
+            onSubmit={handleSubmit}
           >
             <div className="contact-form-wrapper-form-personal">
               <div className="contact-form-wrapper-form-personal-item">
                 <label htmlFor="firstName">{t.contactFirstName}</label>
-                <input id="firstName" name="firstName" type="text" value={values.firstName} onChange={handleChange}/>
+                <input
+                  id="firstName"
+                  name="firstName"
+                  type="text"
+                  value={values.firstName}
+                  onChange={handleChange}
+                />
               </div>
               <div className="contact-form-wrapper-form-personal-item">
                 <label htmlFor="lastName">{t.contactSecondName}</label>
-                <input id="lastName" name="lastName" type="text" value={values.lastName} onChange={handleChange}/>
+                <input
+                  id="lastName"
+                  name="lastName"
+                  type="text"
+                  value={values.lastName}
+                  onChange={handleChange}
+                />
               </div>
             </div>
             <div className="contact-form-wrapper-form-contact">
               <div className="contact-form-wrapper-form-contact-item">
                 <label htmlFor="email">Email</label>
-                <input id="email" name="email" type="email" value={values.email} onChange={handleChange}/>
+                <input
+                  id="email"
+                  name="email"
+                  type="email"
+                  value={values.email}
+                  onChange={handleChange}
+                />
               </div>
               <div className="contact-form-wrapper-form-contact-item">
                 <label htmlFor="companyName">{t.contactCompany}</label>
-                <input id="company" name="company" type="text" value={values.company} onChange={handleChange}/>
+                <input
+                  id="company"
+                  name="company"
+                  type="text"
+                  value={values.company}
+                  onChange={handleChange}
+                />
               </div>
             </div>
             <div className="contact-form-wrapper-form-topic">
               <div className="contact-form-wrapper-form-topic-item">
                 <label htmlFor="topic">{t.contactTopic}</label>
-                <input id="topic" name="topic" type="text" value={values.topic} onChange={handleChange}/>
+                <input
+                  id="topic"
+                  name="topic"
+                  type="text"
+                  value={values.topic}
+                  onChange={handleChange}
+                />
               </div>
             </div>
             <div className="contact-form-wrapper-form-message">
               <div className="contact-form-wrapper-form-message-item">
                 <label htmlFor="message">{t.contactMessage}</label>
-                <textarea
-                  rows={10}
-                  cols={100}
+                <input
                   name="message"
                   id="message"
                   className="form-control"
                   value={values.message}
                   onChange={handleChange}
-                ></textarea>
+                />
               </div>
             </div>
-            <button type="submit" id="submit" className="btn-secondary" onClick={onSubmit}>
+            <button type="submit" id="submit" className="btn-secondary">
               {t.contactBtn}
             </button>
-            <div id="msg">
-              {error && (
-                <h1>error</h1>
-              )}  
-            </div>
           </form>
         </div>
       </section>

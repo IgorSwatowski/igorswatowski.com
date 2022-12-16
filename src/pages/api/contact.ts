@@ -51,9 +51,9 @@ const handler = async (req: any, res: any) => {
       });
 
       return res.status(200).json({ success: true });
-    } catch (err) {
+    } catch (err: any) {
       console.log(err);
-      return res.status(400).json({ message: err });
+      return res.status(400).json({ message: err.nessage });
     }
   }
   return res.status(400).json({ message: "Bad request" });
