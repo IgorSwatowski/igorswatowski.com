@@ -4,9 +4,6 @@ import { useRouter } from 'next/router';
 import { en } from '../i18n/locales/en';
 import { pl } from '../i18n/locales/pl';
 
-import axios from 'axios';
-import contact from './api/contact';
-
 import { sendContactForm } from "../lib/api";
 
 const initValues = { firstName: "", lastName:"", topic: "", email: "", company: "", message: "" };
