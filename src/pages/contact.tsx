@@ -1,51 +1,53 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { useRouter } from 'next/router';
 
 import { en } from '../i18n/locales/en';
 import { pl } from '../i18n/locales/pl';
-import { FormDataProps } from '../types/formData';
-import nodemailer from 'nodemailer';
+
+import axios from 'axios';
+import contact from './api/contact';
+
+import { sendContactForm } from "../lib/api";
+
+const initValues = { firstName: "", lastName:"", topic: "", email: "", company: "", message: "" };
+
+const initState = { isLoading: false, error: "", values: initValues };
 
 const Contact = () => {
-  const [formData, setFormData] = useState({
-    firstName: '',
-    lastName: '',
-    company: '',
-    topic: '',
-    email: '',
-    message: '',
-  });
-
   const router = useRouter();
   const { locale } = router;
   const t = locale === 'en' ? en : pl;
 
-  const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    const { name, value } = event.target;
-    setFormData({
-      ...formData,
-      [name]: value,
-    });
-  };
+  const [state, setState] = useState(initState);
 
-  const sendMail = async () => {}
+  const { values, error } = state;
+
+  const handleChange = ({ target }: any) =>
+    setState((prev) => ({
+      ...prev,
+      values: {
+        ...prev.values,
+        [target.name]: target.value,
+      },
+    }));
 
 
-    // Send the email using the transporter object
+  const onSubmit = async (e: any) => {
+    e.preventDefault();
+    setState((prev) => ({
+      ...prev,
+      isLoading: true,
+    }));
     try {
-      await transporter.sendMail(mailOptions);
-    } catch (err) {
-      console.error(err);
+      await sendContactForm(values);
+      setState(initState);
+    } catch (error) {
+      setState((prev) => ({
+        ...prev,
+        isLoading: false,
+        error: error.message
+      }));
     }
-  };
-
-  useEffect(() => {
-    sendMail();
-  });
-
-  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
-    event.preventDefault();
-    sendMail();
   };
 
   return (
@@ -86,32 +88,31 @@ const Contact = () => {
             id="contact-form"
             data-aos="fade-down"
             data-aos-delay="125"
-            onSubmit={handleSubmit}
           >
             <div className="contact-form-wrapper-form-personal">
               <div className="contact-form-wrapper-form-personal-item">
                 <label htmlFor="firstName">{t.contactFirstName}</label>
-                <input id="firstName" name="firstName" type="text" />
+                <input id="firstName" name="firstName" type="text" value={values.firstName} onChange={handleChange}/>
               </div>
               <div className="contact-form-wrapper-form-personal-item">
                 <label htmlFor="lastName">{t.contactSecondName}</label>
-                <input id="lastName" name="lastName" type="text" onChange={handleChange} />
+                <input id="lastName" name="lastName" type="text" value={values.lastName} onChange={handleChange}/>
               </div>
             </div>
             <div className="contact-form-wrapper-form-contact">
               <div className="contact-form-wrapper-form-contact-item">
                 <label htmlFor="email">Email</label>
-                <input id="email" name="email" type="email" onChange={handleChange} />
+                <input id="email" name="email" type="email" value={values.email} onChange={handleChange}/>
               </div>
               <div className="contact-form-wrapper-form-contact-item">
                 <label htmlFor="companyName">{t.contactCompany}</label>
-                <input id="companyName" name="companyName" type="text" onChange={handleChange} />
+                <input id="company" name="company" type="text" value={values.company} onChange={handleChange}/>
               </div>
             </div>
             <div className="contact-form-wrapper-form-topic">
               <div className="contact-form-wrapper-form-topic-item">
                 <label htmlFor="topic">{t.contactTopic}</label>
-                <input id="topic" name="topic" type="text" onChange={handleChange} />
+                <input id="topic" name="topic" type="text" value={values.topic} onChange={handleChange}/>
               </div>
             </div>
             <div className="contact-form-wrapper-form-message">
@@ -123,13 +124,19 @@ const Contact = () => {
                   name="message"
                   id="message"
                   className="form-control"
+                  value={values.message}
+                  onChange={handleChange}
                 ></textarea>
               </div>
             </div>
-            <button type="submit" id="submit" className="btn-secondary">
+            <button type="submit" id="submit" className="btn-secondary" onClick={onSubmit}>
               {t.contactBtn}
             </button>
-            <div id="msg"></div>
+            <div id="msg">
+              {error && (
+                <h1>error</h1>
+              )}  
+            </div>
           </form>
         </div>
       </section>
