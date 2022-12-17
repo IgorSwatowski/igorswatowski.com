@@ -19,7 +19,7 @@
   background: var(--white);
   transition: 0.6s ease;
   line-height: 2;
-  padding: 10px 100px 10px 100px;
+  padding: 1rem 3.2rem;
 
   @include respond(phone) {
     background-color: var(--white);
@@ -29,7 +29,7 @@
     font-size: 1.8rem;
     font-weight: 500;
     transition: 0.6s ease;
-    padding: 10px 0;
+    padding: 1rem 0;
     display: block;
   }
 
@@ -41,7 +41,7 @@
     font-size: 1.8rem;
     font-weight: 500;
     transition: 0.6s ease;
-    padding: 10px 32px 0 32px;
+    padding: 1rem 3.2rem;
     display: block;
   }
 
@@ -53,7 +53,7 @@
     font-size: 1.8rem;
     font-weight: 500;
     transition: 0.6s ease;
-    padding: 10px 48px 0 48px;
+    padding: 1rem 4.8rem;
     display: block;
   }
 
@@ -212,10 +212,10 @@
       padding: 15px 16px;
     }
     @include respond(tablet-port) {
-      padding: 15px 3.2rem;
+      padding: 15px 0;
     }
     @include respond(tablet-land) {
-      padding: 15px 4.8rem;
+      padding: 15px 0;
     }
     @include respond(desktop-bigger) {
       font-size: 1.5rem;

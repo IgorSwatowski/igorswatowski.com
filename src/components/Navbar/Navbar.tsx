@@ -19,9 +19,9 @@ const Navbar = () => {
 
   return (
     <header className="header" id="menu-header">
-      <a href="/" className="logo">
+      <Link href="/" className="logo">
         Igor. <span className="bolden">Swatowski</span>
-      </a>
+      </Link>
       <input className="menu-btn" type="checkbox" id="menu-btn" />
       <label className="menu-icon" htmlFor="menu-btn">
         <span className="navicon"></span>

@@ -66,37 +66,37 @@ a {
 .container-box {
   width: 100%;
   max-width: 1620px;
-  padding: 0 1rem;
+  padding: 0 3.2rem;
 
   @include respond(phone) {
-    padding-left: 16px;
-    padding-right: 16px;
+    padding-left: 1.6rem;
+    padding-right: 1.6rem;
     width: unset;
     max-width: unset;
   }
 
   @include respond(tablet-port) {
-    padding-left: 32px;
-    padding-right: 32px;
+    padding-left: 3.2rem;
+    padding-right: 3.2rem;
     width: unset;
     max-width: unset;
   }
 
   @include respond(tablet-land) {
-    padding-left: 64px;
-    padding-right: 64px;
+    padding-left: 4.8rem;
+    padding-right: 4.8rem;
     width: unset;
     max-width: unset;
   }
   @include respond(desktop-big) {
-    padding-left: 32px;
-    padding-right: 32px;
+    padding-left: 6.4rem;
+    padding-right: 6.4rem;
     width: unset;
     max-width: unset;
   }
   @include respond(desktop-bigger) {
     width: 100%;
-    max-width: 1120px;
+    max-width: 142rem;
     padding: 0 1rem;
   }
 }

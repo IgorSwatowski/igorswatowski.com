@@ -17,6 +17,7 @@
   }
   @include respond(tablet-port) {
     width: 100%;
+    font-size: 48px;
   }
   @include respond(tablet-land) {
     font-size: 54px;

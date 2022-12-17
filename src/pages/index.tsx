@@ -17,6 +17,7 @@ import ArrowDownSvg from '../assets/arrow.svg';
 import QuoteSvg from '../assets/quote.png';
 import ColorfulThreeLinesSvg from '../assets/colorful-three-lines.png';
 import MeSecondPng from '../assets/me-second.webp';
+import Link from 'next/link';
 
 export default function Home() {
   const router = useRouter();
@@ -239,7 +240,7 @@ export default function Home() {
           >
             {t.meetIgorTextSecond}
           </p>
-          <a
+          <Link
             href="/about"
             className="more-about-me-end-link btn-primary"
             data-aos="fade-up"
@@ -250,7 +251,7 @@ export default function Home() {
               <path d="M1,5 L11,5"></path>
               <polyline points="8 1 12 5 8 9"></polyline>
             </svg>
-          </a>
+          </Link>
         </div>
         <div className="short-personal-info-right" data-aos="fade-down">
           <Image loading="lazy" src={MeSecondPng} alt="" />
