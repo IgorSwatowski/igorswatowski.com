@@ -5,6 +5,7 @@ import { en } from '../i18n/locales/en';
 import { pl } from '../i18n/locales/pl';
 
 import { sendContactForm } from '../lib/api';
+import { CustomInput } from '../components/CustomInput/CustomInput';
 
 interface FormValues {
   firstName: string;
@@ -120,56 +121,56 @@ const Contact: React.FC = () => {
             <div className="contact-form-wrapper-form-personal">
               <div className="contact-form-wrapper-form-personal-item">
                 <label htmlFor="firstName">{t.contactFirstName}</label>
-                <input
-                  id="firstName"
-                  name="firstName"
-                  type="text"
+                <CustomInput
                   value={values.firstName}
                   onChange={handleChange}
+                  id="email"
+                  name="email"
+                  type="email"
                 />
               </div>
               <div className="contact-form-wrapper-form-personal-item">
                 <label htmlFor="lastName">{t.contactSecondName}</label>
-                <input
-                  id="lastName"
-                  name="lastName"
-                  type="text"
+                <CustomInput
                   value={values.lastName}
                   onChange={handleChange}
+                  id="email"
+                  name="email"
+                  type="email"
                 />
               </div>
             </div>
             <div className="contact-form-wrapper-form-contact">
               <div className="contact-form-wrapper-form-contact-item">
                 <label htmlFor="email">Email</label>
-                <input
+                <CustomInput
+                  value={values.email}
+                  onChange={handleChange}
                   id="email"
                   name="email"
                   type="email"
-                  value={values.email}
-                  onChange={handleChange}
                 />
               </div>
               <div className="contact-form-wrapper-form-contact-item">
                 <label htmlFor="companyName">{t.contactCompany}</label>
-                <input
-                  id="company"
-                  name="company"
-                  type="text"
+                <CustomInput
                   value={values.company}
                   onChange={handleChange}
+                  id="email"
+                  name="email"
+                  type="email"
                 />
               </div>
             </div>
             <div className="contact-form-wrapper-form-topic">
               <div className="contact-form-wrapper-form-topic-item">
                 <label htmlFor="topic">{t.contactTopic}</label>
-                <input
-                  id="topic"
-                  name="topic"
-                  type="text"
+                <CustomInput
                   value={values.topic}
                   onChange={handleChange}
+                  id="email"
+                  name="email"
+                  type="email"
                 />
               </div>
             </div>
