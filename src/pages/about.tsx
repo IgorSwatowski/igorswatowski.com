@@ -249,7 +249,7 @@ const About = () => {
             >
               {t.aboutCtaSecondText}
             </p>
-            <Button buttonHref="packages">{t.aboutCtaSecondBtn}</Button>
+            <Button buttonHref="/packages">{t.aboutCtaSecondBtn}</Button>
           </div>
         </div>
       </section>
