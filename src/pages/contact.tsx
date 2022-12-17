@@ -6,6 +6,7 @@ import { pl } from '../i18n/locales/pl';
 
 import { sendContactForm } from '../lib/api';
 import { CustomInput } from '../components/CustomInput/CustomInput';
+import { CustomTextarea } from '../components/CustomTextarea/CustomTextarea';
 
 interface FormValues {
   firstName: string;
@@ -142,7 +143,7 @@ const Contact: React.FC = () => {
             </div>
             <div className="contact-form-wrapper-form-contact">
               <div className="contact-form-wrapper-form-contact-item">
-                <label htmlFor="email">Email</label>
+                <label htmlFor="email">{t.contactEmail}</label>
                 <CustomInput
                   value={values.email}
                   onChange={handleChange}
@@ -177,7 +178,7 @@ const Contact: React.FC = () => {
             <div className="contact-form-wrapper-form-message">
               <div className="contact-form-wrapper-form-message-item">
                 <label htmlFor="message">{t.contactMessage}</label>
-                <textarea
+                <CustomTextarea
                   name="message"
                   id="message"
                   className="form-control"
