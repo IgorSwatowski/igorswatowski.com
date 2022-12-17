@@ -1,16 +1,15 @@
 import { GraphQLClient } from 'graphql-request';
-
-const graphqlAPI = process.env.HYGRAPH_PROJECT_API!;
+import { graphqlAPI } from '../constants/constants';
 
 const hygraph = new GraphQLClient(graphqlAPI);
 
 const query = `
     query AllPostsQuery {
-    posts {
-        id
-        title
-        slug
-    }
+      posts {
+          id
+          title
+          slug
+      }
     }
 `;
 

@@ -1,21 +1,22 @@
-import { GetStaticProps } from "next";
-import { getAllPosts } from "../../lib/posts";
-import Posts from "./Posts";
+import { GetStaticProps } from 'next';
+import BlogPage from '../../components/Blog/Blog';
+import { getAllPosts } from '../../lib/posts';
 
-export async function getStaticProps() {
+export const getStaticProps: GetStaticProps = async () => {
   const posts = await getAllPosts();
-
   return {
-      props: {
-          posts,
-      },
+    props: {
+      posts,
+    },
   };
-}
+};
 
-export default function BlogPage({ posts }: any) {
-    return (
-      <>
-        <Posts posts={posts} />
-      </>
-    );
-  }
+const Blog = ({ posts }: any) => {
+  return (
+    <>
+      <BlogPage posts={posts} />
+    </>
+  );
+};
+
+export default Blog;

@@ -1,11 +1,11 @@
 import { GraphQLClient } from 'graphql-request';
-import React from 'react';
-
-const graphqlAPI = process.env.HYGRAPH_PROJECT_API!;
+import { GetStaticProps } from 'next';
+import { graphqlAPI } from '../../constants/constants';
 
 const hygraph = new GraphQLClient(graphqlAPI);
 
-export async function getStaticProps({ params }: any) {
+export const getStaticProps: GetStaticProps = async ({ params }) => {
+  const slug = params!.slug as string;
   const { post } = await hygraph.request(
     `
     query PostSingleQuery($slug: String) {
@@ -17,8 +17,8 @@ export async function getStaticProps({ params }: any) {
     }
   `,
     {
-      slug: params.slug,
-    }
+      slug,
+    },
   );
 
   return {
@@ -26,14 +26,15 @@ export async function getStaticProps({ params }: any) {
       post,
     },
   };
-}
+};
 
-export async function getStaticPaths() {
+export const getStaticPaths = async () => {
   const { posts } = await hygraph.request(`
     {
       posts {
         slug
         title
+        id
       }
     }
   `);
@@ -44,13 +45,4 @@ export async function getStaticPaths() {
     })),
     fallback: false,
   };
-}
-
-
-const PostSingle = ({ post }: any) => (
-  <React.Fragment>
-    <h1>{post.title}</h1>
-  </React.Fragment>
-);
-
-export default PostSingle;
+};
