@@ -46,7 +46,7 @@ const Contact: React.FC = () => {
 
   const { values, error } = state;
 
-  const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+  const handleChange = (event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = event.target;
     setState((prev) => ({
       ...prev,
@@ -176,7 +176,7 @@ const Contact: React.FC = () => {
             <div className="contact-form-wrapper-form-message">
               <div className="contact-form-wrapper-form-message-item">
                 <label htmlFor="message">{t.contactMessage}</label>
-                <input
+                <textarea
                   name="message"
                   id="message"
                   className="form-control"
