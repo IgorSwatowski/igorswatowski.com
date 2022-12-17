@@ -22,7 +22,7 @@ const en = {
   heroTextSecond:
     'I know how important it is for them to succeed, so I provide them with professional and effective support to help them do so.',
   heroBtn: 'How can I help',
-  trustedBy: "I've been trusted by:",
+  trustedBy: 'Trusted by',
   collaborate: 'I collaborate with brands, entrepreneurs and agencies to create',
   collaborateText: 'memorable',
   collaborateSecond: 'experiences.',
@@ -58,11 +58,11 @@ const en = {
   ctaFirstText:
     "You can reach your dream customers online. Let's create a winning website together and achieve your goals. It's possible and within your reach.",
   ctaSecondText: "Let's make it happen!",
-  meetIgor: 'Get to know Igor – The person behind the brand',
+  meetIgor: 'Unique website designs for your business',
   meetIgorTextFirst:
-    "Hi, I'm Igor Swatowski, a Web Designer and FrontEnd Developer who uses the most popular technologies and design tools.",
+    "Let's start with the fact that every company these days should have its own website. This is essential to establish a presence online and allow potential customers to easily find information about your company and its offerings. ",
   meetIgorTextSecond:
-    "I'm passionate about helping creative professionals improve their websites and work processes, and increase their value and success.",
+    "Therefore, you should make sure that your company's website is not only functional, but also aesthetically pleasing and eye-catching.",
   meetIgorBtn: 'Discover my background',
   ctaSecondFirstText:
     "Share your ideas with me and I'll create a website that is much more efficient and effective for you.",
@@ -87,9 +87,9 @@ const en = {
   ctaHeading: "I'm a big believer in keeping things",
   ctaHeadingUnderline: 'simple',
   ctaTextFirst:
-    "I understand how you feel. The thought of updating your website can be daunting, especially when you have so much on your plate already. But don't worry, I'm here to help. Let me take the burden off your shoulders and create a beautiful, high-converting website for you.",
+    'I get it. The thought of updating your website right now can seem overwhelming. Your to-do list is already a mile long, so how are you supposed to add "Build a beautiful, high converting website" to it?',
   ctaTextSecond:
-    "You'll be amazed at how easy and stress-free the process can be, and how much value and success it can bring to your business. Contact me today to learn more and schedule a consultation. Simple and easy.",
+    "Don't worry because I advocate simplicity that just works and gets results. You pick a few days on my design calendar, I'll get your site ready and up and running, and you're back to running your business like a pro. Simple and easy.",
   whoIAm: 'Building websites for an enjoyable user experience.',
   whoIAmText:
     'As a Front End Developer my goal is to create and build websites that give users a sense of joy and comfort, encouraging them to return. ',
