@@ -14,7 +14,9 @@ const query = `
   ,
 `;
 
-export const getSinglePost = async () => {
-  const { post } = await hygraph.request(query);
+export const getSinglePost = async (slug: string) => {
+  const { post } = await hygraph.request(query, {
+    slug,
+  });
   return post;
 };

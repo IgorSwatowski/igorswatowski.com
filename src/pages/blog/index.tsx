@@ -1,5 +1,5 @@
 import { GetStaticProps } from 'next';
-import BlogPage from '../../components/Blog/Blog';
+import BlogPage from '../../components/Blog/BlogPage';
 import { getAllPosts } from '../../lib/posts';
 
 export const getStaticProps: GetStaticProps = async () => {

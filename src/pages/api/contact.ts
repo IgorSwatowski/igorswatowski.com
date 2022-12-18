@@ -1,34 +1,32 @@
-import { mailOptions, transporter } from "../../config/nodemailer";
+import { mailOptions, transporter } from '../../config/nodemailer';
 
 export interface ContactData {
-    firstName: string;
-    lastName: string;
-    topic: string;
-    email: string;
-    company: string;
-    message: string;
-    [key: string]: string;
-  }
+  firstName: string;
+  lastName: string;
+  topic: string;
+  email: string;
+  company: string;
+  message: string;
+  [key: string]: string;
+}
 
-  const CONTACT_MESSAGE_FIELDS: Record<keyof ContactData, string> = {
-    firstName: "First name",
-    lastName: "Last name",
-    topic: "Topic",
-    email: "Email",
-    company: "Company",
-    message: "Message",
-  };
-
+const CONTACT_MESSAGE_FIELDS: Record<keyof ContactData, string> = {
+  firstName: 'First name',
+  lastName: 'Last name',
+  topic: 'Topic',
+  email: 'Email',
+  company: 'Company',
+  message: 'Message',
+};
 
 const generateEmailContent = (data: ContactData) => {
-    const stringData = Object.entries(data).reduce<string>(
-        (str, [key, val]) =>
-          (str += `${CONTACT_MESSAGE_FIELDS[key]}: \n${val} \n \n`),
-        ""
-      );
+  const stringData = Object.entries(data).reduce<string>(
+    (str, [key, val]) => (str += `${CONTACT_MESSAGE_FIELDS[key]}: \n${val} \n \n`),
+    '',
+  );
   const htmlData = Object.entries(data).reduce((str, [key, val]) => {
     return (str += `<h3 class="form-heading" align="left">${CONTACT_MESSAGE_FIELDS[key]}</h3><p class="form-answer" align="left">${val}</p>`);
-  }, "");
+  }, '');
 
   return {
     text: stringData,
@@ -37,10 +35,18 @@ const generateEmailContent = (data: ContactData) => {
 };
 
 const handler = async (req: any, res: any) => {
-  if (req.method === "POST") {
+  if (req.method === 'POST') {
     const data = req.body;
-    if (!data || !data.firstName || !data.lastName || !data.topic || !data.email || !data.company || !data.message) {
-      return res.status(400).send({ message: "Bad request" });
+    if (
+      !data ||
+      !data.firstName ||
+      !data.lastName ||
+      !data.topic ||
+      !data.email ||
+      !data.company ||
+      !data.message
+    ) {
+      return res.status(400).send({ message: 'Bad request' });
     }
 
     try {
@@ -52,10 +58,9 @@ const handler = async (req: any, res: any) => {
 
       return res.status(200).json({ success: true });
     } catch (err: any) {
-      console.log(err);
       return res.status(400).json({ message: err.nessage });
     }
   }
-  return res.status(400).json({ message: "Bad request" });
+  return res.status(400).json({ message: 'Bad request' });
 };
 export default handler;
