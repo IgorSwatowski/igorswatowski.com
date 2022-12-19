@@ -1,5 +1,5 @@
 import { GetStaticProps } from 'next';
-import PostSinglePage from '../../components/Blog/posts/PostSinglePage';
+import PostSinglePage from '../../components/Blog/posts/PostSinglePageCard';
 import { graphqlAPI } from '../../constants/constants';
 import { getSinglePost } from '../../lib/post';
 import { Post } from '../../types/post';
@@ -25,6 +25,7 @@ export const getStaticProps = async ({ params, locale }) => {
           id
           title
           slug
+          createdAt
         }
       }
     `,
@@ -47,6 +48,10 @@ export const getStaticPaths = async ({ locales }) => {
           title
           slug
           locale
+          createdAt
+          pageContent {
+            text
+          }
         }
       }
     `,
@@ -65,7 +70,6 @@ export const getStaticPaths = async ({ locales }) => {
 };
 
 const PostSingle = ({ post }: PostSingleProps) => {
-  console.log(post.title);
   return <pre>{JSON.stringify(post, null, 2)}</pre>;
 };
 export default PostSingle;

@@ -3,7 +3,7 @@ const pl = {
   about: 'O mnie',
   packages: 'Oferta',
   contact: 'Kontakt',
-  blog: 'blog',
+  blog: 'Blog',
   inquireMe: 'Skontaktuj się',
 
   //Footer
@@ -114,6 +114,16 @@ const pl = {
   contactMessage: 'Wiadomość',
   contactBtn: 'Wyślij wiadomość',
   contactError: 'Wypełnij wszystkie pola',
+
+  //Blog
+  blogHero: 'Odkryj bogactwo wiedzy i inspiracji.',
+  blogHeroText:
+    'Jeśli chcesz być na bieżąco z tematami internetowymi, chcesz nauczyć się web developmentu, projektowania, programowania lub usprawnić swój proces, zapraszam do czytania dalej.',
+  blogCategories: 'Kategorie:',
+  blogWebDev: 'Tworzenie stron internetowych',
+  blogWebDesign: 'Projektowanie stron internetowych',
+  blogEntrepreneurship: 'Biznes',
+  blogToolsAndTechnology: 'Narzędzia i technologia',
 };
 
 export { pl };

@@ -1,0 +1,50 @@
+@import '../../abstracts/mixins';
+@import '../../abstracts/variables';
+
+.blog-banner {
+  padding-top: 12.6rem;
+  &-wrapper {
+    padding-top: 22.6rem;
+    padding-bottom: 6rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto;
+    @include respond(phone) {
+      flex-direction: column;
+      padding-top: 20rem;
+    }
+    @include respond(tablet-port) {
+      flex-direction: column;
+      padding-top: 20rem;
+    }
+    @include respond(tablet-land) {
+      flex-direction: column;
+      padding-top: 20rem;
+    }
+    @include respond(desktop-big) {
+      padding-top: 27rem;
+    }
+
+    &-blogs {
+      display: grid;
+      grid-template-columns: 31% 31% 31%;
+      margin: 0 auto;
+      gap: 4rem;
+      padding-top: 4.2rem;
+
+      &-item {
+        background-color: var(--white);
+        padding: 5rem 4rem;
+        transition: 0.4s all ease;
+        box-shadow: 0 3px 12px #2222220d;
+        border-radius: 5px;
+
+        &:hover {
+          transform: translateY(-10px);
+          background-color: var(--primary);
+        }
+      }
+    }
+  }
+}

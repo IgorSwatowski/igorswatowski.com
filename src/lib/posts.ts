@@ -9,6 +9,10 @@ const query = `
           id
           title
           slug
+          createdAt
+          pageContent {
+            text
+          }
       }
     }
 `;
