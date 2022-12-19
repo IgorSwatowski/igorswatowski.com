@@ -2,9 +2,8 @@
 @import '../../abstracts/variables';
 
 .blog-banner {
-  padding-top: 12.6rem;
+  padding-top: 22.6rem;
   &-wrapper {
-    padding-top: 22.6rem;
     padding-bottom: 6rem;
     display: flex;
     flex-direction: column;
@@ -26,12 +25,46 @@
       padding-top: 27rem;
     }
 
+    &-heading {
+      max-width: 900px;
+    }
+    &-text {
+      max-width: 800px;
+    }
+
+    span {
+      margin-top: 2rem;
+      font-weight: 700;
+    }
+    &-categories {
+      padding-top: 2rem;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 3rem;
+
+      &-item {
+        background-color: var(--primary);
+        color: var(--black);
+        font-weight: 700;
+        padding: 1rem 2rem;
+        transition: 0.4s all ease;
+        border: 1px solid var(--primary);
+
+        &:hover {
+          background-color: var(--white);
+          cursor: pointer;
+          border: 1px solid var(--primary);
+        }
+      }
+    }
+
     &-blogs {
       display: grid;
       grid-template-columns: 31% 31% 31%;
       margin: 0 auto;
       gap: 4rem;
-      padding-top: 4.2rem;
+      padding-top: 8.2rem;
 
       &-item {
         background-color: var(--white);
