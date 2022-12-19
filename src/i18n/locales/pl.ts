@@ -90,11 +90,11 @@ const pl = {
     'Rozumiem, jak się czujesz. Myśl o aktualizacji swojej strony internetowej może być zniechęcająca, zwłaszcza gdy masz tak wiele już do zrobienia. Ale nie martw się, jestem tutaj, aby pomóc. Pozwól mi wziąć ciężar z twoich ramion i stworzyć piękną, wysoko konwertującą stronę internetową dla ciebie.',
   ctaTextSecond:
     'Będziesz zaskoczony, jak łatwy i bezstresowy może być ten proces i jak wiele wartości i sukcesów może przynieść Twojej firmie. Skontaktuj się ze mną już dziś, aby dowiedzieć się więcej i umówić na konsultacje. Proste i łatwe.',
-  whoIAm: 'Budowanie stron internetowych przyjaznych dla użytkownika.',
+  whoIAm: 'Budowanie stron internetowych przyjaznych dla użytkownika',
   whoIAmText:
     'Jako Front End Developer moim celem jest tworzenie i budowanie stron internetowych, które dają użytkownikom poczucie radości i komfortu, zachęcając ich do powrotu.',
   whoIAmTextSecond:
-    'Podczas gdy projekt wizualny strony jest ważny, szczególnie interesuje mnie stojący za nim stos technologiczny i implementacja. Moje główne technologie, z którymi pracuję na co dzień to React, Javascript, Typescript, Next i GraphQL. Aspekt rozwojowy mojej pracy jest dla mnie ważny, ponieważ pozwala mi doskonalić swoje umiejętności i być na bieżąco z nowymi technologiami. Ponadto, stanowi on miłą równowagę dla aspektu projektowego mojej pracy.',
+    'Podczas gdy projekt wizualny strony jest ważny, szczególnie interesuje mnie stojący za nim stos technologiczny i implementacja. Moje główne technologie, z którymi pracuję na co dzień to React, Javascript, Typescript, Next i Graphql. Aspekt rozwojowy mojej pracy jest dla mnie ważny, ponieważ pozwala mi doskonalić swoje umiejętności i być na bieżąco z nowymi technologiami. Dodatkowo, stanowi on miłą równowagę dla aspektu projektowego mojej pracy.',
   whoIAmTextThird: 'Nie zapomnij wpaść na moje social media :)',
   aboutCtaSecondHeading: 'Jesteś zainteresowany współpracą?',
   aboutCtaSecondText: 'Super! Poświęć trochę czasu na poznanie pakietów, które oferuję.',
@@ -105,9 +105,10 @@ const pl = {
   contactText:
     'Jestem tutaj, aby poprowadzić Cię krok po kroku w podróży, jaką jest budowa rzetelnej, wiarygodnej strony internetowej. Nie mogę się doczekać, aby poznać Twój biznes i zabrać Cię w to ekscytujące doświadczenie, które sprawi, że poczujesz, że Twoje możliwości są nieograniczone.',
   contactInstagram: 'Możesz się ze mną skontaktować również poprzez Instagram',
-  contactEmail: 'możesz również skontaktować się bezpośrednio poprzez',
+  contactEmailItem: 'możesz również skontaktować się bezpośrednio poprzez',
   contactForm: 'bez wypełniania formularza kontaktowego.',
   contactFirstName: 'Imie',
+  contactEmail: 'Email',
   contactSecondName: 'Nazwisko',
   contactCompany: 'Firma (opcjonalne)',
   contactTopic: 'Temat',

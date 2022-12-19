@@ -28,7 +28,7 @@ const en = {
   collaborateSecond: 'experiences.',
   collaborateTextMain:
     'My unique perspective and creativity will help you stand out in the marketplace and save your customers memories. I am ready to provide solutions to help you succeed.',
-  designProcess: 'Heres an overview of my design and implementation process  ',
+  designProcess: "Here's an overview of my design and implementation process",
   designProcessText:
     'Are you curious about what to expect when we work together on a creative project? Here are the four stages of our collaboration.',
   stageFirst: 'Strategy',
@@ -90,7 +90,7 @@ const en = {
     'I get it. The thought of updating your website right now can seem overwhelming. Your to-do list is already a mile long, so how are you supposed to add "Build a beautiful, high converting website" to it?',
   ctaTextSecond:
     "Don't worry because I advocate simplicity that just works and gets results. You pick a few days on my design calendar, I'll get your site ready and up and running, and you're back to running your business like a pro. Simple and easy.",
-  whoIAm: 'Building websites for an enjoyable user experience.',
+  whoIAm: 'Building websites for an enjoyable user experience',
   whoIAmText:
     'As a Front End Developer my goal is to create and build websites that give users a sense of joy and comfort, encouraging them to return. ',
   whoIAmTextSecond:
@@ -105,10 +105,11 @@ const en = {
   contactText:
     "I'm here to guide you step by step on the journey that is building a reliable, credible website. I can't wait to learn about your business and take you on this exciting experience that will make you feel that your possibilities are limitless.",
   contactInstagram: 'You can also contact me via Instagram',
-  contactEmail: ' it doesn’t suit you can also contact directly via',
+  contactEmailItem: ' it doesn’t suit you can also contact directly via',
   contactForm: 'without complete the contact form.',
   contactFirstName: 'First name',
   contactSecondName: 'Last name',
+  contactEmail: 'Email',
   contactCompany: 'Company name (optional)',
   contactTopic: 'Topic',
   contactMessage: 'Message',

@@ -104,7 +104,7 @@ const ContactPage = () => {
             <a href="https://instagram.com/igor.websites" target="_blank" rel="noreferrer">
               @igor.websites
             </a>
-            {t.contactEmail}
+            {t.contactEmailItem}
             <a href="mailto: hello@igorswatowski.com" target="_blank" rel="noreferrer">
               hello@igorswatowski.com
             </a>
