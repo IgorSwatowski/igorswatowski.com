@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 
@@ -13,9 +13,21 @@ const Navbar = () => {
   const { locale } = router;
   const t = locale === 'en' ? en : pl;
 
-  const changeLanguage = (locale: string) => {
-    router.push('/', '/', { locale: locale.toLowerCase() });
+  const changeLanguage = async (locale: string) => {
+    const { pathname } = router;
+    const oldLanguageMatch = pathname.match(/^\/([a-z]{2})(\/|$)/);
+    const oldLanguage = oldLanguageMatch ? oldLanguageMatch[1] : null;
+    if (oldLanguage && oldLanguage !== locale.toLowerCase()) {
+      const newPathname = pathname.replace(new RegExp(`^\/${oldLanguage}(\/|$)`), '/');
+      router.replace(`/${locale.toLowerCase()}${newPathname}`);
+    } else if (!oldLanguage) {
+      router.replace(`/${locale.toLowerCase()}${pathname}`);
+    }
   };
+
+  useEffect(() => {
+    changeLanguage(locale as string);
+  }, [locale]);
 
   return (
     <header className="header" id="menu-header">

@@ -6,12 +6,14 @@ import { useRouter } from 'next/router';
 import { en } from '../../i18n/locales/en';
 import { pl } from '../../i18n/locales/pl';
 import PostSinglePageCard from './posts/PostSinglePageCard';
+import { useState } from 'react';
 
 export interface PostsProps {
   posts: Post[];
 }
 
 const BlogPage = ({ posts }: PostsProps) => {
+  const [page, setPage] = useState(0);
   const router = useRouter();
   const { locale } = router;
   const t = locale === 'en' ? en : pl;
@@ -43,6 +45,12 @@ const BlogPage = ({ posts }: PostsProps) => {
               );
             })}
           </div>
+          <button disabled={!page} onClick={() => setPage((prev) => prev - 1)}>
+            Previous page
+          </button>
+          <button disabled={!page} onClick={() => setPage((prev) => prev + 1)}>
+            Next page
+          </button>
         </div>
       </section>
     </main>
