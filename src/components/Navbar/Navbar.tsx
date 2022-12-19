@@ -35,6 +35,9 @@ const Navbar = () => {
         <div className="menu-item" data-c="Packages" aria-label="Packages">
           <Link href="/packages">{t.packages}</Link>
         </div>
+        <div className="menu-item" data-c="Blog" aria-label="Blog">
+          <Link href="/blog">{t.blog}</Link>
+        </div>
         <div className="menu-item">
           <Link href="/contact" data-c="Contact" aria-label="Contact">
             {t.contact}

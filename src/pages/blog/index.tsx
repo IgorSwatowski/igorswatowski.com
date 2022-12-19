@@ -1,9 +1,11 @@
 import { GetStaticProps } from 'next';
-import BlogPage from '../../components/Blog/BlogPage';
+import BlogPage, { PostsProps } from '../../components/Blog/BlogPage';
 import { getAllPosts } from '../../lib/posts';
+import { request } from 'graphql-request';
+import { useRouter } from 'next/router';
 
-export const getStaticProps: GetStaticProps = async () => {
-  const posts = await getAllPosts();
+export const getStaticProps: GetStaticProps = async ({ params, locale }) => {
+  const posts = await getAllPosts(locale as string);
   return {
     props: {
       posts,
@@ -11,7 +13,7 @@ export const getStaticProps: GetStaticProps = async () => {
   };
 };
 
-const Blog = ({ posts }: any) => {
+const Blog = ({ posts }: PostsProps) => {
   return (
     <>
       <BlogPage posts={posts} />

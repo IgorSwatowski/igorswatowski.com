@@ -3,7 +3,7 @@ const en = {
   about: 'About',
   packages: 'Packages',
   contact: 'Contact',
-  blog: 'Blot',
+  blog: 'Blog',
   inquireMe: 'Inquire me',
 
   //Footer
@@ -114,6 +114,16 @@ const en = {
   contactMessage: 'Message',
   contactBtn: 'Send form',
   contactError: 'Please fill out all fields.',
+
+  //Blog
+  blogHero: 'Explore a wealth of knowledge and inspiration.',
+  blogHeroText:
+    'If you want to stay up to date on web topics, want to learn web development, design, programming or improve your process, I invite you to read on.',
+  blogCategories: 'Categories:',
+  blogWebDev: 'Web Development',
+  blogWebDesign: 'Web Design',
+  blogEntrepreneurship: 'Entrepreneurship',
+  blogToolsAndTechnology: 'Tools and technology',
 };
 
 export { en };
