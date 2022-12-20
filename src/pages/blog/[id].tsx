@@ -7,16 +7,6 @@ import request, { gql, GraphQLClient } from 'graphql-request';
 
 const hygraph = new GraphQLClient(graphqlAPI);
 
-type Post = {
-  id: string;
-  title: string;
-  slug: string;
-};
-
-type PostSingleProps = {
-  post: Post;
-};
-
 export const getStaticProps = async ({ params, locale }) => {
   const { post } = await hygraph.request(
     gql`
@@ -69,7 +59,7 @@ export const getStaticPaths = async ({ locales }) => {
   };
 };
 
-const PostSingle = ({ post }: PostSingleProps) => {
+const PostSingle = ({ post }) => {
   return <pre>{JSON.stringify(post, null, 2)}</pre>;
 };
 export default PostSingle;

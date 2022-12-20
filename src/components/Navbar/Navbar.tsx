@@ -14,19 +14,28 @@ const Navbar = () => {
   const t = locale === 'en' ? en : pl;
 
   const changeLanguage = async (locale: string) => {
-    const { pathname } = router;
+    const { pathname, query } = router;
     const oldLanguageMatch = pathname.match(/^\/([a-z]{2})(\/|$)/);
     const oldLanguage = oldLanguageMatch ? oldLanguageMatch[1] : null;
+    let newPathname = pathname;
     if (oldLanguage && oldLanguage !== locale.toLowerCase()) {
-      const newPathname = pathname.replace(new RegExp(`^\/${oldLanguage}(\/|$)`), '/');
-      router.replace(`/${locale.toLowerCase()}${newPathname}`);
+      newPathname = pathname.replace(new RegExp(`^\/${oldLanguage}(\/|$)`), '/');
     } else if (!oldLanguage) {
-      router.replace(`/${locale.toLowerCase()}${pathname}`);
+      newPathname = `/${locale.toLowerCase()}${pathname}`;
     }
+    // Extract dynamic path parameter from URL and append it to new URL
+    const dynamicPathMatch = pathname.match(/^\/[a-z]{2}\/(.+?)\/([^\/]+)$/);
+    if (dynamicPathMatch) {
+      const dynamicPath = dynamicPathMatch[1];
+      const dynamicValue = dynamicPathMatch[2];
+      newPathname = `/${locale.toLowerCase()}/${dynamicPath}/${dynamicValue}`;
+    }
+    router.replace({ pathname: newPathname, query });
   };
 
   useEffect(() => {
     changeLanguage(locale as string);
+    console.log(locale);
   }, [locale]);
 
   return (
