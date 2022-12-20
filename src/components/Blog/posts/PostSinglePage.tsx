@@ -1,8 +1,8 @@
 import Link, { LinkProps } from 'next/link';
 import { Post } from '../../../types/post';
 
-const PostSinglePage = ({ title }: Post) => {
-  console.log(title);
+const PostSinglePage = ({ post }) => {
+  const { title } = post;
   return <h1>{title}</h1>;
 };
 

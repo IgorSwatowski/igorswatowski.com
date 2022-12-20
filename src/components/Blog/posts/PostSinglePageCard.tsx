@@ -1,6 +1,7 @@
+import Link from 'next/link';
 import { Post } from '../../../types/post';
 
-const PostSinglePageCard = ({ id, title, slug, pageContent, createdAt }: Post) => {
+const PostSinglePageCard = ({ id, title, slug, pageContent, createdAt, path }: Post) => {
   const shortText = pageContent?.text?.substring(0, 145) + ' ' + '[...]';
 
   const convertDate = (createdAt: string) => {
@@ -14,7 +15,7 @@ const PostSinglePageCard = ({ id, title, slug, pageContent, createdAt }: Post) =
   const convertedDate = convertDate(createdAt);
 
   return (
-    <a href="/packages" className="blog-banner-wrapper-blogs-item">
+    <Link href={path} className="blog-banner-wrapper-blogs-item">
       <div className="blog-banner-wrapper-blogs-item-heading">
         <h3 className="heading-third"> {title}</h3>
       </div>
@@ -27,7 +28,7 @@ const PostSinglePageCard = ({ id, title, slug, pageContent, createdAt }: Post) =
       <div className="blog-banner-wrapper-blogs-item-category">
         <p className="paragraph-primary"></p>
       </div>
-    </a>
+    </Link>
   );
 };
 

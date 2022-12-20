@@ -35,7 +35,6 @@ const Navbar = () => {
 
   useEffect(() => {
     changeLanguage(locale as string);
-    console.log(locale);
   }, [locale]);
 
   return (

@@ -32,15 +32,16 @@ const BlogPage = ({ posts }: PostsProps) => {
             <div className="blog-banner-wrapper-categories-item">{t.blogToolsAndTechnology}</div>
           </div>
           <div className="blog-banner-wrapper-blogs">
-            {posts.map((post) => {
+            {posts.map(({ id, title, slug, pageContent, createdAt }) => {
               return (
                 <PostSinglePageCard
-                  key={post.id}
-                  title={post.title}
-                  slug={post.slug}
-                  id={post.id}
-                  pageContent={post.pageContent}
-                  createdAt={post.createdAt}
+                  key={id}
+                  title={title}
+                  slug={slug}
+                  id={id}
+                  pageContent={pageContent}
+                  createdAt={createdAt}
+                  path={`/blog/${id}`}
                 />
               );
             })}
