@@ -1,15 +1,16 @@
+import Link from 'next/link';
 import React from 'react';
 
 type ButtonProps = {
   children: React.ReactNode;
-  buttonHref?: string;
+  href: string;
 };
 
-const Button = ({ children, buttonHref }: ButtonProps) => {
+const Button = ({ children, href }: ButtonProps) => {
   return (
-    <a href={buttonHref} className="btn-secondary" data-aos="fade-down" data-aos-delay="150">
+    <Link href={href} className="btn-secondary" data-aos="fade-down" data-aos-delay="150">
       {children}
-    </a>
+    </Link>
   );
 };
 

@@ -62,7 +62,7 @@ const AboutPage = () => {
             >
               {t.bannerTextThird}
             </p>
-            <Button buttonHref="packages">{t.aboutCtaSecondBtn}</Button>
+            <Button href="packages">{t.aboutCtaSecondBtn}</Button>
           </div>
           <div className="banner-text-wrapper-right">
             <Image loading="lazy" src={BannerMeImg} alt="" />
@@ -249,7 +249,7 @@ const AboutPage = () => {
             >
               {t.aboutCtaSecondText}
             </p>
-            <Button buttonHref="/packages">{t.aboutCtaSecondBtn}</Button>
+            <Button href="/packages">{t.aboutCtaSecondBtn}</Button>
           </div>
         </div>
       </section>

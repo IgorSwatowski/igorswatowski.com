@@ -5,8 +5,8 @@ import { useRouter } from 'next/router';
 import { en } from '../../i18n/locales/en';
 import { pl } from '../../i18n/locales/pl';
 import CustomSelect from '../CustomSelect/CustomSelect';
-
-type ChangeLanguageEvent = React.ChangeEvent<HTMLSelectElement>;
+import NavbarItem from './components/NavbarItem';
+import Button from '../Button/Button';
 
 const Navbar = () => {
   const router = useRouter();
@@ -47,36 +47,27 @@ const Navbar = () => {
         <span className="navicon"></span>
       </label>
       <div className="menu">
-        <div className="menu-item">
-          <Link href="/about" data-c="About me" aria-label="About me">
-            {t.about}
-          </Link>
-        </div>
-        <div className="menu-item" data-c="Packages" aria-label="Packages">
-          <Link href="/packages">{t.packages}</Link>
-        </div>
-        <div className="menu-item" data-c="Blog" aria-label="Blog">
-          <Link href="/blog">{t.blog}</Link>
-        </div>
-        <div className="menu-item">
-          <Link href="/contact" data-c="Contact" aria-label="Contact">
-            {t.contact}
-          </Link>
-        </div>
+        <NavbarItem href="/about" aria-label="About me">
+          {t.about}
+        </NavbarItem>
+        <NavbarItem href="/packages" aria-label="Packages">
+          {t.packages}
+        </NavbarItem>
+        <NavbarItem href="/blog" aria-label="Blog">
+          {t.blog}
+        </NavbarItem>
+        <NavbarItem href="/contact" aria-label="Contact">
+          {t.contact}
+        </NavbarItem>
         <CustomSelect
           options={['EN', 'PL'].map((option) => option.toUpperCase())}
           defaultValue={locale === 'en' ? 'EN' : 'PL'}
           onChange={changeLanguage}
         />
         <div className="menu-contact">
-          <Link
-            href="mailto: hello@igorswatowski.com"
-            data-c="Inquire here"
-            aria-label="Inquire here"
-            className="btn-secondary"
-          >
+          <Button href="mailto: hello@igorswatowski.com" aria-label="Inquire here">
             {t.inquireMe}
-          </Link>
+          </Button>
         </div>
       </div>
     </header>
