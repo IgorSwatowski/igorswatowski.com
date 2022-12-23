@@ -2,8 +2,6 @@
 
 This is the source code for my personal website, built with Next.js, Typescript, Hygraph, SCSS, and GraphQL.
 
-First, run the development server:
-
 ## Technologies Used
 
 * Next.js: A React framework for building server-rendered and statically-generated applications.
