@@ -1,9 +1,6 @@
-import { GetStaticProps } from 'next';
 import PostSinglePage from '../../components/Blog/posts/PostSinglePage';
 import { graphqlAPI } from '../../constants/constants';
-import { getSinglePost } from '../../lib/post';
-import { Post } from '../../types/post';
-import request, { gql, GraphQLClient } from 'graphql-request';
+import { gql, GraphQLClient } from 'graphql-request';
 
 const hygraph = new GraphQLClient(graphqlAPI);
 

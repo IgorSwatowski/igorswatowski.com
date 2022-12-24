@@ -1,11 +1,9 @@
-//Layout views
-import Navbar from '../components/Navbar/Navbar';
+//Layout view
 import PackagesPage from '../components/Packages/Packages';
 
 const Packages = () => {
   return (
     <>
-      <Navbar />
       <PackagesPage />
     </>
   );

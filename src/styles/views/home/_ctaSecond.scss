@@ -19,13 +19,15 @@
     margin: 0 auto;
     width: 100%;
     position: relative;
-    padding: 8rem 0;
+    padding-top: 8rem;
+    padding-bottom: 8rem;
 
     @include respond(phone) {
       width: unset;
-      padding: 8rem 1.6rem;
+      padding-top: 8rem;
       margin: 0 auto;
       text-align: center;
+      padding-bottom: 8rem;
     }
     @include respond(tablet-port) {
       width: unset;

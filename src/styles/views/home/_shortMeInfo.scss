@@ -3,11 +3,11 @@
 
 .short-personal-info {
   display: flex;
-  flex-direction: row;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   margin: 0 auto;
-  padding: 8rem 0;
+  flex-direction: row;
+  margin-top: 8rem;
   &-left {
     width: 50%;
     display: flex;
@@ -48,28 +48,6 @@
     }
     @include respond(tablet-land) {
       display: none;
-    }
-
-    &::before {
-      content: '';
-      border: 10px solid var(--primary);
-      background: transparent;
-      width: 396px;
-      height: 500px;
-      position: absolute;
-      z-index: -1;
-      top: 7rem;
-      left: 25rem;
-
-      @include respond(phone) {
-        content: unset;
-      }
-      @include respond(tablet-port) {
-        content: unset;
-      }
-      @include respond(tablet-land) {
-        content: unset;
-      }
     }
   }
 }

@@ -1,4 +1,4 @@
-import request, { gql, GraphQLClient } from 'graphql-request';
+import { GraphQLClient } from 'graphql-request';
 import { graphqlAPI } from '../constants/constants';
 
 const hygraph = new GraphQLClient(graphqlAPI);
