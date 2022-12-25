@@ -1,5 +1,5 @@
 import { useRouter } from 'next/router';
-import { useState } from 'react';
+import { useRef, useState } from 'react';
 import { sendContactForm } from '../../../lib/api';
 import { CustomInput } from '../../CustomInput/CustomInput';
 
@@ -39,6 +39,9 @@ const initState: State = {
 };
 
 const ContactForm = () => {
+  const formRef = useRef<HTMLFormElement>(null);
+  const [showSuccessMessage, setShowSuccessMessage] = useState(false);
+
   const router = useRouter();
   const { locale } = router;
   const t = locale === 'en' ? en : pl;
@@ -67,6 +70,7 @@ const ContactForm = () => {
     try {
       await sendContactForm(values);
       setState(initState);
+      setShowSuccessMessage(true);
     } catch (error: any) {
       setState((prev) => ({
         ...prev,
@@ -79,6 +83,7 @@ const ContactForm = () => {
   return (
     <>
       <form
+        ref={formRef}
         className="contact-form-wrapper-form"
         id="contact-form"
         data-aos="fade-down"
@@ -156,8 +161,8 @@ const ContactForm = () => {
         <button type="submit" id="submit" className="btn-secondary">
           {t.contactBtn}
         </button>
+        {showSuccessMessage && <p>Successfully sent message</p>}
       </form>
-      {error && <p className="contact-form-error">Problem z wyslaniem formularza </p>}
     </>
   );
 };
