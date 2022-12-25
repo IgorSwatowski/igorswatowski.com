@@ -30,18 +30,18 @@
     margin: 0 auto;
     width: 100%;
     position: relative;
-    padding: 7rem 0;
+    padding: 6.4rem 0 6.4rem 0;
 
     @include respond(phone) {
-      padding: 6rem 2rem;
+      padding: 6.4rem 2rem;
       width: unset;
     }
     @include respond(tablet-port) {
-      padding: 6rem 2rem;
+      padding: 6.4rem 2rem;
       width: unset;
     }
     @include respond(tablet-land) {
-      padding: 6rem 2rem;
+      padding: 6.4rem 2rem;
       width: unset;
     }
 

@@ -125,6 +125,53 @@ const en = {
   blogWebDesign: 'Web Design',
   blogEntrepreneurship: 'Entrepreneurship',
   blogToolsAndTechnology: 'Tools and technology',
+
+  //Packages
+  bannerStrategic: 'Strategic',
+  bannerCreative: 'Creative',
+  bannerConfidence: 'Confidence',
+  myProcess: 'My process',
+  myProcessText:
+    "My personalized approach to building empowered brands is to focus on what makes your business unique and meaningful. My goal is to guide you every step of the way on this your journey to business growth and success. To bring you to a level where you feel confident and connected to your brand so that in turn, you'll be able to attract your ideal viewer for years to come.",
+  currentPricesHeading: 'Discover what I have to offer',
+  currentPricesText: 'Choose a plan that’s right for you.',
+
+  webDesign: 'Web Design',
+  webDesignText:
+    'Tailored graphic design for your industry. Market research, color matching, fonts, adaptation to different screens - this is what you can expect from the project.',
+  webDesignPrice: 'From 625$',
+  webDevelopment: 'Web Development',
+  webDevelopmentText:
+    'Do you have a graphic design but are looking for someone to implement the idea into a fully functional website? I will be happy to help you with it.',
+  webDevelopmentPrice: 'From 625$',
+  webDesignAndDev: 'Web Design & Web Development',
+  webDesignAndDevText:
+    'We’ll work together to build a strategic website that attracts your ideal audience. Includes SEO & copy assistance.',
+  webDesignAndDevPrice: '1250$',
+
+  getStartedBtn: 'Get started',
+  whatsIncluded: "What's included",
+
+  upFrontPay: '(50%) upfront payment',
+  customMobile: '+ Custom mobile phone web design optimization',
+  orientedDesign: '+ Functional & goal oriented design',
+  customDesignedWeb: '+ Up to 6 custom designed web pages',
+  strategicDirection: '+ Creative approach and strategic plan of action',
+  creatingDesign: '+ Creating a design in Figma',
+  colorFontPhoto: '+ Color, font and photo matching',
+  timeline: '+ Timelime 1 week - 2 weeks',
+
+  linksAndDomain: '+ Connect links, forms and domain',
+  animationStepByStep: '+ Basic or step-by-step animation',
+  support: '+ Launch Support',
+  frontEndDevelopmentTechnology:
+    '+ Front-end development on Webflow, Next, React, Gatsby or Wordpress',
+  timelineWebDev: '+ Timelime 4 weeks - 6 weeks',
+  basicSeo: '+ Basic SEO',
+  optimized: '+ Optimized for Desktop & Mobile',
+  revisions: '+ 3 Rounds of Revisions',
+
+  timelineWebDevDesign: '+ Timelime 6 weeks - 8 weeks',
 };
 
 export { en };

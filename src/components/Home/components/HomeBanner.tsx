@@ -17,12 +17,8 @@ const HomeBanner = () => {
     <section className="banner container-box">
       <div className="banner-block-left" data-aos="fade-up">
         <h1 className="banner-block-left--title heading-primary">{t.hero}</h1>
-        <p className="banner-block-left--sub paragraph-primary">
-          {t.heroText}
-          <br />
-          <br />
-          {t.heroTextSecond}
-        </p>
+        <p className="banner-block-left--sub paragraph-primary">{t.heroText}</p>
+        <p className="banner-block-left--sub paragraph-primary">{t.heroTextSecond}</p>
         <div className="banner-block-left-buttons">
           <a href="about.html" className="banner-block-left-buttons-first btn-primary">
             <span>{t.heroBtn}</span>

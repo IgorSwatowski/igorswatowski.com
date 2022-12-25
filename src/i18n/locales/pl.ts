@@ -125,6 +125,52 @@ const pl = {
   blogWebDesign: 'Projektowanie stron internetowych',
   blogEntrepreneurship: 'Biznes',
   blogToolsAndTechnology: 'Narzędzia i technologia',
+
+  //Packages
+  bannerStrategic: 'Strategia',
+  bannerCreative: 'Kreatywność',
+  bannerConfidence: 'Zaufanie',
+  myProcess: 'Mój proces',
+  myProcessText:
+    'Moje indywidualne podejście do budowania silnych stron internetowych polega na skupieniu się na tym, co czyni Twój biznes wyjątkowym i znaczącym. Moim celem jest poprowadzenie Cię na każdym kroku w Twojej podróży do rozwoju biznesu i sukcesu. Chcę doprowadzić Cię do poziomu, w którym będziesz czuł się pewnie związany ze swoją marką, dzięki czemu będziesz w stanie przyciągać swoich idealnych odbiorców przez kolejne lata.',
+  currentPricesHeading: 'Zobacz co mam do zaoferowania',
+  currentPricesText: 'Wybierz plan, który jest dla Ciebie odpowiedni.',
+
+  webDesign: 'Projekt strony WWW',
+  webDesignText:
+    'Projekt graficzny dostosowany do potrzeb Twojej branży. Badania rynku, dopasowanie kolorów, czcionek, dostosowanie do różnych ekranów - oto czego możesz się spodziewać po projekcie',
+  webDesignPrice: 'Od 2000zł',
+  webDevelopment: 'Implementacja projektu strony WWW',
+  webDevelopmentText:
+    'Masz projekt graficzny, ale szukasz kogoś, kto zrealizuje pomysł w postaci w pełni funkcjonalnej strony internetowej? Chętnie pomogę Ci w tym zakresie.',
+  webDevelopmentPrice: 'Od 2000zł',
+  webDesignAndDev: 'Projekt & Implementacja strony WWW',
+  webDesignAndDevText:
+    'Pracujmy razem, aby zbudować strategiczną stronę internetową, która przyciągnie Twoich idealnych odbiorców. Pakiet obejmuje równiez pomoc w zakresie SEO.',
+  webDesignAndDevPrice: 'od 4000zł',
+
+  getStartedBtn: 'Rozpocznij',
+  whatsIncluded: 'Co zawiera pakiet?',
+
+  upFrontPay: 'Zaliczka (25%) przed rozpoczęciem prac',
+  customMobile: '+ Optymalizacja projektu na telefony, tablety oraz komputery',
+  orientedDesign: '+ Projekt zorientowany na skuteczne osiągnięcie zamierzonego celu',
+  customDesignedWeb: '+ Do 6 zaprojektowanych podstron',
+  strategicDirection: '+ Kreatywne podejście i strategiczny plan działania',
+  creatingDesign: '+ Projektowanie w Figmie',
+  colorFontPhoto: '+ Dopasowanie kolorów, czcionek i zdjęć',
+  timeline: '+ Czas trwania 1 tydzień - 2 tygodnie',
+
+  linksAndDomain: '+ Podłączenie linków, formularza i domeny',
+  animationStepByStep: '+ Animacja podstawowa lub krok po kroku',
+  support: '+ Wsparcie przy uruchamianiu',
+  frontEndDevelopmentTechnology: '+ Implementacja w Webflow, Next, React, Gatsby lub Wordpress',
+  timelineWebDev: '+ Czas trwania 4 tygodnie - 6 tygodni',
+  basicSeo: '+ Podstawowe SEO',
+  optimized: '+ Zoptymalizowany dla komputerów stacjonarnych i urządzeń mobilnych',
+  revisions: '+ 3 rundy poprawek',
+
+  timelineWebDevDesign: '+ Czas trwania 6 tygodni - 8 tygodni',
 };
 
 export { pl };

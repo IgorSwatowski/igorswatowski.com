@@ -2,14 +2,13 @@
 @import '../../abstracts/variables';
 
 .implementation-process {
-  padding-top: 8rem;
-  padding-bottom: 8rem;
+  padding: 6.4rem 0;
   display: flex;
   margin: 0 auto;
   flex-direction: column;
   &-top {
     &-text {
-      max-width: 626px;
+      max-width: 742px;
     }
     &-heading {
       margin-bottom: 14px;
@@ -24,7 +23,7 @@
     flex-wrap: wrap;
     width: 100%;
     gap: 6rem 0;
-    padding-top: 6rem;
+    padding-top: 6.4rem;
 
     @include respond(phone) {
       flex-direction: column;

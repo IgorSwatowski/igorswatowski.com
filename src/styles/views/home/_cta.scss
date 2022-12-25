@@ -2,8 +2,6 @@
 @import '../../abstracts/variables';
 
 .cta {
-  margin-top: 8rem;
-  margin-bottom: 8rem;
   background-color: var(--gray);
   &-wrapper {
     display: flex;
@@ -13,20 +11,20 @@
     margin: 0 auto;
     width: 100%;
     position: relative;
-    padding: 8rem 0px;
+    padding: 6.4rem 0px;
     gap: 3rem;
 
     @include respond(phone) {
       width: unset;
-      padding: 8rem 1.6rem;
+      padding: 6.4rem 1.6rem;
     }
     @include respond(tablet-port) {
       width: unset;
-      padding: 8rem 1.6rem;
+      padding: 6.4rem 1.6rem;
     }
     @include respond(tablet-land) {
       width: unset;
-      padding: 8rem 1.6rem;
+      padding: 6.4rem 1.6rem;
     }
     p {
       font-size: 24px;

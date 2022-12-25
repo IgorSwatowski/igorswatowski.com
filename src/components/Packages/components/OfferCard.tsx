@@ -1,44 +1,46 @@
+import { useRouter } from 'next/router';
+
+import { en } from '../../../i18n/locales/en';
+import { pl } from '../../../i18n/locales/pl';
+import OfferIncludedList from './OfferIncludedList';
+
 interface OfferCardProps {
   title: string;
   description: string;
   price: string;
+  customMobileText?: string;
+  orientedDesign?: string;
+  customDesignedWeb?: string;
+  strategicDirection?: string;
+  creatingDesign?: string;
+  colorFontPhoto?: string;
+  timeline?: string;
+  linksAndDomain?: string;
+  animationStepByStep?: string;
+  frontEndDevelopmentTechnology?: string;
+  support?: string;
+  timelineWebDev?: string;
+  optimized?: string;
+  basicSeo?: string;
+  revisions?: string;
+  timelineWebDevDesign?: string;
 }
 
-const OfferCard = ({ title, description, price }: OfferCardProps) => {
+const OfferCard = ({ title, description, price, ...props }: OfferCardProps) => {
+  const router = useRouter();
+  const { locale } = router;
+  const t = locale === 'en' ? en : pl;
   return (
     <div className="prices-wrapper-list-item" data-aos="fade-up" data-aos-delay="50">
       <h3 className="prices-wrapper-list-item-heading heading-third">{title}</h3>
       <p className="prices-wrapper-list-item-text paragraph-primary">{description}</p>
-      <h4 className="prices-wrapper-list-item-price heading-third">From {price}</h4>
-      <span>(50%) upfront payment</span>
+      <h4 className="prices-wrapper-list-item-price heading-third">{price}</h4>
+      <span>{t.upFrontPay}</span>
       <a href="contact.html" className="btn-secondary">
-        Get started
+        {t.getStartedBtn}
       </a>
       <div className="small-line"></div>
-      <div className="offer-whats-included-list">
-        <h5 className="offer-whats-included-list-heading heading-fifth">What&apos;s included?</h5>
-        <p className="offer-whats-included-list-item paragraph-primary">
-          + Custom mobile phone web design optimization
-        </p>
-        <p className="offer-whats-included-list-item paragraph-primary">
-          + Functional & goal oriented design
-        </p>
-        <p className="offer-whats-included-list-item paragraph-primary">
-          + Up to 6 custom designed web pages
-        </p>
-        <p className="offer-whats-included-list-item paragraph-primary">
-          + Creative + strategic direction
-        </p>
-        <p className="offer-whats-included-list-item paragraph-primary">
-          + Creating a design in Figma
-        </p>
-        <p className="offer-whats-included-list-item paragraph-primary">
-          + Color, font and photo matching
-        </p>
-        <p className="offer-whats-included-list-item paragraph-primary">
-          + Timelime 1 week - 2 weeks
-        </p>
-      </div>
+      <OfferIncludedList {...props} />
     </div>
   );
 };

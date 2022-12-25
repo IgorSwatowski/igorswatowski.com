@@ -1,6 +1,13 @@
 import OfferCardList from './OfferCardList';
+import { useRouter } from 'next/router';
+
+import { en } from '../../../i18n/locales/en';
+import { pl } from '../../../i18n/locales/pl';
 
 const PricesSection = () => {
+  const router = useRouter();
+  const { locale } = router;
+  const t = locale === 'en' ? en : pl;
   return (
     <section className="prices">
       <div className="prices-wrapper container-box">
@@ -9,14 +16,14 @@ const PricesSection = () => {
           data-aos="fade-down"
           data-aos-delay="50"
         >
-          Check the current prices of my services
+          {t.currentPricesHeading}
         </h2>
         <p
           className="prices-wrapper-text paragraph-primary"
           data-aos="fade-down"
           data-aos-delay="50"
         >
-          Choose a plan that’s right for you.
+          {t.currentPricesText}
         </p>
         <OfferCardList />
       </div>

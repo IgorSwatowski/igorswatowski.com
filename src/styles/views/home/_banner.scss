@@ -68,8 +68,7 @@
       }
     }
     &-buttons {
-      margin-top: 4.2rem;
-      margin-bottom: 4.2rem;
+      margin-top: 3.2rem;
       &-first {
         margin-right: 0.8rem;
       }
@@ -87,7 +86,7 @@
       }
     }
     &-trusted {
-      margin-top: 6.2rem;
+      margin-top: 3.2rem;
       &--small {
         text-transform: uppercase;
         color: var(--gray-200);
@@ -97,7 +96,7 @@
         flex-direction: row;
         align-items: center;
         flex-wrap: wrap;
-        margin-top: 3rem;
+        margin-top: 1.6rem;
         gap: 4rem;
         img {
           margin-right: 1.5rem;
