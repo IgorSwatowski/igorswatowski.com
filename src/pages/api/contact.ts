@@ -1,4 +1,5 @@
 import { mailOptions, transporter } from '../../config/nodemailer';
+import { Request, Response } from 'express';
 
 export interface ContactData {
   firstName: string;
@@ -34,33 +35,28 @@ const generateEmailContent = (data: ContactData) => {
   };
 };
 
-const handler = async (req: any, res: any) => {
-  if (req.method === 'POST') {
-    const data = req.body;
-    if (
-      !data ||
-      !data.firstName ||
-      !data.lastName ||
-      !data.topic ||
-      !data.email ||
-      !data.company ||
-      !data.message
-    ) {
-      return res.status(400).send({ message: 'Bad request' });
-    }
-
-    try {
-      await transporter.sendMail({
-        ...mailOptions,
-        ...generateEmailContent(data),
-        subject: data.topic,
-      });
-
-      return res.status(200).json({ success: true });
-    } catch (err: any) {
-      return res.status(400).json({ message: err.nessage });
-    }
+const handler = async (req: Request, res: Response) => {
+  if (req.method !== 'POST') {
+    return res.status(400).json({ message: 'Bad request' });
   }
-  return res.status(400).json({ message: 'Bad request' });
+
+  const { firstName, lastName, topic, email, company, message } = req.body;
+
+  if (!firstName || !lastName || !topic || !email || !company || !message) {
+    return res.status(400).send({ message: 'Bad request' });
+  }
+
+  try {
+    await transporter.sendMail({
+      ...mailOptions,
+      ...generateEmailContent({ firstName, lastName, topic, email, company, message }),
+      subject: topic,
+    });
+
+    return res.status(200).json({ success: true });
+  } catch (err) {
+    return res.status(400).json({ message: err.message });
+  }
 };
+
 export default handler;
