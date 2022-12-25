@@ -16,7 +16,7 @@ const OfferCard = ({ title, description, price }: OfferCardProps) => {
       </a>
       <div className="small-line"></div>
       <div className="offer-whats-included-list">
-        <h5 className="offer-whats-included-list-heading heading-fifth">What's included?</h5>
+        <h5 className="offer-whats-included-list-heading heading-fifth">What&apos;s included?</h5>
         <p className="offer-whats-included-list-item paragraph-primary">
           + Custom mobile phone web design optimization
         </p>

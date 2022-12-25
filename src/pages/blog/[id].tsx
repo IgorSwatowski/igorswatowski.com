@@ -1,10 +1,17 @@
 import PostSinglePage from '../../components/Blog/posts/PostSinglePage';
 import { graphqlAPI } from '../../constants/constants';
 import { gql, GraphQLClient } from 'graphql-request';
+import { Post } from '../../types/post';
 
 const hygraph = new GraphQLClient(graphqlAPI);
 
-export const getStaticProps = async ({ params, locale }) => {
+export const getStaticProps = async ({
+  params,
+  locale,
+}: {
+  params: { id: string };
+  locale: string;
+}) => {
   const { post } = await hygraph.request(
     gql`
       query PostPageQuery($id: ID!, $locale: Locale!) {
@@ -16,7 +23,7 @@ export const getStaticProps = async ({ params, locale }) => {
         }
       }
     `,
-    { id: params.id, locale },
+    { id: params?.id, locale },
   );
   return {
     props: {
@@ -25,8 +32,8 @@ export const getStaticProps = async ({ params, locale }) => {
   };
 };
 
-export const getStaticPaths = async ({ locales }) => {
-  let paths = [];
+export const getStaticPaths = async ({ locales }: { locales: string[] }) => {
+  let paths: { params: { id: string }; locale: string }[] = [];
   const { posts } = await hygraph.request(
     gql`
       query AllPostsQuery {
@@ -45,10 +52,23 @@ export const getStaticPaths = async ({ locales }) => {
   );
 
   for (const locale of locales) {
-    paths = [...paths, ...posts.map((post) => ({ params: { id: post.id }, locale }))];
+    paths = [
+      ...paths,
+      ...posts.map(
+        (post: {
+          id: string;
+          title: string;
+          slug: string;
+          locale: string;
+          createdAt: string;
+          pageContent: { text: string };
+        }) => ({
+          params: { id: post.id },
+          locale,
+        }),
+      ),
+    ];
   }
-
-  console.log(paths);
 
   return {
     paths,
@@ -56,7 +76,11 @@ export const getStaticPaths = async ({ locales }) => {
   };
 };
 
-const PostSingle = ({ post }) => {
+type PostSingleProps = {
+  post: Post;
+};
+
+const PostSingle = ({ post }: PostSingleProps) => {
   return <PostSinglePage post={post} />;
 };
 export default PostSingle;

@@ -55,7 +55,7 @@ const handler = async (req: Request, res: Response) => {
 
     return res.status(200).json({ success: true });
   } catch (err) {
-    return res.status(400).json({ message: err.message });
+    return res.status(400).json({ message: message });
   }
 };
 

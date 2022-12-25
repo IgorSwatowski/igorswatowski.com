@@ -41,8 +41,8 @@ const PackagesBanner = () => {
             My personalized approach to building empowered brands is to focus on what makes your
             business unique and meaningful. My goal is to guide you every step of the way on this
             your journey to business growth and success. To bring you to a level where you feel
-            confident and connected to your brand so that in turn, you'll be able to attract your
-            ideal viewer for years to come.
+            confident and connected to your brand so that in turn, you&apos;ll be able to attract
+            your ideal viewer for years to come.
           </p>
         </div>
       </div>

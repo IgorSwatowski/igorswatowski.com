@@ -186,8 +186,10 @@ const ContactForm = () => {
         <button type="submit" id="submit" className="btn-secondary">
           {t.contactBtn}
         </button>
-        {showSuccessMessage && <p className="contact-form-success-message">Success</p>}
-        {error && <p className="contact-form-error-message">{error}</p>}{' '}
+        <div id="msg">
+          {showSuccessMessage && <p className="alert-success">Successfully sent message</p>}
+          {error && <p className="alert-danger">{error}</p>}
+        </div>
       </form>
     </>
   );
