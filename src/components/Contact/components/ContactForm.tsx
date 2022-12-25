@@ -41,6 +41,26 @@ const initState: State = {
 const ContactForm = () => {
   const formRef = useRef<HTMLFormElement>(null);
   const [showSuccessMessage, setShowSuccessMessage] = useState(false);
+  const [error, setError] = useState('');
+  const [touched, setTouched] = useState({
+    firstName: false,
+    lastName: false,
+    topic: false,
+    email: false,
+    company: false,
+    message: false,
+  });
+
+  const validateForm = () => {
+    const requiredFields = ['firstName', 'lastName', 'topic', 'email', 'message'];
+    const isFormValid = requiredFields.every((key) => {
+      return values[key] && values[key].trim().length > 0;
+    });
+    if (!isFormValid) {
+      setError('Please fill out all required fields');
+    }
+    return isFormValid;
+  };
 
   const router = useRouter();
   const { locale } = router;
@@ -48,7 +68,7 @@ const ContactForm = () => {
 
   const [state, setState] = useState<State>(initState);
 
-  const { values, error } = state;
+  const { values } = state;
 
   const handleChange = (event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = event.target;
@@ -63,6 +83,11 @@ const ContactForm = () => {
 
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
+    setError('');
+    setShowSuccessMessage(false);
+    if (!validateForm()) {
+      return;
+    }
     setState((prev) => ({
       ...prev,
       isLoading: true,
@@ -72,12 +97,12 @@ const ContactForm = () => {
       setState(initState);
       setShowSuccessMessage(true);
     } catch (error: any) {
-      setState((prev) => ({
-        ...prev,
-        isLoading: false,
-        error: error.message,
-      }));
+      setError(error.message);
     }
+    setState((prev) => ({
+      ...prev,
+      isLoading: false,
+    }));
   };
 
   return (
@@ -161,7 +186,8 @@ const ContactForm = () => {
         <button type="submit" id="submit" className="btn-secondary">
           {t.contactBtn}
         </button>
-        {showSuccessMessage && <p>Successfully sent message</p>}
+        {showSuccessMessage && <p className="contact-form-success-message">Success</p>}
+        {error && <p className="contact-form-error-message">{error}</p>}{' '}
       </form>
     </>
   );
