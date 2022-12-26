@@ -16,32 +16,33 @@
 
     @include respond(phone) {
       width: unset;
-      padding-top: 8rem;
+      padding-top: 6.4rem;
       margin: 0 auto;
       text-align: center;
-      padding-bottom: 8rem;
+      padding-bottom: 6.4rem;
     }
     @include respond(tablet-port) {
       width: unset;
-      padding: 8rem 1.6rem;
+      padding: 6.4rem 1.6rem;
       margin: 0 auto;
       text-align: center;
     }
     @include respond(tablet-land) {
       width: unset;
-      padding: 8rem 1.6rem;
+      padding: 6.4rem 1.6rem;
       margin: 0 auto;
       text-align: center;
     }
 
     p {
-      font-size: 24px;
+      font-size: 20px;
       max-width: 695px;
       color: var(--gray-200);
       text-align: center;
       line-height: 41px;
       letter-spacing: 0em;
       margin: 0;
+      padding: 0 3rem;
     }
     h3 {
       margin: 3.2rem 0 3.2rem 0;
