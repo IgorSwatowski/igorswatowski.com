@@ -27,6 +27,11 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+
+    &-heading {
+      text-align: center;
+    }
+
     &-list {
       display: flex;
       flex-direction: row;
@@ -44,7 +49,6 @@
       @include respond(tablet-land) {
         flex-direction: column;
       }
-
       &-item {
         background-color: var(--white);
         padding: 3.2rem;

@@ -9,12 +9,15 @@
 
   @include respond(phone) {
     width: unset;
+    margin: 11rem 0;
   }
   @include respond(tablet-port) {
     width: unset;
+    margin: 11rem 0;
   }
   @include respond(tablet-land) {
     width: unset;
+    margin: 11rem 0;
   }
 
   &-top {
@@ -39,14 +42,17 @@
     @include respond(phone) {
       flex-direction: column;
       align-items: flex-start;
+      gap: 4.5rem 0;
     }
     @include respond(tablet-port) {
       flex-direction: column;
       align-items: flex-start;
+      gap: 4.5rem 0;
     }
     @include respond(tablet-land) {
       flex-direction: column;
       align-items: flex-start;
+      gap: 4.5rem 0;
     }
     &-item {
       width: 50%;
