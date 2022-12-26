@@ -11,15 +11,15 @@
 
   @include respond(phone) {
     flex-direction: column;
-    padding-top: 14.8rem;
+    padding-top: 18.8rem;
   }
   @include respond(tablet-port) {
     flex-direction: column;
-    padding-top: 14.8rem;
+    padding-top: 18.8rem;
   }
   @include respond(tablet-land) {
     flex-direction: row;
-    padding-top: 14.8rem;
+    padding-top: 18.8rem;
   }
   @include respond(desktop-big) {
     padding-top: 27rem;
