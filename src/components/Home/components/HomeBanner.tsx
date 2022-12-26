@@ -1,5 +1,6 @@
 import { useRouter } from 'next/router';
 import Image from 'next/image';
+import Link from 'next/link';
 
 import { en } from '../../../i18n/locales/en';
 import { pl } from '../../../i18n/locales/pl';
@@ -20,13 +21,13 @@ const HomeBanner = () => {
         <p className="banner-block-left--sub paragraph-primary">{t.heroText}</p>
         <p className="banner-block-left--sub paragraph-primary">{t.heroTextSecond}</p>
         <div className="banner-block-left-buttons">
-          <a href="about.html" className="banner-block-left-buttons-first btn-primary">
+          <Link href="/about" className="banner-block-left-buttons-first btn-primary">
             <span>{t.heroBtn}</span>
             <svg width="13px" height="10px" viewBox="0 0 13 10">
               <path d="M1,5 L11,5"></path>
               <polyline points="8 1 12 5 8 9"></polyline>
             </svg>
-          </a>
+          </Link>
         </div>
         <div className="banner-block-left-trusted">
           <span className="banner-block-left-trusted--small">{t.trustedBy}</span>

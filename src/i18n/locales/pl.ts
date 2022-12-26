@@ -60,9 +60,9 @@ const pl = {
   ctaSecondText: 'Zróbmy to!',
   meetIgor: 'Unikalne projekty stron internetowych dla Twojej firmy.',
   meetIgorTextFirst:
-    'Cześć, jestem Igor Swatowski, FrontEnd Developer & Web Designer, który korzysta z najpopularniejszych technologii i narzędzi projektowych.',
+    'Zacznijmy od tego, że każda firma w dzisiejszych czasach powinna mieć swoją stronę internetową. Jest to niezbędne, aby zaistnieć w sieci i umożliwić potencjalnym klientom łatwe znalezienie informacji o Twojej firmie i jej ofercie.',
   meetIgorTextSecond:
-    'Moim celem jest pomaganie kreatywnym profesjonalistom w ulepszaniu ich stron internetowych i procesów pracy, a także zwiększanie ich wartości i sukcesu. Jako FrontEnd Developer & Web Designer zawsze szukam nowych sposobów na tworzenie atrakcyjnych, funkcjonalnych i responsywnych stron internetowych, które pomogą moim klientom w osiągnięciu sukcesu w dzisiejszym wirtualnym świecie.',
+    'Dlatego też powinieneś zadbać o to, aby strona internetowa Twojej firmy była nie tylko funkcjonalna, ale również estetyczna i przyciągająca wzrok.',
   meetIgorBtn: 'Poznaj mnie bliżej',
   ctaSecondFirstText:
     'Podziel się ze mną swoimi pomysłami, a ja stworzę dla Ciebie stronę internetową, która będzie znacznie bardziej wydajna i skuteczna.',
@@ -78,16 +78,17 @@ const pl = {
     'Dzięki moim umiejętnościom mogę stworzyć dla Ciebie stronę internetową, która przyciągnie uwagę i zachęci ludzi do skorzystania z Twoich usług lub produktów.',
   bannerTextThird:
     'Jeśli informacje, które właśnie usłyszałeś, przekonały Cię, koniecznie sprawdź, co mogę Ci zaoferować :)',
-  timeToIntroduceHeading: 'Które z poniższych brzmi najbardziej jak ty...',
+  timeToIntroduceHeading: 'Które z poniższych stwierdzień brzmi najbardziej jak ty...',
   timeToIntroduceStageFirst:
     'Potrzebuję strony internetowej dla swojej marki lub firmy, ale nie wiem jak zacząć...',
   timeToIntroduceStageSecond:
     'Chcę poprawić swoją obecną stronę internetową, ponieważ nie wygląda ona zbyt dobrze i nie przyciąga klientów...',
-  timeToIntroduceStageThird: 'Chcę, aby moja strona wyglądała pięknie i przynosiła klientów...',
+  timeToIntroduceStageThird:
+    'Chcę poprawić widoczność naszej strony w internecie i zwiększyć naszą sprzedaż oraz zainteresowanie klientów....',
   ctaHeading: 'Jestem wielkim zwolennikiem utrzymywania rzeczy w',
   ctaHeadingUnderline: 'prostocie.',
   ctaTextFirst:
-    'Rozumiem, jak się czujesz. Myśl o aktualizacji swojej strony internetowej może być zniechęcająca, zwłaszcza gdy masz tak wiele już do zrobienia. Ale nie martw się, jestem tutaj, aby pomóc. Pozwól mi wziąć ciężar z twoich ramion i stworzyć piękną, wysoko konwertującą stronę internetową dla ciebie.',
+    'Rozumiem, jak się czujesz. Myśl o aktualizacji swojej strony internetowej może być zniechęcająca, zwłaszcza gdy masz tak wiele już do zrobienia. Ale nie martw się, jestem tutaj, aby Ci pomóc. Pozwól mi wziąć ciężar z twoich ramion i stworzyć piękną, wysoko konwertującą stronę internetową dla ciebie.',
   ctaTextSecond:
     'Będziesz zaskoczony, jak łatwy i bezstresowy może być ten proces i jak wiele wartości i sukcesów może przynieść Twojej firmie. Skontaktuj się ze mną już dziś, aby dowiedzieć się więcej i umówić na konsultacje. Proste i łatwe.',
   whoIAm: 'Budowanie stron internetowych przyjaznych dla użytkownika',

@@ -1,4 +1,5 @@
 import { useRouter } from 'next/router';
+import Link from 'next/link';
 
 import { en } from '../../../i18n/locales/en';
 import { pl } from '../../../i18n/locales/pl';
@@ -36,9 +37,9 @@ const OfferCard = ({ title, description, price, ...props }: OfferCardProps) => {
       <p className="prices-wrapper-list-item-text paragraph-primary">{description}</p>
       <h4 className="prices-wrapper-list-item-price heading-third">{price}</h4>
       <span>{t.upFrontPay}</span>
-      <a href="contact.html" className="btn-secondary">
+      <Link href="/contact" className="btn-secondary">
         {t.getStartedBtn}
-      </a>
+      </Link>
       <div className="small-line"></div>
       <OfferIncludedList {...props} />
     </div>

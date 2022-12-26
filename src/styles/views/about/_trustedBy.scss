@@ -2,12 +2,15 @@
 @import '../../abstracts/variables';
 
 .trusted-by {
+  padding: 3.2rem 0;
   margin-top: 6.4rem;
   background-color: var(--gray);
-  padding: 4rem;
 
   @include respond(phone) {
-    margin-top: unset;
+    padding: 3.2rem 4rem;
+  }
+  @include respond(tablet-port) {
+    padding: 3.2rem 4rem;
   }
 
   &-wrapper {
@@ -19,14 +22,14 @@
 
     @include respond(phone) {
       flex-direction: column;
-      gap: 8rem;
+      gap: 6.4rem;
       align-items: center;
       justify-content: center;
       margin: 0 auto;
     }
     @include respond(tablet-port) {
       flex-direction: column;
-      gap: 8rem;
+      gap: 6.4rem;
       align-items: center;
       justify-content: center;
       margin: 0 auto;
@@ -67,20 +70,28 @@
       @include respond(phone) {
         gap: 7rem;
         margin: 0 auto;
-        display: flex;
         flex-wrap: wrap;
-        padding: 0 6rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
       }
       @include respond(tablet-port) {
         gap: 7rem;
         margin: 0 auto;
-        display: flex;
         flex-wrap: wrap;
-        padding: 0 6rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
       }
       @include respond(tablet-land) {
-        gap: 6rem;
+        gap: 7rem;
         margin: 0 auto;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
       }
 
       img {

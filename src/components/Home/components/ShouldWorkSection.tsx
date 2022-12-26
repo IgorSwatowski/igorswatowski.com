@@ -1,4 +1,5 @@
 import { useRouter } from 'next/router';
+import Link from 'next/link';
 
 import { en } from '../../../i18n/locales/en';
 import { pl } from '../../../i18n/locales/pl';
@@ -34,8 +35,8 @@ const ShouldWorkSection = () => {
         <p className="should-work-wrapper-end-text" data-aos="fade-up" data-aos-delay="50">
           {t.weShouldWorkCTA}
         </p>
-        <a
-          href="about.html"
+        <Link
+          href="/about"
           className="should-work-wrapper-end-link btn-primary"
           data-aos="fade-up"
           data-aos-delay="150"
@@ -45,7 +46,7 @@ const ShouldWorkSection = () => {
             <path d="M1,5 L11,5"></path>
             <polyline points="8 1 12 5 8 9"></polyline>
           </svg>
-        </a>
+        </Link>
       </div>
     </section>
   );

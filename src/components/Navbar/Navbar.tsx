@@ -53,9 +53,9 @@ const Navbar = () => {
         <NavbarItem href="/packages" aria-label="Packages">
           {t.packages}
         </NavbarItem>
-        <NavbarItem href="/blog" aria-label="Blog">
+        {/* <NavbarItem href="/blog" aria-label="Blog">
           {t.blog}
-        </NavbarItem>
+        </NavbarItem> */}
         <NavbarItem href="/contact" aria-label="Contact">
           {t.contact}
         </NavbarItem>

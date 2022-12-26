@@ -1,4 +1,5 @@
 import { useRouter } from 'next/router';
+import Link from 'next/link';
 
 import { en } from '../../../i18n/locales/en';
 import { pl } from '../../../i18n/locales/pl';
@@ -19,9 +20,9 @@ const CTASecondSection = () => {
         <h3 className="cta-second-heading heading-third" data-aos="fade-down" data-aos-delay="50">
           {t.ctaSecondThirdText}
         </h3>
-        <a href="packages.html" className="btn-secondary" data-aos="fade-down" data-aos-delay="50">
+        <Link href="/packages" className="btn-secondary" data-aos="fade-down" data-aos-delay="50">
           {t.ctaSecondBtn}
-        </a>
+        </Link>
       </div>
     </section>
   );

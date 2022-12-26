@@ -2,7 +2,7 @@
 @import '../../abstracts/variables';
 
 .prices {
-  margin-top: 18rem;
+  margin-top: 12.8rem;
 
   @include respond(phone) {
     margin-top: 8rem;
@@ -19,7 +19,7 @@
     align-items: center;
     justify-content: center;
     margin: 0 auto;
-    padding-bottom: 3.2rem;
+    padding-bottom: 6.4rem;
 
     @include respond(phone) {
       align-items: unset;
@@ -32,7 +32,21 @@
       margin-bottom: 2rem;
     }
     &-text {
-      text-align: left;
+      text-align: center;
+      width: 650px;
+
+      @include respond(phone) {
+        width: unset;
+        text-align: left;
+      }
+      @include respond(tablet-port) {
+        width: unset;
+        text-align: left;
+      }
+      @include respond(tablet-land) {
+        width: unset;
+        text-align: left;
+      }
     }
 
     &-list {
@@ -42,18 +56,18 @@
       justify-content: center;
       margin: 0 auto;
       gap: 4.7rem;
-      padding-top: 18rem;
+      padding-top: 12.8rem;
 
       @include respond(phone) {
         display: flex;
         flex-direction: column;
-        padding-top: 6rem;
+        padding-top: 3.2rem;
       }
 
       @include respond(tablet-port) {
         display: flex;
         flex-direction: column;
-        padding-top: 6rem;
+        padding-top: 3.2rem;
       }
 
       @include respond(tablet-land) {
@@ -88,31 +102,28 @@
           margin-bottom: 18px;
         }
         &-text {
-          margin-bottom: 28px;
+          margin-bottom: 3.2rem;
         }
-        &-price {
-          margin-bottom: 10px;
+        h4 {
+          margin-bottom: 1.6rem;
         }
         span {
           font-size: 18px;
           font-weight: 400;
-          line-height: 26px;
-          letter-spacing: 0em;
           text-align: left;
           color: var(--gray-200);
-          margin-top: 10px;
         }
-        a {
+        .btn-secondary {
           display: flex;
           justify-content: center;
           align-items: center;
           margin: 0 auto;
-          margin: 24px 0;
+          margin-top: 3.2rem;
         }
         .small-line {
           height: 1px;
           background-color: #d9d9d9;
-          margin-bottom: 24px;
+          margin-top: 3.2rem;
         }
 
         .offer-whats-included-list {
@@ -122,6 +133,7 @@
           flex-direction: column;
           align-items: flex-start;
           gap: 1.5rem;
+          margin-top: 3.2rem;
 
           &-heading {
             text-align: center;
