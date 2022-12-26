@@ -172,6 +172,9 @@ const pl = {
   revisions: '+ 3 rundy poprawek',
 
   timelineWebDevDesign: '+ Czas trwania 6 tygodni - 8 tygodni',
+
+  sucessMsg: 'Pomyślnie wysłano wiadomość',
+  errorMsg: 'Wypełnij wszystkie wymagane pola',
 };
 
 export { pl };

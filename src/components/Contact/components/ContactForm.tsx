@@ -187,8 +187,8 @@ const ContactForm = () => {
           {t.contactBtn}
         </button>
         <div id="msg">
-          {showSuccessMessage && <p className="alert-success">Successfully sent message</p>}
-          {error && <p className="alert-danger">{error}</p>}
+          {showSuccessMessage && <p className="alert-success">{t.sucessMsg}</p>}
+          {error && <p className="alert-danger">{t.errorMsg}</p>}
         </div>
       </form>
     </>

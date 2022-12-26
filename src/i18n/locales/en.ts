@@ -173,6 +173,9 @@ const en = {
   revisions: '+ 3 Rounds of Revisions',
 
   timelineWebDevDesign: '+ Timelime 6 weeks - 8 weeks',
+
+  sucessMsg: 'Successfully sent message',
+  errorMsg: 'Please fill out all required fields',
 };
 
 export { en };
