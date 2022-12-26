@@ -48,7 +48,7 @@
     font-size: 36px;
   }
   @include respond(tablet-land) {
-    font-size: 54px;
+    font-size: 44px;
   }
   &::selection {
     color: var(--black);

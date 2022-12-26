@@ -2,75 +2,98 @@
 @import '../../abstracts/variables';
 
 .should-work {
-  padding: 6.4rem 0;
+  margin: 12.8rem 0;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 0 auto;
   flex-direction: column;
-  &-list {
+
+  @include respond(phone) {
+    width: unset;
+    margin-top: 6.4rem;
+  }
+  @include respond(tablet-port) {
+    width: unset;
+    margin-top: 6.4rem;
+  }
+  @include respond(tablet-land) {
+    width: unset;
+    margin-top: 6.4rem;
+  }
+
+  &-wrapper {
+    margin: 0 auto;
     display: flex;
-    flex-direction: row;
-    align-items: flex-start;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
-    gap: 3rem;
-    margin-top: 3.2rem;
+    &-list {
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+      justify-content: center;
+      gap: 3rem;
+      margin-top: 3.2rem;
 
-    @include respond(phone) {
-      flex-direction: column;
-    }
-    @include respond(tablet-port) {
-      flex-direction: column;
-    }
-    @include respond(tablet-land) {
-      flex-direction: column;
-    }
-
-    &-item {
-      background-color: var(--white);
-      padding: 3.2rem;
-      width: 50%;
-      box-shadow: 0px 0px 20px 0px #0000000a;
-      border-radius: 5px;
       @include respond(phone) {
-        width: unset;
+        flex-direction: column;
       }
       @include respond(tablet-port) {
-        width: unset;
+        flex-direction: column;
       }
       @include respond(tablet-land) {
-        width: unset;
+        flex-direction: column;
       }
-      &-heading {
-        margin-bottom: 1rem;
+
+      &-item {
+        background-color: var(--white);
+        padding: 3.2rem;
+        width: 50%;
+        box-shadow: 0px 0px 20px 0px #0000000a;
+        border-radius: 5px;
+        @include respond(phone) {
+          width: unset;
+        }
+        @include respond(tablet-port) {
+          width: unset;
+        }
+        @include respond(tablet-land) {
+          width: unset;
+        }
+        &-heading {
+          margin-bottom: 1rem;
+        }
       }
     }
-  }
-  &-end-text {
-    margin: 3.2rem 0;
-    color: var(--black);
-    max-width: 722px;
-    text-align: center;
-    font-weight: 600;
-    font-size: 20px;
-    line-height: 29px;
-  }
-  &-end-link {
-    color: var(--black);
-    max-width: 827px;
-    text-align: center;
-    font-weight: 600;
-    font-size: 20px;
-    position: relative;
-    z-index: 1;
-    &:before {
-      content: '';
-      position: absolute;
-      width: 100%;
-      bottom: -1px;
-      height: 1rem;
-      background-color: var(--primary);
-      z-index: -1;
+    &-end-text {
+      margin: 3.2rem 0;
+      color: var(--black);
+      max-width: 722px;
+      text-align: center;
+      font-weight: 600;
+      font-size: 20px;
+      line-height: 29px;
+    }
+    &-end-link {
+      color: var(--black);
+      max-width: 827px;
+      text-align: center;
+      font-weight: 600;
+      font-size: 20px;
+      position: relative;
+      z-index: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      &:before {
+        content: '';
+        position: absolute;
+        width: 100%;
+        bottom: -1px;
+        height: 1rem;
+        background-color: var(--primary);
+        z-index: -1;
+      }
     }
   }
 }

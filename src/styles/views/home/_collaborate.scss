@@ -2,15 +2,12 @@
 @import '../../abstracts/variables';
 
 .collaborate {
+  margin: 6.4rem 0;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin: 0 auto;
   width: 100%;
-  margin-top: 8rem;
-  margin-bottom: 8rem;
-
   @include respond(phone) {
     width: unset;
   }
@@ -26,22 +23,19 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
     margin: 0 auto;
     width: 100%;
     position: relative;
-    padding: 6.4rem 0 6.4rem 0;
+    padding: 6.4rem 0;
 
     @include respond(phone) {
       padding: 6.4rem 2rem;
       width: unset;
     }
     @include respond(tablet-port) {
-      padding: 6.4rem 2rem;
       width: unset;
     }
     @include respond(tablet-land) {
-      padding: 6.4rem 2rem;
       width: unset;
     }
 
@@ -59,6 +53,10 @@
       }
 
       @include respond(tablet-port) {
+        text-align: left;
+        word-break: break-word;
+      }
+      @include respond(tablet-land) {
         text-align: left;
         word-break: break-word;
       }

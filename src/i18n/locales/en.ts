@@ -83,7 +83,8 @@ const en = {
     "I need a website for my brand or business but don't know how to get started...",
   timeToIntroduceStageSecond:
     "I want to improve my current website because it doesn't look very good and doesn't attract customers...",
-  timeToIntroduceStageThird: 'I want my website to look beautiful and bring in customers...',
+  timeToIntroduceStageThird:
+    'I want to improve the online visibility of our website and increase our sales and customer interest...',
   ctaHeading: "I'm a big believer in keeping things",
   ctaHeadingUnderline: 'simple',
   ctaTextFirst:

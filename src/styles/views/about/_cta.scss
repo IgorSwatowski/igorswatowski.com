@@ -8,7 +8,7 @@
   justify-content: center;
   margin: 0 auto;
   width: 100%;
-  margin-top: 18rem;
+  padding-top: 6.4rem;
 
   @include respond(phone) {
     width: unset;
@@ -32,7 +32,7 @@
     margin: 0 auto;
     width: 100%;
     position: relative;
-    padding: 7rem 0;
+    padding: 6.4rem 0;
 
     @include respond(phone) {
       padding: 6rem 2rem;

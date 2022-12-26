@@ -2,10 +2,21 @@
 @import '../../abstracts/variables';
 
 .implementation-process {
-  padding: 6.4rem 0;
+  margin: 6.4rem 0;
   display: flex;
   margin: 0 auto;
   flex-direction: column;
+
+  @include respond(phone) {
+    width: unset;
+  }
+  @include respond(tablet-port) {
+    width: unset;
+  }
+  @include respond(tablet-land) {
+    width: unset;
+  }
+
   &-top {
     &-text {
       max-width: 742px;

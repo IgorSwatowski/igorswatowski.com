@@ -123,6 +123,10 @@ a {
   position: relative;
   z-index: 1;
   margin-left: 1.5rem;
+
+  @include respond(phone) {
+    margin-left: 0.7rem;
+  }
   &:after {
     content: '';
     position: absolute;
@@ -135,8 +139,7 @@ a {
     z-index: -1;
 
     @include respond(phone) {
-      bottom: 17%;
-      height: 10px;
+      display: none;
     }
 
     @include respond(tablet-port) {

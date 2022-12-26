@@ -2,52 +2,54 @@
 @import '../../abstracts/variables';
 
 .short-personal-info {
-  padding: 6.4rem 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 0 auto;
-  flex-direction: row;
-  &-left {
-    width: 50%;
+  margin: 6.4rem 0;
+  &-wrapper {
+    margin: 0 auto;
     display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-
-    @include respond(phone) {
-      width: 100%;
-    }
-    @include respond(tablet-port) {
-      width: 100%;
-    }
-    @include respond(tablet-land) {
-      width: 100%;
-    }
-    &-text {
-      margin-top: 3rem;
-    }
-    .more-about-me-end-link {
-      margin: 3.2rem 0 0 0;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    &-left {
+      width: 50%;
       display: flex;
-      flex-direction: row;
-      align-items: center;
-      gap: 0.5rem;
-    }
-  }
-  &-right {
-    width: 50%;
-    display: flex;
-    justify-content: flex-end;
-    position: relative;
+      flex-direction: column;
+      align-items: flex-start;
 
-    @include respond(phone) {
-      display: none;
+      @include respond(phone) {
+        width: unset;
+      }
+      @include respond(tablet-port) {
+        width: unset;
+      }
+      @include respond(tablet-land) {
+        width: unset;
+      }
+      &-text {
+        margin-top: 3rem;
+      }
+      .more-about-me-end-link {
+        margin: 3.2rem 0 0 0;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 0.5rem;
+      }
     }
-    @include respond(tablet-port) {
-      display: none;
-    }
-    @include respond(tablet-land) {
-      display: none;
+    &-right {
+      width: 50%;
+      display: flex;
+      justify-content: flex-end;
+      position: relative;
+
+      @include respond(phone) {
+        display: none;
+      }
+      @include respond(tablet-port) {
+        display: none;
+      }
+      @include respond(tablet-land) {
+        display: none;
+      }
     }
   }
 }

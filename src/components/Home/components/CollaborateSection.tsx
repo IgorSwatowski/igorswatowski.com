@@ -11,8 +11,8 @@ const CollaborateSection = () => {
   const { locale } = router;
   const t = locale === 'en' ? en : pl;
   return (
-    <section className="collaborate container-box">
-      <div className="collaborate-wrapper">
+    <section className="collaborate">
+      <div className="collaborate-wrapper container-box">
         <div className="collaborate-wrapper-lines-img">
           <Image loading="lazy" src={LinesSvg} alt="" />
         </div>

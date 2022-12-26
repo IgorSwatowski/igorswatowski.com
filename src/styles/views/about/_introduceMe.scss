@@ -2,7 +2,7 @@
 @import '../../abstracts/variables';
 
 .introduce-me {
-  margin-top: 18rem;
+  padding-top: 6.4rem;
 
   @include respond(phone) {
     margin-top: unset;
@@ -19,11 +19,8 @@
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    align-items: flex-start;
-    margin: 0 auto;
-    max-width: 799px;
     width: 100%;
-
+    margin: 0 auto;
     @include respond(phone) {
       padding-left: 16px;
       padding-right: 16px;
@@ -50,21 +47,24 @@
     &-heading {
       margin-bottom: 34px;
       max-width: 800px;
+      text-align: center;
     }
     &-list {
       display: flex;
-      flex-direction: column;
+      align-items: center;
       gap: 4rem;
-      margin-top: 4rem;
+      justify-content: center;
+      flex-wrap: wrap;
+      padding-top: 3.2rem;
       &-item {
         display: flex;
         flex-direction: row;
         gap: 3rem;
         align-items: center;
-        max-width: 650px;
+        width: 650px;
         &-text {
           margin-bottom: 0;
-          max-width: 550px;
+          max-width: 600px;
         }
       }
     }
