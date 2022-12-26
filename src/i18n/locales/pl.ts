@@ -23,9 +23,8 @@ const pl = {
     'Wiem, jak ważne jest dla Ciebie osiągnięcie sukcesu, dlatego zapewniam profesjonalne i skuteczne wsparcie, które Ci w tym pomoże.',
   heroBtn: 'Jak mogę Ci pomóc?',
   trustedBy: 'Zaufali mi:',
-  collaborate: 'Współpracuję z markami, przedsiębiorcami i agencjami, aby stworzyć',
-  collaborateText: 'niezapomniane',
-  collaborateSecond: 'wrażenia.',
+  collaborate:
+    'Współpracuję z markami, przedsiębiorcami i agencjami, aby stworzyć niezapomniane wrażenia.',
   collaborateTextMain:
     'Moja unikalna perspektywa i kreatywność pozwolą Ci wyróżnić się na rynku i zapisać w pamięci Twoich klientów. Jestem gotowy dostarczyć rozwiązania, które pomogą Ci osiągnąć sukces.',
   designProcess: 'Zapoznaj się z moim procesem projektowania i wdrażania',

@@ -23,9 +23,8 @@ const en = {
     'I know how important it is for them to succeed, so I provide them with professional and effective support to help them do so.',
   heroBtn: 'How can I help',
   trustedBy: 'Trusted by',
-  collaborate: 'I collaborate with brands, entrepreneurs and agencies to create',
-  collaborateText: 'memorable',
-  collaborateSecond: 'experiences.',
+  collaborate:
+    'I collaborate with brands, entrepreneurs and agencies to create memorable experiences.',
   collaborateTextMain:
     'My unique perspective and creativity will help you stand out in the marketplace and save your customers memories. I am ready to provide solutions to help you succeed.',
   designProcess: "Here's an overview of my design and implementation process",
@@ -153,7 +152,7 @@ const en = {
   getStartedBtn: 'Get started',
   whatsIncluded: "What's included",
 
-  upFrontPay: '(50%) upfront payment',
+  upFrontPay: '(25%) upfront payment',
   customMobile: '+ Custom mobile phone web design optimization',
   orientedDesign: '+ Functional & goal oriented design',
   customDesignedWeb: '+ Up to 6 custom designed web pages',

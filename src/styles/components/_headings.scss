@@ -10,17 +10,19 @@
   margin: 0;
 
   @include respond(phone) {
-    font-size: 42px;
-    line-height: 5rem;
+    font-size: 32px;
+    line-height: 4rem;
     font-weight: 600;
     letter-spacing: -1px;
   }
   @include respond(tablet-port) {
     width: 100%;
-    font-size: 48px;
+    font-size: 36px;
+    line-height: 4.3rem;
   }
   @include respond(tablet-land) {
-    font-size: 54px;
+    font-size: 48px;
+    line-height: 5.6rem;
   }
   &::selection {
     color: var(--black);
@@ -38,8 +40,8 @@
 
   @include respond(phone) {
     width: 100%;
-    font-size: 36px;
-    line-height: 1.212em;
+    font-size: 28px;
+    line-height: 3.5rem;
     font-weight: 600;
     letter-spacing: -1px;
   }
