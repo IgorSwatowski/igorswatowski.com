@@ -66,23 +66,23 @@ const Navbar = () => {
       <Link href="/" className="logo">
         Igor. <span className="bolden">Swatowski</span>
       </Link>
-      <input className="menu-btn" type="checkbox" id="menu-btn" onClick={toggleMenu} />
+      <input className="menu-btn" type="checkbox" id="menu-btn" />
       <label className="menu-icon" htmlFor="menu-btn">
         <span className="navicon"></span>
       </label>
       <div className="menu" id="menu">
-        {/* <NavbarItem href="/about" aria-label="About me" onClick={closeMenu}>
+        <NavbarItem href="/about" aria-label="About me">
           {t.about}
         </NavbarItem>
-        <NavbarItem href="/packages" aria-label="Packages" onClick={closeMenu}>
+        <NavbarItem href="/packages" aria-label="Packages">
           {t.packages}
         </NavbarItem>
-        <NavbarItem href="/blog" aria-label="Blog">
+        {/* <NavbarItem href="/blog" aria-label="Blog">
           {t.blog}
-        </NavbarItem>
-        <NavbarItem href="/contact" aria-label="Contact" onClick={closeMenu}>
-          {t.contact}
         </NavbarItem> */}
+        <NavbarItem href="/contact" aria-label="Contact">
+          {t.contact}
+        </NavbarItem>
         <CustomSelect
           options={['EN', 'PL'].map((option) => option.toUpperCase())}
           defaultValue={locale === 'en' ? 'EN' : 'PL'}
