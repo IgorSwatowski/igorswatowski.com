@@ -9,10 +9,10 @@ interface NavbarItemProps {
   children: React.ReactNode;
   href: string;
   ariaLabelText?: string;
-  onClick?: (event: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => void;
+  // onClick?: (event: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => void;
 }
 
-const NavbarItem = ({ children, ariaLabelText, href, onClick }: NavbarItemProps) => {
+const NavbarItem = ({ children, ariaLabelText, href }: NavbarItemProps) => {
   const router = useRouter();
   const { locale } = router;
   const t = locale === 'en' ? en : pl;
@@ -21,12 +21,12 @@ const NavbarItem = ({ children, ariaLabelText, href, onClick }: NavbarItemProps)
       <Link
         href={href}
         aria-label={ariaLabelText}
-        onClick={(event) => {
-          event.preventDefault();
-          if (onClick) {
-            onClick(event);
-          }
-        }}
+        // onClick={(event) => {
+        //   event.preventDefault();
+        //   if (onClick) {
+        //     onClick(event);
+        //   }
+        // }}
       >
         {children}
       </Link>
