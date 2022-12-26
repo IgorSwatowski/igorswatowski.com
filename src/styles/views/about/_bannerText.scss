@@ -101,6 +101,7 @@
           height: 100%;
           object-fit: cover;
           margin-left: 0;
+          display: none;
         }
         @include respond(tablet-port) {
           width: 100%;
