@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 
@@ -12,6 +12,30 @@ const Navbar = () => {
   const router = useRouter();
   const { locale } = router;
   const t = locale === 'en' ? en : pl;
+
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
+  // const closeMenu = () => {
+  //   if (isMenuOpen) {
+  //     setIsMenuOpen(false);
+  //     console.log(isMenuOpen);
+  //     const element = document.getElementById('menu');
+  //     element!.style.display = 'none';
+  //   }
+  // };
+
+  // const closeMenu = () => {
+  //   if (isMenuOpen) {
+  //     setIsMenuOpen(false);
+  //     console.log(isMenuOpen);
+  //     const element = document.getElementById('menu');
+  //     element!.classList.toggle('menu');
+  //   }
+  // };
 
   const changeLanguage = async (locale: string) => {
     const { pathname, query } = router;
@@ -42,23 +66,23 @@ const Navbar = () => {
       <Link href="/" className="logo">
         Igor. <span className="bolden">Swatowski</span>
       </Link>
-      <input className="menu-btn" type="checkbox" id="menu-btn" />
+      <input className="menu-btn" type="checkbox" id="menu-btn" onClick={toggleMenu} />
       <label className="menu-icon" htmlFor="menu-btn">
         <span className="navicon"></span>
       </label>
-      <div className="menu">
-        <NavbarItem href="/about" aria-label="About me">
+      <div className="menu" id="menu">
+        {/* <NavbarItem href="/about" aria-label="About me" onClick={closeMenu}>
           {t.about}
         </NavbarItem>
-        <NavbarItem href="/packages" aria-label="Packages">
+        <NavbarItem href="/packages" aria-label="Packages" onClick={closeMenu}>
           {t.packages}
         </NavbarItem>
-        {/* <NavbarItem href="/blog" aria-label="Blog">
+        <NavbarItem href="/blog" aria-label="Blog">
           {t.blog}
-        </NavbarItem> */}
-        <NavbarItem href="/contact" aria-label="Contact">
-          {t.contact}
         </NavbarItem>
+        <NavbarItem href="/contact" aria-label="Contact" onClick={closeMenu}>
+          {t.contact}
+        </NavbarItem> */}
         <CustomSelect
           options={['EN', 'PL'].map((option) => option.toUpperCase())}
           defaultValue={locale === 'en' ? 'EN' : 'PL'}

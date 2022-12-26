@@ -10,7 +10,7 @@
   word-break: break-word;
 
   @include respond(phone) {
-    font-size: 20px;
+    font-size: 18px;
     line-height: 32px;
     font-weight: 400;
   }

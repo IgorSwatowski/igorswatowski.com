@@ -11,7 +11,7 @@
 
   @include respond(phone) {
     font-size: 42px;
-    line-height: 6rem;
+    line-height: 4.5rem;
     font-weight: 600;
     letter-spacing: -1px;
   }
@@ -38,7 +38,7 @@
 
   @include respond(phone) {
     width: 100%;
-    font-size: 32px;
+    font-size: 36px;
     line-height: 1.212em;
     font-weight: 600;
     letter-spacing: -1px;
@@ -65,13 +65,14 @@
 
   @include respond(phone) {
     width: 100%;
-    font-size: 32px;
+    font-size: 28px;
     line-height: 1.31em;
     font-weight: 600;
     letter-spacing: -1px;
   }
   @include respond(tablet-port) {
     width: 100%;
+    font-size: 32px;
   }
   @include respond(tablet-land) {
     width: 100%;
