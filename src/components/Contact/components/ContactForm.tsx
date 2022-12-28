@@ -6,7 +6,6 @@ import { en } from '../../../i18n/locales/en';
 import { pl } from '../../../i18n/locales/pl';
 import CustomTextarea from '../../CustomTextarea/CustomTextarea';
 
-import { validate } from '../../../utils/validate';
 import { RiLoader5Fill } from 'react-icons/ri';
 import axios from 'axios';
 
@@ -26,6 +25,49 @@ const ContactForm = () => {
   const { locale } = router;
   const t = locale === 'en' ? en : pl;
 
+  const validate = (
+    {
+      firstName,
+      email,
+      message,
+      lastName,
+      topic,
+    }: {
+      firstName?: string;
+      email?: string;
+      message?: string;
+      lastName?: string;
+      topic?: string;
+    },
+    t: any,
+  ) => {
+    const errors: {
+      firstName?: string;
+      email?: string;
+      message?: string;
+      lastName?: string;
+      topic?: string;
+    } = {};
+    if (!firstName || firstName.trim() === '') {
+      errors.firstName = t.contactFirstNameError;
+    }
+    if (!lastName || lastName.trim() === '') {
+      errors.lastName = t.contactLastNameError;
+    }
+    if (!topic || topic.trim() === '') {
+      errors.topic = t.contactTopicError;
+    }
+    if (!email || email.trim() === '') {
+      errors.email = t.contactEmailError;
+    } else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(email)) {
+      errors.email = t.contactInvalidEmail;
+    }
+    if (!message || message.trim() === '') {
+      errors.message = t.contactMessageError;
+    }
+    return errors;
+  };
+
   const [values, setValues] = useState({
     firstName: '',
     lastName: '',
@@ -42,7 +84,7 @@ const ContactForm = () => {
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    const errors = validate(values);
+    const errors = validate(values, t);
     if (errors && Object.keys(errors).length > 0) {
       return setErrors(errors);
     }
@@ -199,7 +241,11 @@ const ContactForm = () => {
           )}
         </button>
         <p className="alert-success">
-          {success !== false ? messageState : <span className="alert-danger">{messageState}</span>}
+          {success !== false ? (
+            <span className="alert-success">{messageState}</span>
+          ) : (
+            <span className="alert-danger">{messageState}</span>
+          )}
         </p>
       </form>
     </>

@@ -114,6 +114,13 @@ const pl = {
   contactTopic: 'Temat',
   contactMessage: 'Wiadomość',
   contactBtn: 'Wyślij wiadomość',
+  contactEmailError: 'Email nie może być pusty',
+  contactLastNameError: 'Nazwisko nie może być puste',
+  contactFirstNameError: 'Imię nie może być puste',
+  contactTopicError: 'Temat nie może być pusty',
+  contactMessageError: 'Wiadomość nie może być pusta',
+  contactInvalidEmail: "Niepoprawny format email'a",
+
   //Blog
   blogHero: 'Odkryj bogactwo wiedzy i inspiracji.',
   blogHeroText:
