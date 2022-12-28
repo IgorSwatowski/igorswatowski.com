@@ -1,5 +1,4 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-import Mail from 'nodemailer/lib/mailer';
 import { MailApi } from '../../constants/constants';
 const sgMail = require('@sendgrid/mail');
 
