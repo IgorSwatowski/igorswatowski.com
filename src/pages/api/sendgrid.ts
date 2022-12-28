@@ -1,15 +1,16 @@
 // import { mailOptions, transporter } from '../../config/nodemailer';
 // import { NextApiRequest, NextApiResponse } from 'next';
 import sendgrid from '@sendgrid/mail';
+import { SENDGRID_API } from '../../constants/constants';
 
-sendgrid.setApiKey(process.env.SENDGRID_API_KEY);
+sendgrid.setApiKey(SENDGRID_API);
 
-async function sendEmail(req, res) {
+async function sendEmail(req: any, res: any) {
   try {
     await sendgrid.send({
       to: 'hello@igorswatowski.com', // Your email where you'll receive emails
       from: 'hello@igorswatowski.com', // your website email address here
-      subject: `[Lead from website] : ${req.body.topic}`,
+      subject: `[Lead from website] : ${req?.body.topic}`,
       html: `<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
       <html lang="en">
       <head>
@@ -54,7 +55,7 @@ async function sendEmail(req, res) {
       </body>
       </html>`,
     });
-  } catch (error) {
+  } catch (error: any) {
     console.log(error);
     return res.status(error.statusCode || 500).json({ error: error.message });
   }
