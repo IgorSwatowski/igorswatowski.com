@@ -6,10 +6,28 @@ import Navbar from '../components/Navbar/Navbar';
 import i18n from '../i18n/i18n';
 
 import '../styles/styles.scss';
+import Script from 'next/script';
+
+const googletagmanager = `https://www.googletagmanager.com/gtag/js?id=${process.env.GA_TAG}`;
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
     <>
+      <Script strategy="afterInteractive" src={googletagmanager} />
+      <Script
+        id="google-analytics"
+        strategy="afterInteractive"
+        dangerouslySetInnerHTML={{
+          __html: `
+                  window.dataLayer = window.dataLayer || [];
+                  function gtag(){dataLayer.push(arguments);}
+                  gtag('js', new Date());
+                  gtag('config', ${process.env.GA_TAG}, {
+                    page_path: window.location.pathname,
+                  });
+                `,
+        }}
+      />
       <Head>
         <title>Igor Swatowski | Web Designer & Developer</title>
         <link rel="icon" type="image/png" href="../../public/favicon.png" />
