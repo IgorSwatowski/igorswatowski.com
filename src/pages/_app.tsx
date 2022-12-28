@@ -12,7 +12,6 @@ import { GATrackId } from '../constants/constants';
 const googletagmanager = `https://www.googletagmanager.com/gtag/js?id=${GATrackId}`;
 
 export default function App({ Component, pageProps }: AppProps) {
-  console.log(GATrackId);
   return (
     <>
       <Script strategy="afterInteractive" src={googletagmanager} />
