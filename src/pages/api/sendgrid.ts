@@ -3,13 +3,25 @@
 import sendgrid from '@sendgrid/mail';
 import { SENDGRID_API } from '../../constants/constants';
 
+export interface ContactData {
+  firstName: string;
+  lastName: string;
+  topic: string;
+  email: string;
+  company: string;
+  message: string;
+  [key: string]: string;
+}
+
 sendgrid.setApiKey(SENDGRID_API);
 
 async function sendEmail(req: any, res: any) {
+  const { email } = req.body;
+
   try {
     await sendgrid.send({
       to: 'hello@igorswatowski.com', // Your email where you'll receive emails
-      from: 'hello@igorswatowski.com', // your website email address here
+      from: email, // your website email address here
       subject: `[Lead from website] : ${req?.body.topic}`,
       html: `<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
       <html lang="en">
