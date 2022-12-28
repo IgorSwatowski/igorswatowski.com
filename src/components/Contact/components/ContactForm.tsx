@@ -165,7 +165,6 @@ const ContactForm = () => {
       setLastName('');
       setCompany('');
     }
-    console.log(firstName, email, topic, lastName, company, message);
   };
 
   return (
