@@ -15,7 +15,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse<
       email: string;
       firstName: string;
       lastName: string;
-      company: string;
+      company?: string;
       topic: string;
       message: string;
     } = req.body;
@@ -29,7 +29,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse<
     };
     try {
       await sgMail.send(data);
-      res.status(200).json({ message: 'Your message was sent successfully.' });
+      res.status(200).json({ message: 'Your message was sent successfully' });
     } catch (err) {
       res.status(500).json({ message: `There was an error sending your message. ${err}` });
     }

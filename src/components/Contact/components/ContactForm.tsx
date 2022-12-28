@@ -14,7 +14,7 @@ interface IValues {
   firstName: string;
   lastName: string;
   topic: string;
-  company: string;
+  company?: string;
   email: string;
   message: string;
 }
@@ -189,25 +189,17 @@ const ContactForm = () => {
             />
           </div>
         </div>
-        <button
-          className="mt-4 w-full rounded-md bg-blue-600 py-3 px-5 text-lg text-white outline-none hover:bg-blue-800 disabled:cursor-not-allowed disabled:bg-opacity-60"
-          type="submit"
-          disabled={loading}
-        >
+        <button className="btn-secondary" type="submit" disabled={loading}>
           {loading !== true ? (
-            'SUBMIT'
+            t.contactBtn
           ) : (
             <div className="flex h-full w-full items-center justify-center ">
               <RiLoader5Fill className="h-8 w-8 animate-spin" />
             </div>
           )}
         </button>
-        <p className="mt-5 text-green-500 dark:text-green-500">
-          {success !== false ? (
-            messageState
-          ) : (
-            <span className="text-red-500 dark:text-red-500">{messageState}</span>
-          )}
+        <p className="alert-success">
+          {success !== false ? messageState : <span className="alert-danger">{messageState}</span>}
         </p>
       </form>
     </>

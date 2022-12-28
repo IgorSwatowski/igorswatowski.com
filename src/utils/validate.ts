@@ -1,18 +1,15 @@
-// utils/validate.ts
 export const validate = ({
   firstName,
   email,
   message,
   lastName,
   topic,
-  company,
 }: {
   firstName?: string;
   email?: string;
   message?: string;
   lastName?: string;
   topic?: string;
-  company?: string;
 }) => {
   const errors: {
     firstName?: string;
@@ -20,16 +17,12 @@ export const validate = ({
     message?: string;
     lastName?: string;
     topic?: string;
-    company?: string;
   } = {};
   if (!firstName || firstName.trim() === '') {
     errors.firstName = 'First name is required';
   }
   if (!lastName || lastName.trim() === '') {
     errors.lastName = 'Last name is required';
-  }
-  if (!company || company.trim() === '') {
-    errors.company = 'Company name is required';
   }
   if (!topic || topic.trim() === '') {
     errors.topic = 'Topic is required';
