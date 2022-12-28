@@ -114,11 +114,11 @@ const en = {
   contactTopic: 'Topic',
   contactMessage: 'Message',
   contactBtn: 'Send form',
-  contactEmailError: 'Email nie może być pusty',
-  contactLastNameError: 'Nazwisko nie może być puste',
-  contactFirtNameError: 'Imię nie może być puste',
-  contactTopicError: 'Temat nie może być pusty',
-  contactMessageError: 'Wiadomość nie może być pusta',
+  contactEmailError: 'Email is required',
+  contactLastNameError: 'Last name is required',
+  contactFirtNameError: 'First name is required',
+  contactTopicError: 'Topic is required',
+  contactMessageError: 'Message is required',
   contactInvalidEmail: 'Invalid email address',
 
   //Blog
