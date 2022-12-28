@@ -1,114 +1,176 @@
 import { useRouter } from 'next/router';
-import { useRef, useState } from 'react';
-import { sendContactForm } from '../../../lib/api';
+import { useState } from 'react';
 import { CustomInput } from '../../CustomInput/CustomInput';
 
 import { en } from '../../../i18n/locales/en';
 import { pl } from '../../../i18n/locales/pl';
 import { CustomTextarea } from '../../CustomTextarea/CustomTextarea';
 
-interface FormValues {
-  firstName: string;
-  lastName: string;
-  topic: string;
-  email: string;
-  company: string;
-  message: string;
-  [key: string]: any;
-}
-
-const initValues: FormValues = {
-  firstName: '',
-  lastName: '',
-  topic: '',
-  email: '',
-  company: '',
-  message: '',
-};
-
-interface State {
-  isLoading: boolean;
-  error: string;
-  values: FormValues;
-}
-
-const initState: State = {
-  isLoading: false,
-  error: '',
-  values: initValues,
-};
-
 const ContactForm = () => {
-  const formRef = useRef<HTMLFormElement>(null);
-  const [showSuccessMessage, setShowSuccessMessage] = useState(false);
-  const [error, setError] = useState('');
-  const [touched, setTouched] = useState({
-    firstName: false,
-    lastName: false,
-    topic: false,
-    email: false,
-    company: false,
-    message: false,
-  });
+  // const [touched, setTouched] = useState({
+  //   firstName: false,
+  //   lastName: false,
+  //   topic: false,
+  //   email: false,
+  //   company: false,
+  //   message: false,
+  // });
 
-  const validateForm = () => {
-    const requiredFields = ['firstName', 'lastName', 'topic', 'email', 'message'];
-    const isFormValid = requiredFields.every((key) => {
-      return values[key] && values[key].trim().length > 0;
-    });
-    if (!isFormValid) {
-      setError('Please fill out all required fields');
-    }
-    return isFormValid;
-  };
+  // const validateForm = () => {
+  //   const requiredFields = ['firstName', 'lastName', 'topic', 'email', 'message'];
+  //   const isFormValid = requiredFields.every((key) => {
+  //     return values[key] && values[key].trim().length > 0;
+  //   });
+  //   if (!isFormValid) {
+  //     setError('Please fill out all required fields');
+  //   }
+  //   return isFormValid;
+  // };
 
   const router = useRouter();
   const { locale } = router;
   const t = locale === 'en' ? en : pl;
 
-  const [state, setState] = useState<State>(initState);
+  // const [state, setState] = useState<State>(initState);
 
-  const { values } = state;
+  // const { values } = state;
 
-  const handleChange = (event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const { name, value } = event.target;
-    setState((prev) => ({
-      ...prev,
-      values: {
-        ...prev.values,
-        [name]: value,
-      },
-    }));
+  // const handleChange = (event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  //   const { name, value } = event.target;
+  //   setState((prev) => ({
+  //     ...prev,
+  //     values: {
+  //       ...prev.values,
+  //       [name]: value,
+  //     },
+  //   }));
+  // };
+
+  // const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
+  //   event.preventDefault();
+  //   setError('');
+  //   setShowSuccessMessage(false);
+  //   if (!validateForm()) {
+  //     return;
+  //   }
+  //   setState((prev) => ({
+  //     ...prev,
+  //     isLoading: true,
+  //   }));
+  //   try {
+  //     await sendContactForm(values);
+  //     setState(initState);
+  //     setShowSuccessMessage(true);
+  //   } catch (error: any) {
+  //     setError(error.message);
+  //   }
+  //   setState((prev) => ({
+  //     ...prev,
+  //     isLoading: false,
+  //   }));
+  // };
+
+  const [firstName, setFirstName] = useState('');
+  const [email, setEmail] = useState('');
+  const [lastName, setLastName] = useState('');
+  const [company, setCompany] = useState('');
+  const [topic, setTopic] = useState('');
+  const [message, setMessage] = useState('');
+  const [buttonText, setButtonText] = useState('Send');
+  // Setting success or failure messages states
+  const [showFailureMessage, setShowFailureMessage] = useState(false);
+  const [errors, setErrors] = useState({});
+  const [showSuccessMessage, setShowSuccessMessage] = useState(false);
+
+  const handleValidation = () => {
+    const tempErrors: { [key: string]: boolean } = {};
+    let isValid = true;
+
+    if (firstName.length <= 0) {
+      tempErrors['firstName'] = true;
+      isValid = false;
+    }
+    if (email.length <= 0) {
+      tempErrors['email'] = true;
+      isValid = false;
+    }
+    if (topic.length <= 0) {
+      tempErrors['topic'] = true;
+      isValid = false;
+    }
+    if (lastName.length <= 0) {
+      tempErrors['lastName'] = true;
+      isValid = false;
+    }
+    if (company.length <= 0) {
+      tempErrors['company'] = true;
+      isValid = false;
+    }
+    if (message.length <= 0) {
+      tempErrors['message'] = true;
+      isValid = false;
+    }
+
+    setErrors({ ...tempErrors });
+    console.log('errors', errors);
+    return isValid;
   };
 
-  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
-    event.preventDefault();
-    setError('');
-    setShowSuccessMessage(false);
-    if (!validateForm()) {
-      return;
-    }
-    setState((prev) => ({
-      ...prev,
-      isLoading: true,
-    }));
-    try {
-      await sendContactForm(values);
-      setState(initState);
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    let isValidForm = handleValidation();
+
+    if (isValidForm) {
+      setButtonText('Sending');
+      const res = await fetch('/api/sendgrid', {
+        body: JSON.stringify({
+          email: email,
+          firstName: firstName,
+          lastName: lastName,
+          company: company,
+          topic: topic,
+          message: message,
+        }),
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        method: 'POST',
+      });
+
+      const { error } = await res.json();
+      if (error) {
+        console.log(error);
+        setShowSuccessMessage(false);
+        setShowFailureMessage(true);
+        setButtonText('Send');
+
+        // Reset form fields
+        setFirstName('');
+        setEmail('');
+        setMessage('');
+        setTopic('');
+        setLastName('');
+        setCompany('');
+        return;
+      }
       setShowSuccessMessage(true);
-    } catch (error: any) {
-      setError(error.message);
+      setShowFailureMessage(false);
+      setButtonText('Send');
+      // Reset form fields
+      setFirstName('');
+      setEmail('');
+      setMessage('');
+      setTopic('');
+      setLastName('');
+      setCompany('');
     }
-    setState((prev) => ({
-      ...prev,
-      isLoading: false,
-    }));
+    console.log(firstName, email, topic, lastName, company, message);
   };
 
   return (
     <>
       <form
-        ref={formRef}
         className="contact-form-wrapper-form"
         id="contact-form"
         data-aos="fade-down"
@@ -119,43 +181,54 @@ const ContactForm = () => {
           <div className="contact-form-wrapper-form-personal-item">
             <label htmlFor="firstName">{t.contactFirstName}</label>
             <CustomInput
-              value={values.firstName}
-              onChange={handleChange}
               id="firstName"
               name="firstName"
               type="text"
+              value={firstName}
+              onChange={(e) => {
+                setFirstName(e.target.value);
+              }}
             />
+            {errors?.firstName && <p className="alert-danger">{t.contactFirtNameError}</p>}
           </div>
           <div className="contact-form-wrapper-form-personal-item">
             <label htmlFor="lastName">{t.contactSecondName}</label>
             <CustomInput
-              value={values.lastName}
-              onChange={handleChange}
               id="lastName"
               name="lastName"
               type="text"
+              value={lastName}
+              onChange={(e) => {
+                setLastName(e.target.value);
+              }}
             />
+            {errors?.lastName && <p className="alert-danger">{t.contactLastNameError}</p>}
           </div>
         </div>
         <div className="contact-form-wrapper-form-contact">
           <div className="contact-form-wrapper-form-contact-item">
             <label htmlFor="email">{t.contactEmail}</label>
             <CustomInput
-              value={values.email}
-              onChange={handleChange}
               id="email"
               name="email"
               type="email"
+              value={email}
+              onChange={(e) => {
+                setEmail(e.target.value);
+              }}
             />
+            {errors?.email && <p className="alert-danger">{t.contactEmailError}</p>}
           </div>
           <div className="contact-form-wrapper-form-contact-item">
             <label htmlFor="companyName">{t.contactCompany}</label>
             <CustomInput
-              value={values.company}
-              onChange={handleChange}
               id="company"
               name="company"
               type="text"
+              value={company}
+              onChange={(e) => {
+                setCompany(e.target.value);
+              }}
             />
           </div>
         </div>
@@ -163,12 +236,15 @@ const ContactForm = () => {
           <div className="contact-form-wrapper-form-topic-item">
             <label htmlFor="topic">{t.contactTopic}</label>
             <CustomInput
-              value={values.topic}
-              onChange={handleChange}
               id="topic"
               name="topic"
               type="text"
+              value={topic}
+              onChange={(e) => {
+                setTopic(e.target.value);
+              }}
             />
+            {errors?.topic && <p className="alert-danger">{t.contactTopicError}</p>}
           </div>
         </div>
         <div className="contact-form-wrapper-form-message">
@@ -178,17 +254,20 @@ const ContactForm = () => {
               name="message"
               id="message"
               className="form-control"
-              value={values.message}
-              onChange={handleChange}
+              value={message}
+              onChange={(e) => {
+                setMessage(e.target.value);
+              }}
             />
+            {errors?.message && <p className="alert-danger">{t.contactMessageError}</p>}
           </div>
         </div>
         <button type="submit" id="submit" className="btn-secondary">
-          {t.contactBtn}
+          {buttonText}
         </button>
         <div id="msg">
           {showSuccessMessage && <p className="alert-success">{t.sucessMsg}</p>}
-          {error && <p className="alert-danger">{t.errorMsg}</p>}
+          {showFailureMessage && <p className="alert-danger">{t.errorMsg}</p>}
         </div>
       </form>
     </>

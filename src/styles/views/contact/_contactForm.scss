@@ -267,21 +267,13 @@
       }
 
       .alert-danger {
-        padding: 2rem 4rem;
-        background: red;
-        color: var(--white);
-        font-size: 18px;
-        font-weight: 700;
-        border-radius: 5px;
+        color: red;
+        font-size: 16px;
         width: max-content;
       }
       .alert-success {
-        padding: 2rem 4rem;
-        background: green;
-        color: var(--white);
-        font-size: 18px;
-        font-weight: 700;
-        border-radius: 5px;
+        color: green;
+        font-size: 20px;
         width: max-content;
       }
 
