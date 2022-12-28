@@ -4,8 +4,6 @@ import { useRouter } from 'next/router';
 import { en } from '../../i18n/locales/en';
 import { pl } from '../../i18n/locales/pl';
 
-import { CustomInput } from '../../components/CustomInput/CustomInput';
-import { CustomTextarea } from '../../components/CustomTextarea/CustomTextarea';
 import ContactForm from './components/ContactForm';
 
 const ContactPage = () => {

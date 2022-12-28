@@ -1,170 +1,91 @@
 import { useRouter } from 'next/router';
 import { useState } from 'react';
-import { CustomInput } from '../../CustomInput/CustomInput';
+import CustomInput from '../../CustomInput/CustomInput';
 
 import { en } from '../../../i18n/locales/en';
 import { pl } from '../../../i18n/locales/pl';
-import { CustomTextarea } from '../../CustomTextarea/CustomTextarea';
+import CustomTextarea from '../../CustomTextarea/CustomTextarea';
+
+import { validate } from '../../../utils/validate';
+import { RiLoader5Fill } from 'react-icons/ri';
+import axios from 'axios';
+
+interface IValues {
+  firstName: string;
+  lastName: string;
+  topic: string;
+  company: string;
+  email: string;
+  message: string;
+}
+
+interface IErrors extends Partial<IValues> {}
 
 const ContactForm = () => {
-  // const [touched, setTouched] = useState({
-  //   firstName: false,
-  //   lastName: false,
-  //   topic: false,
-  //   email: false,
-  //   company: false,
-  //   message: false,
-  // });
-
-  // const validateForm = () => {
-  //   const requiredFields = ['firstName', 'lastName', 'topic', 'email', 'message'];
-  //   const isFormValid = requiredFields.every((key) => {
-  //     return values[key] && values[key].trim().length > 0;
-  //   });
-  //   if (!isFormValid) {
-  //     setError('Please fill out all required fields');
-  //   }
-  //   return isFormValid;
-  // };
-
   const router = useRouter();
   const { locale } = router;
   const t = locale === 'en' ? en : pl;
 
-  // const [state, setState] = useState<State>(initState);
+  const [values, setValues] = useState({
+    firstName: '',
+    lastName: '',
+    company: '',
+    topic: '',
+    email: '',
+    message: '',
+  });
 
-  // const { values } = state;
-
-  // const handleChange = (event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-  //   const { name, value } = event.target;
-  //   setState((prev) => ({
-  //     ...prev,
-  //     values: {
-  //       ...prev.values,
-  //       [name]: value,
-  //     },
-  //   }));
-  // };
-
-  // const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
-  //   event.preventDefault();
-  //   setError('');
-  //   setShowSuccessMessage(false);
-  //   if (!validateForm()) {
-  //     return;
-  //   }
-  //   setState((prev) => ({
-  //     ...prev,
-  //     isLoading: true,
-  //   }));
-  //   try {
-  //     await sendContactForm(values);
-  //     setState(initState);
-  //     setShowSuccessMessage(true);
-  //   } catch (error: any) {
-  //     setError(error.message);
-  //   }
-  //   setState((prev) => ({
-  //     ...prev,
-  //     isLoading: false,
-  //   }));
-  // };
-
-  const [firstName, setFirstName] = useState('');
-  const [email, setEmail] = useState('');
-  const [lastName, setLastName] = useState('');
-  const [company, setCompany] = useState('');
-  const [topic, setTopic] = useState('');
-  const [message, setMessage] = useState('');
-  const [buttonText, setButtonText] = useState('Send');
-  // Setting success or failure messages states
-  const [showFailureMessage, setShowFailureMessage] = useState(false);
-  const [errors, setErrors] = useState<{ [key: string]: boolean }>({});
-  const [showSuccessMessage, setShowSuccessMessage] = useState(false);
-
-  const handleValidation = () => {
-    const tempErrors: { [key: string]: boolean } = {};
-    let isValid = true;
-
-    if (firstName.length <= 0) {
-      tempErrors['firstName'] = true;
-      isValid = false;
-    }
-    if (email.length <= 0) {
-      tempErrors['email'] = true;
-      isValid = false;
-    }
-    if (topic.length <= 0) {
-      tempErrors['topic'] = true;
-      isValid = false;
-    }
-    if (lastName.length <= 0) {
-      tempErrors['lastName'] = true;
-      isValid = false;
-    }
-    if (company.length <= 0) {
-      tempErrors['company'] = true;
-      isValid = false;
-    }
-    if (message.length <= 0) {
-      tempErrors['message'] = true;
-      isValid = false;
-    }
-
-    setErrors({ ...tempErrors });
-    console.log('errors', errors);
-    return isValid;
-  };
+  const [errors, setErrors] = useState<IErrors>({});
+  const [loading, setLoading] = useState(false);
+  const [success, setSuccess] = useState(false);
+  const [messageState, setMessageState] = useState('');
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-
-    let isValidForm = handleValidation();
-
-    if (isValidForm) {
-      setButtonText('Sending');
-      const res = await fetch('/api/sendgrid', {
-        body: JSON.stringify({
-          email: email,
-          firstName: firstName,
-          lastName: lastName,
-          company: company,
-          topic: topic,
-          message: message,
-        }),
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        method: 'POST',
-      });
-
-      const { error } = await res.json();
-      if (error) {
-        console.log(error);
-        setShowSuccessMessage(false);
-        setShowFailureMessage(true);
-        setButtonText('Send');
-
-        // Reset form fields
-        setFirstName('');
-        setEmail('');
-        setMessage('');
-        setTopic('');
-        setLastName('');
-        setCompany('');
-        return;
-      }
-      setShowSuccessMessage(true);
-      setShowFailureMessage(false);
-      setButtonText('Send');
-      // Reset form fields
-      setFirstName('');
-      setEmail('');
-      setMessage('');
-      setTopic('');
-      setLastName('');
-      setCompany('');
+    const errors = validate(values);
+    if (errors && Object.keys(errors).length > 0) {
+      return setErrors(errors);
     }
+    setErrors({});
+    setLoading(true);
+    axios
+      .post('/api/sendgrid', {
+        firstName: values.firstName,
+        lastName: values.lastName,
+        company: values.company,
+        topic: values.topic,
+        email: values.email,
+        message: values.message,
+      })
+      .then((res) => {
+        if (res.status === 200) {
+          setValues({
+            firstName: '',
+            lastName: '',
+            company: '',
+            topic: '',
+            email: '',
+            message: '',
+          });
+          setLoading(false);
+          setSuccess(true);
+          setMessageState(res.data.message);
+        } else {
+          setLoading(false);
+          setMessageState(res.data.message);
+        }
+      })
+      .catch((err) => {
+        setLoading(false);
+        setMessageState(String(err.message));
+      });
+    setLoading(false);
+  };
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    setValues((prevInput) => ({
+      ...prevInput,
+      [e.target.name]: e.target.value,
+    }));
   };
 
   return (
@@ -183,12 +104,13 @@ const ContactForm = () => {
               id="firstName"
               name="firstName"
               type="text"
-              value={firstName}
-              onChange={(e) => {
-                setFirstName(e.target.value);
-              }}
+              label="firstName"
+              placeholder="First Name"
+              error={!!errors.firstName}
+              errorMessage={!!errors.firstName ? errors.firstName : ''}
+              value={values.firstName}
+              onChange={handleChange}
             />
-            {errors?.firstName && <p className="alert-danger">{t.contactFirtNameError}</p>}
           </div>
           <div className="contact-form-wrapper-form-personal-item">
             <label htmlFor="lastName">{t.contactSecondName}</label>
@@ -196,12 +118,13 @@ const ContactForm = () => {
               id="lastName"
               name="lastName"
               type="text"
-              value={lastName}
-              onChange={(e) => {
-                setLastName(e.target.value);
-              }}
+              label="lastName"
+              placeholder="Last Name"
+              error={!!errors.lastName}
+              errorMessage={!!errors.lastName ? errors.lastName : ''}
+              value={values.lastName}
+              onChange={handleChange}
             />
-            {errors?.lastName && <p className="alert-danger">{t.contactLastNameError}</p>}
           </div>
         </div>
         <div className="contact-form-wrapper-form-contact">
@@ -211,12 +134,13 @@ const ContactForm = () => {
               id="email"
               name="email"
               type="email"
-              value={email}
-              onChange={(e) => {
-                setEmail(e.target.value);
-              }}
+              label="email"
+              placeholder="Email"
+              error={!!errors.email}
+              errorMessage={!!errors.email ? errors.email : ''}
+              value={values.email}
+              onChange={handleChange}
             />
-            {errors?.email && <p className="alert-danger">{t.contactEmailError}</p>}
           </div>
           <div className="contact-form-wrapper-form-contact-item">
             <label htmlFor="companyName">{t.contactCompany}</label>
@@ -224,10 +148,12 @@ const ContactForm = () => {
               id="company"
               name="company"
               type="text"
-              value={company}
-              onChange={(e) => {
-                setCompany(e.target.value);
-              }}
+              label="company"
+              placeholder="Company"
+              error={!!errors.company}
+              errorMessage={!!errors.company ? errors.company : ''}
+              value={values.company}
+              onChange={handleChange}
             />
           </div>
         </div>
@@ -238,12 +164,13 @@ const ContactForm = () => {
               id="topic"
               name="topic"
               type="text"
-              value={topic}
-              onChange={(e) => {
-                setTopic(e.target.value);
-              }}
+              label="topic"
+              placeholder="Topic"
+              error={!!errors.topic}
+              errorMessage={!!errors.topic ? errors.topic : ''}
+              value={values.topic}
+              onChange={handleChange}
             />
-            {errors?.topic && <p className="alert-danger">{t.contactTopicError}</p>}
           </div>
         </div>
         <div className="contact-form-wrapper-form-message">
@@ -253,21 +180,35 @@ const ContactForm = () => {
               name="message"
               id="message"
               className="form-control"
-              value={message}
-              onChange={(e) => {
-                setMessage(e.target.value);
-              }}
+              label="message"
+              placeholder="Message"
+              error={!!errors.message}
+              errorMessage={!!errors.message ? errors.message : ''}
+              value={values.message}
+              onChange={handleChange}
             />
-            {errors?.message && <p className="alert-danger">{t.contactMessageError}</p>}
           </div>
         </div>
-        <button type="submit" id="submit" className="btn-secondary">
-          {buttonText}
+        <button
+          className="mt-4 w-full rounded-md bg-blue-600 py-3 px-5 text-lg text-white outline-none hover:bg-blue-800 disabled:cursor-not-allowed disabled:bg-opacity-60"
+          type="submit"
+          disabled={loading}
+        >
+          {loading !== true ? (
+            'SUBMIT'
+          ) : (
+            <div className="flex h-full w-full items-center justify-center ">
+              <RiLoader5Fill className="h-8 w-8 animate-spin" />
+            </div>
+          )}
         </button>
-        <div id="msg">
-          {showSuccessMessage && <p className="alert-success">{t.sucessMsg}</p>}
-          {showFailureMessage && <p className="alert-danger">{t.errorMsg}</p>}
-        </div>
+        <p className="mt-5 text-green-500 dark:text-green-500">
+          {success !== false ? (
+            messageState
+          ) : (
+            <span className="text-red-500 dark:text-red-500">{messageState}</span>
+          )}
+        </p>
       </form>
     </>
   );

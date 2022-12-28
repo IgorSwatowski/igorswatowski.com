@@ -1,17 +1,40 @@
-interface CustomInputProps {
+interface InputProps extends React.InputHTMLAttributes<HTMLInputElement> {
   value: string;
   onChange: (event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => void;
-  id?: string;
-  name?: string;
-  type?: string;
-  error?: string;
+  id: string;
+  name: string;
+  label: string;
+  placeholder: string;
+  error?: boolean;
+  errorMessage?: string;
 }
 
-export const CustomInput = ({ value, onChange, id, name, type, error }: CustomInputProps) => {
+const CustomInput = ({
+  value,
+  onChange,
+  id,
+  name,
+  type,
+  label,
+  placeholder,
+  error = false,
+  errorMessage = '',
+  ...props
+}: InputProps) => {
   return (
     <>
-      <input id={id} name={name} type={type} value={value} onChange={onChange} />
-      {error && <span className="custom-input-error">{error}</span>}
+      <input
+        id={id}
+        name={name}
+        type={type}
+        value={value}
+        onChange={onChange}
+        placeholder={placeholder}
+        {...props}
+      />
+      {error && <p className="alert-danger">*{errorMessage}</p>}
     </>
   );
 };
+
+export default CustomInput;

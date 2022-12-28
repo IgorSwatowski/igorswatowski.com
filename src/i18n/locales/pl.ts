@@ -114,13 +114,6 @@ const pl = {
   contactTopic: 'Temat',
   contactMessage: 'Wiadomość',
   contactBtn: 'Wyślij wiadomość',
-  contactError: 'Wypełnij wszystkie pola',
-  contactEmailError: 'Email nie może być pusty',
-  contactLastNameError: 'Nazwisko nie może być puste',
-  contactFirtNameError: 'Imię nie może być puste',
-  contactTopicError: 'Temat nie może być pusty',
-  contactMessageError: 'Wiadomość nie może być pusta',
-
   //Blog
   blogHero: 'Odkryj bogactwo wiedzy i inspiracji.',
   blogHeroText:

@@ -114,12 +114,6 @@ const en = {
   contactTopic: 'Topic',
   contactMessage: 'Message',
   contactBtn: 'Send form',
-  contactEmailError: 'Email cannot be empty',
-  contactLastNameError: 'Last Name cannot be empty',
-  contactFirtNameError: 'First Name cannot be empty',
-  contactTopicError: 'Topic cannot be empty',
-  contactMessageError: 'Message cannot be empty',
-
   //Blog
   blogHero: 'Explore a wealth of knowledge and inspiration.',
   blogHeroText:

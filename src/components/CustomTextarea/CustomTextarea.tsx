@@ -1,24 +1,43 @@
-interface CustomTextareaProps {
-  name?: string;
-  id?: string;
+interface TextAreaProps extends React.InputHTMLAttributes<HTMLTextAreaElement> {
   className?: string;
   value: string;
   onChange: (event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => void;
-  error?: string;
+  id: string;
+  name: string;
+  label: string;
+  placeholder: string;
+  type?: string;
+  error?: boolean;
+  errorMessage?: string;
 }
 
-export const CustomTextarea = ({
-  name,
-  id,
+const CustomTextarea = ({
   className,
   value,
   onChange,
+  id,
+  name,
+  label,
+  placeholder,
   error,
-}: CustomTextareaProps) => {
+  errorMessage,
+  ...props
+}: TextAreaProps) => {
   return (
     <>
-      <textarea name={name} id={id} className={className} value={value} onChange={onChange} />
-      {error && <span className="custom-input-error">{error}</span>}
+      <textarea
+        name={name}
+        id={id}
+        className={className}
+        value={value}
+        onChange={onChange}
+        rows={5}
+        placeholder={placeholder}
+        {...props}
+      />
+      {error && <p className="alert-danger">*{errorMessage}</p>}
     </>
   );
 };
+
+export default CustomTextarea;
