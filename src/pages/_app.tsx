@@ -9,26 +9,23 @@ import '../styles/styles.scss';
 import Script from 'next/script';
 import { GATrackId } from '../constants/constants';
 
-const googletagmanager = `https://www.googletagmanager.com/gtag/js?id=${GATrackId}`;
-
 export default function App({ Component, pageProps }: AppProps) {
   return (
     <>
-      <Script strategy="afterInteractive" src={googletagmanager} />
       <Script
-        id="google-analytics"
-        strategy="afterInteractive"
-        dangerouslySetInnerHTML={{
-          __html: `
-                  window.dataLayer = window.dataLayer || [];
-                  function gtag(){dataLayer.push(arguments);}
-                  gtag('js', new Date());
-                  gtag('config', ${GATrackId}, {
-                    page_path: window.location.pathname,
-                  });
-                `,
-        }}
+        strategy="lazyOnload"
+        src={`https://www.googletagmanager.com/gtag/js?id=${GATrackId}`}
       />
+      <Script strategy="lazyOnload" id="google-analytics">
+        {`
+                    window.dataLayer = window.dataLayer || [];
+                    function gtag(){dataLayer.push(arguments);}
+                    gtag('js', new Date());
+                    gtag('config', '${GATrackId}', {
+                    page_path: window.location.pathname,
+                    });
+                `}
+      </Script>
       <Head>
         <title>Igor Swatowski | Web Designer & Developer</title>
         <link rel="icon" type="image/png" href="../../public/favicon.png" />

@@ -1,7 +1,10 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
+import Mail from 'nodemailer/lib/mailer';
+import { MailApi } from '../../constants/constants';
 const sgMail = require('@sendgrid/mail');
 
-sgMail.setApiKey(process.env.SENDGRID_SECRET);
+sgMail.setApiKey(MailApi);
+console.log(MailApi);
 type Data = {
   message: string;
 };
