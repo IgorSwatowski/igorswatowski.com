@@ -79,7 +79,7 @@ const ContactForm = () => {
   const [buttonText, setButtonText] = useState('Send');
   // Setting success or failure messages states
   const [showFailureMessage, setShowFailureMessage] = useState(false);
-  const [errors, setErrors] = useState({});
+  const [errors, setErrors] = useState<{ [key: string]: boolean }>({});
   const [showSuccessMessage, setShowSuccessMessage] = useState(false);
 
   const handleValidation = () => {
@@ -116,7 +116,7 @@ const ContactForm = () => {
     return isValid;
   };
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
     let isValidForm = handleValidation();
