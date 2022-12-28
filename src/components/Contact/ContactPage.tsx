@@ -4,41 +4,9 @@ import { useRouter } from 'next/router';
 import { en } from '../../i18n/locales/en';
 import { pl } from '../../i18n/locales/pl';
 
-import { sendContactForm } from '../../lib/api';
 import { CustomInput } from '../../components/CustomInput/CustomInput';
 import { CustomTextarea } from '../../components/CustomTextarea/CustomTextarea';
 import ContactForm from './components/ContactForm';
-
-interface FormValues {
-  firstName: string;
-  lastName: string;
-  topic: string;
-  email: string;
-  company: string;
-  message: string;
-  [key: string]: any;
-}
-
-const initValues: FormValues = {
-  firstName: '',
-  lastName: '',
-  topic: '',
-  email: '',
-  company: '',
-  message: '',
-};
-
-interface State {
-  isLoading: boolean;
-  error: string;
-  values: FormValues;
-}
-
-const initState: State = {
-  isLoading: false,
-  error: '',
-  values: initValues,
-};
 
 const ContactPage = () => {
   const router = useRouter();
