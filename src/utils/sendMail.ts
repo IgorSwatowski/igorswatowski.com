@@ -34,7 +34,7 @@ const sendEmail = async ({
         },
       ],
       from: {
-        email: 'hello@igorswatowski.com',
+        email,
         name: 'Test SendGrid',
       },
       content: [
