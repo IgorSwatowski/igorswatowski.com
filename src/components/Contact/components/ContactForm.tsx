@@ -34,14 +34,14 @@ const ContactForm = () => {
     message: '',
     topic: '',
   });
-  const handleChange = (event) => {
+  const handleChange = (event: any) => {
     const { name, value } = event.target;
     setState({
       ...state,
       [name]: value,
     });
   };
-  const handlePress = (e) => {
+  const handlePress = (e: any) => {
     e.preventDefault();
     fetch('/api/mail', {
       method: 'POST',

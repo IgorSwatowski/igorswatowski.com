@@ -3,7 +3,23 @@ import { MailApi } from '../constants/constants';
 
 const SENDGRID_API = 'https://api.sendgrid.com/v3/mail/send';
 
-const sendEmail = async ({ topic, email, firstName, lastName, company, message }) => {
+interface sendMailProps {
+  topic: string;
+  email: string;
+  firstName: string;
+  lastName: string;
+  company: string;
+  message: string;
+}
+
+const sendEmail = async ({
+  topic,
+  email,
+  firstName,
+  lastName,
+  company,
+  message,
+}: sendMailProps) => {
   await fetch(SENDGRID_API, {
     method: 'POST',
     headers: {
