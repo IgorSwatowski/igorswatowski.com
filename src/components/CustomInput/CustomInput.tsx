@@ -1,10 +1,12 @@
 interface InputProps extends React.InputHTMLAttributes<HTMLInputElement> {
-  value: string;
-  onChange: (event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => void;
-  id: string;
-  name: string;
-  label: string;
-  placeholder: string;
+  className?: string;
+  value?: string;
+  onChange?: (event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => void;
+  id?: string;
+  name?: string;
+  label?: string;
+  placeholder?: string;
+  type?: string;
   error?: boolean;
   errorMessage?: string;
 }

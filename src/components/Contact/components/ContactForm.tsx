@@ -8,6 +8,7 @@ import CustomTextarea from '../../CustomTextarea/CustomTextarea';
 
 import { RiLoader5Fill } from 'react-icons/ri';
 import axios from 'axios';
+import e from 'express';
 
 interface IValues {
   firstName: string;
@@ -25,109 +26,35 @@ const ContactForm = () => {
   const { locale } = router;
   const t = locale === 'en' ? en : pl;
 
-  const validate = (
-    {
-      firstName,
-      email,
-      message,
-      lastName,
-      topic,
-    }: {
-      firstName?: string;
-      email?: string;
-      message?: string;
-      lastName?: string;
-      topic?: string;
-    },
-    t: any,
-  ) => {
-    const errors: {
-      firstName?: string;
-      email?: string;
-      message?: string;
-      lastName?: string;
-      topic?: string;
-    } = {};
-    if (!firstName || firstName.trim() === '') {
-      errors.firstName = t.contactFirstNameError;
-    }
-    if (!lastName || lastName.trim() === '') {
-      errors.lastName = t.contactLastNameError;
-    }
-    if (!topic || topic.trim() === '') {
-      errors.topic = t.contactTopicError;
-    }
-    if (!email || email.trim() === '') {
-      errors.email = t.contactEmailError;
-    } else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(email)) {
-      errors.email = t.contactInvalidEmail;
-    }
-    if (!message || message.trim() === '') {
-      errors.message = t.contactMessageError;
-    }
-    return errors;
-  };
-
-  const [values, setValues] = useState({
+  const [state, setState] = useState({
     firstName: '',
+    email: '',
     lastName: '',
     company: '',
-    topic: '',
-    email: '',
     message: '',
+    topic: '',
   });
-
-  const [errors, setErrors] = useState<IErrors>({});
-  const [loading, setLoading] = useState(false);
-  const [success, setSuccess] = useState(false);
-  const [messageState, setMessageState] = useState('');
-
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    const errors = validate(values, t);
-    if (errors && Object.keys(errors).length > 0) {
-      return setErrors(errors);
-    }
-    setErrors({});
-    setLoading(true);
-    axios
-      .post('/api/sendgrid', {
-        firstName: values.firstName,
-        lastName: values.lastName,
-        company: values.company,
-        topic: values.topic,
-        email: values.email,
-        message: values.message,
-      })
-      .then((res) => {
-        if (res.status === 200) {
-          setValues({
-            firstName: '',
-            lastName: '',
-            company: '',
-            topic: '',
-            email: '',
-            message: '',
-          });
-          setLoading(false);
-          setSuccess(true);
-          setMessageState(res.data.message);
-        } else {
-          setLoading(false);
-          setMessageState(res.data.message);
-        }
-      })
-      .catch((err) => {
-        setLoading(false);
-        setMessageState(String(err.message));
-      });
-    setLoading(false);
+  const handleChange = (event) => {
+    const { name, value } = event.target;
+    setState({
+      ...state,
+      [name]: value,
+    });
   };
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    setValues((prevInput) => ({
-      ...prevInput,
-      [e.target.name]: e.target.value,
-    }));
+  const handlePress = (e) => {
+    e.preventDefault();
+    fetch('/api/mail', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        firstName: state.firstName,
+        email: state.email,
+        lastName: state.lastName,
+        company: state.company,
+        message: state.message,
+        topic: state.topic,
+      }),
+    });
   };
 
   return (
@@ -137,7 +64,7 @@ const ContactForm = () => {
         id="contact-form"
         data-aos="fade-down"
         data-aos-delay="125"
-        onSubmit={handleSubmit}
+        onSubmit={handlePress}
       >
         <div className="contact-form-wrapper-form-personal">
           <div className="contact-form-wrapper-form-personal-item">
@@ -148,9 +75,9 @@ const ContactForm = () => {
               type="text"
               label="firstName"
               placeholder="First Name"
-              error={!!errors.firstName}
-              errorMessage={!!errors.firstName ? errors.firstName : ''}
-              value={values.firstName}
+              // error={!!errors.firstName}
+              // errorMessage={!!errors.firstName ? errors.firstName : ''}
+              // value={values.firstName}
               onChange={handleChange}
             />
           </div>
@@ -162,9 +89,9 @@ const ContactForm = () => {
               type="text"
               label="lastName"
               placeholder="Last Name"
-              error={!!errors.lastName}
-              errorMessage={!!errors.lastName ? errors.lastName : ''}
-              value={values.lastName}
+              // error={!!errors.lastName}
+              // errorMessage={!!errors.lastName ? errors.lastName : ''}
+              // value={values.lastName}
               onChange={handleChange}
             />
           </div>
@@ -178,9 +105,9 @@ const ContactForm = () => {
               type="email"
               label="email"
               placeholder="Email"
-              error={!!errors.email}
-              errorMessage={!!errors.email ? errors.email : ''}
-              value={values.email}
+              // error={!!errors.email}
+              // errorMessage={!!errors.email ? errors.email : ''}
+              // value={values.email}
               onChange={handleChange}
             />
           </div>
@@ -192,9 +119,9 @@ const ContactForm = () => {
               type="text"
               label="company"
               placeholder="Company"
-              error={!!errors.company}
-              errorMessage={!!errors.company ? errors.company : ''}
-              value={values.company}
+              // error={!!errors.company}
+              // errorMessage={!!errors.company ? errors.company : ''}
+              // value={values.company}
               onChange={handleChange}
             />
           </div>
@@ -208,9 +135,9 @@ const ContactForm = () => {
               type="text"
               label="topic"
               placeholder="Topic"
-              error={!!errors.topic}
-              errorMessage={!!errors.topic ? errors.topic : ''}
-              value={values.topic}
+              // error={!!errors.topic}
+              // errorMessage={!!errors.topic ? errors.topic : ''}
+              // value={values.topic}
               onChange={handleChange}
             />
           </div>
@@ -224,29 +151,16 @@ const ContactForm = () => {
               className="form-control"
               label="message"
               placeholder="Message"
-              error={!!errors.message}
-              errorMessage={!!errors.message ? errors.message : ''}
-              value={values.message}
+              // error={!!errors.message}
+              // errorMessage={!!errors.message ? errors.message : ''}
+              // value={values.message}
               onChange={handleChange}
             />
           </div>
         </div>
-        <button className="btn-secondary" type="submit" disabled={loading}>
-          {loading !== true ? (
-            t.contactBtn
-          ) : (
-            <div className="flex h-full w-full items-center justify-center ">
-              <RiLoader5Fill className="h-8 w-8 animate-spin" />
-            </div>
-          )}
+        <button className="btn-secondary" type="submit">
+          {t.contactBtn}
         </button>
-        <p className="alert-success">
-          {success !== false ? (
-            <span className="alert-success">{messageState}</span>
-          ) : (
-            <span className="alert-danger">{messageState}</span>
-          )}
-        </p>
       </form>
     </>
   );
