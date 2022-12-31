@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://igorswatowski.com
+
+# Sitemaps
+Sitemap: https://igorswatowski.com/sitemap.xml
