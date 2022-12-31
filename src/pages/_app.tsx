@@ -8,6 +8,8 @@ import i18n from '../i18n/i18n';
 import '../styles/styles.scss';
 import Script from 'next/script';
 import { GATrackId } from '../constants/constants';
+import { DefaultSeo } from 'next-seo';
+import SEO from '../../next-seo.config';
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
@@ -27,13 +29,13 @@ export default function App({ Component, pageProps }: AppProps) {
                 `}
       </Script>
       <Head>
-        <title>Igor Swatowski | Web Designer & Developer</title>
         <link rel="icon" type="image/png" href="../../public/favicon.png" />
         <meta
           name="viewport"
           content="width=device-width, user-scalable=yes, initial-scale=1.0, viewport-fit=cover"
         />
       </Head>
+      <DefaultSeo {...SEO} />
       <I18nextProvider i18n={i18n}>
         <Navbar />
         <Component {...pageProps} />
