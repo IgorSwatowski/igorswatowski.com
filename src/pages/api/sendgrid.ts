@@ -12,6 +12,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse<
       firstName,
       email,
       message,
+      lastName,
+      topic,
+      company,
     }: {
       email: string;
       firstName: string;
@@ -20,11 +23,11 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse<
       topic: string;
       message: string;
     } = req.body;
-    const msg = `FirstName: ${firstName}\r\n Email: ${email}\r\n Message: ${message}`;
+    const msg = `FirstName: ${firstName}\r\n LastName: ${lastName}\r\n Topic: ${topic}\r\n  Email: ${email}\r\n Company: ${company}\r\n  Message: ${message}`;
     const data = {
       to: 'hello@igorswatowski.com',
-      from: 'hello@igorswatowski.com',
-      subject: `${firstName} sent you a message from Contact Form`,
+      from: email,
+      subject: `[Lead from website] | ${firstName}`,
       text: `Email => ${email}`,
       html: msg.replace(/\r\n/g, '<br>'),
     };
