@@ -24,12 +24,12 @@ const pl = {
   heroBtn: 'Jak mogę Ci pomóc?',
   trustedBy: 'Zaufali mi:',
   collaborate:
-    'Współpracuję z markami, przedsiębiorcami i agencjami, aby stworzyć niezapomniane wrażenia.',
+    'Współpracuję z markami, przedsiębiorcami i firmami, aby stworzyć niezapomniane wrażenia',
   collaborateTextMain:
     'Moja unikalna perspektywa i kreatywność pozwolą Ci wyróżnić się na rynku i zapisać w pamięci Twoich klientów. Jestem gotowy dostarczyć rozwiązania, które pomogą Ci osiągnąć sukces.',
-  designProcess: 'Zapoznaj się z moim procesem projektowania i wdrażania',
+  designProcess: 'Przyjrzyj się moim krokom tworzenia i wprowadzania projektu w życie',
   designProcessText:
-    'Jesteś ciekawy, czego możesz się spodziewać, gdy pracujemy razem nad kreatywnym projektem? Oto cztery etapy naszej współpracy.',
+    'Jesteś ciekawy, czego możesz się spodziewać, gdy pracujemy razem nad stroną WWW? Oto cztery etapy naszej współpracy.',
   stageFirst: 'Strategia',
   stageFirstText:
     'Zawsze upewniam się, że zadaję właściwe pytania i podejmuję właściwe wyzwania zanim zacznę projektowanie. To pomaga mi stworzyć projekt, który spełni Twoje potrzeby i będzie się wyróżniał na tle konkurencji.',

@@ -27,9 +27,9 @@ const en = {
     'I collaborate with brands, entrepreneurs and agencies to create memorable experiences.',
   collaborateTextMain:
     'My unique perspective and creativity will help you stand out in the marketplace and save your customers memories. I am ready to provide solutions to help you succeed.',
-  designProcess: "Here's an overview of my design and implementation process",
+  designProcess: 'Take a look at my steps for creating and implementing a project',
   designProcessText:
-    'Are you curious about what to expect when we work together on a creative project? Here are the four stages of our collaboration.',
+    'Are you curious about what to expect when we work together on a website? Here are the four stages of our collaboration.',
   stageFirst: 'Strategy',
   stageFirstText:
     'I always make sure I ask the right questions and address the right challenges before I start designing. This helps me create a design that meets your needs and stands out from the competition.',
