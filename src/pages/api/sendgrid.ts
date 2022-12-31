@@ -26,7 +26,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse<
     const msg = `FirstName: ${firstName}\r\n LastName: ${lastName}\r\n Topic: ${topic}\r\n  Email: ${email}\r\n Company: ${company}\r\n  Message: ${message}`;
     const data = {
       to: 'hello@igorswatowski.com',
-      from: email,
+      from: 'hello@igorswatowski.com',
       subject: `[Lead from website] | ${firstName}`,
       text: `Email => ${email}`,
       html: msg.replace(/\r\n/g, '<br>'),
