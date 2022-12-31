@@ -23,7 +23,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse<
     const msg = `FirstName: ${firstName}\r\n Email: ${email}\r\n Message: ${message}`;
     const data = {
       to: 'hello@igorswatowski.com',
-      from: email,
+      from: 'hello@igorswatowski.com',
       subject: `${firstName} sent you a message from Contact Form`,
       text: `Email => ${email}`,
       html: msg.replace(/\r\n/g, '<br>'),
