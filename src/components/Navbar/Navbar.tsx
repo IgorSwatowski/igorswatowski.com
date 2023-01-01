@@ -13,30 +13,6 @@ const Navbar = () => {
   const { locale } = router;
   const t = locale === 'en' ? en : pl;
 
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-
-  const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
-  };
-
-  // const closeMenu = () => {
-  //   if (isMenuOpen) {
-  //     setIsMenuOpen(false);
-  //     console.log(isMenuOpen);
-  //     const element = document.getElementById('menu');
-  //     element!.style.display = 'none';
-  //   }
-  // };
-
-  // const closeMenu = () => {
-  //   if (isMenuOpen) {
-  //     setIsMenuOpen(false);
-  //     console.log(isMenuOpen);
-  //     const element = document.getElementById('menu');
-  //     element!.classList.toggle('menu');
-  //   }
-  // };
-
   const changeLanguage = async (locale: string) => {
     const { pathname, query } = router;
     const oldLanguageMatch = pathname.match(/^\/([a-z]{2})(\/|$)/);
@@ -61,40 +37,58 @@ const Navbar = () => {
     changeLanguage(locale as string);
   }, [locale]);
 
+  const [menuActive, setMenuActive] = useState(false);
+
+  function toggleMenu() {
+    setMenuActive(!menuActive);
+  }
+
+  const hideMenu = () => {
+    (document.querySelector('#checkbox_toggle')! as HTMLInputElement).checked = false;
+    setMenuActive(false);
+
+    document.querySelectorAll('.nav-links a, .hamburger').forEach((item) => {
+      item.addEventListener('click', hideMenu);
+    });
+  };
   return (
-    <header className="header" id="menu-header">
-      <Link href="/" className="logo">
-        Igor. <span className="bolden">Swatowski</span>
-      </Link>
-      <input className="menu-btn" type="checkbox" id="menu-btn" />
-      <label className="menu-icon" htmlFor="menu-btn">
-        <span className="navicon"></span>
-      </label>
-      <div className="menu" id="menu">
-        <NavbarItem href="/about" aria-label="About me">
-          {t.about}
-        </NavbarItem>
-        <NavbarItem href="/packages" aria-label="Packages">
-          {t.packages}
-        </NavbarItem>
-        {/* <NavbarItem href="/blog" aria-label="Blog">
-          {t.blog}
-        </NavbarItem> */}
-        <NavbarItem href="/contact" aria-label="Contact">
-          {t.contact}
-        </NavbarItem>
-        <CustomSelect
-          options={['EN', 'PL'].map((option) => option.toUpperCase())}
-          defaultValue={locale === 'en' ? 'EN' : 'PL'}
-          onChange={changeLanguage}
-        />
-        <div className="menu-contact">
-          <Button href="mailto: hello@igorswatowski.com" aria-label="Inquire here">
-            {t.inquireMe}
-          </Button>
-        </div>
+    <nav className="navbar">
+      <div className="navbar-logo">
+        <Link href="/" className="logo">
+          Igor. <span className="bolden">Swatowski</span>
+        </Link>
       </div>
-    </header>
+      <ul className="nav-links">
+        <input type="checkbox" id="checkbox_toggle" onClick={toggleMenu} />
+        <label htmlFor="checkbox_toggle" className={`hamburger ${menuActive ? 'cross' : ''}`}>
+          &#9776;
+        </label>
+        <div className="menu">
+          <NavbarItem href="/about" aria-label="About me" onClick={hideMenu}>
+            {t.about}
+          </NavbarItem>
+          <NavbarItem href="/packages" aria-label="Packages" onClick={hideMenu}>
+            {t.packages}
+          </NavbarItem>
+          {/* <NavbarItem href="/blog" aria-label="Blog">
+         {t.blog}
+        </NavbarItem> */}
+          <NavbarItem href="/contact" aria-label="Contact" onClick={hideMenu}>
+            {t.contact}
+          </NavbarItem>
+          <CustomSelect
+            options={['EN', 'PL'].map((option) => option.toUpperCase())}
+            defaultValue={locale === 'en' ? 'EN' : 'PL'}
+            onChange={changeLanguage}
+          />
+          <div className="menu-contact">
+            <Button href="mailto: hello@igorswatowski.com" aria-label="Inquire here">
+              {t.inquireMe}
+            </Button>
+          </div>
+        </div>
+      </ul>
+    </nav>
   );
 };
 

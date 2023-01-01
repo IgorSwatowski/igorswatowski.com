@@ -1,7 +1,7 @@
 @import '../abstracts/mixins';
 @import '../abstracts/variables';
 
-.header {
+.navbar {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -22,333 +22,168 @@
   padding: 1rem 3.2rem;
 
   @include respond(phone) {
-    background-color: var(--white);
-    position: fixed;
-    width: 100%;
-    z-index: 999;
-    font-size: 1.8rem;
-    font-weight: 500;
-    transition: 0.6s ease;
-    padding: 1rem 0;
-    display: block;
+    padding: 12px 20px;
   }
 
-  @include respond(tablet-port) {
-    background-color: var(--white);
-    position: fixed;
-    width: 100%;
-    z-index: 999;
-    font-size: 1.8rem;
-    font-weight: 500;
-    transition: 0.6s ease;
-    padding: 1rem 3.2rem;
-    display: block;
-  }
-
-  @include respond(tablet-land) {
-    background-color: var(--white);
-    position: fixed;
-    width: 100%;
-    z-index: 999;
-    font-size: 1.8rem;
-    font-weight: 500;
-    transition: 0.6s ease;
-    padding: 1rem 4.8rem;
-    display: block;
-  }
-
-  .menu {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    background-color: var(--white);
-
-    @include respond(phone) {
-      overflow: hidden;
-      display: block;
-      height: 48rem;
-      padding: 0 1.6rem;
-    }
-
-    @include respond(tablet-port) {
-      overflow: hidden;
-      display: block;
-    }
-
-    @include respond(tablet-land) {
-      overflow: hidden;
-      display: block;
-    }
-  }
-  .menu-item {
-    a {
-      display: block;
-      margin: 15px 32px;
-      transition: 0.2s all ease-in-out;
+  .nav-links {
+    .nav-link {
       color: var(--black);
-      position: relative;
-      z-index: 1;
+    }
+    input[type='checkbox'] {
+      display: none;
+    }
+    .menu {
+      display: flex;
+      align-items: center;
+      gap: 4.2rem;
 
-      &:before {
-        content: '';
+      @include respond(phone) {
+        display: none;
         position: absolute;
+        background-color: var(--white);
+        right: 0;
+        left: 0;
+        text-align: center;
+        padding: 16px 0;
+        box-shadow: 0 3px 6px #2222220d;
+      }
+      @include respond(tablet-port) {
+        display: none;
+        position: absolute;
+        background-color: var(--white);
+        right: 0;
+        left: 0;
+        text-align: center;
+        padding: 16px 0;
+        box-shadow: 0 3px 6px #2222220d;
+      }
+
+      li {
+        display: block;
+        margin: 1.5rem 1.2rem;
+        transition: 0.2s all ease-in-out;
+        color: var(--black);
+        position: relative;
         z-index: 1;
-        bottom: 8px;
-        width: 100%;
-        height: 10px;
-        background-color: var(--primary-light);
-        opacity: 0;
-        -webkit-transition: opacity 0.2s ease;
-        -moz-transition: opacity 0.2s ease;
-        -ms-transition: opacity 0.2s ease;
-        -o-transition: opacity 0.2s ease;
-        transition: opacity 0.2s ease;
 
-        @include respond(phone) {
-          display: none;
-        }
-        @include respond(tablet-port) {
-          display: none;
-        }
-        @include respond(tablet-land) {
-          display: none;
-        }
-        @include respond(desktop-big) {
-          display: none;
-        }
-      }
+        &:before {
+          content: '';
+          position: absolute;
+          z-index: 1;
+          bottom: 8px;
+          width: 100%;
+          height: 10px;
+          background-color: var(--primary-light);
+          opacity: 0;
+          -webkit-transition: opacity 0.2s ease;
+          -moz-transition: opacity 0.2s ease;
+          -ms-transition: opacity 0.2s ease;
+          -o-transition: opacity 0.2s ease;
+          transition: opacity 0.2s ease;
 
-      &:hover {
-        @include respond(phone) {
-          color: var(--primary);
-        }
-        @include respond(tablet-port) {
-          color: var(--primary);
-        }
-        @include respond(desktop-big) {
-          color: var(--primary);
-        }
-      }
-
-      &:hover:before {
-        z-index: -1;
-        opacity: 1;
-      }
-
-      @include respond(phone) {
-        padding: 0;
-        margin: 0;
-      }
-      @include respond(tablet-port) {
-        padding: 0;
-        margin: 0;
-      }
-      @include respond(tablet-land) {
-        padding: 0;
-        margin: 0;
-      }
-      @include respond(desktop-bigger) {
-        font-size: 1.5rem;
-      }
-      text-decoration: none;
-    }
-  }
-  .menu-contact {
-    margin: 15px 32px;
-
-    @include respond(phone) {
-      margin: 15px 0;
-    }
-  }
-  .menu-btn {
-    &:hover {
-      background-color: #f4f4f4;
-    }
-    display: none;
-    &:checked {
-      ~ {
-        .menu {
-          max-height: 2400px;
-          display: flex;
-          align-items: center;
-          flex-direction: column;
-          gap: 3rem;
-          padding-top: 3rem;
-        }
-        .menu-icon {
-          .navicon {
-            background: transparent;
-            &:before {
-              transform: rotate(-45deg);
-            }
-            &:after {
-              transform: rotate(45deg);
-            }
+          @include respond(phone) {
+            display: none;
           }
-          &:not(.steps) {
-            .navicon {
-              &:before {
-                top: 0;
-              }
-              &:after {
-                top: 0;
-              }
-            }
+          @include respond(tablet-port) {
+            display: none;
+          }
+          @include respond(tablet-land) {
+            display: none;
+          }
+          @include respond(desktop-big) {
+            display: none;
           }
         }
+
+        &:hover {
+          @include respond(phone) {
+            color: var(--primary);
+          }
+          @include respond(tablet-port) {
+            color: var(--primary);
+          }
+          @include respond(desktop-big) {
+            color: var(--primary);
+          }
+        }
+
+        &:hover:before {
+          z-index: -1;
+          opacity: 1;
+        }
       }
     }
   }
-  .logo {
+
+  &-logo {
+    a {
+      img {
+        @include respond(phone) {
+          width: 70px;
+          height: auto;
+          object-fit: contain;
+        }
+        @include respond(tablet-port) {
+          width: 70px;
+          height: auto;
+          object-fit: contain;
+        }
+      }
+    }
+  }
+}
+
+@include respond(phone) {
+  input[type='checkbox']:checked ~ .menu {
+    padding-top: 4.4rem;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    padding-bottom: 8rem;
+    gap: 3rem;
+  }
+}
+@include respond(tablet-port) {
+  input[type='checkbox']:checked ~ .menu {
+    padding-top: 4.4rem;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    padding-bottom: 8rem;
+    gap: 3rem;
+  }
+}
+
+.hamburger {
+  display: none;
+  cursor: pointer;
+  svg {
+    // reszta kodu hamburgera
+    .cross {
+      display: none;
+    }
+  }
+  &.cross {
+    .menu {
+      display: flex;
+      flex-flow: column nowrap;
+      align-items: center;
+      gap: 3rem;
+    }
+    svg {
+      .cross {
+        display: block;
+      }
+      rect:first-of-type,
+      rect:nth-of-type(2) {
+        display: none;
+      }
+    }
+  }
+}
+
+@media (max-width: 991px) {
+  .hamburger {
     display: block;
-    float: left;
-    font-size: 2rem;
-    text-decoration: none;
-    padding: 15px 0 14px 0;
-    @include respond(phone) {
-      padding: 15px 16px;
-    }
-    @include respond(tablet-port) {
-      padding: 15px 0;
-    }
-    @include respond(tablet-land) {
-      padding: 15px 0;
-    }
-    @include respond(desktop-bigger) {
-      font-size: 1.5rem;
-    }
-  }
-  .menu {
-    @include respond(phone) {
-      clear: both;
-      max-height: 0;
-      transition: max-height 0.2s ease-out;
-    }
-    @include respond(tablet-port) {
-      clear: both;
-      max-height: 0;
-      transition: max-height 0.2s ease-out;
-    }
-    @include respond(tablet-land) {
-      clear: both;
-      max-height: 0;
-      transition: max-height 0.2s ease-out;
-    }
-  }
-  .menu-icon {
-    display: none;
-    @include respond(phone) {
-      cursor: pointer;
-      display: inline-block;
-      float: right;
-      position: relative;
-      user-select: none;
-      padding: 32px 40px 28px 0;
-    }
-    @include respond(tablet-port) {
-      cursor: pointer;
-      display: inline-block;
-      float: right;
-      padding: 33px 80px 28px 0;
-      position: relative;
-      user-select: none;
-    }
-    @include respond(tablet-land) {
-      cursor: pointer;
-      display: inline-block;
-      float: right;
-      padding: 33px 140px 28px 0;
-      position: relative;
-      user-select: none;
-    }
-    .navicon {
-      @include respond(phone) {
-        background: #333;
-        display: block;
-        height: 2px;
-        position: relative;
-        transition: background 0.2s ease-out;
-        width: 18px;
-        &:before {
-          background: #333;
-          content: '';
-          display: block;
-          height: 100%;
-          position: absolute;
-          transition: all 0.2s ease-out;
-          width: 100%;
-          top: 5px;
-        }
-        &:after {
-          background: #333;
-          content: '';
-          display: block;
-          height: 100%;
-          position: absolute;
-          transition: all 0.2s ease-out;
-          width: 100%;
-          top: -5px;
-        }
-      }
-      @include respond(tablet-port) {
-        background: #333;
-        display: block;
-        height: 2px;
-        position: relative;
-        transition: background 0.2s ease-out;
-        width: 18px;
-        &:before {
-          background: #333;
-          content: '';
-          display: block;
-          height: 100%;
-          position: absolute;
-          transition: all 0.2s ease-out;
-          width: 100%;
-          top: 5px;
-        }
-        &:after {
-          background: #333;
-          content: '';
-          display: block;
-          height: 100%;
-          position: absolute;
-          transition: all 0.2s ease-out;
-          width: 100%;
-          top: -5px;
-        }
-      }
-      @include respond(tablet-land) {
-        background: #333;
-        display: block;
-        height: 2px;
-        position: relative;
-        transition: background 0.2s ease-out;
-        width: 18px;
-        &:before {
-          background: #333;
-          content: '';
-          display: block;
-          height: 100%;
-          position: absolute;
-          transition: all 0.2s ease-out;
-          width: 100%;
-          top: 5px;
-        }
-        &:after {
-          background: #333;
-          content: '';
-          display: block;
-          height: 100%;
-          position: absolute;
-          transition: all 0.2s ease-out;
-          width: 100%;
-          top: -5px;
-        }
-      }
-    }
   }
 }

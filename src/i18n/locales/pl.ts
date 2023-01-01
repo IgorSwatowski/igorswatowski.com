@@ -143,7 +143,7 @@ const pl = {
 
   webDesign: 'Projekt strony WWW',
   webDesignText:
-    'Projekt graficzny dostosowany do potrzeb Twojej branży. Badania rynku, dopasowanie kolorów, czcionek, dostosowanie do różnych ekranów - oto czego możesz się spodziewać po projekcie',
+    'Projekt graficzny dostosowany do potrzeb Twojej branży. Badania rynku, dopasowanie kolorów, fontów, dostosowanie do różnych ekranów - oto czego możesz się spodziewać po projekcie',
   webDesignPrice: 'Od 2000zł',
   webDevelopment: 'Implementacja projektu strony WWW',
   webDevelopmentText:
@@ -163,7 +163,7 @@ const pl = {
   customDesignedWeb: '+ Do 6 zaprojektowanych podstron',
   strategicDirection: '+ Kreatywne podejście i strategiczny plan działania',
   creatingDesign: '+ Projektowanie w Figmie',
-  colorFontPhoto: '+ Dopasowanie kolorów, czcionek i zdjęć',
+  colorFontPhoto: '+ Dopasowanie kolorów, fontów i zdjęć',
   timeline: '+ Czas trwania 1 tydzień - 2 tygodnie',
 
   linksAndDomain: '+ Podłączenie linków, formularza i domeny',
