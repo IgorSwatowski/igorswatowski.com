@@ -54,7 +54,7 @@ const Navbar = () => {
   return (
     <nav className="navbar">
       <div className="navbar-logo">
-        <Link href="/" className="logo">
+        <Link href="/" className="logo" onClick={hideMenu}>
           Igor. <span className="bolden">Swatowski</span>
         </Link>
       </div>
