@@ -82,11 +82,7 @@ const Navbar = () => {
             onChange={changeLanguage}
           />
           <div className="menu-contact">
-            <Button
-              className="btn-secondary"
-              href="mailto: hello@igorswatowski.com"
-              aria-label="Inquire here"
-            >
+            <Button href="mailto: hello@igorswatowski.com" aria-label="Inquire here">
               {t.inquireMe}
             </Button>
           </div>
