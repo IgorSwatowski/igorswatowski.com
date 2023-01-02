@@ -18,7 +18,7 @@ import { useEffect } from 'react';
 export default function App({ Component, pageProps }: AppProps) {
   useEffect(() => {
     AOS.init({
-      duration: 1000,
+      duration: 200,
       once: true,
       disable: 'mobile',
     });
