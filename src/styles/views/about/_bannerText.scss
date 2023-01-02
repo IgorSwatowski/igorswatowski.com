@@ -70,7 +70,6 @@
     &-right {
       width: 45%;
       position: relative;
-      top: 10rem;
 
       @include respond(phone) {
         width: 100%;

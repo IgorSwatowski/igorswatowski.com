@@ -3,7 +3,7 @@ import { useRouter } from 'next/router';
 import { en } from '../../../i18n/locales/en';
 import { pl } from '../../../i18n/locales/pl';
 
-import BannerMeImg from '../../../assets/about-igor.webp';
+import BannerMeImg from '../../../assets/about-igor.jpeg';
 import Image from 'next/image';
 import Button from '../../Button/Button';
 
@@ -46,7 +46,7 @@ const BannerAbout = () => {
           <Button href="packages">{t.aboutCtaSecondBtn}</Button>
         </div>
         <div className="banner-text-wrapper-right">
-          <Image loading="lazy" src={BannerMeImg} alt="" />
+          <Image src={BannerMeImg} alt="" />
         </div>
       </div>
     </section>
