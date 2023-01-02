@@ -5,7 +5,7 @@ import Link from 'next/link';
 import { en } from '../../../i18n/locales/en';
 import { pl } from '../../../i18n/locales/pl';
 
-import MeSecondPng from '../../../assets/me-second.webp';
+import MeSecondPng from '../../../assets/personal-photo.jpeg';
 
 const ShortPersonalSection = () => {
   const router = useRouter();
