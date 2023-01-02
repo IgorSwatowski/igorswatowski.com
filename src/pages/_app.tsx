@@ -11,7 +11,18 @@ import { GATrackId } from '../constants/constants';
 import { DefaultSeo } from 'next-seo';
 import SEO from '../../next-seo.config';
 
+import 'aos/dist/aos.css';
+import AOS from 'aos';
+import { useEffect } from 'react';
+
 export default function App({ Component, pageProps }: AppProps) {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      once: true,
+      disable: 'mobile',
+    });
+  }, []);
   return (
     <>
       <Script

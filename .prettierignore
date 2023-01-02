@@ -4,3 +4,5 @@ package-lock.json
 public
 node_modules
 dist
+en.ts
+pl.ts
