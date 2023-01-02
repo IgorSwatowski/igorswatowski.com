@@ -8,16 +8,19 @@
   justify-content: center;
   margin: 0 auto;
   width: 100%;
-  padding: 0 0 6.4rem 0;
+  padding: 8.6rem 0 8.6rem 0;
 
   @include respond(phone) {
     width: unset;
+    padding: 1.2rem 0 8.6rem 0;
   }
   @include respond(tablet-port) {
     width: unset;
+    padding: 1.2rem 0 8.6rem 0;
   }
   @include respond(tablet-land) {
     width: unset;
+    padding: 1.2rem 0 8.6rem 0;
   }
 
   &-wrapper {

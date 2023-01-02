@@ -26,6 +26,17 @@
       }
       &-text {
         margin-top: 3rem;
+        width: 680px;
+
+        @include respond(phone) {
+          width: unset;
+        }
+        @include respond(tablet-port) {
+          width: unset;
+        }
+        @include respond(tablet-land) {
+          width: unset;
+        }
       }
       .more-about-me-end-link {
         margin: 3.2rem 0 0 0;

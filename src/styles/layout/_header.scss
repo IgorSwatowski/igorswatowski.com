@@ -35,7 +35,7 @@
     .menu {
       display: flex;
       align-items: center;
-      gap: 4.2rem;
+      gap: 1.2rem;
 
       @include respond(phone) {
         display: none;

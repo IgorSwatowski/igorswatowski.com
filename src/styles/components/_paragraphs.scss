@@ -4,14 +4,11 @@
 .paragraph-primary {
   font-size: 20px;
   color: var(--gray-200);
-  line-height: 3rem;
-  letter-spacing: 0em;
-  margin-top: 1.6rem;
+  margin-top: 1.3rem;
   word-break: break-word;
 
   @include respond(phone) {
     font-size: 18px;
-    line-height: 32px;
     font-weight: 400;
   }
   @include respond(tablet-land) {
@@ -32,7 +29,6 @@
   @include respond(phone) {
     width: 100%;
     font-size: 18px;
-    line-height: 32px;
     font-weight: 400;
     letter-spacing: -0.01em;
     padding: 0;
@@ -52,7 +48,6 @@
   @include respond(phone) {
     width: 100%;
     font-size: 18px;
-    line-height: 32px;
     font-weight: 400;
     letter-spacing: -0.01em;
     padding: 0;

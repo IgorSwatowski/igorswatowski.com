@@ -13,7 +13,7 @@ const HomePage = () => {
       <HomeBanner />
       <CollaborateSection />
       <ImplementationSection />
-      <ShouldWorkSection />
+      {/* <ShouldWorkSection /> */}
       <ReferencesSection />
       <CTASection />
       <ShortPersonalSection />

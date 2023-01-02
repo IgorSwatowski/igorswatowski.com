@@ -27,21 +27,21 @@ const pl = {
     'Współpracuję z markami, przedsiębiorcami i firmami, aby stworzyć niezapomniane wrażenia',
   collaborateTextMain:
     'Moja unikalna perspektywa i kreatywność pozwolą Ci wyróżnić się na rynku i zapisać w pamięci Twoich klientów. Jestem gotowy dostarczyć rozwiązania, które pomogą Ci osiągnąć sukces.',
-  designProcess: 'Przyjrzyj się moim krokom tworzenia i wprowadzania projektu w życie',
+  designProcess: 'Poznaj mój proces od środka',
   designProcessText:
     'Jesteś ciekawy, czego możesz się spodziewać, gdy pracujemy razem nad stroną WWW? Oto cztery etapy naszej współpracy.',
-  stageFirst: 'Strategia',
+  stageFirst: 'Planowanie',
   stageFirstText:
-    'Zawsze upewniam się, że zadaję właściwe pytania i podejmuję właściwe wyzwania zanim zacznę projektowanie. To pomaga mi stworzyć projekt, który spełni Twoje potrzeby i będzie się wyróżniał na tle konkurencji.',
+    'Zaczynam od poznania Ciebie i Twojego biznesu. Zadaję pytania, słucham Twoich pomysłów i staram się zrozumieć Twoją wizję projektu. To pomaga mi rozwinąć głębokie zrozumienie Twoich potrzeb i wyzwań. Następnie opracowujemy plan projektu, obejmujący układ, funkcjonalność i liczbę stron.',
   stageSecond: 'Projektowanie',
   stageSecondText:
-    'Po zakończeniu tej fazy, będziesz miał perfekcyjny jak pixel projekt swojej aplikacji lub strony internetowej. Tworzę prototypy, aby zasymulować ostateczny rezultat przed rozpoczęciem projektu.',
-  stageThird: 'Wdrażanie',
+    'To właśnie tutaj dzieje się magia! Tworzę niestandardowe projekty na podstawie planów opracowanych w poprzednim etapie. Przedstawiam Ci wiele opcji projektowych i pracuję z nimi, aby dopracować i udoskonalić wybrany projekt.',
+  stageThird: 'Programowanie',
   stageThirdText:
-    'Jako projektant, który potrafi również kodować, mogę łatwo współpracować z programistami od początku do końca. Zajmuję się również front-end developmentem dla projektów internetowych.',
-  stageFourth: 'Zapewnienie jakości',
+    'W fazie programowania, zamieniam projekt w funkcjonalną stronę internetową lub aplikację. Obejmuje to programowanie i integrowanie wszelkich niezbędnych cech i funkcjonalności.',
+  stageFourth: 'Wdrażanie',
   stageFourthText:
-    'Regularne spotkania zapewniają pełny wgląd w mój proces projektowy. Po opracowaniu wstępnych wersji projektu przeprowadzam testy z użytkownikami, aby zapewnić najlepsze rozwiązania dla Twoich klientów.',
+    'W końcowym etapie ożywiam projekt, wdrażając go na stronie internetowej lub w aplikacji. Testuję i debuguję, aby upewnić się, że produkt końcowy jest najwyższej jakości i spełnia wszystkie wymagania określone na etapie planowania.',
   weShouldWorkHeading: 'Powinniśmy współpracować, jeśli jesteś...',
   weShouldWorkFirst: 'Przedsiębiorcą',
   weShouldWorkFirstText:
@@ -57,7 +57,7 @@ const pl = {
   ctaFirstText:
     'Możesz dotrzeć do swoich wymarzonych klientów online. Stwórzmy razem zwycięską stronę internetową i osiągnijmy Twoje cele. To jest możliwe i w Twoim zasięgu.',
   ctaSecondText: 'Zróbmy to!',
-  meetIgor: 'Unikalne projekty stron internetowych dla Twojej firmy.',
+  meetIgor: 'Unikalne projekty stron internetowych dla Twojej firmy',
   meetIgorTextFirst:
     'Zacznijmy od tego, że każda firma w dzisiejszych czasach powinna mieć swoją stronę internetową. Jest to niezbędne, aby zaistnieć w sieci i umożliwić potencjalnym klientom łatwe znalezienie informacji o Twojej firmie i jej ofercie.',
   meetIgorTextSecond:

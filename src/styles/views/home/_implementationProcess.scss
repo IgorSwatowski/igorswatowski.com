@@ -2,22 +2,22 @@
 @import '../../abstracts/variables';
 
 .implementation-process {
-  margin: 6.4rem 0;
+  padding-top: 6.4rem;
   display: flex;
   margin: 0 auto;
   flex-direction: column;
 
   @include respond(phone) {
     width: unset;
-    margin: 11rem 0;
+    margin: 11rem 0 4rem 0;
   }
   @include respond(tablet-port) {
     width: unset;
-    margin: 11rem 0;
+    margin: 11rem 0 4rem 0;
   }
   @include respond(tablet-land) {
     width: unset;
-    margin: 11rem 0;
+    margin: 11rem 0 4rem 0;
   }
 
   &-top {
@@ -36,7 +36,7 @@
     justify-content: center;
     flex-wrap: wrap;
     width: 100%;
-    gap: 6rem 0;
+    gap: 8rem 0;
     padding-top: 6.4rem;
 
     @include respond(phone) {
@@ -126,7 +126,7 @@
         }
       }
       &-bottom {
-        max-width: 634px;
+        max-width: 664px;
         width: 100%;
 
         &-text {

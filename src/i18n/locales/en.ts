@@ -27,21 +27,21 @@ const en = {
     'I collaborate with brands, entrepreneurs and agencies to create memorable experiences.',
   collaborateTextMain:
     'My unique perspective and creativity will help you stand out in the marketplace and save your customers memories. I am ready to provide solutions to help you succeed.',
-  designProcess: 'Take a look at my steps for creating and implementing a project',
+  designProcess: 'Get an inside look at my process',
   designProcessText:
     'Are you curious about what to expect when we work together on a website? Here are the four stages of our collaboration.',
-  stageFirst: 'Strategy',
+  stageFirst: 'Planning',
   stageFirstText:
-    'I always make sure I ask the right questions and address the right challenges before I start designing. This helps me create a design that meets your needs and stands out from the competition.',
+    'I begin by getting to know you and your business. I ask questions, listen to your ideas, and understand your vision for the project. This helps me to develop a deep understanding of your needs and challenges. We then map out a plan for the design, including layout, functionality, and user experience.',
   stageSecond: 'Design',
   stageSecondText:
-    'At the end of this phase, you will have a pixel-perfect design for your app or website. I create prototypes to simulate the final output before starting the project.',
+    "This is where the magic happens! I'm creating custom designs based on the plans developed in the previous stage. I present you with multiple design options and work with them to refine and perfect the chosen design.",
   stageThird: 'Development',
   stageThirdText:
-    'As a designer who can also code, I can easily work closely with developers from start to finish. I also do front-end development for web projects.',
-  stageFourth: 'Quality assurance',
+    'In the development stage, I turn the design into a functional website or app. This includes programming and integrating any necessary features and functionality.',
+  stageFourth: 'Implementation',
   stageFourthText:
-    'Regular meetings provide full insight into my design process. After developing initial design versions, I conduct user testing to ensure the best solutions for your clients.',
+    'In the final stage, I bring the design to life by implementing it on the website or app. I test and debug to ensure that the final product is of the highest quality and meets all of the requirements set out in the planning stage.',
   weShouldWorkHeading: 'We should work together if you are ...',
   weShouldWorkFirst: 'An enterpreneur',
   weShouldWorkFirstText:
