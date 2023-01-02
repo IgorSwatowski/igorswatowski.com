@@ -46,7 +46,7 @@ const BannerAbout = () => {
           <Button href="packages">{t.aboutCtaSecondBtn}</Button>
         </div>
         <div className="banner-text-wrapper-right">
-          <Image src={BannerMeImg} alt="" />
+          <Image loading="lazy" src={BannerMeImg} alt="" />
         </div>
       </div>
     </section>
