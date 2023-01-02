@@ -3,7 +3,7 @@ import { useRouter } from 'next/router';
 import { en } from '../../../i18n/locales/en';
 import { pl } from '../../../i18n/locales/pl';
 
-import BannerMeImg from '../../../assets/about-igor.jpeg';
+import BannerMeImg from '../../../assets/about-igor.webp';
 import Image from 'next/image';
 import Button from '../../Button/Button';
 

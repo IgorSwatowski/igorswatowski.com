@@ -5,7 +5,7 @@ import { pl } from '../../../i18n/locales/pl';
 
 import Image from 'next/image';
 import InstagramIcon from '../../../assets/icons/instagram-icon.png';
-import MeAboutImg from '../../../assets/personal-photo.jpeg';
+import MeAboutImg from '../../../assets/personal-photo.webp';
 import FacebookIcon from '../../../assets/icons/facebook-icon.png';
 import LinkedinIcon from '../../../assets/icons/linkedin-icon.png';
 import Link from 'next/link';
