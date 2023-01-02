@@ -135,7 +135,7 @@
       align-items: center;
     }
     &-img {
-      width: 70.1rem;
+      width: 50.1rem;
       position: relative;
       z-index: 10;
       top: -10rem;
@@ -152,7 +152,7 @@
     }
     img {
       object-fit: cover;
-      width: 600px;
+      width: 500px;
       height: auto;
       @include respond(tablet-land) {
         width: 85%;
