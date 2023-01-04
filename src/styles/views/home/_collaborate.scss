@@ -26,7 +26,8 @@
     margin: 0 auto;
     width: 100%;
     position: relative;
-    padding: 6.4rem 0;
+    padding-top: 6.4rem;
+    padding-bottom: 6.4rem;
 
     @include respond(phone) {
       padding: 6.4rem 2rem;

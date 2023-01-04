@@ -35,7 +35,7 @@
     .menu {
       display: flex;
       align-items: center;
-      gap: 1.2rem;
+      gap: 1.8rem;
 
       @include respond(phone) {
         display: none;
@@ -48,6 +48,26 @@
         box-shadow: 0 3px 6px #2222220d;
       }
       @include respond(tablet-port) {
+        display: none;
+        position: absolute;
+        background-color: var(--white);
+        right: 0;
+        left: 0;
+        text-align: center;
+        padding: 16px 0;
+        box-shadow: 0 3px 6px #2222220d;
+      }
+      @include respond(tablet-land) {
+        display: none;
+        position: absolute;
+        background-color: var(--white);
+        right: 0;
+        left: 0;
+        text-align: center;
+        padding: 16px 0;
+        box-shadow: 0 3px 6px #2222220d;
+      }
+      @include respond(desktop-big) {
         display: none;
         position: absolute;
         background-color: var(--white);
@@ -102,6 +122,9 @@
           @include respond(tablet-port) {
             color: var(--primary);
           }
+          @include respond(tablet-land) {
+            color: var(--primary);
+          }
           @include respond(desktop-big) {
             color: var(--primary);
           }
@@ -128,6 +151,16 @@
           height: auto;
           object-fit: contain;
         }
+        @include respond(tablet-land) {
+          width: 70px;
+          height: auto;
+          object-fit: contain;
+        }
+        @include respond(desktop-big) {
+          width: 70px;
+          height: auto;
+          object-fit: contain;
+        }
       }
     }
   }
@@ -144,6 +177,28 @@
   }
 }
 @include respond(tablet-port) {
+  input[type='checkbox']:checked ~ .menu {
+    padding-top: 4.4rem;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    padding-bottom: 8rem;
+    gap: 3rem;
+  }
+}
+
+@include respond(tablet-land) {
+  input[type='checkbox']:checked ~ .menu {
+    padding-top: 4.4rem;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    padding-bottom: 8rem;
+    gap: 3rem;
+  }
+}
+
+@include respond(desktop-big) {
   input[type='checkbox']:checked ~ .menu {
     padding-top: 4.4rem;
     display: flex;

@@ -4,6 +4,7 @@ const pl = {
   packages: 'Oferta',
   contact: 'Kontakt',
   blog: 'Blog',
+  portfolio: "Portfolio",
   inquireMe: 'Skontaktuj się',
 
   //Footer

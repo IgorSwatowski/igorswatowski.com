@@ -4,6 +4,7 @@ const en = {
   packages: 'Packages',
   contact: 'Contact',
   blog: 'Blog',
+  portfolio: "Portfolio",
   inquireMe: 'Inquire me',
 
   //Footer

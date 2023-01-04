@@ -138,7 +138,6 @@
       width: 50.1rem;
       position: relative;
       z-index: 10;
-      top: -10rem;
       @include respond(phone) {
         margin-top: 4rem;
         width: 100%;
