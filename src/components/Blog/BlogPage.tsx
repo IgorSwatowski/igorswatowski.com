@@ -55,7 +55,7 @@ const BlogPage = ({ posts }: PostsProps) => {
             ) : (
               <h4 className="heading-fourth">
                 <Image src={InfoIcon} alt="" />
-                Unfortunately, there are no posts to display.
+                Unfortunately, there are no posts to display
               </h4>
             )}
           </div>
