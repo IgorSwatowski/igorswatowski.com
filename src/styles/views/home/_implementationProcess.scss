@@ -10,14 +10,17 @@
   @include respond(phone) {
     width: unset;
     margin: 11rem 0 4rem 0;
+    padding-top: 0;
   }
   @include respond(tablet-port) {
     width: unset;
     margin: 11rem 0 4rem 0;
+    padding-top: 0;
   }
   @include respond(tablet-land) {
     width: unset;
     margin: 11rem 0 4rem 0;
+    padding-top: 0;
   }
 
   &-top {
