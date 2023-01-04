@@ -12,13 +12,6 @@ import { DefaultSeo } from 'next-seo';
 import SEO from '../../next-seo.config';
 
 export default function App({ Component, pageProps }: AppProps) {
-  // useEffect(() => {
-  //   AOS.init({
-  //     duration: 200,
-  //     once: true,
-  //     disable: 'mobile',
-  //   });
-  // }, []);
   return (
     <>
       <Script

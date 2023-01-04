@@ -4,22 +4,25 @@ import { graphqlAPI } from '../constants/constants';
 const hygraph = new GraphQLClient(graphqlAPI);
 
 const query = `
-  query PostSingleQuery($id: ID!) {
-    post(where: { id: $id }) {
+  query PostSingleQuery($slug: String!) {
+    post(where: { slug: $slug }) {
       title
       slug
       id
       createdAt
-      pageContent {
+      content {
         text
+      }
+      createdBy {
+        name
       }
     }
   }
 `;
 
-export const getSinglePost = async (id: string) => {
+export const getSinglePost = async (slug: string) => {
   const variables = {
-    id,
+    slug,
   };
   const { post } = await hygraph.request(query, variables);
   return post;

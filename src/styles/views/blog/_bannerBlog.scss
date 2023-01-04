@@ -68,14 +68,40 @@
       &-item {
         background-color: var(--white);
         padding: 5rem 4rem;
-        transition: 0.4s all ease;
+        transition: 0.4s all ease-in-out;
         box-shadow: 0 3px 12px #2222220d;
         border-radius: 5px;
+
+        .line {
+          background-color: var(--primary);
+          height: 2px;
+          width: 200px;
+          margin: 1.6rem 0;
+          transition: 0.4s all ease-in-out;
+        }
 
         &:hover {
           transform: translateY(-10px);
           background-color: var(--primary);
         }
+
+        &:hover > .line {
+          background-color: var(--white);
+          width: 310px;
+        }
+      }
+    }
+    &-blog {
+      h4 {
+        display: flex;
+        width: max-content;
+        background-color: var(--white);
+        border-radius: 5px;
+        flex-direction: row;
+        padding: 3.2rem 3.2rem;
+        gap: 1.6rem;
+        margin-top: 6.4rem;
+        align-items: center;
       }
     }
   }

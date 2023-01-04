@@ -4,14 +4,17 @@ import { graphqlAPI } from '../constants/constants';
 const hygraph = new GraphQLClient(graphqlAPI);
 
 const query = `
-    query AllPostsQuery($locale: Locale!) {
-      posts(locales: [$locale]) {
+    query AllPostsQuery {
+      posts {
           id
           title
           slug
           createdAt
-          pageContent {
+          content {
             text
+          }
+          createdBy {
+            name
           }
       }
     }

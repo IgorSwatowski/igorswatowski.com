@@ -1,4 +1,5 @@
 import { t } from 'i18next';
+import Image from 'next/image';
 import { Post } from '../../types/post';
 
 import { useRouter } from 'next/router';
@@ -7,6 +8,8 @@ import { en } from '../../i18n/locales/en';
 import { pl } from '../../i18n/locales/pl';
 import PostSinglePageCard from './posts/PostSinglePageCard';
 import { useState } from 'react';
+
+import InfoIcon from '../../assets/info-icon.png';
 
 export interface PostsProps {
   posts: Post[];
@@ -31,27 +34,31 @@ const BlogPage = ({ posts }: PostsProps) => {
             <div className="blog-banner-wrapper-categories-item">{t.blogEntrepreneurship}</div>
             <div className="blog-banner-wrapper-categories-item">{t.blogToolsAndTechnology}</div>
           </div>
-          <div className="blog-banner-wrapper-blogs">
-            {posts.map(({ id, title, slug, pageContent, createdAt }) => {
-              return (
-                <PostSinglePageCard
-                  key={id}
-                  title={title}
-                  slug={slug}
-                  id={id}
-                  pageContent={pageContent}
-                  createdAt={createdAt}
-                  path={`/blog/${id}`}
-                />
-              );
-            })}
+          <div className="blog-banner-wrapper-blog">
+            {posts.length > 0 ? (
+              <div className="blog-banner-wrapper-blogs">
+                {posts.map(({ id, title, slug, content, createdAt, createdBy }) => {
+                  return (
+                    <PostSinglePageCard
+                      key={id}
+                      title={title}
+                      slug={slug}
+                      id={id}
+                      content={content}
+                      createdAt={createdAt}
+                      createdBy={createdBy}
+                      path={`/blog/${slug}`}
+                    />
+                  );
+                })}
+              </div>
+            ) : (
+              <h4 className="heading-fourth">
+                <Image src={InfoIcon} alt="" />
+                Unfortunately, there are no posts to display.
+              </h4>
+            )}
           </div>
-          <button disabled={!page} onClick={() => setPage((prev) => prev - 1)}>
-            Previous page
-          </button>
-          <button disabled={!page} onClick={() => setPage((prev) => prev + 1)}>
-            Next page
-          </button>
         </div>
       </section>
     </main>

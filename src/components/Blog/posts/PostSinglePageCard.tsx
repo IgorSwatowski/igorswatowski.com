@@ -1,8 +1,8 @@
 import Link from 'next/link';
 import { Post } from '../../../types/post';
 
-const PostSinglePageCard = ({ id, title, slug, pageContent, createdAt, path }: Post) => {
-  const shortText = pageContent?.text?.substring(0, 145) + ' ' + '[...]';
+const PostSinglePageCard = ({ title, content, createdAt, path }: Post) => {
+  const shortText = content?.text?.substring(0, 145) + ' ' + '[...]';
 
   const convertDate = (createdAt: string) => {
     const date = new Date(createdAt);
@@ -22,8 +22,12 @@ const PostSinglePageCard = ({ id, title, slug, pageContent, createdAt, path }: P
       <div className="blog-banner-wrapper-blogs-item-paragraph">
         <p className="paragraph-primary">{shortText}</p>
       </div>
+      <div className="line"></div>
       <div className="blog-banner-wrapper-blogs-item-date">
-        <p className="paragraph-primary">{convertedDate}</p>
+        <p className="paragraph-primary">Date: {convertedDate}</p>
+      </div>
+      <div className="blog-banner-wrapper-blogs-item-date">
+        <p className="paragraph-primary">Category: {convertedDate}</p>
       </div>
       <div className="blog-banner-wrapper-blogs-item-category">
         <p className="paragraph-primary"></p>

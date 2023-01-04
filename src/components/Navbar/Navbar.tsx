@@ -72,10 +72,10 @@ const Navbar = () => {
           </NavbarItem>
           {/* <NavbarItem href="/portfolio" aria-label="Portfolio" onClick={hideMenu}>
             {t.portfolio}
-          </NavbarItem>
+          </NavbarItem> */}
           <NavbarItem href="/blog" aria-label="Blog" onClick={hideMenu}>
             {t.blog}
-          </NavbarItem> */}
+          </NavbarItem>
           <NavbarItem href="/contact" aria-label="Contact" onClick={hideMenu}>
             {t.contact}
           </NavbarItem>

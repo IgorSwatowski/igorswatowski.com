@@ -5,25 +5,25 @@ import { Post } from '../../types/post';
 
 const hygraph = new GraphQLClient(graphqlAPI);
 
-export const getStaticProps = async ({
-  params,
-  locale,
-}: {
-  params: { id: string };
-  locale: string;
-}) => {
+export const getStaticProps = async ({ params }: { params: { slug: string } }) => {
   const { post } = await hygraph.request(
     gql`
-      query PostPageQuery($id: ID!, $locale: Locale!) {
-        post(where: { id: $id }, locales: [$locale]) {
+      query PostPageQuery($slug: String!) {
+        post(where: { slug: $slug }) {
           id
           title
           slug
           createdAt
+          content {
+            text
+          }
+          createdBy {
+            name
+          }
         }
       }
     `,
-    { id: params?.id, locale },
+    { slug: params.slug },
   );
   return {
     props: {
@@ -33,7 +33,7 @@ export const getStaticProps = async ({
 };
 
 export const getStaticPaths = async ({ locales }: { locales: string[] }) => {
-  let paths: { params: { id: string }; locale: string }[] = [];
+  let paths: { params: { slug: string }; locale: string }[] = [];
   const { posts } = await hygraph.request(
     gql`
       query AllPostsQuery {
@@ -43,8 +43,11 @@ export const getStaticPaths = async ({ locales }: { locales: string[] }) => {
           slug
           locale
           createdAt
-          pageContent {
+          content {
             text
+          }
+          createdBy {
+            name
           }
         }
       }
@@ -61,9 +64,10 @@ export const getStaticPaths = async ({ locales }: { locales: string[] }) => {
           slug: string;
           locale: string;
           createdAt: string;
-          pageContent: { text: string };
+          content: { text: string };
+          createdBy: { name: string };
         }) => ({
-          params: { id: post.id },
+          params: { slug: post.slug },
           locale,
         }),
       ),
