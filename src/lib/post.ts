@@ -10,9 +10,6 @@ const query = `
       slug
       id
       createdAt
-      pageContent {
-        text
-      }
     }
   }
 `;

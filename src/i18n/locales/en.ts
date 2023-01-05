@@ -139,21 +139,21 @@ const en = {
   myProcess: 'A look at my process',
   myProcessText:
     "My personalized approach to building empowered brands is to focus on what makes your business unique and meaningful. My goal is to guide you every step of the way on this your journey to business growth and success. To bring you to a level where you feel confident and connected to your brand so that in turn, you'll be able to attract your ideal viewer for years to come.",
-  currentPricesHeading: 'Discover what I have to offer',
+  currentPricesHeading: "Let’s check my packages",
   currentPricesText:
     'Are you trying to decide which plan is right for you? I offer a variety of options to suit your needs.',
   webDesign: 'Web Design',
   webDesignText:
     'Tailored graphic design for your industry. Market research, color matching, fonts, adaptation to different screens - this is what you can expect from the project.',
-  webDesignPrice: 'From 625$',
+  webDesignPrice: 'From 725$',
   webDevelopment: 'Web Development',
   webDevelopmentText:
     'Do you have a graphic design but are looking for someone to implement the idea into a fully functional website? I will be happy to help you with it.',
-  webDevelopmentPrice: 'From 625$',
+  webDevelopmentPrice: 'From 725$',
   webDesignAndDev: 'Web Design & Web Development',
   webDesignAndDevText:
     'We’ll work together to build a strategic website that attracts your ideal audience. Includes SEO & copy assistance.',
-  webDesignAndDevPrice: '1250$',
+  webDesignAndDevPrice: '1350$',
 
   getStartedBtn: 'Get started',
   whatsIncluded: "What's included",

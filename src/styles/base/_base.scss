@@ -139,7 +139,8 @@ a {
     z-index: -1;
 
     @include respond(phone) {
-      display: none;
+      display: 16%;
+      height: 10px;
     }
 
     @include respond(tablet-port) {

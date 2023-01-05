@@ -43,9 +43,6 @@ export const getStaticPaths = async ({ locales }: { locales: string[] }) => {
           slug
           locale
           createdAt
-          pageContent {
-            text
-          }
         }
       }
     `,

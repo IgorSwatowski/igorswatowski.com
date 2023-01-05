@@ -145,15 +145,15 @@ const pl = {
   webDesign: 'Projekt strony WWW',
   webDesignText:
     'Projekt graficzny dostosowany do potrzeb Twojej branży. Badania rynku, dopasowanie kolorów, fontów, dostosowanie do różnych ekranów - oto czego możesz się spodziewać po projekcie',
-  webDesignPrice: 'Od 2000zł',
+  webDesignPrice: 'Od 2400zł',
   webDevelopment: 'Implementacja projektu strony WWW',
   webDevelopmentText:
     'Masz projekt graficzny, ale szukasz kogoś, kto zrealizuje pomysł w postaci w pełni funkcjonalnej strony internetowej? Chętnie pomogę Ci w tym zakresie.',
-  webDevelopmentPrice: 'Od 2000zł',
+  webDevelopmentPrice: 'Od 2400zł',
   webDesignAndDev: 'Projekt & Implementacja strony WWW',
   webDesignAndDevText:
     'Pracujmy razem, aby zbudować strategiczną stronę internetową, która przyciągnie Twoich idealnych odbiorców. Pakiet obejmuje równiez pomoc w zakresie SEO.',
-  webDesignAndDevPrice: 'od 4000zł',
+  webDesignAndDevPrice: 'od 4800zł',
 
   getStartedBtn: 'Rozpocznij',
   whatsIncluded: 'Co zawiera pakiet?',
