@@ -145,20 +145,16 @@ const en = {
   webDesign: 'Web Design',
   webDesignText:
     'Tailored graphic design for your industry. Market research, color matching, fonts, adaptation to different screens - this is what you can expect from the project.',
-  webDesignPrice: 'From 725$',
   webDevelopment: 'Web Development',
   webDevelopmentText:
     'Do you have a graphic design but are looking for someone to implement the idea into a fully functional website? I will be happy to help you with it.',
-  webDevelopmentPrice: 'From 725$',
   webDesignAndDev: 'Web Design & Web Development',
   webDesignAndDevText:
     'We’ll work together to build a strategic website that attracts your ideal audience. Includes SEO & copy assistance.',
-  webDesignAndDevPrice: '1350$',
 
   getStartedBtn: 'Get started',
   whatsIncluded: "What's included",
 
-  upFrontPay: '(25%) upfront payment',
   customMobile: '+ Custom mobile phone web design optimization',
   orientedDesign: '+ Functional & goal oriented design',
   customDesignedWeb: '+ Up to 6 custom designed web pages',
