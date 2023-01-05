@@ -18,9 +18,9 @@ const HomeBanner = () => {
   const t = locale === 'en' ? en : pl;
   return (
     <section className="banner container-box">
-      <Image src={TriangleElement} alt="" className="banner-triangle-first" />
-      <Image src={TriangleElement} alt="" className="banner-triangle-second" />
-      <Image src={CurvedLinesElement} alt="" className="banner-curved-lines-first" />
+      <Image loading="lazy" src={TriangleElement} alt="" className="banner-triangle-first" />
+      <Image loading="lazy" src={TriangleElement} alt="" className="banner-triangle-second" />
+      <Image loading="lazy" src={CurvedLinesElement} alt="" className="banner-curved-lines-first" />
       <div className="banner-block-left" data-aos="fade-up">
         <h1 className="banner-block-left--title heading-primary">
           {t.hero}
