@@ -56,7 +56,7 @@ const pl = {
     'Jestem w stanie zrozumieć Twoje pomysły i dostosować je do Twoich celów, tworząc elegancką i przyciągającą wzrok stronę internetową. Będziesz zachwycony rezultatami. ',
   weShouldWorkBtn: 'Zobacz, jak tworzę',
   reference:
-    'Zawsze z przyjemnością pracowaliśmy z Igorem - wnosi kreatywne pomysły, szybko osiąga wyniki i przyjemnie się z nim współpracuje. Ogólnie rzecz biorąc, nasza współpraca była bardzo pozytywna i udana.',
+    '"Zawsze z przyjemnością pracowaliśmy z Igorem - wnosi kreatywne pomysły, szybko osiąga wyniki i przyjemnie się z nim współpracuje. Ogólnie rzecz biorąc, nasza współpraca była bardzo pozytywna i udana."',
   ctaFirstText:
     'Możesz dotrzeć do swoich wymarzonych klientów online. Stwórzmy razem zwycięską stronę internetową i osiągnijmy Twoje cele. To jest możliwe i w Twoim zasięgu.',
   ctaSecondText: 'Zróbmy to!',

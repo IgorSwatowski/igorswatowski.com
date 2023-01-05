@@ -56,7 +56,7 @@ const en = {
     "I understand your products and tailor them to your goals, creating an elegant and eye-catching package. You'll be amazed by the results. Let's create something special and effective together.",
   weShouldWorkBtn: 'See how I make things',
   reference:
-    'We have always enjoyed working with Igor – he brings creative ideas, delivers fast results, and is a pleasure to collaborate with. Overall, our cooperation has been very positive and successful.',
+    '"We have always enjoyed working with Igor – he brings creative ideas, delivers fast results, and is a pleasure to collaborate with. Overall, our cooperation has been very positive and successful."',
   ctaFirstText:
     "You can reach your dream customers online. Let's create a winning website together and achieve your goals. It's possible and within your reach.",
   ctaSecondText: "Let's make it happen!",
