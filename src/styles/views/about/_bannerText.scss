@@ -3,6 +3,24 @@
 
 .banner-text {
   background-color: var(--gray);
+  position: relative;
+
+  img {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    object-fit: cover;
+
+    @include respond(phone) {
+      display: none;
+    }
+    @include respond(tablet-port) {
+      display: none;
+    }
+    @include respond(tablet-land) {
+      display: none;
+    }
+  }
   &-wrapper {
     padding-top: 22.6rem;
     padding-bottom: 6rem;
@@ -60,10 +78,11 @@
           width: 100%;
         }
       }
-      a {
-        margin-top: 3rem;
-        display: block;
-        width: max-content;
+      &-buttons {
+        margin-top: 3.2rem;
+        &-first {
+          margin-right: 0.8rem;
+        }
       }
     }
 

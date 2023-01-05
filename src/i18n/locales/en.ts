@@ -73,7 +73,8 @@ const en = {
   ctaSecondBtn: 'Yeah!',
 
   //About
-  bannerHeading: 'How can I contribute to the success of your company?',
+  bannerHeading: 'How can I contribute to the success of your',
+  bannerHeadingSecond: "company?",
   bannerText:
     'If you are looking for a professional and aesthetically pleasing website for your business, then I am able to help you. I have been working in this field for many years and have experience in designing websites for various industries.',
   bannerTextSecond:

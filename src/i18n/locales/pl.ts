@@ -73,7 +73,8 @@ const pl = {
   ctaSecondBtn: 'Pewnie!',
 
   //About
-  bannerHeading: 'Jak mogę przyczynić się do sukcesu Twojej firmy?',
+  bannerHeading: 'Jak mogę przyczynić się do sukcesu Twojej',
+  bannerHeadingSecond: "firmy?",
   bannerText:
     'Jeśli szukasz profesjonalnej i estetycznej strony internetowej dla swojej firmy, to jestem w stanie Ci pomóc. Pracuję w tej branży od wielu lat i mam doświadczenie w projektowaniu stron internetowych dla różnych branż. ',
   bannerTextSecond:

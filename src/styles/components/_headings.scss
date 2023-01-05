@@ -40,17 +40,17 @@
 
   @include respond(phone) {
     width: 100%;
-    font-size: 28px;
+    font-size: 36px;
     line-height: 3.5rem;
     font-weight: 600;
     letter-spacing: -1px;
   }
   @include respond(tablet-port) {
     width: 100%;
-    font-size: 36px;
+    font-size: 48px;
   }
   @include respond(tablet-land) {
-    font-size: 44px;
+    font-size: 56px;
   }
   &::selection {
     color: var(--black);
