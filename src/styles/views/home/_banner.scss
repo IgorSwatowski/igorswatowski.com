@@ -2,12 +2,80 @@
 @import '../../abstracts/variables';
 
 .banner {
-  padding-top: 24.6rem;
+  padding-top: 18.6rem;
   display: flex;
   justify-content: center;
   flex-direction: row;
   align-items: center;
   margin: 0 auto;
+  position: relative;
+
+  &-triangle-first {
+    position: absolute;
+    top: 15%;
+    left: 12%;
+    animation: rotate 5s linear infinite;
+
+    @include respond(phone) {
+      display: none;
+    }
+
+    @keyframes rotate {
+      from {
+        transform: rotate(0deg);
+      }
+
+      to {
+        transform: rotate(359deg);
+      }
+    }
+  }
+
+  &-triangle-second {
+    position: absolute;
+    bottom: 1%;
+    animation: rotate 5s linear infinite;
+
+    @include respond(phone) {
+      bottom: 5%;
+      right: 3%;
+    }
+    @include respond(tablet-port) {
+      bottom: 5%;
+      right: 15%;
+    }
+
+    @include respond(tablet-land) {
+      bottom: 5%;
+      right: 15%;
+    }
+
+    @keyframes rotate {
+      from {
+        transform: rotate(0deg);
+      }
+
+      to {
+        transform: rotate(359deg);
+      }
+    }
+  }
+
+  &-curved-lines-first {
+    position: absolute;
+    right: 45%;
+    bottom: 45%;
+
+    @include respond(phone) {
+      display: none;
+    }
+    @include respond(tablet-port) {
+      display: none;
+    }
+    @include respond(tablet-land) {
+      display: none;
+    }
+  }
 
   @include respond(phone) {
     flex-direction: column;
@@ -24,7 +92,6 @@
   @include respond(desktop-big) {
     padding-top: 27rem;
   }
-
   &-block-left {
     width: 70%;
     position: relative;
@@ -36,6 +103,7 @@
     }
     @include respond(tablet-land) {
       margin-right: 5rem;
+      width: 100%;
     }
     &--title {
       margin-top: 1.2rem;
@@ -46,25 +114,10 @@
         width: unset !important;
       }
       @include respond(tablet-port) {
-        width: 100%;
+        width: unset !important;
       }
       @include respond(tablet-land) {
-        width: 100%;
-      }
-      span {
-        display: inline-block;
-        position: relative;
-        z-index: 10;
-        &:after {
-          background: #f1ca89;
-          bottom: 8%;
-          content: '';
-          height: 12px;
-          position: absolute;
-          left: 0;
-          width: 100%;
-          z-index: -1;
-        }
+        width: unset !important;
       }
     }
     &-buttons {
@@ -82,6 +135,9 @@
         margin-top: unset;
       }
       @include respond(tablet-port) {
+        margin-top: unset;
+      }
+      @include respond(tablet-land) {
         margin-top: unset;
       }
     }
@@ -129,10 +185,7 @@
       display: none;
     }
     @include respond(tablet-land) {
-      position: relative;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
+      display: none;
     }
     &-img {
       width: 50.1rem;
@@ -144,6 +197,11 @@
         height: auto;
       }
       @include respond(tablet-port) {
+        margin-top: 4rem;
+        width: 100%;
+        height: auto;
+      }
+      @include respond(tablet-land) {
         margin-top: 4rem;
         width: 100%;
         height: auto;

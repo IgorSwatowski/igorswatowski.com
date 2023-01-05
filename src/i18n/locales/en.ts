@@ -17,7 +17,8 @@ const en = {
   followMeOn: 'Follow me on',
 
   //Homepage
-  hero: 'Attract and retain clients with a professionally designed website.',
+  hero: 'Attract and retain clients with a professionally designed',
+  heroUnderline: "website.",
   heroText:
     'My mission is to make sure that all of my clients achieve their goals with online presence they want.',
   heroTextSecond:

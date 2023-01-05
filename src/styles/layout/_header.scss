@@ -67,16 +67,6 @@
         padding: 16px 0;
         box-shadow: 0 3px 6px #2222220d;
       }
-      @include respond(desktop-big) {
-        display: none;
-        position: absolute;
-        background-color: var(--white);
-        right: 0;
-        left: 0;
-        text-align: center;
-        padding: 16px 0;
-        box-shadow: 0 3px 6px #2222220d;
-      }
 
       li {
         display: block;
@@ -237,7 +227,19 @@
   }
 }
 
-@media (max-width: 991px) {
+@include respond(phone) {
+  .hamburger {
+    display: block;
+  }
+}
+
+@include respond(tablet-port) {
+  .hamburger {
+    display: block;
+  }
+}
+
+@include respond(tablet-land) {
   .hamburger {
     display: block;
   }

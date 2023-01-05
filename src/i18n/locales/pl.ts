@@ -17,7 +17,8 @@ const pl = {
   followMeOn: 'Śledź mnie na',
 
   //Homepage
-  hero: 'Zbudujmy razem stronę, która przyniesie sukces w Twoim biznesie.',
+  hero: 'Zbudujmy razem stronę, która przyniesie sukces w Twoim',
+  heroUnderline: "biznesie.",
   heroText:
     'Moim zadaniem jest wspieranie moich klientów w osiąganiu ich celów związanych z obecnością online.',
   heroTextSecond:
