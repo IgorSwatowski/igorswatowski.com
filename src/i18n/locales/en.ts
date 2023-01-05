@@ -25,7 +25,8 @@ const en = {
   heroBtn: 'How can I help',
   trustedBy: 'Trusted by',
   collaborate:
-    'I collaborate with brands, entrepreneurs and agencies to create memorable experiences.',
+    'I collaborate with brands, entrepreneurs and agencies to create memorable ',
+    collaborateText: "experiences",
   collaborateTextMain:
     'My unique perspective and creativity will help you stand out in the marketplace and save your customers memories. I am ready to provide solutions to help you succeed.',
   designProcess: 'Get an inside look at my process',
@@ -58,7 +59,7 @@ const en = {
   ctaFirstText:
     "You can reach your dream customers online. Let's create a winning website together and achieve your goals. It's possible and within your reach.",
   ctaSecondText: "Let's make it happen!",
-  meetIgor: 'Unique website designs for your business',
+  meetIgor: 'Unique website designs for you and your business',
   meetIgorTextFirst:
     "Let's start with the fact that every company these days should have its own website. This is essential to establish a presence online and allow potential customers to easily find information about your company and its offerings. ",
   meetIgorTextSecond:

@@ -18,6 +18,7 @@ const CollaborateSection = () => {
         </div>
         <h2 className="collaborate-wrapper-heading heading-big" data-aos="fade-up">
           {t.collaborate}
+          <span className="underline">{t.collaborateText}</span>
         </h2>
         <p
           className="collaborate-wrapper-text paragraph-primary"

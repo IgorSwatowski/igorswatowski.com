@@ -24,6 +24,20 @@
       @include respond(tablet-land) {
         width: unset;
       }
+
+      &-heading {
+        width: 950px;
+
+        @include respond(phone) {
+          width: unset;
+        }
+        @include respond(tablet-port) {
+          width: unset;
+        }
+        @include respond(tablet-land) {
+          width: unset;
+        }
+      }
       &-text {
         margin-top: 3rem;
         width: 680px;
