@@ -11,6 +11,11 @@ import { GATrackId } from '../constants/constants';
 import { DefaultSeo } from 'next-seo';
 import SEO from '../../next-seo.config';
 
+import '@etchteam/next-pagination/dist/index.css';
+
+import { ApolloProvider } from '@apollo/client/react';
+import { client } from '../lib/apollo';
+
 export default function App({ Component, pageProps }: AppProps) {
   return (
     <>
@@ -37,9 +42,11 @@ export default function App({ Component, pageProps }: AppProps) {
       </Head>
       <DefaultSeo {...SEO} />
       <I18nextProvider i18n={i18n}>
-        <Navbar />
-        <Component {...pageProps} />
-        <Footer />
+        <ApolloProvider client={client}>
+          <Navbar />
+          <Component {...pageProps} />
+          <Footer />
+        </ApolloProvider>
       </I18nextProvider>
     </>
   );

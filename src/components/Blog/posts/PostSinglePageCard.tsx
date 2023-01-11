@@ -1,8 +1,8 @@
 import Link from 'next/link';
 import { Post } from '../../../types/post';
 
-const PostSinglePageCard = ({ title, content, createdAt, path }: Post) => {
-  const shortText = content?.text?.substring(0, 145) + ' ' + '[...]';
+const PostSinglePageCard = ({ title, content, date, path }) => {
+  const shortText = content?.substring(0, 145) + ' ' + '[...]';
 
   const convertDate = (createdAt: string) => {
     const date = new Date(createdAt);
@@ -12,7 +12,7 @@ const PostSinglePageCard = ({ title, content, createdAt, path }: Post) => {
     return `${day}/${month}/${year}`;
   };
 
-  const convertedDate = convertDate(createdAt);
+  const convertedDate = convertDate(date);
 
   return (
     <Link href={path} className="blog-banner-wrapper-blogs-item">
