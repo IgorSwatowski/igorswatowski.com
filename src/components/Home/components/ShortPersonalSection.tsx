@@ -9,6 +9,8 @@ import MeSecondPng from '../../../assets/personal-photo.webp';
 import TriangleElement from '../../../assets/elements/triangle.png';
 import CurvedLinesElement from '../../../assets/elements/curved-lines.png';
 
+import MeImg from '../../../assets/me.png';
+
 const ShortPersonalSection = () => {
   const router = useRouter();
   const { locale } = router;
@@ -64,7 +66,7 @@ const ShortPersonalSection = () => {
           </Link>
         </div>
         <div className="short-personal-info-wrapper-right" data-aos="fade-down">
-          <Image loading="lazy" src={MeSecondPng} alt="" />
+          <Image loading="lazy" src={MeImg} alt="" />
         </div>
       </div>
     </section>
