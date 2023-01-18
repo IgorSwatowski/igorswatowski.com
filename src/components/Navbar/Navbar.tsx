@@ -70,9 +70,9 @@ const Navbar = () => {
           <NavbarItem href="/packages" aria-label="Packages" onClick={hideMenu}>
             {t.packages}
           </NavbarItem>
-          {/* <NavbarItem href="/portfolio" aria-label="Portfolio" onClick={hideMenu}>
+          <NavbarItem href="/portfolio" aria-label="Portfolio" onClick={hideMenu}>
             {t.portfolio}
-          </NavbarItem> */}
+          </NavbarItem>
           <NavbarItem href="/blog" aria-label="Blog" onClick={hideMenu}>
             {t.blog}
           </NavbarItem>
