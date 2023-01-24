@@ -86,7 +86,7 @@
     &-heading {
       margin-top: 1.2rem;
       margin-bottom: 1rem;
-      width: 872px;
+      width: 800px;
 
       @include respond(phone, tablet-port, tablet-land) {
         width: unset;
