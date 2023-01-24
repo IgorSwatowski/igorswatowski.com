@@ -14,7 +14,7 @@ const pl = {
   phone: 'Telefon',
   copyright: 'Copyright © 2022 . Igor Swatowski . Wszelkie prawa zastrzeżone.',
   menuHeading: 'Menu',
-  followMeOn: 'Śledź mnie na',
+  followMeOn: 'Social',
 
   //Homepage
   hero: 'Zbudujmy razem stronę, która przyniesie sukces w Twoim',
@@ -26,8 +26,7 @@ const pl = {
   heroBtn: 'Jak mogę Ci pomóc?',
   trustedBy: 'Zaufali mi:',
   collaborate:
-    'Współpracuję z markami, przedsiębiorcami i firmami, aby stworzyć niezapomniane',
-    collaborateText: "wrażenia",
+    'Współpracuję z markami, przedsiębiorcami i firmami, aby stworzyć niezapomniane wrażenia.',
   collaborateTextMain:
     'Moja unikalna perspektywa i kreatywność pozwolą Ci wyróżnić się na rynku i zapisać w pamięci Twoich klientów. Jestem gotowy dostarczyć rozwiązania, które pomogą Ci osiągnąć sukces.',
   designProcess: 'Poznaj mój proces od środka',
@@ -60,7 +59,7 @@ const pl = {
   ctaFirstText:
     'Możesz dotrzeć do swoich wymarzonych klientów online. Stwórzmy razem zwycięską stronę internetową i osiągnijmy Twoje cele. To jest możliwe i w Twoim zasięgu.',
   ctaSecondText: 'Zróbmy to!',
-  meetIgor: 'Unikalne projekty stron internetowych dla Ciebie i Twojej firmy',
+  meetIgor: 'Funkcjonalna strona internetowa - kluczem do sukcesu w sieci',
   meetIgorTextFirst:
     'Zacznijmy od tego, że każda firma w dzisiejszych czasach powinna mieć swoją stronę internetową. Jest to niezbędne, aby zaistnieć w sieci i umożliwić potencjalnym klientom łatwe znalezienie informacji o Twojej firmie i jej ofercie.',
   meetIgorTextSecond:

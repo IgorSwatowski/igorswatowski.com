@@ -2,19 +2,15 @@
 @import '../abstracts/variables';
 
 .paragraph-primary {
-  font-size: 20px;
+  font-size: 18px;
   color: var(--gray-200);
-  margin-top: 1.3rem;
   word-break: break-word;
+  font-weight: 400;
+  margin: 1.6rem 0 0;
 
   @include respond(phone) {
     font-size: 18px;
-    font-weight: 400;
   }
-  @include respond(tablet-land) {
-    width: 100%;
-  }
-
   &::selection {
     color: var(--black);
     background-color: var(--primary);
@@ -27,10 +23,6 @@
   word-break: break-word;
 
   @include respond(phone) {
-    width: 100%;
-    font-size: 18px;
-    font-weight: 400;
-    letter-spacing: -0.01em;
     padding: 0;
     text-align: center;
   }
@@ -46,10 +38,6 @@
   word-break: break-word;
 
   @include respond(phone) {
-    width: 100%;
-    font-size: 18px;
-    font-weight: 400;
-    letter-spacing: -0.01em;
     padding: 0;
   }
   &::selection {

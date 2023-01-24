@@ -20,7 +20,7 @@ const BannerAbout = () => {
       <div className="banner-text-wrapper container-box">
         <div className="banner-text-wrapper-left">
           <h1
-            className="banner-text-wrapper-heading heading-primary"
+            className="banner-text-wrapper-left-heading heading-primary"
             data-aos="fade-down"
             data-aos-delay="50"
           >
@@ -28,21 +28,21 @@ const BannerAbout = () => {
             <span className="underline">{t.bannerHeadingSecond}</span>
           </h1>
           <p
-            className="banner-text-wrapper-text paragraph-primary"
+            className="banner-text-wrapper-left-text paragraph-primary"
             data-aos="fade-down"
             data-aos-delay="100"
           >
             {t.bannerText}
           </p>
           <p
-            className="banner-text-wrapper-text paragraph-primary"
+            className="banner-text-wrapper-left-text paragraph-primary"
             data-aos="fade-down"
             data-aos-delay="100"
           >
             {t.bannerTextSecond}
           </p>
           <p
-            className="banner-text-wrapper-text paragraph-primary"
+            className="banner-text-wrapper-left-text paragraph-primary"
             data-aos="fade-down"
             data-aos-delay="100"
           >

@@ -6,7 +6,7 @@
   display: flex;
   justify-content: center;
   flex-direction: row;
-  align-items: center;
+  align-items: flex-start;
   margin: 0 auto;
   position: relative;
 
@@ -40,12 +40,7 @@
       bottom: 5%;
       right: 3%;
     }
-    @include respond(tablet-port) {
-      bottom: 5%;
-      right: 15%;
-    }
-
-    @include respond(tablet-land) {
+    @include respond(ablet-port, tablet-land) {
       bottom: 5%;
       right: 15%;
     }
@@ -66,58 +61,35 @@
     right: 45%;
     bottom: 45%;
 
-    @include respond(phone) {
-      display: none;
-    }
-    @include respond(tablet-port) {
-      display: none;
-    }
-    @include respond(tablet-land) {
+    @include respond(phone, tablet-port, tablet-land, desktop-big) {
       display: none;
     }
   }
 
-  @include respond(phone) {
+  @include respond(phone, tablet-port, tablet-land) {
     flex-direction: column;
-    padding-top: 18.8rem;
-  }
-  @include respond(tablet-port) {
-    flex-direction: column;
-    padding-top: 18.8rem;
-  }
-  @include respond(tablet-land) {
-    flex-direction: row;
     padding-top: 18.8rem;
   }
   @include respond(desktop-big) {
     padding-top: 27rem;
   }
   &-block-left {
-    width: 70%;
+    width: 75%;
     position: relative;
-    @include respond(phone) {
+    @include respond(phone, tablet-port, tablet-land) {
       width: 100%;
     }
-    @include respond(tablet-port) {
-      width: 100%;
-    }
-    @include respond(tablet-land) {
+    @include respond(desktop-big) {
       margin-right: 5rem;
-      width: 100%;
+      width: 65%;
     }
-    &--title {
+    &-heading {
       margin-top: 1.2rem;
       margin-bottom: 1rem;
       width: 872px;
 
-      @include respond(phone) {
-        width: unset !important;
-      }
-      @include respond(tablet-port) {
-        width: unset !important;
-      }
-      @include respond(tablet-land) {
-        width: unset !important;
+      @include respond(phone, tablet-port, tablet-land) {
+        width: unset;
       }
     }
     &-buttons {
@@ -131,13 +103,7 @@
       max-width: 573px;
       margin-top: 4rem;
 
-      @include respond(phone) {
-        margin-top: unset;
-      }
-      @include respond(tablet-port) {
-        margin-top: unset;
-      }
-      @include respond(tablet-land) {
+      @include respond(phone, tablet-port, tablet-land) {
         margin-top: unset;
       }
     }
@@ -172,25 +138,23 @@
     }
   }
   &-block-right {
-    width: 30%;
+    width: 25%;
     display: flex;
     align-items: flex-end;
     justify-content: flex-end;
     z-index: -1;
 
-    @include respond(phone) {
+    @include respond(phone, tablet-port, tablet-land) {
       display: none;
     }
-    @include respond(tablet-port) {
-      display: none;
-    }
-    @include respond(tablet-land) {
-      display: none;
+    @include respond(desktop-big) {
+      width: 35%;
     }
     &-img {
-      width: 50.1rem;
+      width: 100%;
       position: relative;
       z-index: 10;
+      margin-left: auto;
       @include respond(phone) {
         margin-top: 4rem;
         width: 100%;
@@ -209,7 +173,7 @@
     }
     img {
       object-fit: cover;
-      width: 500px;
+      width: 100%;
       height: auto;
       @include respond(tablet-land) {
         width: 85%;

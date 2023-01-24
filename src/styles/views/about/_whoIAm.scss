@@ -10,19 +10,7 @@
   padding-top: 6.4rem;
   gap: 10rem;
 
-  @include respond(phone) {
-    flex-direction: column;
-    padding-top: 5rem;
-    align-items: center;
-    gap: 4rem;
-  }
-  @include respond(tablet-port) {
-    flex-direction: column;
-    padding-top: 5rem;
-    align-items: center;
-    gap: 4rem;
-  }
-  @include respond(tablet-land) {
+  @include respond(phone, tablet-port, tablet-land) {
     flex-direction: column;
     padding-top: 5rem;
     align-items: center;
@@ -32,26 +20,33 @@
   &-left {
     width: 50%;
 
-    @include respond(phone) {
-      width: 100%;
-    }
-    @include respond(tablet-port) {
-      width: 100%;
-    }
-    @include respond(tablet-land) {
+    @include respond(phone, tablet-port, tablet-land) {
       width: 100%;
     }
 
     &-heading {
-      margin-bottom: 24px;
+      width: 700px;
+
+      @include respond(phone, tablet-port, tablet-land) {
+        width: 100%;
+      }
     }
     &-text {
-      margin-bottom: 34px;
+      width: 700px;
+
+      @include respond(phone, tablet-port, tablet-land) {
+        width: 100%;
+      }
     }
     .social-links {
       display: flex;
       flex-direction: row;
       gap: 2rem;
+      margin-top: 1.6rem;
+
+      @include respond(phone, tablet-port, tablet-land) {
+        margin-top: 3.2rem;
+      }
 
       a {
         transition: 0.3s all ease;
@@ -68,16 +63,9 @@
     align-items: flex-end;
     position: relative;
 
-    @include respond(phone) {
+    @include respond(phone, tablet-port, tablet-land) {
       width: 100%;
     }
-    @include respond(tablet-port) {
-      width: 100%;
-    }
-    @include respond(tablet-land) {
-      width: 100%;
-    }
-
     img {
       margin-left: auto;
       width: 500px;
@@ -92,13 +80,7 @@
         margin-left: 0;
         display: none;
       }
-      @include respond(tablet-port) {
-        width: 50%;
-        height: auto;
-        object-fit: cover;
-        margin-left: 0;
-      }
-      @include respond(tablet-land) {
+      @include respond(tablet-port, tablet-land) {
         width: 50%;
         height: auto;
         object-fit: cover;

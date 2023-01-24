@@ -9,15 +9,7 @@
     flex-direction: column;
     justify-content: center;
     margin: 0 auto;
-    @include respond(phone) {
-      flex-direction: column;
-      padding-top: 20rem;
-    }
-    @include respond(tablet-port) {
-      flex-direction: column;
-      padding-top: 20rem;
-    }
-    @include respond(tablet-land) {
+    @include respond(phone, tablet-port, tablet-land) {
       flex-direction: column;
       padding-top: 20rem;
     }

@@ -2,27 +2,17 @@
 @import '../abstracts/variables';
 
 .heading-primary {
-  font-size: 64px;
-  line-height: 1.212em;
+  font-size: 54px;
   font-weight: 600;
-  letter-spacing: -1px;
-  font-family: 'Poppins', sans-serif;
-  margin: 0;
+  line-height: 120%;
+  max-width: 100%;
+  word-break: break-word;
 
-  @include respond(phone) {
+  @include respond(phone, tablet-port) {
     font-size: 32px;
-    line-height: 4rem;
-    font-weight: 600;
-    letter-spacing: -1px;
-  }
-  @include respond(tablet-port) {
-    width: 100%;
-    font-size: 36px;
-    line-height: 4.3rem;
   }
   @include respond(tablet-land) {
-    font-size: 48px;
-    line-height: 5.6rem;
+    font-size: 42px;
   }
   &::selection {
     color: var(--black);
@@ -33,20 +23,13 @@
 .heading-big {
   font-size: 64px;
   width: 100%;
-  line-height: 1.212em;
+  line-height: 120%;
   font-weight: 600;
-  letter-spacing: -1px;
-  margin: 0;
 
   @include respond(phone) {
-    width: 100%;
-    font-size: 36px;
-    line-height: 3.5rem;
-    font-weight: 600;
-    letter-spacing: -1px;
+    font-size: 30px;
   }
   @include respond(tablet-port) {
-    width: 100%;
     font-size: 48px;
   }
   @include respond(tablet-land) {
@@ -60,30 +43,19 @@
 
 .heading-secondary {
   font-size: 48px;
-  line-height: 55px;
   font-weight: 600;
-  letter-spacing: -1px;
-  margin: 0;
+  line-height: 120%;
 
   @include respond(phone) {
-    width: 100%;
-    font-size: 28px;
-    line-height: 1.31em;
-    font-weight: 600;
-    letter-spacing: -1px;
-  }
-  @include respond(tablet-port) {
-    width: 100%;
     font-size: 32px;
   }
+  @include respond(tablet-port) {
+    font-size: 36px;
+  }
   @include respond(tablet-land) {
-    width: 100%;
     font-size: 42px;
     margin-top: 0px;
     margin-bottom: 16px;
-    line-height: 1.31em;
-    font-weight: 600;
-    letter-spacing: -1px;
   }
   &::selection {
     color: var(--black);
@@ -94,22 +66,13 @@
 .heading-third {
   font-size: 40px;
   font-weight: 600;
-  line-height: 41px;
-  letter-spacing: -1px;
-  margin: 0;
+  line-height: 120%;
 
   @include respond(phone) {
-    width: 100%;
     font-size: 28px;
-    line-height: 1.212em;
-    font-weight: 600;
-    letter-spacing: -1px;
   }
-  @include respond(tablet-port) {
-    width: 100%;
-  }
-  @include respond(tablet-land) {
-    font-size: 54px;
+  @include respond(tablet-port, tablet-land) {
+    font-size: 32px;
   }
   &::selection {
     color: var(--black);
@@ -120,22 +83,13 @@
 .heading-references {
   font-size: 32px;
   font-weight: 600;
-  line-height: 41px;
-  letter-spacing: -1px;
-  margin: 0;
+  line-height: 120%;
 
   @include respond(phone) {
-    width: 100%;
     font-size: 24px;
-    line-height: 1.212em;
-    font-weight: 600;
-    letter-spacing: -1px;
   }
-  @include respond(tablet-port) {
-    width: 100%;
-  }
-  @include respond(tablet-land) {
-    width: 100%;
+  @include respond(tablet-port, tablet-land) {
+    font-size: 28px;
   }
   &::selection {
     color: var(--black);
@@ -146,22 +100,13 @@
 .heading-fourth {
   font-size: 32px;
   font-weight: 600;
-  line-height: 41px;
-  letter-spacing: -1px;
-  margin: 0;
+  line-height: 120%;
 
   @include respond(phone) {
-    width: 100%;
     font-size: 24px;
-    line-height: 1.212em;
-    font-weight: 600;
-    letter-spacing: -1px;
   }
-  @include respond(tablet-port) {
-    width: 100%;
-  }
-  @include respond(tablet-land) {
-    width: 100%;
+  @include respond(tablet-port, tablet-land) {
+    font-size: 28px;
   }
   &::selection {
     color: var(--black);
@@ -173,18 +118,6 @@
   font-size: 20px;
   font-weight: 600;
   line-height: 29px;
-  letter-spacing: -1px;
-  margin: 0;
-
-  @include respond(phone) {
-    width: 100%;
-  }
-  @include respond(tablet-port) {
-    width: 100%;
-  }
-  @include respond(tablet-land) {
-    width: 100%;
-  }
   &::selection {
     color: var(--black);
     background-color: var(--primary);

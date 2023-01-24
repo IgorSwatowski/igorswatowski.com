@@ -3,16 +3,15 @@
 
 body {
   font-family: 'Poppins', sans-serif;
-  font-style: normal;
-  margin: 0;
-  padding: 0;
-  overflow-x: hidden;
+  background: #f8f8f9;
   font-size: 1.6rem;
   height: 100vh;
+  margin: 0;
+  overflow-x: hidden;
+  padding: 0;
+  position: relative;
   width: 100%;
   max-width: 100%;
-  position: relative;
-  background: #f8f8f9;
 }
 
 * {
@@ -65,8 +64,7 @@ a {
 
 .container-box {
   width: 100%;
-  max-width: 1620px;
-  padding: 0 3.2rem;
+  max-width: 1441px;
 
   @include respond(phone) {
     padding-left: 1.6rem;
@@ -93,11 +91,6 @@ a {
     padding-right: 6.4rem;
     width: unset;
     max-width: unset;
-  }
-  @include respond(desktop-bigger) {
-    width: 100%;
-    max-width: 142rem;
-    padding: 0 1rem;
   }
 }
 

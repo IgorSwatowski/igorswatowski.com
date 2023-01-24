@@ -21,13 +21,7 @@
       text-align: center;
       padding-bottom: 6.4rem;
     }
-    @include respond(tablet-port) {
-      width: unset;
-      padding: 6.4rem 1.6rem;
-      margin: 0 auto;
-      text-align: center;
-    }
-    @include respond(tablet-land) {
+    @include respond(tablet-port, tablet-land) {
       width: unset;
       padding: 6.4rem 1.6rem;
       margin: 0 auto;

@@ -22,7 +22,7 @@ const HomeBanner = () => {
       <Image loading="lazy" src={TriangleElement} alt="" className="banner-triangle-second" />
       <Image loading="lazy" src={CurvedLinesElement} alt="" className="banner-curved-lines-first" />
       <div className="banner-block-left" data-aos="fade-up">
-        <h1 className="banner-block-left--title heading-primary">
+        <h1 className="banner-block-left-heading heading-primary">
           {t.hero}
           <span className="underline">{t.heroUnderline}</span>
         </h1>
