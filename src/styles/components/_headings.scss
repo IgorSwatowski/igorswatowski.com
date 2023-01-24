@@ -27,7 +27,7 @@
   font-weight: 600;
 
   @include respond(phone) {
-    font-size: 30px;
+    font-size: 28px;
   }
   @include respond(tablet-port) {
     font-size: 48px;
