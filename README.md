@@ -1,6 +1,6 @@
 # Personal Website
 
-This is the source code for my personal website, built with Next.js, Typescript, Hygraph, SCSS, and GraphQL.
+This is the source code for my personal website, built with Next.js, Typescript, SCSS, and GraphQL.
 
 ## Technologies Used
 
