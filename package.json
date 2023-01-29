@@ -23,6 +23,7 @@
     "@types/react-dom": "18.0.9",
     "aos": "^2.3.4",
     "axios": "^1.2.1",
+    "contentful": "^9.3.0",
     "cross-env": "^7.0.3",
     "dotenv": "^16.0.3",
     "eslint": "8.29.0",
