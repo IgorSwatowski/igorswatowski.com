@@ -6,7 +6,7 @@ import { pl } from '../../i18n/locales/pl';
 import PostCard from '../../components/Blog/posts/PostCard';
 import { client } from '../../lib/contentful/client';
 
-const Posts = ({ posts }) => {
+const Posts = ({ posts }: any) => {
   const router = useRouter();
   const { locale } = router;
   const t = locale === 'en' ? en : pl;
@@ -30,7 +30,7 @@ const Posts = ({ posts }) => {
         </div> */}
           <div className='blog-banner-wrapper-blog'>
             <div className='blog-banner-wrapper-blogs'>
-              {posts.map(post => (
+              {posts.map((post: any) => (
                 <PostCard key={post.fields.slug} post={post} />
               ))}
             </div>
