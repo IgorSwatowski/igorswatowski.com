@@ -38,21 +38,7 @@
         flex-direction: row;
         gap: 4rem;
 
-        @include respond(phone) {
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
-          gap: 1rem;
-        }
-        @include respond(tablet-port) {
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
-          gap: 1rem;
-        }
-        @include respond(tablet-land) {
+        @include respond(phone, tablet-port, tablet-land) {
           display: flex;
           flex-direction: column;
           justify-content: center;
@@ -158,19 +144,7 @@
         flex-direction: row;
         gap: 4rem;
 
-        @include respond(phone) {
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
-        }
-        @include respond(tablet-port) {
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
-        }
-        @include respond(tablet-land) {
+        @include respond(phone, tablet-port, tablet-land) {
           display: flex;
           flex-direction: column;
           justify-content: center;
@@ -184,13 +158,7 @@
           margin-bottom: 4rem;
           width: 849px;
 
-          @include respond(phone) {
-            width: 100%;
-          }
-          @include respond(tablet-port) {
-            width: 100%;
-          }
-          @include respond(tablet-land) {
+          @include respond(phone, tablet-port, tablet-land) {
             width: 100%;
           }
 
@@ -201,13 +169,7 @@
             width: 100%;
             padding: 0 2rem;
 
-            @include respond(phone) {
-              width: unset;
-            }
-            @include respond(tablet-port) {
-              width: unset;
-            }
-            @include respond(tablet-land) {
+            @include respond(phone, tablet-port, tablet-land) {
               width: unset;
             }
 
@@ -227,13 +189,7 @@
           width: 849px;
           gap: 1rem;
 
-          @include respond(phone) {
-            width: 100%;
-          }
-          @include respond(tablet-port) {
-            width: 100%;
-          }
-          @include respond(tablet-land) {
+          @include respond(phone, tablet-port, tablet-land) {
             width: 100%;
           }
 
@@ -245,13 +201,7 @@
             padding: 2rem 2rem;
             resize: none;
 
-            @include respond(phone) {
-              width: unset;
-            }
-            @include respond(tablet-port) {
-              width: unset;
-            }
-            @include respond(tablet-land) {
+            @include respond(phone, tablet-port, tablet-land) {
               width: unset;
             }
 
@@ -270,7 +220,6 @@
         color: red;
         font-size: 16px;
         width: max-content;
-        margin-top: 2rem;
       }
       .alert-success {
         color: green;

@@ -6,10 +6,7 @@
   margin-top: 6.4rem;
   background-color: var(--gray);
 
-  @include respond(phone) {
-    padding: 3.2rem 4rem;
-  }
-  @include respond(tablet-port) {
+  @include respond(phone, tablet-port) {
     padding: 3.2rem 4rem;
   }
 
@@ -20,14 +17,7 @@
     justify-content: center;
     margin: 0 auto;
 
-    @include respond(phone) {
-      flex-direction: column;
-      gap: 6.4rem;
-      align-items: center;
-      justify-content: center;
-      margin: 0 auto;
-    }
-    @include respond(tablet-port) {
+    @include respond(phone, tablet-port) {
       flex-direction: column;
       gap: 6.4rem;
       align-items: center;
@@ -44,13 +34,7 @@
       text-transform: uppercase;
       margin-right: auto;
 
-      @include respond(phone) {
-        margin-right: 0;
-      }
-      @include respond(tablet-port) {
-        margin-right: 0;
-      }
-      @include respond(tablet-land) {
+      @include respond(phone, tablet-port, tablet-land) {
         margin-right: 0;
       }
 
@@ -67,29 +51,12 @@
       justify-content: center;
       align-items: center;
       margin-right: 10rem;
-      @include respond(phone) {
+      @include respond(phone, tablet-port, tablet-land) {
         gap: 7rem;
         margin: 0 auto;
         flex-wrap: wrap;
         display: flex;
         flex-direction: column;
-        align-items: center;
-        justify-content: center;
-      }
-      @include respond(tablet-port) {
-        gap: 7rem;
-        margin: 0 auto;
-        flex-wrap: wrap;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-      }
-      @include respond(tablet-land) {
-        gap: 7rem;
-        margin: 0 auto;
-        display: flex;
-        flex-direction: row;
         align-items: center;
         justify-content: center;
       }

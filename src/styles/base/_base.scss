@@ -3,16 +3,15 @@
 
 body {
   font-family: 'Poppins', sans-serif;
-  font-style: normal;
-  margin: 0;
-  padding: 0;
-  overflow-x: hidden;
+  background: #f8f8f9;
   font-size: 1.6rem;
   height: 100vh;
+  margin: 0;
+  overflow-x: hidden;
+  padding: 0;
+  position: relative;
   width: 100%;
   max-width: 100%;
-  position: relative;
-  background: #f8f8f9;
 }
 
 * {
@@ -65,8 +64,7 @@ a {
 
 .container-box {
   width: 100%;
-  max-width: 1620px;
-  padding: 0 3.2rem;
+  max-width: 1441px;
 
   @include respond(phone) {
     padding-left: 1.6rem;
@@ -94,11 +92,6 @@ a {
     width: unset;
     max-width: unset;
   }
-  @include respond(desktop-bigger) {
-    width: 100%;
-    max-width: 142rem;
-    padding: 0 1rem;
-  }
 }
 
 .bolden {
@@ -122,7 +115,7 @@ a {
 .underline {
   position: relative;
   z-index: 1;
-  margin-left: 1.5rem;
+  margin-left: 1rem;
 
   @include respond(phone) {
     margin-left: 0.7rem;
@@ -132,14 +125,15 @@ a {
     position: absolute;
     background-color: var(--primary);
     bottom: 15%;
-    height: 20px;
+    height: 18px;
     position: absolute;
     left: 0;
     width: 100%;
     z-index: -1;
 
     @include respond(phone) {
-      display: none;
+      display: 16%;
+      height: 10px;
     }
 
     @include respond(tablet-port) {

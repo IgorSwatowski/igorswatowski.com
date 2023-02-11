@@ -75,6 +75,12 @@
       h1 {
         width: max-content;
         text-transform: uppercase;
+        @include respond(phone) {
+          font-size: 36px;
+        }
+        @include respond(tablet-port) {
+          font-size: 42px;
+        }
       }
     }
     &-right {

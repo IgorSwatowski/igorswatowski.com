@@ -147,7 +147,7 @@ const ContactForm = () => {
               name="firstName"
               type="text"
               label="firstName"
-              placeholder="First Name"
+              placeholder={t.contactFirstName}
               error={!!errors.firstName}
               errorMessage={!!errors.firstName ? errors.firstName : ''}
               value={values.firstName}
@@ -161,7 +161,7 @@ const ContactForm = () => {
               name="lastName"
               type="text"
               label="lastName"
-              placeholder="Last Name"
+              placeholder={t.contactSecondName}
               error={!!errors.lastName}
               errorMessage={!!errors.lastName ? errors.lastName : ''}
               value={values.lastName}
@@ -177,7 +177,7 @@ const ContactForm = () => {
               name="email"
               type="email"
               label="email"
-              placeholder="Email"
+              placeholder={t.contactEmail}
               error={!!errors.email}
               errorMessage={!!errors.email ? errors.email : ''}
               value={values.email}
@@ -191,7 +191,7 @@ const ContactForm = () => {
               name="company"
               type="text"
               label="company"
-              placeholder="Company"
+              placeholder={t.contactCompany}
               error={!!errors.company}
               errorMessage={!!errors.company ? errors.company : ''}
               value={values.company}
@@ -207,7 +207,7 @@ const ContactForm = () => {
               name="topic"
               type="text"
               label="topic"
-              placeholder="Topic"
+              placeholder={t.contactTopic}
               error={!!errors.topic}
               errorMessage={!!errors.topic ? errors.topic : ''}
               value={values.topic}
@@ -223,7 +223,7 @@ const ContactForm = () => {
               id="message"
               className="form-control"
               label="message"
-              placeholder="Message"
+              placeholder={t.contactMessage}
               error={!!errors.message}
               errorMessage={!!errors.message ? errors.message : ''}
               value={values.message}

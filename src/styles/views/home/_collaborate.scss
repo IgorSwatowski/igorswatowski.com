@@ -8,23 +8,16 @@
   align-items: center;
   justify-content: center;
   width: 100%;
-  @include respond(phone) {
-    width: unset;
-  }
-  @include respond(tablet-port) {
-    width: unset;
-  }
-  @include respond(tablet-land) {
-    width: unset;
-  }
 
+  @include respond(phone, tablet-port, tablet-land) {
+    width: unset;
+  }
   &-wrapper {
     background-color: var(--white);
     display: flex;
     flex-direction: column;
     align-items: center;
     margin: 0 auto;
-    width: 100%;
     position: relative;
     padding-top: 6.4rem;
     padding-bottom: 6.4rem;
@@ -33,10 +26,7 @@
       padding: 6.4rem 2rem;
       width: unset;
     }
-    @include respond(tablet-port) {
-      width: unset;
-    }
-    @include respond(tablet-land) {
+    @include respond(ablet-port, tablet-land) {
       width: unset;
     }
 
@@ -48,17 +38,8 @@
       align-items: center;
       display: block;
 
-      @include respond(phone) {
-        text-align: left;
-        word-break: break-word;
-      }
-
-      @include respond(tablet-port) {
-        text-align: left;
-        word-break: break-word;
-      }
-      @include respond(tablet-land) {
-        text-align: left;
+      @include respond(phone, tablet-port, tablet-land) {
+        text-align: center;
         word-break: break-word;
       }
     }
@@ -68,12 +49,8 @@
       width: 100%;
       text-align: center;
 
-      @include respond(phone) {
-        text-align: left;
-        word-break: break-word;
-      }
-      @include respond(tablet-port) {
-        text-align: left;
+      @include respond(phone, tablet-port) {
+        text-align: center;
         word-break: break-word;
       }
     }
@@ -83,42 +60,22 @@
       right: 9rem;
       top: 7rem;
 
-      @include respond(phone) {
-        display: none;
-      }
-      @include respond(tablet-port) {
-        display: none;
-      }
-      @include respond(tablet-land) {
+      @include respond(phone, tablet-port, tablet-land) {
         display: none;
       }
     }
     &-arrow-img {
       position: absolute;
-      bottom: -13rem;
+      bottom: -9rem;
       right: 0;
 
-      @include respond(phone) {
-        bottom: -8rem;
-      }
-      @include respond(tablet-port) {
-        bottom: -8rem;
-      }
-      @include respond(tablet-land) {
+      @include respond(phone, tablet-port, tablet-land) {
         bottom: -8rem;
       }
 
       img {
         object-fit: cover;
-        @include respond(phone) {
-          width: 99px;
-          height: auto;
-        }
-        @include respond(tablet-port) {
-          width: 99px;
-          height: auto;
-        }
-        @include respond(tablet-land) {
+        @include respond(phone, tablet-port, tablet-land) {
           width: 99px;
           height: auto;
         }

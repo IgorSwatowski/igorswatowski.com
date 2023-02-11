@@ -9,6 +9,8 @@ import GammasoftLogo from '../../../assets/trusted/gammasoft.png';
 import AionlineLogo from '../../../assets/trusted/aionline.png';
 import CodemaLogo from '../../../assets/trusted/codema.png';
 import MeImg from '../../../assets/me.png';
+import TriangleElement from '../../../assets/elements/triangle.png';
+import CurvedLinesElement from '../../../assets/elements/curved-lines.png';
 
 const HomeBanner = () => {
   const router = useRouter();
@@ -16,8 +18,29 @@ const HomeBanner = () => {
   const t = locale === 'en' ? en : pl;
   return (
     <section className='banner container-box'>
+      <Image
+        loading='lazy'
+        src={TriangleElement}
+        alt=''
+        className='banner-triangle-first'
+      />
+      <Image
+        loading='lazy'
+        src={TriangleElement}
+        alt=''
+        className='banner-triangle-second'
+      />
+      <Image
+        loading='lazy'
+        src={CurvedLinesElement}
+        alt=''
+        className='banner-curved-lines-first'
+      />
       <div className='banner-block-left' data-aos='fade-up'>
-        <h1 className='banner-block-left--title heading-primary'>{t.hero}</h1>
+        <h1 className='banner-block-left-heading heading-primary'>
+          {t.hero}
+          <span className='underline'>{t.heroUnderline}</span>
+        </h1>
         <p className='banner-block-left--sub paragraph-primary'>{t.heroText}</p>
         <p className='banner-block-left--sub paragraph-primary'>
           {t.heroTextSecond}

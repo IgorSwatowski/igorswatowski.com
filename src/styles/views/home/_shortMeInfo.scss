@@ -3,6 +3,45 @@
 
 .short-personal-info {
   margin: 6.4rem 0;
+  position: relative;
+
+  &-triangle-first {
+    position: absolute;
+    bottom: 6%;
+    left: 50%;
+    animation: rotate 5s linear infinite;
+
+    @include respond(phone) {
+      display: none;
+    }
+
+    @keyframes rotate {
+      from {
+        transform: rotate(0deg);
+      }
+
+      to {
+        transform: rotate(359deg);
+      }
+    }
+  }
+
+  &-curved-lines-first {
+    position: absolute;
+    left: 56%;
+    bottom: 65%;
+
+    @include respond(phone) {
+      display: none;
+    }
+    @include respond(tablet-port) {
+      display: none;
+    }
+    @include respond(tablet-land) {
+      display: none;
+    }
+  }
+
   &-wrapper {
     margin: 0 auto;
     display: flex;
@@ -10,7 +49,7 @@
     align-items: center;
     justify-content: center;
     &-left {
-      width: 50%;
+      width: 75%;
       display: flex;
       flex-direction: column;
       align-items: flex-start;
@@ -23,6 +62,20 @@
       }
       @include respond(tablet-land) {
         width: unset;
+      }
+
+      &-heading {
+        width: 850px;
+
+        @include respond(phone) {
+          width: unset;
+        }
+        @include respond(tablet-port) {
+          width: unset;
+        }
+        @include respond(tablet-land) {
+          width: unset;
+        }
       }
       &-text {
         margin-top: 3rem;
@@ -47,7 +100,7 @@
       }
     }
     &-right {
-      width: 50%;
+      width: 25%;
       display: flex;
       justify-content: flex-end;
       position: relative;
@@ -63,11 +116,9 @@
       }
 
       img {
-        margin-left: auto;
-        width: 500px;
-        max-width: 100%;
-        height: 550px;
-        object-fit: cover;
+        object-fit: contain;
+        width: 100%;
+        height: 500px;
 
         @include respond(phone) {
           width: 100%;

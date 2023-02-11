@@ -6,6 +6,10 @@ import { en } from '../../../i18n/locales/en';
 import { pl } from '../../../i18n/locales/pl';
 
 import MeSecondPng from '../../../assets/personal-photo.webp';
+import TriangleElement from '../../../assets/elements/triangle.png';
+import CurvedLinesElement from '../../../assets/elements/curved-lines.png';
+
+import MeImg from '../../../assets/me.png';
 
 const ShortPersonalSection = () => {
   const router = useRouter();
@@ -13,6 +17,19 @@ const ShortPersonalSection = () => {
   const t = locale === 'en' ? en : pl;
   return (
     <section className="short-personal-info">
+      <Image
+        loading="lazy"
+        src={TriangleElement}
+        alt=""
+        className="short-personal-info-triangle-first"
+      />
+      <Image
+        loading="lazy"
+        src={CurvedLinesElement}
+        alt=""
+        className="short-personal-info-curved-lines-first"
+      />
+
       <div className="short-personal-info-wrapper container-box">
         <div className="short-personal-info-wrapper-left">
           <h2
@@ -49,7 +66,7 @@ const ShortPersonalSection = () => {
           </Link>
         </div>
         <div className="short-personal-info-wrapper-right" data-aos="fade-down">
-          <Image loading="lazy" src={MeSecondPng} alt="" />
+          <Image loading="lazy" src={MeImg} alt="" />
         </div>
       </div>
     </section>

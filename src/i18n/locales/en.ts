@@ -14,10 +14,11 @@ const en = {
   phone: 'Phone',
   copyright: 'Copyright © 2022 . Igor Swatowski . All rights reserved.',
   menuHeading: 'Menu',
-  followMeOn: 'Follow me on',
+  followMeOn: 'Social',
 
   //Homepage
-  hero: 'Attract and retain clients with a professionally designed website.',
+  hero: 'Attract and retain clients with a professionally designed',
+  heroUnderline: "website.",
   heroText:
     'My mission is to make sure that all of my clients achieve their goals with online presence they want.',
   heroTextSecond:
@@ -54,11 +55,11 @@ const en = {
     "I understand your products and tailor them to your goals, creating an elegant and eye-catching package. You'll be amazed by the results. Let's create something special and effective together.",
   weShouldWorkBtn: 'See how I make things',
   reference:
-    'We have always enjoyed working with Igor – he brings creative ideas, delivers fast results, and is a pleasure to collaborate with. Overall, our cooperation has been very positive and successful.',
+    '"We have always enjoyed working with Igor – he brings creative ideas, delivers fast results, and is a pleasure to collaborate with. Overall, our cooperation has been very positive and successful."',
   ctaFirstText:
     "You can reach your dream customers online. Let's create a winning website together and achieve your goals. It's possible and within your reach.",
   ctaSecondText: "Let's make it happen!",
-  meetIgor: 'Unique website designs for your business',
+  meetIgor: 'Functional website - the key to success in the digital world',
   meetIgorTextFirst:
     "Let's start with the fact that every company these days should have its own website. This is essential to establish a presence online and allow potential customers to easily find information about your company and its offerings. ",
   meetIgorTextSecond:
@@ -71,7 +72,8 @@ const en = {
   ctaSecondBtn: 'Yeah!',
 
   //About
-  bannerHeading: 'How can I contribute to the success of your company?',
+  bannerHeading: 'How can I contribute to the success of your',
+  bannerHeadingSecond: "company?",
   bannerText:
     'If you are looking for a professional and aesthetically pleasing website for your business, then I am able to help you. I have been working in this field for many years and have experience in designing websites for various industries.',
   bannerTextSecond:
@@ -117,7 +119,7 @@ const en = {
   contactBtn: 'Send form',
   contactEmailError: 'Email is required',
   contactLastNameError: 'Last name is required',
-  contactFirtNameError: 'First name is required',
+  contactFirstNameError: 'First name is required',
   contactTopicError: 'Topic is required',
   contactMessageError: 'Message is required',
   contactInvalidEmail: 'Invalid email address',
@@ -139,26 +141,22 @@ const en = {
   myProcess: 'A look at my process',
   myProcessText:
     "My personalized approach to building empowered brands is to focus on what makes your business unique and meaningful. My goal is to guide you every step of the way on this your journey to business growth and success. To bring you to a level where you feel confident and connected to your brand so that in turn, you'll be able to attract your ideal viewer for years to come.",
-  currentPricesHeading: 'Discover what I have to offer',
+  currentPricesHeading: "Let’s check my packages",
   currentPricesText:
     'Are you trying to decide which plan is right for you? I offer a variety of options to suit your needs.',
   webDesign: 'Web Design',
   webDesignText:
     'Tailored graphic design for your industry. Market research, color matching, fonts, adaptation to different screens - this is what you can expect from the project.',
-  webDesignPrice: 'From 625$',
   webDevelopment: 'Web Development',
   webDevelopmentText:
     'Do you have a graphic design but are looking for someone to implement the idea into a fully functional website? I will be happy to help you with it.',
-  webDevelopmentPrice: 'From 625$',
   webDesignAndDev: 'Web Design & Web Development',
   webDesignAndDevText:
     'We’ll work together to build a strategic website that attracts your ideal audience. Includes SEO & copy assistance.',
-  webDesignAndDevPrice: '1250$',
 
   getStartedBtn: 'Get started',
   whatsIncluded: "What's included",
 
-  upFrontPay: '(25%) upfront payment',
   customMobile: '+ Custom mobile phone web design optimization',
   orientedDesign: '+ Functional & goal oriented design',
   customDesignedWeb: '+ Up to 6 custom designed web pages',

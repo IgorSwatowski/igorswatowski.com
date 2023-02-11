@@ -10,15 +10,7 @@
   width: 100%;
   padding-top: 6.4rem;
 
-  @include respond(phone) {
-    width: unset;
-    margin-top: unset;
-  }
-  @include respond(tablet-port) {
-    width: unset;
-    margin-top: unset;
-  }
-  @include respond(tablet-land) {
+  @include respond(phone, tablet-port, tablet-land) {
     width: unset;
     margin-top: unset;
   }
@@ -34,33 +26,23 @@
     position: relative;
     padding: 6.4rem 0;
 
-    @include respond(phone) {
-      padding: 6rem 2rem;
-      width: unset;
-    }
-    @include respond(tablet-port) {
-      padding: 6rem 2rem;
-      width: unset;
-    }
-    @include respond(tablet-land) {
+    @include respond(phone, tablet-port, tablet-land) {
       padding: 6rem 2rem;
       width: unset;
     }
 
     &-heading {
-      max-width: 1093px;
+      max-width: 1150px;
       text-align: center;
-      margin: 3rem 0;
     }
 
     &-text {
-      max-width: 1150px;
+      max-width: 960px;
       width: 100%;
       text-align: center;
-      margin-bottom: 34px;
 
       &--second {
-        max-width: 1150px;
+        max-width: 960px;
         width: 100%;
         text-align: center;
         margin-bottom: 0;
@@ -72,13 +54,7 @@
       right: 9rem;
       top: 7rem;
 
-      @include respond(phone) {
-        display: none;
-      }
-      @include respond(tablet-port) {
-        display: none;
-      }
-      @include respond(tablet-land) {
+      @include respond(phone, tablet-port, tablet-land) {
         display: none;
       }
     }
@@ -87,27 +63,13 @@
       bottom: -13rem;
       right: 0;
 
-      @include respond(phone) {
-        bottom: -8rem;
-      }
-      @include respond(tablet-port) {
-        bottom: -8rem;
-      }
-      @include respond(tablet-land) {
+      @include respond(phone, tablet-port, tablet-land) {
         bottom: -8rem;
       }
 
       img {
         object-fit: cover;
-        @include respond(phone) {
-          width: 99px;
-          height: auto;
-        }
-        @include respond(tablet-port) {
-          width: 99px;
-          height: auto;
-        }
-        @include respond(tablet-land) {
+        @include respond(phone, tablet-port, tablet-land) {
           width: 99px;
           height: auto;
         }

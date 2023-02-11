@@ -14,10 +14,11 @@ const pl = {
   phone: 'Telefon',
   copyright: 'Copyright © 2022 . Igor Swatowski . Wszelkie prawa zastrzeżone.',
   menuHeading: 'Menu',
-  followMeOn: 'Śledź mnie na',
+  followMeOn: 'Social',
 
   //Homepage
-  hero: 'Zbudujmy razem stronę, która przyniesie sukces w Twoim biznesie.',
+  hero: 'Zbudujmy razem stronę, która przyniesie sukces w Twoim',
+  heroUnderline: "biznesie.",
   heroText:
     'Moim zadaniem jest wspieranie moich klientów w osiąganiu ich celów związanych z obecnością online.',
   heroTextSecond:
@@ -25,7 +26,7 @@ const pl = {
   heroBtn: 'Jak mogę Ci pomóc?',
   trustedBy: 'Zaufali mi:',
   collaborate:
-    'Współpracuję z markami, przedsiębiorcami i firmami, aby stworzyć niezapomniane wrażenia',
+    'Współpracuję z markami, przedsiębiorcami i firmami, aby stworzyć niezapomniane wrażenia.',
   collaborateTextMain:
     'Moja unikalna perspektywa i kreatywność pozwolą Ci wyróżnić się na rynku i zapisać w pamięci Twoich klientów. Jestem gotowy dostarczyć rozwiązania, które pomogą Ci osiągnąć sukces.',
   designProcess: 'Poznaj mój proces od środka',
@@ -54,11 +55,11 @@ const pl = {
     'Jestem w stanie zrozumieć Twoje pomysły i dostosować je do Twoich celów, tworząc elegancką i przyciągającą wzrok stronę internetową. Będziesz zachwycony rezultatami. ',
   weShouldWorkBtn: 'Zobacz, jak tworzę',
   reference:
-    'Zawsze z przyjemnością pracowaliśmy z Igorem - wnosi kreatywne pomysły, szybko osiąga wyniki i przyjemnie się z nim współpracuje. Ogólnie rzecz biorąc, nasza współpraca była bardzo pozytywna i udana.',
+    '"Zawsze z przyjemnością pracowaliśmy z Igorem - wnosi kreatywne pomysły, szybko osiąga wyniki i przyjemnie się z nim współpracuje. Ogólnie rzecz biorąc, nasza współpraca była bardzo pozytywna i udana."',
   ctaFirstText:
     'Możesz dotrzeć do swoich wymarzonych klientów online. Stwórzmy razem zwycięską stronę internetową i osiągnijmy Twoje cele. To jest możliwe i w Twoim zasięgu.',
   ctaSecondText: 'Zróbmy to!',
-  meetIgor: 'Unikalne projekty stron internetowych dla Twojej firmy',
+  meetIgor: 'Funkcjonalna strona internetowa - kluczem do sukcesu w sieci',
   meetIgorTextFirst:
     'Zacznijmy od tego, że każda firma w dzisiejszych czasach powinna mieć swoją stronę internetową. Jest to niezbędne, aby zaistnieć w sieci i umożliwić potencjalnym klientom łatwe znalezienie informacji o Twojej firmie i jej ofercie.',
   meetIgorTextSecond:
@@ -71,7 +72,8 @@ const pl = {
   ctaSecondBtn: 'Pewnie!',
 
   //About
-  bannerHeading: 'Jak mogę przyczynić się do sukcesu Twojej firmy?',
+  bannerHeading: 'Jak mogę przyczynić się do sukcesu Twojej',
+  bannerHeadingSecond: "firmy?",
   bannerText:
     'Jeśli szukasz profesjonalnej i estetycznej strony internetowej dla swojej firmy, to jestem w stanie Ci pomóc. Pracuję w tej branży od wielu lat i mam doświadczenie w projektowaniu stron internetowych dla różnych branż. ',
   bannerTextSecond:
@@ -145,20 +147,16 @@ const pl = {
   webDesign: 'Projekt strony WWW',
   webDesignText:
     'Projekt graficzny dostosowany do potrzeb Twojej branży. Badania rynku, dopasowanie kolorów, fontów, dostosowanie do różnych ekranów - oto czego możesz się spodziewać po projekcie',
-  webDesignPrice: 'Od 2000zł',
   webDevelopment: 'Implementacja projektu strony WWW',
   webDevelopmentText:
     'Masz projekt graficzny, ale szukasz kogoś, kto zrealizuje pomysł w postaci w pełni funkcjonalnej strony internetowej? Chętnie pomogę Ci w tym zakresie.',
-  webDevelopmentPrice: 'Od 2000zł',
   webDesignAndDev: 'Projekt & Implementacja strony WWW',
   webDesignAndDevText:
     'Pracujmy razem, aby zbudować strategiczną stronę internetową, która przyciągnie Twoich idealnych odbiorców. Pakiet obejmuje równiez pomoc w zakresie SEO.',
-  webDesignAndDevPrice: 'od 4000zł',
 
   getStartedBtn: 'Rozpocznij',
   whatsIncluded: 'Co zawiera pakiet?',
 
-  upFrontPay: 'Zaliczka (25%) przed rozpoczęciem prac',
   customMobile: '+ Optymalizacja projektu na telefony, tablety oraz komputery',
   orientedDesign: '+ Projekt zorientowany na skuteczne osiągnięcie zamierzonego celu',
   customDesignedWeb: '+ Do 6 zaprojektowanych podstron',

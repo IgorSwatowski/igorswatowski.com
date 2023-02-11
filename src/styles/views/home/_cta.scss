@@ -14,15 +14,7 @@
     padding: 6.4rem 0px;
     gap: 3rem;
 
-    @include respond(phone) {
-      width: unset;
-      padding: 6.4rem 1.6rem;
-    }
-    @include respond(tablet-port) {
-      width: unset;
-      padding: 6.4rem 1.6rem;
-    }
-    @include respond(tablet-land) {
+    @include respond(phone, tablet-port, tablet-land) {
       width: unset;
       padding: 6.4rem 1.6rem;
     }
@@ -31,7 +23,6 @@
       max-width: 825px;
       color: var(--gray-200);
       text-align: center;
-      line-height: 41px;
       letter-spacing: 0em;
       margin: 0;
       padding: 0 3rem;

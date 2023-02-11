@@ -4,7 +4,6 @@ import Image from 'next/image';
 import { en } from '../../../i18n/locales/en';
 import { pl } from '../../../i18n/locales/pl';
 
-import QuoteSvg from '../../../assets/quote.png';
 import ColorfulThreeLinesSvg from '../../../assets/colorful-three-lines.png';
 
 const ReferencesSection = () => {
@@ -27,7 +26,6 @@ const ReferencesSection = () => {
             data-aos-delay='100'
           >
             <div className='references-wrapper-left-author-top'>
-              <Image loading='lazy' src={QuoteSvg} alt='Quote img' />
               <h4 className='heading-fourth'>Agnieszka</h4>
             </div>
             <p className='references-wrapper-left-author-company'>

@@ -37,37 +37,7 @@
       align-items: center;
       gap: 1.8rem;
 
-      @include respond(phone) {
-        display: none;
-        position: absolute;
-        background-color: var(--white);
-        right: 0;
-        left: 0;
-        text-align: center;
-        padding: 16px 0;
-        box-shadow: 0 3px 6px #2222220d;
-      }
-      @include respond(tablet-port) {
-        display: none;
-        position: absolute;
-        background-color: var(--white);
-        right: 0;
-        left: 0;
-        text-align: center;
-        padding: 16px 0;
-        box-shadow: 0 3px 6px #2222220d;
-      }
-      @include respond(tablet-land) {
-        display: none;
-        position: absolute;
-        background-color: var(--white);
-        right: 0;
-        left: 0;
-        text-align: center;
-        padding: 16px 0;
-        box-shadow: 0 3px 6px #2222220d;
-      }
-      @include respond(desktop-big) {
+      @include respond(phone, tablet-port, tablet-land) {
         display: none;
         position: absolute;
         background-color: var(--white);
@@ -101,31 +71,13 @@
           -o-transition: opacity 0.2s ease;
           transition: opacity 0.2s ease;
 
-          @include respond(phone) {
-            display: none;
-          }
-          @include respond(tablet-port) {
-            display: none;
-          }
-          @include respond(tablet-land) {
-            display: none;
-          }
-          @include respond(desktop-big) {
+          @include respond(phone, tablet-port, tablet-land, desktop-big) {
             display: none;
           }
         }
 
         &:hover {
-          @include respond(phone) {
-            color: var(--primary);
-          }
-          @include respond(tablet-port) {
-            color: var(--primary);
-          }
-          @include respond(tablet-land) {
-            color: var(--primary);
-          }
-          @include respond(desktop-big) {
+          @include respond(phone, tablet-port, tablet-land, desktop-big) {
             color: var(--primary);
           }
         }
@@ -141,22 +93,7 @@
   &-logo {
     a {
       img {
-        @include respond(phone) {
-          width: 70px;
-          height: auto;
-          object-fit: contain;
-        }
-        @include respond(tablet-port) {
-          width: 70px;
-          height: auto;
-          object-fit: contain;
-        }
-        @include respond(tablet-land) {
-          width: 70px;
-          height: auto;
-          object-fit: contain;
-        }
-        @include respond(desktop-big) {
+        @include respond(phone, tablet-port, tablet-land, desktop-big) {
           width: 70px;
           height: auto;
           object-fit: contain;
@@ -166,39 +103,7 @@
   }
 }
 
-@include respond(phone) {
-  input[type='checkbox']:checked ~ .menu {
-    padding-top: 4.4rem;
-    display: flex;
-    flex-flow: column nowrap;
-    align-items: center;
-    padding-bottom: 8rem;
-    gap: 3rem;
-  }
-}
-@include respond(tablet-port) {
-  input[type='checkbox']:checked ~ .menu {
-    padding-top: 4.4rem;
-    display: flex;
-    flex-flow: column nowrap;
-    align-items: center;
-    padding-bottom: 8rem;
-    gap: 3rem;
-  }
-}
-
-@include respond(tablet-land) {
-  input[type='checkbox']:checked ~ .menu {
-    padding-top: 4.4rem;
-    display: flex;
-    flex-flow: column nowrap;
-    align-items: center;
-    padding-bottom: 8rem;
-    gap: 3rem;
-  }
-}
-
-@include respond(desktop-big) {
+@include respond(phone, tablet-port, tablet-land, desktop-big) {
   input[type='checkbox']:checked ~ .menu {
     padding-top: 4.4rem;
     display: flex;
@@ -213,7 +118,6 @@
   display: none;
   cursor: pointer;
   svg {
-    // reszta kodu hamburgera
     .cross {
       display: none;
     }
@@ -237,7 +141,7 @@
   }
 }
 
-@media (max-width: 991px) {
+@include respond(phone, tablet-port, tablet-land) {
   .hamburger {
     display: block;
   }

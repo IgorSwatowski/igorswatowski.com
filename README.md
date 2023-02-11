@@ -1,6 +1,6 @@
 # Personal Website
 
-This is the source code for my personal website, built with Next.js, Typescript, Hygraph, SCSS, and GraphQL.
+This is the source code for my personal website, built with Next.js, Typescript, SCSS, and GraphQL.
 
 ## Technologies Used
 
@@ -8,5 +8,4 @@ This is the source code for my personal website, built with Next.js, Typescript,
 * Typescript: A typed superset of JavaScript that enables type checking and improved code reliability.
 * SCSS: A CSS preprocessor that enables the use of variables, mixins, and functions to write more maintainable and scalable stylesheets.
 * GraphQL: A query language for your API that allows clients to request exactly the data they need, and nothing more.
-* Hygraph: A GraphQL client for building efficient and flexible client-side applications.
 

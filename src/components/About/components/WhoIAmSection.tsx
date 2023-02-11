@@ -10,6 +10,8 @@ import FacebookIcon from '../../../assets/icons/facebook-icon.png';
 import LinkedinIcon from '../../../assets/icons/linkedin-icon.png';
 import Link from 'next/link';
 
+import MeImg from '../../../assets/me.png';
+
 const WhoIAmSection = () => {
   const router = useRouter();
   const { locale } = router;
@@ -75,7 +77,7 @@ const WhoIAmSection = () => {
         </div>
       </div>
       <div className="who-i-am-right" data-aos="fade-down" data-aos-delay="50">
-        <Image loading="lazy" src={MeAboutImg} alt="" />
+        <Image loading="lazy" src={MeImg} alt="" />
       </div>
     </section>
   );

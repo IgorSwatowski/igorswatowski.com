@@ -13,7 +13,6 @@ const OfferCardList = () => {
       <OfferCard
         title={t.webDesign}
         description={t.webDesignText}
-        price={t.webDesignPrice}
         customMobileText={t.customMobile}
         orientedDesign={t.orientedDesign}
         customDesignedWeb={t.customDesignedWeb}
@@ -26,7 +25,6 @@ const OfferCardList = () => {
       <OfferCard
         title={t.webDesignAndDev}
         description={t.webDesignAndDevText}
-        price={t.webDesignAndDevPrice}
         customMobileText={t.customMobile}
         orientedDesign={t.orientedDesign}
         customDesignedWeb={t.customDesignedWeb}
@@ -45,7 +43,6 @@ const OfferCardList = () => {
       <OfferCard
         title={t.webDevelopment}
         description={t.webDevelopmentText}
-        price={t.webDevelopmentPrice}
         linksAndDomain={t.linksAndDomain}
         animationStepByStep={t.animationStepByStep}
         support={t.support}

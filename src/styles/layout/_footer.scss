@@ -9,27 +9,15 @@
     align-items: flex-start;
     justify-content: space-between;
     margin: 0 auto;
-    width: 100%;
     position: relative;
     padding-top: 8rem;
     padding-bottom: 8rem;
 
-    @include respond(phone) {
+    @include respond(phone, tablet-port, tablet-land) {
       width: unset;
       padding-top: 8rem;
       padding-bottom: 8rem;
     }
-    @include respond(tablet-port) {
-      width: unset;
-      padding-top: 8rem;
-      padding-bottom: 8rem;
-    }
-    @include respond(tablet-land) {
-      width: unset;
-      padding-top: 8rem;
-      padding-bottom: 8rem;
-    }
-
     &-contact {
       &-text {
         max-width: 558px;
@@ -50,13 +38,7 @@
       justify-content: space-between;
       gap: 14rem;
 
-      @include respond(phone) {
-        display: none;
-      }
-      @include respond(tablet-port) {
-        display: none;
-      }
-      @include respond(tablet-land) {
+      @include respond(phone, tablet-port, tablet-land) {
         display: none;
       }
 

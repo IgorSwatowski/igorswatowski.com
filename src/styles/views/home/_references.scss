@@ -86,7 +86,7 @@
       &-author {
         display: flex;
         flex-direction: column;
-        margin-top: 3.2rem;
+        margin-top: 1.6rem;
         @include respond(phone) {
           margin: 0 auto;
           text-align: center;
@@ -106,7 +106,6 @@
           display: flex;
           flex-direction: row;
           align-items: center;
-          gap: 1rem;
 
           h4 {
             font-size: 24px;
@@ -118,10 +117,9 @@
           }
         }
         &-company {
-          color: var(--gray-200);
-          font-size: 13px;
-          font-weight: 400;
-          margin-top: 1.6rem;
+          color: var(--primary);
+          font-size: 14px;
+          font-weight: 700;
         }
       }
     }

@@ -11,13 +11,7 @@
   margin-top: 6.4rem;
   background-color: var(--gray);
 
-  @include respond(phone) {
-    width: unset;
-  }
-  @include respond(tablet-port) {
-    width: unset;
-  }
-  @include respond(tablet-land) {
+  @include respond(phone, tablet-port, tablet-land) {
     width: unset;
   }
 
@@ -36,12 +30,7 @@
       width: unset;
       flex-direction: column;
     }
-    @include respond(tablet-port) {
-      padding: 6rem 3rem;
-      width: unset;
-      flex-direction: column;
-    }
-    @include respond(tablet-land) {
+    @include respond(tablet-port, tablet-land) {
       padding: 6rem 3rem;
       width: unset;
       flex-direction: column;
@@ -52,13 +41,7 @@
       bottom: 0;
       height: 100%;
 
-      @include respond(phone) {
-        display: none;
-      }
-      @include respond(tablet-port) {
-        display: none;
-      }
-      @include respond(tablet-land) {
+      @include respond(phone, tablet-port, tablet-land) {
         display: none;
       }
       img {
@@ -75,23 +58,7 @@
       flex-direction: column;
       align-items: center;
       text-align: center;
-      @include respond(phone) {
-        width: 100%;
-        padding-left: 0;
-        display: flex;
-        flex-direction: column;
-        margin: 0 auto;
-        text-align: center;
-      }
-      @include respond(tablet-port) {
-        width: 100%;
-        padding-left: 0;
-        display: flex;
-        flex-direction: column;
-        margin: 0 auto;
-        text-align: center;
-      }
-      @include respond(tablet-land) {
+      @include respond(phone, tablet-port, tablet-land) {
         width: 100%;
         padding-left: 0;
         display: flex;
@@ -102,13 +69,14 @@
 
       &-heading {
         max-width: 1180px;
-        margin-bottom: 24px;
       }
 
       &-text {
         max-width: 958px;
         width: 100%;
-        margin-bottom: 24px;
+      }
+      a {
+        margin-top: 1.6rem;
       }
     }
   }

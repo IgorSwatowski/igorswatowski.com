@@ -2,69 +2,94 @@
 @import '../../abstracts/variables';
 
 .banner {
-  padding-top: 24.6rem;
+  padding-top: 18.6rem;
   display: flex;
   justify-content: center;
   flex-direction: row;
-  align-items: center;
+  align-items: flex-start;
   margin: 0 auto;
+  position: relative;
 
-  @include respond(phone) {
-    flex-direction: column;
-    padding-top: 18.8rem;
+  &-triangle-first {
+    position: absolute;
+    top: 15%;
+    left: 12%;
+    animation: rotate 5s linear infinite;
+
+    @include respond(phone) {
+      display: none;
+    }
+
+    @keyframes rotate {
+      from {
+        transform: rotate(0deg);
+      }
+
+      to {
+        transform: rotate(359deg);
+      }
+    }
   }
-  @include respond(tablet-port) {
-    flex-direction: column;
-    padding-top: 18.8rem;
+
+  &-triangle-second {
+    position: absolute;
+    bottom: 1%;
+    animation: rotate 5s linear infinite;
+
+    @include respond(phone) {
+      bottom: 5%;
+      right: 3%;
+    }
+    @include respond(ablet-port, tablet-land) {
+      bottom: 5%;
+      right: 15%;
+    }
+
+    @keyframes rotate {
+      from {
+        transform: rotate(0deg);
+      }
+
+      to {
+        transform: rotate(359deg);
+      }
+    }
   }
-  @include respond(tablet-land) {
-    flex-direction: row;
+
+  &-curved-lines-first {
+    position: absolute;
+    right: 45%;
+    bottom: 45%;
+
+    @include respond(phone, tablet-port, tablet-land, desktop-big) {
+      display: none;
+    }
+  }
+
+  @include respond(phone, tablet-port, tablet-land) {
+    flex-direction: column;
     padding-top: 18.8rem;
   }
   @include respond(desktop-big) {
     padding-top: 27rem;
   }
-
   &-block-left {
-    width: 70%;
+    width: 75%;
     position: relative;
-    @include respond(phone) {
+    @include respond(phone, tablet-port, tablet-land) {
       width: 100%;
     }
-    @include respond(tablet-port) {
-      width: 100%;
-    }
-    @include respond(tablet-land) {
+    @include respond(desktop-big) {
       margin-right: 5rem;
+      width: 65%;
     }
-    &--title {
+    &-heading {
       margin-top: 1.2rem;
       margin-bottom: 1rem;
-      width: 872px;
+      width: 800px;
 
-      @include respond(phone) {
-        width: unset !important;
-      }
-      @include respond(tablet-port) {
-        width: 100%;
-      }
-      @include respond(tablet-land) {
-        width: 100%;
-      }
-      span {
-        display: inline-block;
-        position: relative;
-        z-index: 10;
-        &:after {
-          background: #f1ca89;
-          bottom: 8%;
-          content: '';
-          height: 12px;
-          position: absolute;
-          left: 0;
-          width: 100%;
-          z-index: -1;
-        }
+      @include respond(phone, tablet-port, tablet-land) {
+        width: unset;
       }
     }
     &-buttons {
@@ -78,10 +103,7 @@
       max-width: 573px;
       margin-top: 4rem;
 
-      @include respond(phone) {
-        margin-top: unset;
-      }
-      @include respond(tablet-port) {
+      @include respond(phone, tablet-port, tablet-land) {
         margin-top: unset;
       }
     }
@@ -116,28 +138,23 @@
     }
   }
   &-block-right {
-    width: 30%;
+    width: 25%;
     display: flex;
     align-items: flex-end;
     justify-content: flex-end;
     z-index: -1;
 
-    @include respond(phone) {
+    @include respond(phone, tablet-port, tablet-land) {
       display: none;
     }
-    @include respond(tablet-port) {
-      display: none;
-    }
-    @include respond(tablet-land) {
-      position: relative;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
+    @include respond(desktop-big) {
+      width: 35%;
     }
     &-img {
-      width: 50.1rem;
+      width: 100%;
       position: relative;
       z-index: 10;
+      margin-left: auto;
       @include respond(phone) {
         margin-top: 4rem;
         width: 100%;
@@ -148,10 +165,15 @@
         width: 100%;
         height: auto;
       }
+      @include respond(tablet-land) {
+        margin-top: 4rem;
+        width: 100%;
+        height: auto;
+      }
     }
     img {
       object-fit: cover;
-      width: 500px;
+      width: 100%;
       height: auto;
       @include respond(tablet-land) {
         width: 85%;
