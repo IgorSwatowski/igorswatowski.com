@@ -11,23 +11,26 @@ const CollaborateSection = () => {
   const { locale } = router;
   const t = locale === 'en' ? en : pl;
   return (
-    <section className="collaborate">
-      <div className="collaborate-wrapper container-box">
-        <div className="collaborate-wrapper-lines-img">
-          <Image loading="lazy" src={LinesSvg} alt="" />
+    <section className='collaborate'>
+      <div className='collaborate-wrapper container-box'>
+        <div className='collaborate-wrapper-lines-img'>
+          <Image loading='lazy' src={LinesSvg} alt='Lines image' />
         </div>
-        <h2 className="collaborate-wrapper-heading heading-big" data-aos="fade-up">
+        <h2
+          className='collaborate-wrapper-heading heading-big'
+          data-aos='fade-up'
+        >
           {t.collaborate}
         </h2>
         <p
-          className="collaborate-wrapper-text paragraph-primary"
-          data-aos="fade-up"
-          data-aos-delay="50"
+          className='collaborate-wrapper-text paragraph-primary'
+          data-aos='fade-up'
+          data-aos-delay='50'
         >
           {t.collaborateTextMain}
         </p>
-        <div className="collaborate-wrapper-arrow-img">
-          <Image loading="lazy" src={ArrowDownSvg} alt="" />
+        <div className='collaborate-wrapper-arrow-img'>
+          <Image loading='lazy' src={ArrowDownSvg} alt='Arrow image' />
         </div>
       </div>
     </section>

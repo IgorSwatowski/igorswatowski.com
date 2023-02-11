@@ -19,7 +19,10 @@ const Navbar = () => {
     const oldLanguage = oldLanguageMatch ? oldLanguageMatch[1] : null;
     let newPathname = pathname;
     if (oldLanguage && oldLanguage !== locale.toLowerCase()) {
-      newPathname = pathname.replace(new RegExp(`^\/${oldLanguage}(\/|$)`), '/');
+      newPathname = pathname.replace(
+        new RegExp(`^\/${oldLanguage}(\/|$)`),
+        '/',
+      );
     } else if (!oldLanguage) {
       newPathname = `/${locale.toLowerCase()}${pathname}`;
     }
@@ -44,48 +47,59 @@ const Navbar = () => {
   }
 
   const hideMenu = () => {
-    (document.querySelector('#checkbox_toggle')! as HTMLInputElement).checked = false;
+    (document.querySelector('#checkbox_toggle')! as HTMLInputElement).checked =
+      false;
     setMenuActive(false);
 
-    document.querySelectorAll('.nav-links a, .hamburger').forEach((item) => {
+    document.querySelectorAll('.nav-links a, .hamburger').forEach(item => {
       item.addEventListener('click', hideMenu);
     });
   };
   return (
-    <nav className="navbar">
-      <div className="navbar-logo">
-        <Link href="/" className="logo" onClick={hideMenu}>
-          Igor. <span className="bolden">Swatowski</span>
+    <nav className='navbar'>
+      <div className='navbar-logo'>
+        <Link href='/' className='logo' onClick={hideMenu}>
+          Igor. <span className='bolden'>Swatowski</span>
         </Link>
       </div>
-      <ul className="nav-links">
-        <input type="checkbox" id="checkbox_toggle" onClick={toggleMenu} />
-        <label htmlFor="checkbox_toggle" className={`hamburger ${menuActive ? 'cross' : ''}`}>
+      <ul className='nav-links'>
+        <input type='checkbox' id='checkbox_toggle' onClick={toggleMenu} />
+        <label
+          htmlFor='checkbox_toggle'
+          className={`hamburger ${menuActive ? 'cross' : ''}`}
+        >
           &#9776;
         </label>
-        <div className="menu">
-          <NavbarItem href="/about" aria-label="About me" onClick={hideMenu}>
+        <div className='menu'>
+          <NavbarItem href='/about' aria-label='About me' onClick={hideMenu}>
             {t.about}
           </NavbarItem>
-          <NavbarItem href="/packages" aria-label="Packages" onClick={hideMenu}>
+          <NavbarItem href='/packages' aria-label='Packages' onClick={hideMenu}>
             {t.packages}
           </NavbarItem>
-          {/* <NavbarItem href="/portfolio" aria-label="Portfolio" onClick={hideMenu}>
+          {/* <NavbarItem
+            href='/portfolio'
+            aria-label='Portfolio'
+            onClick={hideMenu}
+          >
             {t.portfolio}
-          </NavbarItem>
-          <NavbarItem href="/blog" aria-label="Blog" onClick={hideMenu}>
+          </NavbarItem> */}
+          {/* <NavbarItem href="/blog" aria-label="Blog" onClick={hideMenu}>
             {t.blog}
           </NavbarItem> */}
-          <NavbarItem href="/contact" aria-label="Contact" onClick={hideMenu}>
+          <NavbarItem href='/contact' aria-label='Contact' onClick={hideMenu}>
             {t.contact}
           </NavbarItem>
           <CustomSelect
-            options={['EN', 'PL'].map((option) => option.toUpperCase())}
+            options={['EN', 'PL'].map(option => option.toUpperCase())}
             defaultValue={locale === 'en' ? 'EN' : 'PL'}
             onChange={changeLanguage}
           />
-          <div className="menu-contact">
-            <Button href="mailto: hello@igorswatowski.com" aria-label="Inquire here">
+          <div className='menu-contact'>
+            <Button
+              href='mailto: hello@igorswatowski.com'
+              aria-label='Inquire here'
+            >
               {t.inquireMe}
             </Button>
           </div>

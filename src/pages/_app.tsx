@@ -11,21 +11,18 @@ import { GATrackId } from '../constants/constants';
 import { DefaultSeo } from 'next-seo';
 import SEO from '../../next-seo.config';
 
+import '@etchteam/next-pagination/dist/index.css';
+
+import { ApolloProvider } from '@apollo/client/react';
+
 export default function App({ Component, pageProps }: AppProps) {
-  // useEffect(() => {
-  //   AOS.init({
-  //     duration: 200,
-  //     once: true,
-  //     disable: 'mobile',
-  //   });
-  // }, []);
   return (
     <>
       <Script
-        strategy="lazyOnload"
+        strategy='lazyOnload'
         src={`https://www.googletagmanager.com/gtag/js?id=${GATrackId}`}
       />
-      <Script strategy="lazyOnload" id="google-analytics">
+      <Script strategy='lazyOnload' id='google-analytics'>
         {`
                     window.dataLayer = window.dataLayer || [];
                     function gtag(){dataLayer.push(arguments);}
@@ -36,10 +33,10 @@ export default function App({ Component, pageProps }: AppProps) {
                 `}
       </Script>
       <Head>
-        <link rel="icon" type="image/png" href="../../public/favicon.png" />
+        <link rel='icon' type='image/png' href='../../public/favicon.png' />
         <meta
-          name="viewport"
-          content="width=device-width, user-scalable=yes, initial-scale=1.0, viewport-fit=cover"
+          name='viewport'
+          content='width=device-width, user-scalable=yes, initial-scale=1.0, viewport-fit=cover'
         />
       </Head>
       <DefaultSeo {...SEO} />
