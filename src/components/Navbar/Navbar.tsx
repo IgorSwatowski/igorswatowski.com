@@ -6,7 +6,7 @@ import { en } from '../../i18n/locales/en';
 import { pl } from '../../i18n/locales/pl';
 import CustomSelect from '../CustomSelect/CustomSelect';
 import NavbarItem from './components/NavbarItem';
-import Button from '../Button/Button';
+import { Button } from '../Button/Button';
 
 const Navbar = () => {
   const router = useRouter();
@@ -83,8 +83,8 @@ const Navbar = () => {
             onClick={hideMenu}
           >
             {t.portfolio}
-          </NavbarItem> */}
-          {/* <NavbarItem href="/blog" aria-label="Blog" onClick={hideMenu}>
+          </NavbarItem>
+          <NavbarItem href='/blog' aria-label='Blog' onClick={hideMenu}>
             {t.blog}
           </NavbarItem> */}
           <NavbarItem href='/contact' aria-label='Contact' onClick={hideMenu}>
