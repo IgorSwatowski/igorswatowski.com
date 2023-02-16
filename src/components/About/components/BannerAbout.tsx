@@ -1,14 +1,12 @@
 import { useRouter } from 'next/router';
-
-import { en } from '../../../i18n/locales/en';
-import { pl } from '../../../i18n/locales/pl';
-
-import BannerMeImg from '../../../assets/about-igor.webp';
-import Image from 'next/image';
-import { Button } from '../../Button/Button';
 import Link from 'next/link';
 
-import TriangleColor from '../../../assets/triangle-color.png';
+import TriangleColor from '@/assets/triangle-color.png';
+
+import { en } from '@/i18n/locales/en';
+import { pl } from '@/i18n/locales/pl';
+import BannerMeImg from '@/assets/about-igor.webp';
+import Image from 'next/image';
 
 const BannerAbout = () => {
   const router = useRouter();

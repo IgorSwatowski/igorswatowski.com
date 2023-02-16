@@ -1,8 +1,8 @@
 import { useRouter } from 'next/router';
 
-import { en } from '../../../i18n/locales/en';
-import { pl } from '../../../i18n/locales/pl';
-import OfferIncludedItem from './OfferIncludedItem';
+import { en } from '@/i18n/locales/en';
+import { pl } from '@/i18n/locales/pl';
+import OfferIncludedItem from '@/components/Packages/components/OfferIncludedItem';
 
 interface OfferIncludedListProps {
   customMobileText?: string;
@@ -46,8 +46,10 @@ const OfferIncludedList = ({
   const { locale } = router;
   const t = locale === 'en' ? en : pl;
   return (
-    <div className="offer-whats-included-list">
-      <h5 className="offer-whats-included-list-heading heading-fifth">{t.whatsIncluded}</h5>
+    <div className='offer-whats-included-list'>
+      <h5 className='offer-whats-included-list-heading heading-fifth'>
+        {t.whatsIncluded}
+      </h5>
       <OfferIncludedItem>{customMobileText}</OfferIncludedItem>
       <OfferIncludedItem>{orientedDesign}</OfferIncludedItem>
       <OfferIncludedItem>{customDesignedWeb}</OfferIncludedItem>

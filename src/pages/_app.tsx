@@ -1,13 +1,13 @@
 import type { AppProps } from 'next/app';
 import Head from 'next/head';
 import { I18nextProvider } from 'react-i18next';
-import Footer from '../components/Footer/Footer';
-import Navbar from '../components/Navbar/Navbar';
-import i18n from '../i18n/i18n';
+import Footer from '@/components/Footer/Footer';
+import Navbar from '@/components/Navbar/Navbar';
+import i18n from '@/i18n/i18n';
 
-import '../styles/styles.scss';
+import '@/styles/styles.scss';
 import Script from 'next/script';
-import { GATrackId } from '../constants/constants';
+import { GATrackId } from '@/constants/constants';
 import { DefaultSeo } from 'next-seo';
 import SEO from '../../next-seo.config';
 

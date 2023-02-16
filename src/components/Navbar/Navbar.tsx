@@ -2,11 +2,11 @@ import React, { useEffect, useRef, useState } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 
-import { en } from '../../i18n/locales/en';
-import { pl } from '../../i18n/locales/pl';
-import CustomSelect from '../CustomSelect/CustomSelect';
-import NavbarItem from './components/NavbarItem';
-import { Button } from '../Button/Button';
+import { en } from '@/i18n/locales/en';
+import { pl } from '@/i18n/locales/pl';
+import CustomSelect from '@/components/CustomSelect/CustomSelect';
+import NavbarItem from '@/components/Navbar/components/NavbarItem';
+import { Button } from '@/components/Button/Button';
 
 const Navbar = () => {
   const router = useRouter();

@@ -1,5 +1,5 @@
 import { GraphQLClient } from 'graphql-request';
-import { graphqlAPI } from '../constants/constants';
+import { graphqlAPI } from '@/constants/constants';
 
 const hygraph = new GraphQLClient(graphqlAPI);
 
