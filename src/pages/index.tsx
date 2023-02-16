@@ -1,4 +1,5 @@
 import HomePage from '@/components/Home/Home';
+import resources from '@/i18n/resources';
 import { NextSeo } from 'next-seo';
 
 const title = 'Igor Swatowski | Web Designer & Developer';
@@ -7,6 +8,8 @@ const description =
 const url = 'https://igorswatowski.com';
 
 const Home = () => {
+  const { en, pl } = resources;
+
   return (
     <>
       <NextSeo
