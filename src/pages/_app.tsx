@@ -13,8 +13,6 @@ import SEO from '../../next-seo.config';
 
 import '@etchteam/next-pagination/dist/index.css';
 
-import { ApolloProvider } from '@apollo/client/react';
-
 export default function App({ Component, pageProps }: AppProps) {
   return (
     <>
