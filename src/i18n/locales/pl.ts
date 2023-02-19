@@ -125,14 +125,15 @@ const pl = {
   contactInvalidEmail: "Niepoprawny format email'a",
 
   //Blog
-  blogHero: 'Odkryj bogactwo wiedzy i inspiracji.',
+  blogHero: 'Blog',
   blogHeroText:
-    'Jeśli chcesz być na bieżąco z tematami internetowymi, chcesz nauczyć się web developmentu, projektowania, programowania lub usprawnić swój proces, zapraszam do czytania dalej.',
-  blogCategories: 'Kategorie:',
-  blogWebDev: 'Tworzenie stron internetowych',
-  blogWebDesign: 'Projektowanie stron internetowych',
-  blogEntrepreneurship: 'Biznes',
-  blogToolsAndTechnology: 'Narzędzia i technologia',
+  'Ta strona dzieli się moimi najlepszymi artykułami do przeczytania na tematy takie jak tworzenie stron internetowych, projektowanie, procesy i więcej.',
+  blogWebDev: 'Strony internetowe',
+  blogDesign: 'Projektowanie',
+  blogProcess: 'Proces',
+  blogTechnology: 'Technologia',
+  blogTools: 'Narzędzia',
+  posts: "Brak artykułów do wyświetlenia",
 
   //Packages
   bannerStrategic: 'Strategia',

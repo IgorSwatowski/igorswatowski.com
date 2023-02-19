@@ -125,14 +125,15 @@ const en = {
   contactInvalidEmail: 'Invalid email address',
 
   //Blog
-  blogHero: 'Explore a wealth of knowledge and inspiration.',
+  blogHero: 'Blog',
   blogHeroText:
-    'If you want to stay up to date on web topics, want to learn web development, design, programming or improve your process, I invite you to read on.',
-  blogCategories: 'Categories:',
-  blogWebDev: 'Web Development',
-  blogWebDesign: 'Web Design',
-  blogEntrepreneurship: 'Entrepreneurship',
-  blogToolsAndTechnology: 'Tools and technology',
+    'This page shares my best articles to read on topics like creating websites, implementation website, design, process and more.',
+  blogWebDev: 'Websites',
+  blogDesign: 'Design',
+  blogProcess: 'Process',
+  blogTechnology: 'Technology',
+  blogTools: 'Tools',
+  posts: "No articles to display",
 
   //Packages
   bannerStrategic: 'Strategic',

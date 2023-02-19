@@ -84,9 +84,13 @@ const Navbar = () => {
           >
             {t.portfolio}
           </NavbarItem> */}
+<<<<<<< Updated upstream
           {/* <NavbarItem href="/blog" aria-label="Blog" onClick={hideMenu}>
+=======
+          <NavbarItem href='/blog' aria-label='Blog' onClick={hideMenu}>
+>>>>>>> Stashed changes
             {t.blog}
-          </NavbarItem> */}
+          </NavbarItem>
           <NavbarItem href='/contact' aria-label='Contact' onClick={hideMenu}>
             {t.contact}
           </NavbarItem>

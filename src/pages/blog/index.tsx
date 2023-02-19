@@ -15,24 +15,38 @@ const Posts = ({ posts }: any) => {
     <main>
       <section className='blog-banner'>
         <div className='blog-banner-wrapper container-box'>
-          <h1 className='blog-banner-wrapper-heading heading-primary'>
+          <h1 className='blog-banner-wrapper-heading heading-primary underline'>
             {t.blogHero}
           </h1>
           <p className='blog-banner-wrapper-text paragraph-primary'>
             {t.blogHeroText}
           </p>
-          {/* <span>{t.blogCategories}</span>
-        <div className="blog-banner-wrapper-categories">
-          <div className="blog-banner-wrapper-categories-item">{t.blogWebDev}</div>
-          <div className="blog-banner-wrapper-categories-item">{t.blogWebDesign}</div>
-          <div className="blog-banner-wrapper-categories-item">{t.blogEntrepreneurship}</div>
-          <div className="blog-banner-wrapper-categories-item">{t.blogToolsAndTechnology}</div>
-        </div> */}
+          <div className='blog-banner-wrapper-categories'>
+            <div className='blog-banner-wrapper-categories-item'>
+              {t.blogWebDev}
+            </div>
+            <div className='blog-banner-wrapper-categories-item'>
+              {t.blogDesign}
+            </div>
+            <div className='blog-banner-wrapper-categories-item'>
+              {t.blogProcess}
+            </div>
+            <div className='blog-banner-wrapper-categories-item'>
+              {t.blogTechnology}
+            </div>
+            <div className='blog-banner-wrapper-categories-item'>
+              {t.blogTools}
+            </div>
+          </div>
           <div className='blog-banner-wrapper-blog'>
             <div className='blog-banner-wrapper-blogs'>
-              {posts.map((post: any) => (
-                <PostCard key={post.fields.slug} post={post} />
-              ))}
+              {posts.length < 1 ? (
+                <p className='paragraph-primary'>{t.posts}</p>
+              ) : (
+                posts.map((post: any) => (
+                  <PostCard key={post.fields.slug} post={post} />
+                ))
+              )}
             </div>
           </div>
         </div>

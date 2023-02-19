@@ -5,11 +5,18 @@ const hygraph = new GraphQLClient(graphqlAPI);
 
 const query = `
     query AllPostsQuery($locale: Locale!) {
-      posts(locales: [$locale]) {
+      postCollection(locales: [$locale]) {
           id
           title
           slug
-          createdAt
+          date
+          author {
+            name
+          }
+          content {
+            json
+          }
+          excerpt
       }
     }
 `;
