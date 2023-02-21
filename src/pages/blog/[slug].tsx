@@ -1,5 +1,6 @@
 import { client, previewClient } from '../../lib/contentful/client';
 import { useRouter } from 'next/router';
+import { CONTENT_TYPE } from '../../constants/constants';
 
 const Post = ({ post, preview }) => {
   const router = useRouter();
@@ -43,7 +44,7 @@ export const getStaticProps = async ({ params, preview = false }) => {
 };
 
 export const getStaticPaths = async () => {
-  const response = await client.getEntries({ content_type: 'post' });
+  const response = await client.getEntries({ content_type: CONTENT_TYPE.POST });
   const paths = response.items.map(item => ({
     params: { slug: item.fields.slug },
   }));

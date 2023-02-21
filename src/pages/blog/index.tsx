@@ -5,8 +5,9 @@ import { pl } from '../../i18n/locales/pl';
 
 import PostCard from '../../components/Blog/posts/PostCard';
 import { client } from '../../lib/contentful/client';
+import { CONTENT_TYPE } from '../../constants/constants';
 
-const Posts = ({ posts }: any) => {
+const Posts = ({ posts, categories }: any) => {
   const router = useRouter();
   const { locale } = router;
   const t = locale === 'en' ? en : pl;
@@ -22,21 +23,18 @@ const Posts = ({ posts }: any) => {
             {t.blogHeroText}
           </p>
           <div className='blog-banner-wrapper-categories'>
-            <div className='blog-banner-wrapper-categories-item'>
-              {t.blogWebDev}
-            </div>
-            <div className='blog-banner-wrapper-categories-item'>
-              {t.blogDesign}
-            </div>
-            <div className='blog-banner-wrapper-categories-item'>
-              {t.blogProcess}
-            </div>
-            <div className='blog-banner-wrapper-categories-item'>
-              {t.blogTechnology}
-            </div>
-            <div className='blog-banner-wrapper-categories-item'>
-              {t.blogTools}
-            </div>
+            {categories.length < 1 ? (
+              <p className='paragraph-primary'>{t.posts}</p>
+            ) : (
+              categories.map((category: any) => (
+                <div
+                  className='blog-banner-wrapper-categories-item'
+                  key={category.fields.slug}
+                >
+                  {category.fields.title}
+                </div>
+              ))
+            )}
           </div>
           <div className='blog-banner-wrapper-blog'>
             <div className='blog-banner-wrapper-blogs'>
@@ -56,11 +54,16 @@ const Posts = ({ posts }: any) => {
 };
 
 export const getStaticProps = async () => {
-  const response = await client.getEntries({ content_type: 'post' });
+  const response = await client.getEntries({ content_type: CONTENT_TYPE.POST });
+
+  const category = await client.getEntries({
+    content_type: CONTENT_TYPE.CATEGORY,
+  });
 
   return {
     props: {
       posts: response.items,
+      categories: category.items,
     },
   };
 };
