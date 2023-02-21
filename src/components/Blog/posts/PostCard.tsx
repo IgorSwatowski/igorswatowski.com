@@ -1,9 +1,5 @@
 import Link from 'next/link';
 
-<<<<<<< Updated upstream
-const PostCard = ({ post }) => {
-  const { title, slug, excerpt, author, date } = post.fields;
-=======
 const PostCard = ({ post }: any) => {
   const { title, slug, date, content, author, excerpt } = post.fields;
 
@@ -13,9 +9,6 @@ const PostCard = ({ post }: any) => {
     month: 'short',
     year: 'numeric',
   });
-
-  console.log(excerpt);
->>>>>>> Stashed changes
 
   return (
     <Link href={`/blog/${slug}`} className='blog-banner-wrapper-blogs-item'>
