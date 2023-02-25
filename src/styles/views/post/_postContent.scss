@@ -1,0 +1,52 @@
+@import '../../abstracts/mixins';
+@import '../../abstracts/variables';
+
+.post {
+  padding-top: 22.6rem;
+  &-wrapper {
+    padding-bottom: 6rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto;
+    @include respond(phone, tablet-port, tablet-land) {
+      flex-direction: column;
+      padding-top: 20rem;
+    }
+    @include respond(desktop-big) {
+      padding-top: 27rem;
+    }
+
+    &-heading {
+      width: 777px;
+    }
+    &-text {
+      max-width: 800px;
+    }
+
+    &-date {
+      margin-bottom: 31.2rem;
+
+      p {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 1.2rem;
+
+        span {
+          margin: 0;
+          font-size: 14px;
+        }
+      }
+    }
+
+    span {
+      margin-top: 2rem;
+      font-weight: 700;
+    }
+
+    &-content {
+      margin-top: 6.4rem;
+    }
+  }
+}
