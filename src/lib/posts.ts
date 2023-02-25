@@ -5,7 +5,7 @@ const hygraph = new GraphQLClient(graphqlAPI);
 
 const query = `
     query AllPostsQuery($locale: Locale!) {
-      postCollection(locales: [$locale]) {
+      postCollection(locale: [$locale]) {
           id
           title
           slug
