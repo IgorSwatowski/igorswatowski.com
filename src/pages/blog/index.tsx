@@ -3,7 +3,7 @@ import { useRouter } from 'next/router';
 import { en } from '../../i18n/locales/en';
 import { pl } from '../../i18n/locales/pl';
 
-import PostCard from '../../components/Blog/posts/PostCard';
+import PostCard from '../../components/Blog/PostCard';
 import { client } from '../../lib/contentful/client';
 import { CONTENT_TYPE } from '../../constants/constants';
 

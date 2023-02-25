@@ -1,9 +1,9 @@
 import { client, previewClient } from '../../lib/contentful/client';
 import { useRouter } from 'next/router';
 import { CONTENT_TYPE } from '../../constants/constants';
-import PostSingle from '../../components/Blog/posts/PostSingle';
+import PostSingle from '../../components/Blog/PostSingle';
 
-const Post = ({ post, preview }) => {
+const Post = ({ post, preview }: any) => {
   const router = useRouter();
 
   return (
@@ -18,7 +18,7 @@ const Post = ({ post, preview }) => {
   );
 };
 
-export const getStaticProps = async ({ params, preview = false }) => {
+export const getStaticProps = async ({ params, preview = false }: any) => {
   const cfClient = preview ? previewClient : client;
 
   const { slug } = params;
