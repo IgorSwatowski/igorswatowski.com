@@ -8,22 +8,21 @@ import OfferIncludedList from './OfferIncludedList';
 interface OfferCardProps {
   title: string;
   description: string;
-  customMobileText?: string;
-  orientedDesign?: string;
-  customDesignedWeb?: string;
-  strategicDirection?: string;
-  creatingDesign?: string;
-  colorFontPhoto?: string;
-  timeline?: string;
-  linksAndDomain?: string;
-  animationStepByStep?: string;
-  frontEndDevelopmentTechnology?: string;
-  support?: string;
-  timelineWebDev?: string;
-  optimized?: string;
-  basicSeo?: string;
-  revisions?: string;
-  timelineWebDevDesign?: string;
+  problemSetting?: string;
+  goals?: string;
+  analysis?: string;
+  content?: string;
+  informationArchitecture?: string;
+  concept?: string;
+  designPatterns?: string;
+  wireframing?: string;
+  preLaunch?: string;
+  testing?: string;
+  seo?: string;
+  technology?: string;
+  domain?: string;
+  implementation?: string;
+  links?: string;
 }
 
 const OfferCard = ({ title, description, ...props }: OfferCardProps) => {
@@ -31,13 +30,18 @@ const OfferCard = ({ title, description, ...props }: OfferCardProps) => {
   const { locale } = router;
   const t = locale === 'en' ? en : pl;
   return (
-    <div className="prices-wrapper-list-item" data-aos="fade-up" data-aos-delay="50">
-      <h3 className="prices-wrapper-list-item-heading heading-third">{title}</h3>
-      <p className="prices-wrapper-list-item-text paragraph-primary">{description}</p>
-      <Link href="/contact" className="btn-secondary">
-        {t.getStartedBtn}
-      </Link>
-      <div className="small-line"></div>
+    <div
+      className='prices-wrapper-list-item'
+      data-aos='fade-up'
+      data-aos-delay='50'
+    >
+      <h3 className='prices-wrapper-list-item-heading heading-third'>
+        {title}
+      </h3>
+      <p className='prices-wrapper-list-item-text paragraph-primary'>
+        {description}
+      </p>
+      <div className='small-line'></div>
       <OfferIncludedList {...props} />
     </div>
   );

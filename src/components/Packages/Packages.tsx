@@ -7,6 +7,7 @@ import { pl } from '../../i18n/locales/pl';
 
 import PackagesBanner from './components/PackagesBanner';
 import PricesSection from './components/PricesSection';
+import ReferencesSection from '../Home/components/ReferencesSection';
 
 const PackagesPage = () => {
   const router = useRouter();
@@ -16,6 +17,7 @@ const PackagesPage = () => {
     <main>
       <PackagesBanner />
       <PricesSection />
+      <ReferencesSection />
     </main>
   );
 };

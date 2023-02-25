@@ -48,6 +48,13 @@ const PackagesBanner = () => {
           >
             {t.myProcessText}
           </p>
+          <p
+            className='packages-banner-wrapper-right-text paragraph-primary'
+            data-aos='fade-down'
+            data-aos-delay='100'
+          >
+            {t.myProcessTextSecond}
+          </p>
         </div>
       </div>
     </section>
