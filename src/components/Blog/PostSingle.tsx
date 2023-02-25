@@ -1,4 +1,5 @@
 import { formatDate } from '../../lib/formatDate';
+import RichText from '../RichText';
 
 const PostSingle = ({ post }: any) => {
   const { title, date, content, author } = post.fields;
@@ -8,19 +9,21 @@ const PostSingle = ({ post }: any) => {
       <article className='post'>
         <div className='post-wrapper container-box'>
           <h1 className='post-wrapper-heading heading-primary'>{title}</h1>
-          <p className='post-wrapper-date paragraph-primary'>
+          <div className='post-wrapper-date paragraph-primary'>
             <span className='color-primary'>/</span>
-            {formatDate(date, {
-              weekday: 'long',
-              day: 'numeric',
-              month: 'short',
-              year: 'numeric',
-            })}{' '}
-            <span className='color-primary'>/</span> Written by{' '}
-            {author.fields.name}
-          </p>
+            <p className='paragraph-primary'>
+              {formatDate(date, {
+                weekday: 'long',
+                day: 'numeric',
+                month: 'short',
+                year: 'numeric',
+              })}
+            </p>
+            <span className='color-primary'>/</span>
+            <p className='paragraph-primary'>Written by {author.fields.name}</p>
+          </div>
           <div className='post-wrapper-content'>
-            {content.content[0].content[0].value}
+            <RichText content={content} />
           </div>
         </div>
       </article>
