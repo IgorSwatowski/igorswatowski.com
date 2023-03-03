@@ -6,11 +6,17 @@ import { pl } from '../../i18n/locales/pl';
 import PostCard from '../../components/Blog/PostCard';
 import { client } from '../../lib/contentful/client';
 import { CONTENT_TYPE } from '../../constants/constants';
+import { useEffect, useState } from 'react';
 
 const Posts = ({ posts, categories }: any) => {
+  const [selectedCategory, setSelectedCategory] = useState();
   const router = useRouter();
   const { locale } = router;
   const t = locale === 'en' ? en : pl;
+
+  useEffect(() => {
+    console.log(selectedCategory);
+  }, [selectedCategory]);
 
   return (
     <main>
@@ -31,7 +37,11 @@ const Posts = ({ posts, categories }: any) => {
                   className='blog-banner-wrapper-categories-item'
                   key={category.fields.slug}
                 >
-                  {category.fields.title}
+                  <button
+                    onClick={() => setSelectedCategory(category.fields.slug)}
+                  >
+                    {category.fields.title}
+                  </button>
                 </div>
               ))
             )}
