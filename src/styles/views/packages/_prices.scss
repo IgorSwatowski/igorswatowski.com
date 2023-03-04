@@ -28,6 +28,7 @@
 
     &-heading {
       margin-bottom: 2rem;
+      max-width: 600px;
     }
 
     &-list {
@@ -37,7 +38,7 @@
       justify-content: center;
       margin: 0 auto;
       gap: 4.7rem;
-      padding-top: 12.8rem;
+      padding-top: 3.2rem;
 
       @include respond(phone) {
         display: flex;
@@ -92,7 +93,7 @@
           flex-direction: column;
           align-items: flex-start;
           gap: 1.5rem;
-          margin-top: 3.2rem;
+          margin-top: 1.6rem;
 
           &-heading {
             text-align: center;
