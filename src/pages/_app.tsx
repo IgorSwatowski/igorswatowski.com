@@ -7,11 +7,7 @@ import i18n from '@/i18n/i18n';
 
 import '@/styles/styles.scss';
 import Script from 'next/script';
-<<<<<<< Updated upstream
-import { GATrackId } from '@/constants/constants';
-=======
 import { GATrackId, GOOGLE_SITE_VERIFY } from '../constants/constants';
->>>>>>> Stashed changes
 import { DefaultSeo } from 'next-seo';
 import SEO from '../../next-seo.config';
 
