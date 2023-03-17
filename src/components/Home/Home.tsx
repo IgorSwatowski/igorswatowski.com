@@ -6,6 +6,7 @@ import ShouldWorkSection from '@/components/Home/components/ShouldWorkSection';
 import ImplementationSection from '@/components/Home/components/ImplementationSection';
 import HomeBanner from '@/components/Home/components/HomeBanner';
 import CollaborateSection from '@/components/Home/components/CollaborateSection';
+import React from 'react';
 
 const HomePage = () => {
   return (

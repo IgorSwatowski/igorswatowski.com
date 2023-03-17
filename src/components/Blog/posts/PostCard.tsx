@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import React from 'react';
 
 const PostCard = ({ post }: any) => {
   const { title, slug, excerpt, author, date } = post.fields;

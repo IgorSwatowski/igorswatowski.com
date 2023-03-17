@@ -8,6 +8,7 @@ import CustomTextarea from '@/components/CustomTextarea/CustomTextarea';
 
 import { RiLoader5Fill } from 'react-icons/ri';
 import axios from 'axios';
+import React from 'react';
 
 interface IValues {
   firstName: string;

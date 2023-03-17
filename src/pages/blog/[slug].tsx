@@ -1,13 +1,10 @@
 import { client, previewClient } from '@/lib/contentful/client';
 import { useRouter } from 'next/router';
-import { GetStaticProps, GetStaticPaths } from 'next';
+import { CONTENT_TYPE } from '../../constants/constants';
+import PostSingle from '../../components/Blog/PostSingle';
+import React from 'react';
 
-interface PostProps {
-  post: any;
-  preview: boolean;
-}
-
-const Post = ({ post, preview }: PostProps) => {
+const Post = ({ post, preview }: any) => {
   const router = useRouter();
 
   if (router.isFallback || !post) {
@@ -18,16 +15,15 @@ const Post = ({ post, preview }: PostProps) => {
     <section className='section'>
       {preview && <p>Preview mode enabled!</p>}
       <div className='container'>
-        <article className='prose mx-auto'>{post.fields.title}</article>
+        <article className='prose mx-auto'>
+          {router.isFallback ? <p>alert</p> : <PostSingle post={post} />}
+        </article>
       </div>
     </section>
   );
 };
 
-export const getStaticProps: GetStaticProps<PostProps> = async ({
-  params,
-  preview = false,
-}: any) => {
+export const getStaticProps = async ({ params, preview = false }: any) => {
   const cfClient = preview ? previewClient : client;
 
   const { slug } = params;
@@ -50,9 +46,9 @@ export const getStaticProps: GetStaticProps<PostProps> = async ({
   };
 };
 
-export const getStaticPaths: GetStaticPaths = async () => {
-  const response = await client.getEntries({ content_type: 'post' });
-  const paths = response.items.map((item: any) => ({
+export const getStaticPaths = async () => {
+  const response = await client.getEntries({ content_type: CONTENT_TYPE.POST });
+  const paths = response.items.map(item => ({
     params: { slug: item.fields.slug },
   }));
 

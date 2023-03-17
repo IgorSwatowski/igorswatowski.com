@@ -16,8 +16,6 @@
   &-wrapper {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
     margin: 0 auto;
     padding-bottom: 6.4rem;
 
@@ -30,33 +28,17 @@
 
     &-heading {
       margin-bottom: 2rem;
-    }
-    &-text {
-      text-align: center;
-      width: 650px;
-
-      @include respond(phone) {
-        width: unset;
-        text-align: left;
-      }
-      @include respond(tablet-port) {
-        width: unset;
-        text-align: left;
-      }
-      @include respond(tablet-land) {
-        width: unset;
-        text-align: left;
-      }
+      max-width: 600px;
     }
 
     &-list {
       display: grid;
-      grid-template-columns: 31% 31% 31%;
+      grid-template-columns: 50% auto;
       align-items: flex-start;
       justify-content: center;
       margin: 0 auto;
       gap: 4.7rem;
-      padding-top: 12.8rem;
+      padding-top: 3.2rem;
 
       @include respond(phone) {
         display: flex;
@@ -81,22 +63,6 @@
         padding: 7rem 4rem;
         box-shadow: 0px 0px 40px 0px #0000000d;
         border-radius: 5px;
-
-        &:nth-child(2) {
-          margin-top: -8rem;
-
-          @include respond(phone) {
-            margin-top: unset;
-          }
-
-          @include respond(tablet-port) {
-            margin-top: unset;
-          }
-
-          @include respond(tablet-land) {
-            margin-top: unset;
-          }
-        }
 
         &-heading {
           margin-bottom: 18px;
@@ -127,7 +93,7 @@
           flex-direction: column;
           align-items: flex-start;
           gap: 1.5rem;
-          margin-top: 3.2rem;
+          margin-top: 1.6rem;
 
           &-heading {
             text-align: center;

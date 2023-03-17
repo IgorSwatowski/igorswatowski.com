@@ -125,57 +125,52 @@ const en = {
   contactInvalidEmail: 'Invalid email address',
 
   //Blog
-  blogHero: 'Explore a wealth of knowledge and inspiration.',
+  blogHero: 'Blog',
   blogHeroText:
-    'If you want to stay up to date on web topics, want to learn web development, design, programming or improve your process, I invite you to read on.',
-  blogCategories: 'Categories:',
-  blogWebDev: 'Web Development',
-  blogWebDesign: 'Web Design',
-  blogEntrepreneurship: 'Entrepreneurship',
-  blogToolsAndTechnology: 'Tools and technology',
+    'This page shares my best articles to read on topics like creating websites, implementation website, design, process and more.',
+  blogWebDev: 'Websites',
+  blogDesign: 'Design',
+  blogProcess: 'Process',
+  blogTechnology: 'Technology',
+  blogTools: 'Tools',
+  posts: "No articles to display",
 
   //Packages
   bannerStrategic: 'Strategic',
   bannerCreative: 'Creative',
   bannerConfidence: 'Confidence',
-  myProcess: 'A look at my process',
+  myProcess: 'My process in few sentences',
   myProcessText:
-    "My personalized approach to building empowered brands is to focus on what makes your business unique and meaningful. My goal is to guide you every step of the way on this your journey to business growth and success. To bring you to a level where you feel confident and connected to your brand so that in turn, you'll be able to attract your ideal viewer for years to come.",
-  currentPricesHeading: "Let’s check my packages",
-  currentPricesText:
-    'Are you trying to decide which plan is right for you? I offer a variety of options to suit your needs.',
-  webDesign: 'Web Design',
-  webDesignText:
-    'Tailored graphic design for your industry. Market research, color matching, fonts, adaptation to different screens - this is what you can expect from the project.',
-  webDevelopment: 'Web Development',
-  webDevelopmentText:
-    'Do you have a graphic design but are looking for someone to implement the idea into a fully functional website? I will be happy to help you with it.',
-  webDesignAndDev: 'Web Design & Web Development',
-  webDesignAndDevText:
-    'We’ll work together to build a strategic website that attracts your ideal audience. Includes SEO & copy assistance.',
+    "My clients are at the center of everything I do. Every process starts by listening to their needs, goals, and challenges. I believe in taking the time to fully understand their business and their target audience, so that I can create solutions that are tailored to their specific needs.",
+  myProcessTextSecond: "My process focuses on 4 building blocks: Planning, Design, Development and Implementation.",
+  currentPricesHeading: "Unlock the full potential of your business.",
+  planning: "Planning",
+  planningText: "I take the time to understand your needs and goals, and to analyze your current situation. By clearly defining your problem.",
+  design: "Design",
+  designText: "I’ll work with you to create something that is visually striking and reflects your brand in the best possible way.",
+  development: "Development",
+  developmentText: "This is where I take the designs and turn them into a fully functional website, testing and fine-tuning everything to ensure smooth performance before it goes live.",
+  implementation: "Implementation",
+  implementationText: "After the deployment, I'll monitor the site closely to ensure that it is performing as expected and address any issues that may arise. If everything works as it should, I'm ready to deploy the site online.",
 
-  getStartedBtn: 'Get started',
-  whatsIncluded: "What's included",
 
-  customMobile: '+ Custom mobile phone web design optimization',
-  orientedDesign: '+ Functional & goal oriented design',
-  customDesignedWeb: '+ Up to 6 custom designed web pages',
-  strategicDirection: '+ Creative approach and strategic plan of action',
-  creatingDesign: '+ Creating a design in Figma',
-  colorFontPhoto: '+ Color, font and photo matching',
-  timeline: '+ Timelime 1 week - 2 weeks',
+  problemSetting: "Problem setting",
+  goals: "Define needs & goals",
+  analysis: "Analysis",
+  content: "Content",
 
-  linksAndDomain: '+ Connect links, forms and domain',
-  animationStepByStep: '+ Basic or step-by-step animation',
-  support: '+ Launch Support',
-  frontEndDevelopmentTechnology:
-    '+ Front-end development on Webflow, Next, React, Gatsby or Wordpress',
-  timelineWebDev: '+ Timelime 4 weeks - 6 weeks',
-  basicSeo: '+ Basic SEO',
-  optimized: '+ Optimized for Desktop & Mobile',
-  revisions: '+ 3 Rounds of Revisions',
+  informationArchitecture: "Information architecture",
+  concept: "Concept & Sketching",
+  wireframeing: "Wireframing",
+  designPatterns: 'Design patterns (style guide)',
 
-  timelineWebDevDesign: '+ Timelime 6 weeks - 8 weeks',
+  technology: "Next, React, Wordpress, Webflow development",
+  seo: "On-page SEO",
+  testing: "Testing",
+  preLaunch: "Pre-launch checklist",
+
+  domain: "Connect domain + hosting",
+  links: 'Connect forms, links',
 
   sucessMsg: 'Successfully sent message',
   errorMsg: 'Please fill out all required fields',

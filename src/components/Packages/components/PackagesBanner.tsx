@@ -2,6 +2,7 @@ import { useRouter } from 'next/router';
 
 import { en } from '@/i18n/locales/en';
 import { pl } from '@/i18n/locales/pl';
+import React from 'react';
 
 const PackagesBanner = () => {
   const router = useRouter();
@@ -47,6 +48,13 @@ const PackagesBanner = () => {
             data-aos-delay='100'
           >
             {t.myProcessText}
+          </p>
+          <p
+            className='packages-banner-wrapper-right-text paragraph-primary'
+            data-aos='fade-down'
+            data-aos-delay='100'
+          >
+            {t.myProcessTextSecond}
           </p>
         </div>
       </div>

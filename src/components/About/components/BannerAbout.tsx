@@ -7,6 +7,7 @@ import { en } from '@/i18n/locales/en';
 import { pl } from '@/i18n/locales/pl';
 import BannerMeImg from '@/assets/about-igor.webp';
 import Image from 'next/image';
+import React from 'react';
 
 const BannerAbout = () => {
   const router = useRouter();

@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import { Button } from '@/components/Button/Button';
+import React from 'react';
 
 import ColorfulThreeLinesSvg from '@/assets/colorful-three-lines.png';
 import { useRouter } from 'next/router';

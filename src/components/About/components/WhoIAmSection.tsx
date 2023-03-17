@@ -8,6 +8,7 @@ import InstagramIcon from '@/assets/icons/instagram-icon.png';
 import FacebookIcon from '@/assets/icons/facebook-icon.png';
 import LinkedinIcon from '@/assets/icons/linkedin-icon.png';
 import Link from 'next/link';
+import React from 'react';
 
 import MeImg from '@/assets/me.png';
 

@@ -10,6 +10,7 @@ import TrustedLinesImg from '@/assets/trusted-lines-about.png';
 import GammasoftLogo from '@/assets/trusted/gammasoft.png';
 import CodemaLogo from '@/assets/trusted/codema.png';
 import AionlineLogo from '@/assets/trusted/aionline.png';
+import React from 'react';
 
 const TrustedBySection = () => {
   const router = useRouter();

@@ -18,7 +18,8 @@
     }
 
     &-heading {
-      max-width: 900px;
+      width: max-content;
+      margin-left: 0;
     }
     &-text {
       max-width: 800px;
@@ -36,32 +37,34 @@
       gap: 3rem;
 
       &-item {
-        background-color: var(--primary);
         color: var(--black);
-        font-weight: 700;
-        padding: 1rem 2rem;
-        transition: 0.4s all ease;
-        border: 1px solid var(--primary);
-
+        font-weight: 500;
+        text-decoration: underline;
+        transition: 0.3s all ease-in-out;
         &:hover {
-          background-color: var(--white);
           cursor: pointer;
-          border: 1px solid var(--primary);
+          color: var(--primary);
         }
       }
     }
 
     &-blogs {
       display: grid;
-      grid-template-columns: 31% 31% 31%;
+      grid-template-columns: 50% 50%;
       gap: 4rem;
-      padding-top: 8.2rem;
+      padding-top: 6.2rem;
+
+      @include respond(phone, tablet-port, tablet-land) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 4rem;
+      }
 
       &-item {
         background-color: var(--white);
         padding: 5rem 4rem;
         transition: 0.4s all ease-in-out;
-        box-shadow: 0 3px 12px #2222220d;
         border-radius: 5px;
 
         .line {
@@ -71,10 +74,33 @@
           margin: 1.6rem 0;
           transition: 0.4s all ease-in-out;
         }
+        .color-primary {
+          color: var(--primary);
+          transition: 0.4s all ease-in-out;
+        }
+        &-date {
+          margin-bottom: 3.2rem;
+
+          p {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 1.2rem;
+
+            span {
+              margin: 0;
+              font-size: 14px;
+            }
+          }
+        }
+
+        &:hover > .blog-banner-wrapper-blogs-item-date > p > .color-primary {
+          color: var(--white);
+        }
 
         &:hover {
           transform: translateY(-10px);
-          background-color: var(--primary);
+          background-color: var(--primary-light);
         }
 
         &:hover > .line {

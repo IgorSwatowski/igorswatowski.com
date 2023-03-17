@@ -3,6 +3,7 @@ import Link from 'next/link';
 
 import { en } from '@/i18n/locales/en';
 import { pl } from '@/i18n/locales/pl';
+import React from 'react';
 
 const ShouldWorkSection = () => {
   const router = useRouter();

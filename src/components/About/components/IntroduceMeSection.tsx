@@ -8,6 +8,7 @@ import Image from 'next/image';
 import NumberFirstImg from '@/assets/number_first.png';
 import NumberSecondImg from '@/assets/number_second.png';
 import NumberThirdImg from '@/assets/number_third.png';
+import React from 'react';
 
 const IntroduceMeSection = () => {
   const router = useRouter();

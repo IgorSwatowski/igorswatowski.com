@@ -2,6 +2,7 @@ import { useRouter } from 'next/router';
 
 import { en } from '@/i18n/locales/en';
 import { pl } from '@/i18n/locales/pl';
+import React from 'react';
 
 const CTASection = () => {
   const router = useRouter();

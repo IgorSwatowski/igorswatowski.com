@@ -1,6 +1,10 @@
+import React from 'react';
+
 interface InputProps extends React.InputHTMLAttributes<HTMLInputElement> {
   value: string;
-  onChange: (event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => void;
+  onChange: (
+    event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
+  ) => void;
   id: string;
   name: string;
   label: string;
@@ -32,7 +36,7 @@ const CustomInput = ({
         placeholder={placeholder}
         {...props}
       />
-      {error && <p className="alert-danger">*{errorMessage}</p>}
+      {error && <p className='alert-danger'>*{errorMessage}</p>}
     </>
   );
 };

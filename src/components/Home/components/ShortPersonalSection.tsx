@@ -8,6 +8,7 @@ import { pl } from '@/i18n/locales/pl';
 import MeSecondPng from '@/assets/personal-photo.webp';
 import TriangleElement from '@/assets/elements/triangle.png';
 import CurvedLinesElement from '@/assets/elements/curved-lines.png';
+import React from 'react';
 
 import MeImg from '@/assets/me.png';
 
