@@ -7,9 +7,10 @@ import i18n from '@/i18n/i18n';
 
 import '@/styles/styles.scss';
 import Script from 'next/script';
-import { GATrackId, GOOGLE_SITE_VERIFY } from '../constants/constants';
+import { GATrackId } from '../constants/constants';
 import { DefaultSeo } from 'next-seo';
 import SEO from '../../next-seo.config';
+import React from 'react';
 
 import '@etchteam/next-pagination/dist/index.css';
 
@@ -36,7 +37,6 @@ export default function App({ Component, pageProps }: AppProps) {
           name='viewport'
           content='width=device-width, user-scalable=yes, initial-scale=1.0, viewport-fit=cover'
         />
-        <meta name='google-site-verification' content={GOOGLE_SITE_VERIFY} />
       </Head>
       <DefaultSeo {...SEO} />
       <I18nextProvider i18n={i18n}>
