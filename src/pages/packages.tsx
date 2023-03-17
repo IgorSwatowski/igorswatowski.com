@@ -1,5 +1,5 @@
 import { NextSeo } from 'next-seo';
-import PackagesPage from '../components/Packages/Packages';
+import PackagesPage from '@/components/Packages/Packages';
 
 const title = 'Offer: Igor Swatowski | Web Designer & Developer';
 const description =

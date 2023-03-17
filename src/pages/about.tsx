@@ -1,5 +1,5 @@
 import { NextSeo } from 'next-seo';
-import AboutPage from '../components/About/About';
+import AboutPage from '@/components/About/About';
 
 const title = 'About: Igor Swatowski | Web Designer & Developer';
 const description =

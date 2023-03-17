@@ -1,13 +1,14 @@
 import { useRouter } from 'next/router';
 import { useState } from 'react';
-import CustomInput from '../../CustomInput/CustomInput';
+import CustomInput from '@/components/CustomInput/CustomInput';
 
-import { en } from '../../../i18n/locales/en';
-import { pl } from '../../../i18n/locales/pl';
-import CustomTextarea from '../../CustomTextarea/CustomTextarea';
+import { en } from '@/i18n/locales/en';
+import { pl } from '@/i18n/locales/pl';
+import CustomTextarea from '@/components/CustomTextarea/CustomTextarea';
 
 import { RiLoader5Fill } from 'react-icons/ri';
 import axios from 'axios';
+import React from 'react';
 
 interface IValues {
   firstName: string;
@@ -99,7 +100,7 @@ const ContactForm = () => {
         email: values.email,
         message: values.message,
       })
-      .then((res) => {
+      .then(res => {
         if (res.status === 200) {
           setValues({
             firstName: '',
@@ -117,14 +118,16 @@ const ContactForm = () => {
           setMessageState(res.data.message);
         }
       })
-      .catch((err) => {
+      .catch(err => {
         setLoading(false);
         setMessageState(String(err.message));
       });
     setLoading(false);
   };
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    setValues((prevInput) => ({
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
+  ) => {
+    setValues(prevInput => ({
       ...prevInput,
       [e.target.name]: e.target.value,
     }));
@@ -133,20 +136,20 @@ const ContactForm = () => {
   return (
     <>
       <form
-        className="contact-form-wrapper-form"
-        id="contact-form"
-        data-aos="fade-down"
-        data-aos-delay="125"
+        className='contact-form-wrapper-form'
+        id='contact-form'
+        data-aos='fade-down'
+        data-aos-delay='125'
         onSubmit={handleSubmit}
       >
-        <div className="contact-form-wrapper-form-personal">
-          <div className="contact-form-wrapper-form-personal-item">
-            <label htmlFor="firstName">{t.contactFirstName}</label>
+        <div className='contact-form-wrapper-form-personal'>
+          <div className='contact-form-wrapper-form-personal-item'>
+            <label htmlFor='firstName'>{t.contactFirstName}</label>
             <CustomInput
-              id="firstName"
-              name="firstName"
-              type="text"
-              label="firstName"
+              id='firstName'
+              name='firstName'
+              type='text'
+              label='firstName'
               placeholder={t.contactFirstName}
               error={!!errors.firstName}
               errorMessage={!!errors.firstName ? errors.firstName : ''}
@@ -154,13 +157,13 @@ const ContactForm = () => {
               onChange={handleChange}
             />
           </div>
-          <div className="contact-form-wrapper-form-personal-item">
-            <label htmlFor="lastName">{t.contactSecondName}</label>
+          <div className='contact-form-wrapper-form-personal-item'>
+            <label htmlFor='lastName'>{t.contactSecondName}</label>
             <CustomInput
-              id="lastName"
-              name="lastName"
-              type="text"
-              label="lastName"
+              id='lastName'
+              name='lastName'
+              type='text'
+              label='lastName'
               placeholder={t.contactSecondName}
               error={!!errors.lastName}
               errorMessage={!!errors.lastName ? errors.lastName : ''}
@@ -169,14 +172,14 @@ const ContactForm = () => {
             />
           </div>
         </div>
-        <div className="contact-form-wrapper-form-contact">
-          <div className="contact-form-wrapper-form-contact-item">
-            <label htmlFor="email">{t.contactEmail}</label>
+        <div className='contact-form-wrapper-form-contact'>
+          <div className='contact-form-wrapper-form-contact-item'>
+            <label htmlFor='email'>{t.contactEmail}</label>
             <CustomInput
-              id="email"
-              name="email"
-              type="email"
-              label="email"
+              id='email'
+              name='email'
+              type='email'
+              label='email'
               placeholder={t.contactEmail}
               error={!!errors.email}
               errorMessage={!!errors.email ? errors.email : ''}
@@ -184,13 +187,13 @@ const ContactForm = () => {
               onChange={handleChange}
             />
           </div>
-          <div className="contact-form-wrapper-form-contact-item">
-            <label htmlFor="companyName">{t.contactCompany}</label>
+          <div className='contact-form-wrapper-form-contact-item'>
+            <label htmlFor='companyName'>{t.contactCompany}</label>
             <CustomInput
-              id="company"
-              name="company"
-              type="text"
-              label="company"
+              id='company'
+              name='company'
+              type='text'
+              label='company'
               placeholder={t.contactCompany}
               error={!!errors.company}
               errorMessage={!!errors.company ? errors.company : ''}
@@ -199,14 +202,14 @@ const ContactForm = () => {
             />
           </div>
         </div>
-        <div className="contact-form-wrapper-form-topic">
-          <div className="contact-form-wrapper-form-topic-item">
-            <label htmlFor="topic">{t.contactTopic}</label>
+        <div className='contact-form-wrapper-form-topic'>
+          <div className='contact-form-wrapper-form-topic-item'>
+            <label htmlFor='topic'>{t.contactTopic}</label>
             <CustomInput
-              id="topic"
-              name="topic"
-              type="text"
-              label="topic"
+              id='topic'
+              name='topic'
+              type='text'
+              label='topic'
               placeholder={t.contactTopic}
               error={!!errors.topic}
               errorMessage={!!errors.topic ? errors.topic : ''}
@@ -215,14 +218,14 @@ const ContactForm = () => {
             />
           </div>
         </div>
-        <div className="contact-form-wrapper-form-message">
-          <div className="contact-form-wrapper-form-message-item">
-            <label htmlFor="message">{t.contactMessage}</label>
+        <div className='contact-form-wrapper-form-message'>
+          <div className='contact-form-wrapper-form-message-item'>
+            <label htmlFor='message'>{t.contactMessage}</label>
             <CustomTextarea
-              name="message"
-              id="message"
-              className="form-control"
-              label="message"
+              name='message'
+              id='message'
+              className='form-control'
+              label='message'
               placeholder={t.contactMessage}
               error={!!errors.message}
               errorMessage={!!errors.message ? errors.message : ''}
@@ -231,20 +234,20 @@ const ContactForm = () => {
             />
           </div>
         </div>
-        <button className="btn-secondary" type="submit" disabled={loading}>
+        <button className='btn-secondary' type='submit' disabled={loading}>
           {loading !== true ? (
             t.contactBtn
           ) : (
-            <div className="flex h-full w-full items-center justify-center ">
-              <RiLoader5Fill className="h-8 w-8 animate-spin" />
+            <div className='flex h-full w-full items-center justify-center '>
+              <RiLoader5Fill className='h-8 w-8 animate-spin' />
             </div>
           )}
         </button>
-        <p className="alert-success">
+        <p className='alert-success'>
           {success !== false ? (
-            <span className="alert-success">{messageState}</span>
+            <span className='alert-success'>{messageState}</span>
           ) : (
-            <span className="alert-danger">{messageState}</span>
+            <span className='alert-danger'>{messageState}</span>
           )}
         </p>
       </form>

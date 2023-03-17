@@ -1,14 +1,19 @@
-import { client, previewClient } from '../../lib/contentful/client';
+import { client, previewClient } from '@/lib/contentful/client';
 import { useRouter } from 'next/router';
 import { CONTENT_TYPE } from '../../constants/constants';
 import PostSingle from '../../components/Blog/PostSingle';
+import React from 'react';
 
 const Post = ({ post, preview }: any) => {
   const router = useRouter();
 
+  if (router.isFallback || !post) {
+    return <p>Loading...</p>;
+  }
+
   return (
     <section className='section'>
-      {preview && <p>alert</p>}
+      {preview && <p>Preview mode enabled!</p>}
       <div className='container'>
         <article className='prose mx-auto'>
           {router.isFallback ? <p>alert</p> : <PostSingle post={post} />}
@@ -29,16 +34,13 @@ export const getStaticProps = async ({ params, preview = false }: any) => {
 
   if (!response?.items?.length) {
     return {
-      redirect: {
-        destination: '/posts',
-        permanent: false,
-      },
+      notFound: true,
     };
   }
 
   return {
     props: {
-      post: response?.items?.[0],
+      post: response.items[0],
       preview,
     },
   };

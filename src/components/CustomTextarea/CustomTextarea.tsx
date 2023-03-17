@@ -1,7 +1,11 @@
+import React from 'react';
+
 interface TextAreaProps extends React.InputHTMLAttributes<HTMLTextAreaElement> {
   className?: string;
   value: string;
-  onChange: (event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => void;
+  onChange: (
+    event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
+  ) => void;
   id: string;
   name: string;
   label: string;
@@ -35,7 +39,7 @@ const CustomTextarea = ({
         placeholder={placeholder}
         {...props}
       />
-      {error && <p className="alert-danger">*{errorMessage}</p>}
+      {error && <p className='alert-danger'>*{errorMessage}</p>}
     </>
   );
 };

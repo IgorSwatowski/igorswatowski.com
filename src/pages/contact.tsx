@@ -1,5 +1,5 @@
 import { NextSeo } from 'next-seo';
-import ContactPage from '../components/Contact/ContactPage';
+import ContactPage from '@/components/Contact/ContactPage';
 
 const title = 'Contact: Igor Swatowski | Web Designer & Developer';
 const description =

@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { formatDate } from '../../lib/formatDate';
+import React from 'react';
 
 const PostCard = ({ post }: any) => {
   const { title, slug, date, author, excerpt } = post.fields;

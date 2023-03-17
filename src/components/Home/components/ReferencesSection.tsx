@@ -1,10 +1,11 @@
 import { useRouter } from 'next/router';
 import Image from 'next/image';
 
-import { en } from '../../../i18n/locales/en';
-import { pl } from '../../../i18n/locales/pl';
+import { en } from '@/i18n/locales/en';
+import { pl } from '@/i18n/locales/pl';
 
-import ColorfulThreeLinesSvg from '../../../assets/colorful-three-lines.png';
+import ColorfulThreeLinesSvg from '@/assets/colorful-three-lines.png';
+import React from 'react';
 
 const ReferencesSection = () => {
   const router = useRouter();

@@ -1,10 +1,11 @@
 // Components
-import BannerAbout from './components/BannerAbout';
-import IntroduceMeSection from './components/IntroduceMeSection';
-import CTAAboutSection from './components/CTAAboutSection';
-import TrustedBySection from './components/TrustedBySection';
-import WhoIAmSection from './components/WhoIAmSection';
-import CTAAboutSecondSection from './components/CTAAboutSecondSection';
+import BannerAbout from '@/components/About/components/BannerAbout';
+import IntroduceMeSection from '@/components/About/components/IntroduceMeSection';
+import CTAAboutSection from '@/components/About/components/CTAAboutSection';
+import TrustedBySection from '@/components/About/components/TrustedBySection';
+import WhoIAmSection from '@/components/About/components/WhoIAmSection';
+import CTAAboutSecondSection from '@/components/About/components/CTAAboutSecondSection';
+import React from 'react';
 
 const AboutPage = () => {
   return (

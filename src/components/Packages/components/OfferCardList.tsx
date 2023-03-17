@@ -2,14 +2,15 @@ import OfferCard from './OfferCard';
 
 import { useRouter } from 'next/router';
 
-import { en } from '../../../i18n/locales/en';
-import { pl } from '../../../i18n/locales/pl';
+import { en } from '@/i18n/locales/en';
+import { pl } from '@/i18n/locales/pl';
+import React from 'react';
 const OfferCardList = () => {
   const router = useRouter();
   const { locale } = router;
   const t = locale === 'en' ? en : pl;
   return (
-    <div className="prices-wrapper-list">
+    <div className='prices-wrapper-list'>
       <OfferCard
         title={t.planning}
         description={t.planningText}

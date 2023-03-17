@@ -1,5 +1,6 @@
 import { formatDate } from '../../lib/formatDate';
 import RichText from '../RichText';
+import React from 'react';
 
 const PostSingle = ({ post }: any) => {
   const { title, date, content, author } = post.fields;

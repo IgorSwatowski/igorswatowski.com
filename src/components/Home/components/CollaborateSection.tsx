@@ -1,10 +1,11 @@
-import LinesSvg from '../../../assets/lines.svg';
-import ArrowDownSvg from '../../../assets/arrow.svg';
+import LinesSvg from '@/assets/lines.svg';
+import ArrowDownSvg from '@/assets/arrow.svg';
 import Image from 'next/image';
 import { useRouter } from 'next/router';
 
-import { en } from '../../../i18n/locales/en';
-import { pl } from '../../../i18n/locales/pl';
+import { en } from '@/i18n/locales/en';
+import { pl } from '@/i18n/locales/pl';
+import React from 'react';
 
 const CollaborateSection = () => {
   const router = useRouter();

@@ -1,9 +1,10 @@
 import { useRouter } from 'next/router';
 import Image from 'next/image';
 import Link from 'next/link';
+import React from 'react';
 
-import { en } from '../../../i18n/locales/en';
-import { pl } from '../../../i18n/locales/pl';
+import { en } from '@/i18n/locales/en';
+import { pl } from '@/i18n/locales/pl';
 
 import GammasoftLogo from '../../../assets/trusted/gammasoft.png';
 import AionlineLogo from '../../../assets/trusted/aionline.png';

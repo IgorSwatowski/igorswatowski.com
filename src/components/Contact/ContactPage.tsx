@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { useRouter } from 'next/router';
 
-import { en } from '../../i18n/locales/en';
-import { pl } from '../../i18n/locales/pl';
+import { en } from '@/i18n/locales/en';
+import { pl } from '@/i18n/locales/pl';
 
 import ContactForm from './components/ContactForm';
 
@@ -13,33 +13,41 @@ const ContactPage = () => {
 
   return (
     <main>
-      <section className="contact-form">
-        <div className="contact-form-wrapper container-box">
+      <section className='contact-form'>
+        <div className='contact-form-wrapper container-box'>
           <h1
-            className="contact-form-wrapper-heading heading-primary"
-            data-aos="fade-down"
-            data-aos-delay="50"
+            className='contact-form-wrapper-heading heading-primary'
+            data-aos='fade-down'
+            data-aos-delay='50'
           >
             {t.contactHeading}
           </h1>
           <p
-            className="contact-form-wrapper-text paragraph-primary"
-            data-aos="fade-down"
-            data-aos-delay="75"
+            className='contact-form-wrapper-text paragraph-primary'
+            data-aos='fade-down'
+            data-aos-delay='75'
           >
             {t.contactText}
           </p>
           <p
-            className="contact-form-wrapper-text paragraph-primary"
-            data-aos="fade-down"
-            data-aos-delay="75"
+            className='contact-form-wrapper-text paragraph-primary'
+            data-aos='fade-down'
+            data-aos-delay='75'
           >
             {t.contactInstagram}
-            <a href="https://instagram.com/igor.websites" target="_blank" rel="noreferrer">
+            <a
+              href='https://instagram.com/igor.websites'
+              target='_blank'
+              rel='noreferrer'
+            >
               @igor.websites
             </a>
             {t.contactEmailItem}
-            <a href="mailto: hello@igorswatowski.com" target="_blank" rel="noreferrer">
+            <a
+              href='mailto: hello@igorswatowski.com'
+              target='_blank'
+              rel='noreferrer'
+            >
               hello@igorswatowski.com
             </a>
             {t.contactForm}

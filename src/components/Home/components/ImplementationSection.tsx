@@ -1,13 +1,14 @@
 import { useRouter } from 'next/router';
 import Image from 'next/image';
 
-import { en } from '../../../i18n/locales/en';
-import { pl } from '../../../i18n/locales/pl';
+import { en } from '@/i18n/locales/en';
+import { pl } from '@/i18n/locales/pl';
 
-import StrategyIcon from '../../../assets/horse-icon.svg';
-import DesignIcon from '../../../assets/design-icon.png';
-import DevelopmentIcon from '../../../assets/development-icon.png';
-import QualityIcon from '../../../assets/quality-icon.png';
+import StrategyIcon from '@/assets/horse-icon.svg';
+import DesignIcon from '@/assets/design-icon.png';
+import DevelopmentIcon from '@/assets/development-icon.png';
+import QualityIcon from '@/assets/quality-icon.png';
+import React from 'react';
 
 const ImplementationSection = () => {
   const router = useRouter();

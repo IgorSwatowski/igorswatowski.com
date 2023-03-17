@@ -1,8 +1,9 @@
 import { useRouter } from 'next/router';
 
-import { en } from '../../../i18n/locales/en';
-import { pl } from '../../../i18n/locales/pl';
-import OfferIncludedItem from './OfferIncludedItem';
+import { en } from '@/i18n/locales/en';
+import { pl } from '@/i18n/locales/pl';
+import OfferIncludedItem from '@/components/Packages/components/OfferIncludedItem';
+import React from 'react';
 
 interface OfferIncludedListProps {
   problemSetting?: string;
