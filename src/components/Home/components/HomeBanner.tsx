@@ -15,13 +15,7 @@ import { useRef, useEffect, useState } from 'react';
 import { gsap } from 'gsap';
 import PageLoader from '../../PageLoader/PageLoader';
 
-interface HeroBannerProps {
-  image: string;
-  title: string;
-  description: string;
-}
-
-const HomeBanner = ({ image, title, description }: HeroBannerProps) => {
+const HomeBanner = () => {
   const imageRef = useRef(null);
   const titleRef = useRef(null);
   const descriptionFirstRef = useRef(null);
@@ -50,32 +44,32 @@ const HomeBanner = ({ image, title, description }: HeroBannerProps) => {
     gsap.fromTo(
       imageRef.current,
       { opacity: 0, y: 100 },
-      { opacity: 1, y: 0, duration: 1, delay: 2.3 },
+      { opacity: 1, y: 0, duration: 1, delay: 2 },
     );
     gsap.fromTo(
       titleRef.current,
       { opacity: 0, y: 100 },
-      { opacity: 1, y: 0, duration: 1, delay: 2.8 },
+      { opacity: 1, y: 0, duration: 1, delay: 2.4 },
     );
     gsap.fromTo(
       descriptionFirstRef.current,
       { opacity: 0, y: 100 },
-      { opacity: 1, y: 0, duration: 1, delay: 3.2 },
+      { opacity: 1, y: 0, duration: 1, delay: 2.8 },
     );
     gsap.fromTo(
       descriptionSecondRef.current,
       { opacity: 0, y: 100 },
-      { opacity: 1, y: 0, duration: 1, delay: 3.7 },
+      { opacity: 1, y: 0, duration: 1, delay: 3.2 },
     );
     gsap.fromTo(
       buttonRef.current,
       { opacity: 0, y: 100 },
-      { opacity: 1, y: 0, duration: 1, delay: 4.2 },
+      { opacity: 1, y: 0, duration: 1, delay: 3.6 },
     );
     gsap.fromTo(
       trustedClients.current,
       { opacity: 0, y: 100 },
-      { opacity: 1, y: 0, duration: 1, delay: 4.7 },
+      { opacity: 1, y: 0, duration: 1, delay: 4 },
     );
   }, []);
 
