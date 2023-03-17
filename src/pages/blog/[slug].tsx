@@ -48,7 +48,7 @@ export const getStaticProps = async ({ params, preview = false }: any) => {
 
 export const getStaticPaths = async () => {
   const response = await client.getEntries({ content_type: CONTENT_TYPE.POST });
-  const paths = response.items.map(item => ({
+  const paths = response.items.map((item: any) => ({
     params: { slug: item.fields.slug },
   }));
 
