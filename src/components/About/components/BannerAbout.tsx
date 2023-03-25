@@ -58,7 +58,7 @@ const BannerAbout = () => {
           </div>
         </div>
         <div className='banner-text-wrapper-right'>
-          <Image loading='lazy' src={BannerMeImg} alt='' />
+          {/* <Image loading='lazy' src={BannerMeImg} alt='' /> */}
         </div>
       </div>
     </section>
