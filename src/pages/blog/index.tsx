@@ -7,8 +7,9 @@ import PostCard from '../../components/Blog/PostCard';
 import { client } from '../../lib/contentful/client';
 import { CONTENT_TYPE } from '../../constants/constants';
 import { useEffect, useState } from 'react';
+import Pagination from '@/components/Pagination/Pagination';
 
-const Posts = ({ posts, categories }: any) => {
+const Posts = ({ posts, categories, currentPage, totalPages }: any) => {
   const [selectedCategory, setSelectedCategory] = useState();
   const router = useRouter();
   const { locale } = router;
@@ -17,6 +18,9 @@ const Posts = ({ posts, categories }: any) => {
   useEffect(() => {
     console.log(selectedCategory);
   }, [selectedCategory]);
+
+  const nextDisabled = parseInt(currentPage, 10) === parseInt(totalPages, 10);
+  const prevDisabled = parseInt(currentPage, 10) === 1;
 
   return (
     <main>
@@ -57,6 +61,12 @@ const Posts = ({ posts, categories }: any) => {
               )}
             </div>
           </div>
+          <Pagination
+            totalPages={totalPages}
+            currentPage={currentPage}
+            nextDisabled={nextDisabled}
+            prevDisabled={prevDisabled}
+          />
         </div>
       </section>
     </main>

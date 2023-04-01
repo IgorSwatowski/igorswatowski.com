@@ -29,7 +29,8 @@
     "**/*.ts",
     "**/*.tsx",
     "src/pages/api/mail.ts",
-    "next-sitemap.config.js"
+    "next-sitemap.config.js",
+    "src/lib/utils/contentfulApi.js"
   ],
   "exclude": ["node_modules"]
 }

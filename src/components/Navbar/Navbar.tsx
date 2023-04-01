@@ -84,9 +84,9 @@ const Navbar = () => {
           >
             {t.portfolio}
           </NavbarItem> */}
-          {/* <NavbarItem href='/blog' aria-label='Blog' onClick={hideMenu}>
+          <NavbarItem href='/blog' aria-label='Blog' onClick={hideMenu}>
             {t.blog}
-          </NavbarItem> */}
+          </NavbarItem>
           <NavbarItem href='/contact' aria-label='Contact' onClick={hideMenu}>
             {t.contact}
           </NavbarItem>
