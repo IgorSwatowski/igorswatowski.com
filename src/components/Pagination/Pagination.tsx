@@ -1,5 +1,3 @@
-// /components/PostList/Pagination/index.js
-
 import Link from 'next/link';
 
 export default function Pagination(props: any) {
