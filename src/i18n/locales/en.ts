@@ -34,10 +34,10 @@ const en = {
     'Are you curious about what to expect when we work together on a website? Here are the four stages of our collaboration.',
   stageFirst: 'Planning',
   stageFirstText:
-    'I begin by getting to know you and your business. I ask questions, listen to your ideas, and understand your vision for the project. This helps me to develop a deep understanding of your needs and challenges. We then map out a plan for the design, including layout, functionality, and user experience.',
+    'I start by getting to know you and your business. I ask questions, listen to your ideas, and understand your vision for the project. This helps me develop a deep understanding of your needs and challenges. We then map out a plan for the design, including layout, functionality, and user experience.',
   stageSecond: 'Design',
   stageSecondText:
-    "This is where the magic happens! I'm creating custom designs based on the plans developed in the previous stage. I present you with multiple design options and work with them to refine and perfect the chosen design.",
+    "This is where the magic happens! I create custom designs based on the plans developed in the previous stage. I present you with multiple design options and work with you to refine and perfect the chosen design.",
   stageThird: 'Development',
   stageThirdText:
     'In the development stage, I turn the design into a functional website or app. This includes programming and integrating any necessary features and functionality.',
