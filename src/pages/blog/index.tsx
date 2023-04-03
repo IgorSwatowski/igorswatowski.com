@@ -6,17 +6,23 @@ import { pl } from '../../i18n/locales/pl';
 import PostCard from '../../components/Blog/PostCard';
 import { client } from '../../lib/contentful/client';
 import { CONTENT_TYPE } from '../../constants/constants';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
+import { GetStaticProps } from 'next';
+import { Post, PostFields } from '@/types/post';
+import { CategoryFields } from '@/types/category';
 
-const Posts = ({ posts, categories }: any) => {
-  const [selectedCategory, setSelectedCategory] = useState();
+interface PostsProps {
+  posts: Post[];
+  categories: CategoryFields[];
+}
+
+const Posts: React.FC<PostsProps> = ({ posts, categories }) => {
+  const [selectedCategory, setSelectedCategory] = useState<
+    string | undefined
+  >();
   const router = useRouter();
   const { locale } = router;
   const t = locale === 'en' ? en : pl;
-
-  useEffect(() => {
-    console.log(selectedCategory);
-  }, [selectedCategory]);
 
   return (
     <main>
@@ -29,18 +35,16 @@ const Posts = ({ posts, categories }: any) => {
             {t.blogHeroText}
           </p>
           <div className='blog-banner-wrapper-categories'>
-            {categories.length < 1 ? (
+            {categories && categories.length < 1 ? (
               <p className='paragraph-primary'>{t.posts}</p>
             ) : (
-              categories.map((category: any) => (
+              categories?.map((category: CategoryFields) => (
                 <div
                   className='blog-banner-wrapper-categories-item'
-                  key={category.fields.slug}
+                  key={category.slug}
                 >
-                  <button
-                    onClick={() => setSelectedCategory(category.fields.slug)}
-                  >
-                    {category.fields.title}
+                  <button onClick={() => setSelectedCategory(category.slug)}>
+                    {category.title}
                   </button>
                 </div>
               ))
@@ -48,11 +52,11 @@ const Posts = ({ posts, categories }: any) => {
           </div>
           <div className='blog-banner-wrapper-blog'>
             <div className='blog-banner-wrapper-blogs'>
-              {posts.length < 1 ? (
+              {posts && posts.length < 1 ? (
                 <p className='paragraph-primary'>{t.posts}</p>
               ) : (
-                posts.map((post: any) => (
-                  <PostCard key={post.fields.slug} post={post} />
+                posts.map((post: Post) => (
+                  <PostCard key={post.fields.slug} post={post.fields} />
                 ))
               )}
             </div>
@@ -63,19 +67,30 @@ const Posts = ({ posts, categories }: any) => {
   );
 };
 
-export const getStaticProps = async () => {
-  const response = await client.getEntries({ content_type: CONTENT_TYPE.POST });
+export const getStaticProps: GetStaticProps<PostsProps> = async () => {
+  try {
+    const responsePosts = await client.getEntries({
+      content_type: CONTENT_TYPE.POST,
+    });
+    const posts = responsePosts.items;
 
-  const category = await client.getEntries({
-    content_type: CONTENT_TYPE.CATEGORY,
-  });
+    const responseCategories = await client.getEntries({
+      content_type: CONTENT_TYPE.CATEGORY,
+    });
+    const categories = responseCategories.items;
 
-  return {
-    props: {
-      posts: response.items,
-      categories: category.items,
-    },
-  };
+    return {
+      props: {
+        posts,
+        categories,
+      },
+    };
+  } catch (error) {
+    console.error('Error fetching posts and categories: ', error);
+    return {
+      notFound: true,
+    };
+  }
 };
 
 export default Posts;

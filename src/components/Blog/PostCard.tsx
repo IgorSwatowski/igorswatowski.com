@@ -1,9 +1,15 @@
 import Link from 'next/link';
 import { formatDate } from '../../lib/formatDate';
 import React from 'react';
+import { PostFields } from '@/types/post';
 
-const PostCard = ({ post }: any) => {
-  const { title, slug, date, author, excerpt } = post.fields;
+const PostCard = ({ post }: { post?: PostFields }) => {
+  if (!post || !post) {
+    return <div>Post not found</div>;
+  }
+
+  const { title = '', slug = '', date = '', excerpt = '' } = post;
+  const { fields: authorFields = { name: '' } } = post.author;
 
   return (
     <Link href={`/blog/${slug}`} className='blog-banner-wrapper-blogs-item'>
@@ -17,7 +23,7 @@ const PostCard = ({ post }: any) => {
             year: 'numeric',
           })}
           <span className='color-primary'>/</span> Written by{' '}
-          {author.fields.name}
+          {authorFields.name || ''}
         </p>
       </div>
       <div className='blog-banner-wrapper-blogs-item-heading'>
