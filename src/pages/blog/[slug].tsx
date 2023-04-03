@@ -3,8 +3,14 @@ import { useRouter } from 'next/router';
 import { CONTENT_TYPE } from '../../constants/constants';
 import PostSingle from '../../components/Blog/PostSingle';
 import React from 'react';
+import { GetStaticPaths, GetStaticProps } from 'next';
 
-const Post = ({ post, preview }: any) => {
+interface PostProps {
+  post?: any;
+  preview: boolean;
+}
+
+const Post: React.FC<PostProps> = ({ post, preview }) => {
   const router = useRouter();
 
   if (router.isFallback || !post) {
@@ -23,39 +29,61 @@ const Post = ({ post, preview }: any) => {
   );
 };
 
-export const getStaticProps = async ({ params, preview = false }: any) => {
+export const getStaticProps: GetStaticProps<PostProps> = async ({
+  params,
+  preview = false,
+}) => {
   const cfClient = preview ? previewClient : client;
+  const { slug } = params ?? {};
 
-  const { slug } = params;
-  const response = await cfClient.getEntries({
-    content_type: 'post',
-    'fields.slug': slug,
-  });
+  try {
+    const response = await cfClient.getEntries({
+      content_type: CONTENT_TYPE.POST,
+      'fields.slug': slug,
+    });
 
-  if (!response?.items?.length) {
+    if (!response?.items?.length) {
+      return {
+        notFound: true,
+      };
+    }
+
+    return {
+      props: {
+        post: response.items[0],
+        preview,
+      },
+    };
+  } catch (error) {
+    console.error('Error fetching post: ', error);
+
     return {
       notFound: true,
     };
   }
-
-  return {
-    props: {
-      post: response.items[0],
-      preview,
-    },
-  };
 };
 
-export const getStaticPaths = async () => {
-  const response = await client.getEntries({ content_type: CONTENT_TYPE.POST });
-  const paths = response.items.map((item: any) => ({
-    params: { slug: item.fields.slug },
-  }));
+export const getStaticPaths: GetStaticPaths = async () => {
 
-  return {
-    paths,
-    fallback: true,
-  };
+  try {
+    const response = await client.getEntries({ content_type: CONTENT_TYPE.POST });
+    const paths = response.items.map((item: any) => ({
+      params: { slug: item.fields.slug },
+    }));
+
+    return {
+      paths,
+      fallback: true,
+    };  
+    
+  } catch (error) {
+    console.error('Error fetching posts: ', error);
+
+    return {
+      paths: [],
+      fallback: true,
+    };
+  }
 };
 
 export default Post;
