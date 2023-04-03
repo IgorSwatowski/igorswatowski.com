@@ -15,9 +15,6 @@ const CollaborateSection = () => {
   return (
     <section className='collaborate'>
       <div className='collaborate-wrapper container-box'>
-        <div className='collaborate-wrapper-lines-img'>
-          <Image loading='lazy' src={LinesSvg} alt='Lines image' />
-        </div>
         <h2 className='collaborate-wrapper-heading heading-big'>
           {t.collaborate}
         </h2>

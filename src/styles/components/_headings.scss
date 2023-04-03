@@ -21,9 +21,9 @@
 }
 
 .heading-big {
-  font-size: 64px;
+  font-size: 54px;
   width: 100%;
-  line-height: 100%;
+  line-height: 120%;
   font-weight: 600;
 
   @include respond(phone) {

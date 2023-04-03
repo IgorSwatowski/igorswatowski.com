@@ -20,18 +20,18 @@ const en = {
   hero: 'Attract and retain clients with a professionally designed',
   heroUnderline: "website.",
   heroText:
-    'My mission is to make sure that all of my clients achieve their goals with online presence they want.',
+    'My mission is to help you achieve your goals by creating a stunning and effective online presence tailored to your needs.',
   heroTextSecond:
-    'I know how important it is for them to succeed, so I provide them with professional and effective support to help them do so.',
+    "I understand the importance of success for your business, and I'm committed to providing professional, reliable, and results-driven support to ensure your website stands out in the digital landscape.",
   heroBtn: 'How can I help',
   trustedBy: 'Trusted by',
   collaborate:
-    'I collaborate with brands, entrepreneurs and agencies to create memorable experiences.',
+    'Partnering with brands, entrepreneurs & agencies to craft exceptional digital experiences',
   collaborateTextMain:
-    'My unique perspective and creativity will help you stand out in the marketplace and save your customers memories. I am ready to provide solutions to help you succeed.',
-  designProcess: 'Get an inside look at my process',
+    'With my unique perspective and creative expertise, I help you differentiate your brand in the competitive online space, ensuring memorable user experiences for your customers. I am dedicated to offering tailored solutions that drive success and elevate your digital presence.',
+  designProcess: 'Discover my proven process',
   designProcessText:
-    'Are you curious about what to expect when we work together on a website? Here are the four stages of our collaboration.',
+    "Curious about what it's like to collaborate on a web project with me? Explore the four key stages of our partnership to create a successful and impactful online presence for your brand.",
   stageFirst: 'Planning',
   stageFirstText:
     'I start by getting to know you and your business. I ask questions, listen to your ideas, and understand your vision for the project. This helps me develop a deep understanding of your needs and challenges. We then map out a plan for the design, including layout, functionality, and user experience.',
