@@ -5,15 +5,19 @@ import { PropagateLoader } from 'react-spinners';
 
 interface PageLoaderProps {
   color?: string;
+  duration?: number;
 }
 
-const PageLoader: React.FC<PageLoaderProps> = ({ color = '#000' }) => {
+const PageLoader: React.FC<PageLoaderProps> = ({
+  color = '#000',
+  duration = 2,
+}) => {
   const textRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    if (textRef.current) {
-      const letters = textRef.current.children;
+    const letters = textRef.current?.querySelectorAll('span');
 
+    if (letters) {
       gsap.set(letters, { opacity: 0, y: 50 });
       gsap.to(letters, {
         opacity: 1,
@@ -27,10 +31,17 @@ const PageLoader: React.FC<PageLoaderProps> = ({ color = '#000' }) => {
 
   useEffect(() => {
     const tl = gsap.timeline({ defaults: { ease: 'power2.inOut' } });
-    tl.to(textRef.current, { opacity: 0, duration: 0.5, delay: 1.5 }).set(
-      document.body,
-      { overflow: 'auto' },
-    ); // Add overflow to body when animation is end.
+    tl.to(textRef.current, { opacity: 0, duration: 0.5, delay: 1.5 })
+      .set(document.documentElement, { overflow: 'auto' })
+      .eventCallback('onComplete', () => {
+        if (tl.reversed() || tl.time() === 0) {
+          console.error('PageLoader animation error');
+        }
+      });
+
+    return () => {
+      tl.kill(); // Clean up the animation when the component unmounts
+    };
   }, []);
 
   const loaderRef = useRef<HTMLDivElement>(null);
