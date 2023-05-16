@@ -4,13 +4,14 @@ import { CONTENT_TYPE } from '../../constants/constants';
 import PostSingle from '../../components/Blog/PostSingle';
 import React from 'react';
 import { GetStaticPaths, GetStaticProps } from 'next';
+import { Post } from '@/types/post';
 
-interface PostProps {
-  post?: any;
+interface BlogPostProps {
+  post?: Post;
   preview: boolean;
 }
 
-const Post: React.FC<PostProps> = ({ post, preview }) => {
+const Post: React.FC<BlogPostProps> = ({ post, preview }) => {
   const router = useRouter();
 
   if (router.isFallback || !post) {
@@ -29,7 +30,7 @@ const Post: React.FC<PostProps> = ({ post, preview }) => {
   );
 };
 
-export const getStaticProps: GetStaticProps<PostProps> = async ({
+export const getStaticProps: GetStaticProps<BlogPostProps> = async ({
   params,
   preview = false,
 }) => {
@@ -64,18 +65,18 @@ export const getStaticProps: GetStaticProps<PostProps> = async ({
 };
 
 export const getStaticPaths: GetStaticPaths = async () => {
-
   try {
-    const response = await client.getEntries({ content_type: CONTENT_TYPE.POST });
-    const paths = response.items.map((item: any) => ({
+    const response = await client.getEntries({
+      content_type: CONTENT_TYPE.POST,
+    });
+    const paths = response.items.map((item: Post) => ({
       params: { slug: item.fields.slug },
     }));
 
     return {
       paths,
       fallback: true,
-    };  
-    
+    };
   } catch (error) {
     console.error('Error fetching posts: ', error);
 
