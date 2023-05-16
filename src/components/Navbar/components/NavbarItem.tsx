@@ -10,12 +10,14 @@ interface NavbarItemProps {
   href: string;
   ariaLabelText?: string;
   onClick?: (event: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => void;
+  scroll?: boolean;
 }
 
 const NavbarItem = ({
   children,
   ariaLabelText,
   href,
+  scroll,
   onClick,
 }: NavbarItemProps) => {
   const router = useRouter();
@@ -23,7 +25,7 @@ const NavbarItem = ({
   const t = locale === 'en' ? en : pl;
   return (
     <li className='menu-item'>
-      <Link href={href} aria-label={ariaLabelText} onClick={onClick}>
+      <Link href={href} aria-label={ariaLabelText} onClick={onClick} scroll>
         {children}
       </Link>
     </li>
