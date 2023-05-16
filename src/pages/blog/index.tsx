@@ -35,7 +35,7 @@ const Posts: React.FC<PostsProps> = ({ posts, categories }) => {
             {t.blogHeroText}
           </p>
           <div className='blog-banner-wrapper-categories'>
-            {categories && categories.length < 1 ? (
+            {categories.length < 0 ? (
               <p className='paragraph-primary'>{t.posts}</p>
             ) : (
               categories?.map((category: CategoryFields) => (
@@ -52,7 +52,7 @@ const Posts: React.FC<PostsProps> = ({ posts, categories }) => {
           </div>
           <div className='blog-banner-wrapper-blog'>
             <div className='blog-banner-wrapper-blogs'>
-              {posts && posts.length < 1 ? (
+              {posts.length < 0 ? (
                 <p className='paragraph-primary'>{t.posts}</p>
               ) : (
                 posts.map((post: Post) => (

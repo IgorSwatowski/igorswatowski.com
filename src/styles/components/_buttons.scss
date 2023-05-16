@@ -71,7 +71,6 @@
   text-decoration: none;
   background-color: var(--black);
   font-weight: bold;
-  cursor: pointer;
   position: relative;
   border-radius: 5px;
   color: var(--white);
@@ -81,7 +80,6 @@
   &:hover {
     color: var(--black);
     background-color: transparent;
-    cursor: pointer;
     border: 1px solid var(--black);
   }
 
@@ -94,7 +92,7 @@
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
     border-radius: 5px;
-    outline: 0;
+    outline-color: transparent; // Make sure, I'm not using outline: 0 here. Accessibility problems.
     border: 1px solid var(--black);
   }
 }
@@ -107,7 +105,6 @@
   font-weight: bold;
   background: var(--white);
   transition: all 0.4s ease-in-out;
-  cursor: pointer;
   position: relative;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
@@ -115,7 +112,6 @@
   &:hover {
     border-bottom-left-radius: 40px;
     border-top-right-radius: 40px;
-    cursor: pointer;
   }
 
   @include respond(phone) {

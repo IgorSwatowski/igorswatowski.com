@@ -21,8 +21,6 @@ const en = {
   heroUnderline: "website.",
   heroText:
     'My mission is to help you achieve your goals by creating a stunning and effective online presence tailored to your needs.',
-  heroTextSecond:
-    "I understand the importance of success for your business, and I'm committed to providing professional, reliable, and results-driven support to ensure your website stands out in the digital landscape.",
   heroBtn: 'How can I help',
   trustedBy: 'Trusted by',
   collaborate:

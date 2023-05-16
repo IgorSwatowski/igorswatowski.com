@@ -28,7 +28,7 @@
     }
     &-text-form {
       button {
-        outline: 0;
+        outline-color: transparent; // Make sure, I'm not using outline: 0 here. Accessibility problems.
         border: 1px solid var(--black);
 
         &:hover {

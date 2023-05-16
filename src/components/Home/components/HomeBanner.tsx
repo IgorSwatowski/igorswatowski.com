@@ -20,7 +20,6 @@ const HomeBanner = () => {
   const imageRef = useRef(null);
   const titleRef = useRef(null);
   const descriptionFirstRef = useRef(null);
-  const descriptionSecondRef = useRef(null);
   const buttonRef = useRef(null);
   const trustedClients = useRef(null);
   const [loading, setLoading] = useState(true);
@@ -56,11 +55,6 @@ const HomeBanner = () => {
       descriptionFirstRef.current,
       { opacity: 0, y: 100 },
       { opacity: 1, y: 0, duration: 1, delay: 2.8 },
-    );
-    gsap.fromTo(
-      descriptionSecondRef.current,
-      { opacity: 0, y: 100 },
-      { opacity: 1, y: 0, duration: 1, delay: 3.2 },
     );
     gsap.fromTo(
       buttonRef.current,
@@ -109,12 +103,6 @@ const HomeBanner = () => {
             ref={descriptionFirstRef}
           >
             {t.heroText}
-          </p>
-          <p
-            className='banner-block-left--sub paragraph-primary'
-            ref={descriptionSecondRef}
-          >
-            {t.heroTextSecond}
           </p>
           <div className='banner-block-left-buttons' ref={buttonRef}>
             <Link

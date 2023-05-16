@@ -21,8 +21,6 @@ const pl = {
   heroUnderline: "biznesie.",
   heroText:
     'Moim zadaniem jest wspieranie moich klientów w osiąganiu ich celów związanych z obecnością online.',
-  heroTextSecond:
-    'Wiem, jak ważne jest dla Ciebie osiągnięcie sukcesu, dlatego zapewniam profesjonalne i skuteczne wsparcie, które Ci w tym pomoże.',
   heroBtn: 'Jak mogę Ci pomóc?',
   trustedBy: 'Zaufali mi:',
   collaborate:

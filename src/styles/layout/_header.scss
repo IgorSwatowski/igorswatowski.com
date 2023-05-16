@@ -8,7 +8,7 @@
   justify-content: space-between;
   padding-top: 1.9rem;
   padding-bottom: 1.9rem;
-  font-size: 2rem;
+  font-size: 1.8rem;
   font-weight: 500;
   position: fixed;
   top: 0;
@@ -116,7 +116,6 @@
 
 .hamburger {
   display: none;
-  cursor: pointer;
   svg {
     .cross {
       display: none;
