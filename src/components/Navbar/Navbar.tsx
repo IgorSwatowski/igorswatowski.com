@@ -1,44 +1,12 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useState } from 'react';
 import Link from 'next/link';
-import { useRouter } from 'next/router';
-
-import { en } from '@/i18n/locales/en';
-import { pl } from '@/i18n/locales/pl';
 import CustomSelect from '@/components/CustomSelect/CustomSelect';
-import NavbarItem from '@/components/Navbar/components/NavbarItem';
+import NavbarItem from '@/components/Navbar/NavbarItem';
 import { Button } from '@/components/Button/Button';
+import { useLanguage } from '@/hooks/useLanguage';
 
 const Navbar = () => {
-  const router = useRouter();
-  const { locale } = router;
-  const t = locale === 'en' ? en : pl;
-
-  const changeLanguage = async (locale: string) => {
-    const { pathname, query } = router;
-    const oldLanguageMatch = pathname.match(/^\/([a-z]{2})(\/|$)/);
-    const oldLanguage = oldLanguageMatch ? oldLanguageMatch[1] : null;
-    let newPathname = pathname;
-    if (oldLanguage && oldLanguage !== locale.toLowerCase()) {
-      newPathname = pathname.replace(
-        new RegExp(`^\/${oldLanguage}(\/|$)`),
-        '/',
-      );
-    } else if (!oldLanguage) {
-      newPathname = `/${locale.toLowerCase()}${pathname}`;
-    }
-    // Extract dynamic path parameter from URL and append it to new URL
-    const dynamicPathMatch = pathname.match(/^\/[a-z]{2}\/(.+?)\/([^\/]+)$/);
-    if (dynamicPathMatch) {
-      const dynamicPath = dynamicPathMatch[1];
-      const dynamicValue = dynamicPathMatch[2];
-      newPathname = `/${locale.toLowerCase()}/${dynamicPath}/${dynamicValue}`;
-    }
-    router.replace({ pathname: newPathname, query });
-  };
-
-  useEffect(() => {
-    changeLanguage(locale as string);
-  }, [locale]);
+  const { locale, t, changeLanguage } = useLanguage();
 
   const [menuActive, setMenuActive] = useState(false);
 
