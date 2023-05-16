@@ -28,49 +28,51 @@ const HomeBanner = () => {
   const { locale } = router;
   const t = locale === 'en' ? en : pl;
 
-  useEffect(() => {
-    const timer = setTimeout(() => setLoading(false), 3200);
+  // useEffect(() => {
+  //   const timer = setTimeout(() => {
+  //     setLoading(false);
+  //   }, 3200);
 
-    return () => clearTimeout(timer);
-  }, []);
+  //   return () => clearTimeout(timer);
+  // }, []);
 
-  useEffect(() => {
-    if (!loading) {
-      document.body.classList.remove('loading');
-    }
-  }, [loading]);
+  // useEffect(() => {
+  //   if (!loading) {
+  //     document.body.classList.remove('loading');
+  //   }
+  // }, [loading]);
 
-  useEffect(() => {
-    gsap.fromTo(
-      imageRef.current,
-      { opacity: 0, y: 100 },
-      { opacity: 1, y: 0, duration: 1, delay: 2 },
-    );
-    gsap.fromTo(
-      titleRef.current,
-      { opacity: 0, y: 100 },
-      { opacity: 1, y: 0, duration: 1, delay: 2.4 },
-    );
-    gsap.fromTo(
-      descriptionFirstRef.current,
-      { opacity: 0, y: 100 },
-      { opacity: 1, y: 0, duration: 1, delay: 2.8 },
-    );
-    gsap.fromTo(
-      buttonRef.current,
-      { opacity: 0, y: 100 },
-      { opacity: 1, y: 0, duration: 1, delay: 3.6 },
-    );
-    gsap.fromTo(
-      trustedClients.current,
-      { opacity: 0, y: 100 },
-      { opacity: 1, y: 0, duration: 1, delay: 4 },
-    );
-  }, []);
+  // useEffect(() => {
+  //   gsap.fromTo(
+  //     imageRef.current,
+  //     { opacity: 0, y: 100 },
+  //     { opacity: 1, y: 0, duration: 1, delay: 2 },
+  //   );
+  //   gsap.fromTo(
+  //     titleRef.current,
+  //     { opacity: 0, y: 100 },
+  //     { opacity: 1, y: 0, duration: 1, delay: 2.4 },
+  //   );
+  //   gsap.fromTo(
+  //     descriptionFirstRef.current,
+  //     { opacity: 0, y: 100 },
+  //     { opacity: 1, y: 0, duration: 1, delay: 2.8 },
+  //   );
+  //   gsap.fromTo(
+  //     buttonRef.current,
+  //     { opacity: 0, y: 100 },
+  //     { opacity: 1, y: 0, duration: 1, delay: 3.6 },
+  //   );
+  //   gsap.fromTo(
+  //     trustedClients.current,
+  //     { opacity: 0, y: 100 },
+  //     { opacity: 1, y: 0, duration: 1, delay: 4 },
+  //   );
+  // }, []);
 
   return (
     <>
-      {loading && <PageLoader />}
+      {/* {loading && <PageLoader />} */}
       <section className='banner container-box'>
         <Image
           loading='lazy'
