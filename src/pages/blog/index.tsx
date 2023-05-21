@@ -1,28 +1,33 @@
 import { useRouter } from 'next/router';
+import { useState } from 'react';
+import { GetStaticProps } from 'next';
 
 import { en } from '../../i18n/locales/en';
 import { pl } from '../../i18n/locales/pl';
-
 import PostCard from '../../components/Blog/PostCard';
-import { client } from '../../lib/contentful/client';
+import { client, getCategories, getPosts } from '../../lib/contentful/client';
 import { CONTENT_TYPE } from '../../constants/constants';
-import { useState } from 'react';
-import { GetStaticProps } from 'next';
-import { Post, PostFields } from '@/types/post';
+import { Post } from '@/types/post';
 import { CategoryFields } from '@/types/category';
 
-interface PostsProps {
+interface BlogPostsProps {
   posts: Post[];
   categories: CategoryFields[];
 }
 
-const Posts: React.FC<PostsProps> = ({ posts, categories }) => {
+const Posts: React.FC<BlogPostsProps> = ({ posts, categories }) => {
   const [selectedCategory, setSelectedCategory] = useState<
     string | undefined
   >();
   const router = useRouter();
   const { locale } = router;
   const t = locale === 'en' ? en : pl;
+
+  const filteredPosts = selectedCategory
+    ? posts.filter(
+        post => post.fields.category.fields.slug === selectedCategory,
+      )
+    : posts;
 
   return (
     <main>
@@ -52,10 +57,10 @@ const Posts: React.FC<PostsProps> = ({ posts, categories }) => {
           </div>
           <div className='blog-banner-wrapper-blog'>
             <div className='blog-banner-wrapper-blogs'>
-              {posts.length < 0 ? (
+              {filteredPosts.length < 0 ? (
                 <p className='paragraph-primary'>{t.posts}</p>
               ) : (
-                posts.map((post: Post) => (
+                filteredPosts.map((post: Post) => (
                   <PostCard key={post.fields.slug} post={post.fields} />
                 ))
               )}
@@ -67,17 +72,10 @@ const Posts: React.FC<PostsProps> = ({ posts, categories }) => {
   );
 };
 
-export const getStaticProps: GetStaticProps<PostsProps> = async () => {
+export const getStaticProps: GetStaticProps<BlogPostsProps> = async () => {
   try {
-    const responsePosts = await client.getEntries({
-      content_type: CONTENT_TYPE.POST,
-    });
-    const posts = responsePosts.items;
-
-    const responseCategories = await client.getEntries({
-      content_type: CONTENT_TYPE.CATEGORY,
-    });
-    const categories = responseCategories.items;
+    const posts = await getPosts();
+    const categories = await getCategories();
 
     return {
       props: {

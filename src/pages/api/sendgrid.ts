@@ -1,8 +1,8 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-import { MailApi } from '@/constants/constants';
+import { MAIL_API } from '@/constants/constants';
 const sgMail = require('@sendgrid/mail');
 
-sgMail.setApiKey(MailApi);
+sgMail.setApiKey(MAIL_API);
 
 type ContactFormData = {
   email: string;

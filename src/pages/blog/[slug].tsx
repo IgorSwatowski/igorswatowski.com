@@ -1,4 +1,4 @@
-import { client, previewClient } from '@/lib/contentful/client';
+import { client, getPosts, previewClient } from '@/lib/contentful/client';
 import { useRouter } from 'next/router';
 import { CONTENT_TYPE } from '../../constants/constants';
 import PostSingle from '../../components/Blog/PostSingle';
@@ -34,16 +34,13 @@ export const getStaticProps: GetStaticProps<BlogPostProps> = async ({
   params,
   preview = false,
 }) => {
-  const cfClient = preview ? previewClient : client;
   const { slug } = params ?? {};
 
   try {
-    const response = await cfClient.getEntries({
-      content_type: CONTENT_TYPE.POST,
-      'fields.slug': slug,
-    });
+    const posts = await getPosts();
+    const post = posts.find((item: Post) => item.fields.slug === slug);
 
-    if (!response?.items?.length) {
+    if (!post) {
       return {
         notFound: true,
       };
@@ -51,7 +48,7 @@ export const getStaticProps: GetStaticProps<BlogPostProps> = async ({
 
     return {
       props: {
-        post: response.items[0],
+        post,
         preview,
       },
     };
@@ -66,10 +63,8 @@ export const getStaticProps: GetStaticProps<BlogPostProps> = async ({
 
 export const getStaticPaths: GetStaticPaths = async () => {
   try {
-    const response = await client.getEntries({
-      content_type: CONTENT_TYPE.POST,
-    });
-    const paths = response.items.map((item: Post) => ({
+    const posts = await getPosts();
+    const paths = posts.map((item: Post) => ({
       params: { slug: item.fields.slug },
     }));
 

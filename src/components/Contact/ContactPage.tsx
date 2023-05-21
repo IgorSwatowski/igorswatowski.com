@@ -4,7 +4,7 @@ import { useRouter } from 'next/router';
 import { en } from '@/i18n/locales/en';
 import { pl } from '@/i18n/locales/pl';
 
-import ContactForm from './components/ContactForm';
+import ContactForm from './ContactForm';
 
 const ContactPage = () => {
   const router = useRouter();

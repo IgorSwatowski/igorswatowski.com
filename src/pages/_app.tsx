@@ -7,7 +7,7 @@ import i18n from '@/i18n/i18n';
 
 import '@/styles/styles.scss';
 import Script from 'next/script';
-import { GATrackId } from '../constants/constants';
+import { GA_TRACK_ID } from '../constants/constants';
 import { DefaultSeo } from 'next-seo';
 import SEO from '../../next-seo.config';
 import React from 'react';
@@ -19,14 +19,14 @@ export default function App({ Component, pageProps }: AppProps) {
     <>
       <Script
         strategy='lazyOnload'
-        src={`https://www.googletagmanager.com/gtag/js?id=${GATrackId}`}
+        src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACK_ID}`}
       />
       <Script strategy='lazyOnload' id='google-analytics'>
         {`
                     window.dataLayer = window.dataLayer || [];
                     function gtag(){dataLayer.push(arguments);}
                     gtag('js', new Date());
-                    gtag('config', '${GATrackId}', {
+                    gtag('config', '${GA_TRACK_ID}', {
                     page_path: window.location.pathname,
                     });
                 `}
