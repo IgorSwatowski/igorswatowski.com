@@ -12,8 +12,6 @@ import { DefaultSeo } from 'next-seo';
 import SEO from '../../next-seo.config';
 import React from 'react';
 
-import '@etchteam/next-pagination/dist/index.css';
-
 export default function App({ Component, pageProps }: AppProps) {
   return (
     <>
