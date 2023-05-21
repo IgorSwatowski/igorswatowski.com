@@ -1,5 +1,5 @@
 import { useRouter } from 'next/router';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { GetStaticProps } from 'next';
 
 import { en } from '../../i18n/locales/en';
@@ -8,26 +8,34 @@ import PostCard from '../../components/Blog/PostCard';
 import { client, getCategories, getPosts } from '../../lib/contentful/client';
 import { CONTENT_TYPE } from '../../constants/constants';
 import { Post } from '@/types/post';
-import { CategoryFields } from '@/types/category';
+import { Category } from '@/types/category';
 
 interface BlogPostsProps {
   posts: Post[];
-  categories: CategoryFields[];
+  categories: Category[];
 }
 
 const Posts: React.FC<BlogPostsProps> = ({ posts, categories }) => {
   const [selectedCategory, setSelectedCategory] = useState<
     string | undefined
   >();
+  const [filteredPosts, setFilteredPosts] = useState<Post[]>([]);
   const router = useRouter();
   const { locale } = router;
   const t = locale === 'en' ? en : pl;
 
-  const filteredPosts = selectedCategory
-    ? posts.filter(
-        post => post.fields.category.fields.slug === selectedCategory,
-      )
-    : posts;
+  useEffect(() => {
+    if (selectedCategory) {
+      setFilteredPosts(
+        posts.filter(
+          post =>
+            post.fields.categoryCollection.items.slug === selectedCategory,
+        ),
+      );
+    } else {
+      setFilteredPosts(posts);
+    }
+  }, [selectedCategory, posts]);
 
   return (
     <main>
@@ -40,16 +48,18 @@ const Posts: React.FC<BlogPostsProps> = ({ posts, categories }) => {
             {t.blogHeroText}
           </p>
           <div className='blog-banner-wrapper-categories'>
-            {categories.length < 0 ? (
+            {categories.length < 1 ? (
               <p className='paragraph-primary'>{t.posts}</p>
             ) : (
-              categories?.map((category: CategoryFields) => (
+              categories?.map((category: Category) => (
                 <div
                   className='blog-banner-wrapper-categories-item'
-                  key={category.slug}
+                  key={category.fields.slug}
                 >
-                  <button onClick={() => setSelectedCategory(category.slug)}>
-                    {category.title}
+                  <button
+                    onClick={() => setSelectedCategory(category.fields.slug)}
+                  >
+                    {category.fields.title}
                   </button>
                 </div>
               ))

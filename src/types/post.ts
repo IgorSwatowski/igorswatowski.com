@@ -5,8 +5,8 @@ export type Post = {
 export interface PostFields {
   title: string;
   slug: string;
-  category: {
-    fields: {
+  categoryCollection: {
+    items: {
       title: string;
       slug: string;
     };
