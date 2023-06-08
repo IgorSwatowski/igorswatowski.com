@@ -37,6 +37,7 @@
       flex-direction: row;
       align-items: center;
       gap: 3rem;
+      flex-wrap: wrap;
 
       &-item {
         color: var(--black);
