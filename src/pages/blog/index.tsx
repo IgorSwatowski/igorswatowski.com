@@ -8,11 +8,11 @@ import PostCard from '../../components/Blog/PostCard';
 import { client, getCategories, getPosts } from '../../lib/contentful/client';
 import { CONTENT_TYPE } from '../../constants/constants';
 import { Post } from '@/types/post';
-import { Category } from '@/types/category';
+import { CategoryFields } from '@/types/category';
 
 interface BlogPostsProps {
   posts: Post[];
-  categories: Category[];
+  categories: CategoryFields[];
 }
 
 const Posts: React.FC<BlogPostsProps> = ({ posts, categories }) => {
@@ -52,7 +52,7 @@ const Posts: React.FC<BlogPostsProps> = ({ posts, categories }) => {
             {categories.length < 1 ? (
               <p className='paragraph-primary'>{t.posts}</p>
             ) : (
-              categories?.map((category: Category) => (
+              categories?.map((category: CategoryFields) => (
                 <div
                   className={`blog-banner-wrapper-categories-item ${
                     selectedCategory === category.fields.slug ? 'active' : ''
