@@ -13,18 +13,24 @@ const PostCard = ({ post }: { post?: PostFields }) => {
 
   return (
     <Link href={`/blog/${slug}`} className='blog-banner-wrapper-blogs-item'>
-      <div className='blog-banner-wrapper-blogs-item-date'>
-        <p className='paragraph-primary'>
+      <div className='blog-banner-wrapper-blogs-item-information'>
+        <div className='blog-banner-wrapper-blogs-item-information-date'>
           <span className='color-primary'>/</span>
-          {formatDate(date, {
-            weekday: 'long',
-            day: 'numeric',
-            month: 'short',
-            year: 'numeric',
-          })}
-          <span className='color-primary'>/</span> Written by{' '}
-          {authorFields.name || ''}
-        </p>
+          <p className='paragraph-primary'>
+            {formatDate(date, {
+              weekday: 'long',
+              day: 'numeric',
+              month: 'short',
+              year: 'numeric',
+            })}
+          </p>
+        </div>
+        <div className='blog-banner-wrapper-blogs-item-information-author'>
+          <span className='color-primary'>/</span>
+          <p className='paragraph-primary'>
+            Written by {authorFields.name || ''}
+          </p>
+        </div>
       </div>
       <div className='blog-banner-wrapper-blogs-item-heading'>
         <h3 className='heading-third'> {title}</h3>

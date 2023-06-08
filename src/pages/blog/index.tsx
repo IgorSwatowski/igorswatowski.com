@@ -16,9 +16,7 @@ interface BlogPostsProps {
 }
 
 const Posts: React.FC<BlogPostsProps> = ({ posts, categories }) => {
-  const [selectedCategory, setSelectedCategory] = useState<
-    string | undefined
-  >();
+  const [selectedCategory, setSelectedCategory] = useState('all');
   const [filteredPosts, setFilteredPosts] = useState<Post[]>([]);
   const router = useRouter();
   const { locale } = router;
@@ -29,7 +27,10 @@ const Posts: React.FC<BlogPostsProps> = ({ posts, categories }) => {
       setFilteredPosts(
         posts.filter(
           post =>
-            post.fields.categoryCollection.items.slug === selectedCategory,
+            post.fields.category &&
+            post.fields.category.some(
+              cat => cat.fields.slug === selectedCategory,
+            ),
         ),
       );
     } else {
@@ -53,11 +54,14 @@ const Posts: React.FC<BlogPostsProps> = ({ posts, categories }) => {
             ) : (
               categories?.map((category: Category) => (
                 <div
-                  className='blog-banner-wrapper-categories-item'
+                  className={`blog-banner-wrapper-categories-item ${
+                    selectedCategory === category.fields.slug ? 'active' : ''
+                  }`}
                   key={category.fields.slug}
                 >
                   <button
                     onClick={() => setSelectedCategory(category.fields.slug)}
+                    className='category-btn'
                   >
                     {category.fields.title}
                   </button>
@@ -67,7 +71,7 @@ const Posts: React.FC<BlogPostsProps> = ({ posts, categories }) => {
           </div>
           <div className='blog-banner-wrapper-blog'>
             <div className='blog-banner-wrapper-blogs'>
-              {filteredPosts.length < 0 ? (
+              {filteredPosts.length === 0 ? (
                 <p className='paragraph-primary'>{t.posts}</p>
               ) : (
                 filteredPosts.map((post: Post) => (

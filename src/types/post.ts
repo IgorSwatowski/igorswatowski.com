@@ -1,3 +1,5 @@
+import { CategoryFields } from './category';
+
 export type Post = {
   fields: PostFields;
 };
@@ -5,12 +7,7 @@ export type Post = {
 export interface PostFields {
   title: string;
   slug: string;
-  categoryCollection: {
-    items: {
-      title: string;
-      slug: string;
-    };
-  };
+  category: CategoryFields[];
   heroImage: {
     fields: {
       file: {

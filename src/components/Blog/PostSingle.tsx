@@ -7,21 +7,27 @@ const PostSingle = ({ post }: any) => {
 
   return (
     <main>
-      <article className='post'>
-        <div className='post-wrapper container-box'>
+      <article className='post container-box'>
+        <div className='post-wrapper'>
           <h1 className='post-wrapper-heading heading-primary'>{title}</h1>
-          <div className='post-wrapper-date paragraph-primary'>
-            <span className='color-primary'>/</span>
-            <p className='paragraph-primary'>
-              {formatDate(date, {
-                weekday: 'long',
-                day: 'numeric',
-                month: 'short',
-                year: 'numeric',
-              })}
-            </p>
-            <span className='color-primary'>/</span>
-            <p className='paragraph-primary'>Written by {author.fields.name}</p>
+          <div className='post-wrapper-information'>
+            <div className='post-wrapper-information-date'>
+              <span className='color-primary'>/</span>
+              <p className='paragraph-primary'>
+                {formatDate(date, {
+                  weekday: 'long',
+                  day: 'numeric',
+                  month: 'short',
+                  year: 'numeric',
+                })}
+              </p>
+            </div>
+            <div className='post-wrapper-information-author'>
+              <span className='color-primary'>/</span>
+              <p className='paragraph-primary'>
+                Written by {author.fields.name}
+              </p>
+            </div>
           </div>
           <div className='post-wrapper-content'>
             <RichText content={content} />
