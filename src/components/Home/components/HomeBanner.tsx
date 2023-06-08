@@ -8,7 +8,6 @@ import { pl } from '@/i18n/locales/pl';
 
 import GammasoftLogo from '../../../assets/trusted/gammasoft.png';
 import AionlineLogo from '../../../assets/trusted/aionline.png';
-import CodemaLogo from '../../../assets/trusted/codema.png';
 import MeImg from '../../../assets/me.png';
 import TriangleElement from '../../../assets/elements/triangle.png';
 import CurvedLinesElement from '../../../assets/elements/curved-lines.png';
@@ -134,13 +133,6 @@ const HomeBanner = () => {
                 priority
                 src={AionlineLogo}
                 alt='aoinline'
-                width={100}
-                height={100}
-              />
-              <Image
-                priority
-                src={CodemaLogo}
-                alt='Codema'
                 width={100}
                 height={100}
               />
