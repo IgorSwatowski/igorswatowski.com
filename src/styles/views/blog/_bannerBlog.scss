@@ -118,6 +118,10 @@
               margin: 0;
               font-size: 14px;
               color: var(--primary);
+
+              @include respond(phone) {
+                display: none;
+              }
             }
             p {
               font-size: 16px;
@@ -133,6 +137,10 @@
               margin: 0;
               font-size: 14px;
               color: var(--primary);
+
+              @include respond(phone) {
+                display: none;
+              }
             }
             p {
               font-size: 16px;
