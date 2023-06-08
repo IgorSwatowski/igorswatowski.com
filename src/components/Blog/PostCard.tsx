@@ -9,7 +9,6 @@ const PostCard = ({ post }: { post?: PostFields }) => {
   }
 
   const { title = '', slug = '', date = '', excerpt = '' } = post;
-  const { fields: authorFields = { name: '' } } = post.author;
 
   return (
     <Link href={`/blog/${slug}`} className='blog-banner-wrapper-blogs-item'>
@@ -23,12 +22,6 @@ const PostCard = ({ post }: { post?: PostFields }) => {
               month: 'short',
               year: 'numeric',
             })}
-          </p>
-        </div>
-        <div className='blog-banner-wrapper-blogs-item-information-author'>
-          <span className='color-primary'>/</span>
-          <p className='paragraph-primary'>
-            Written by {authorFields.name || ''}
           </p>
         </div>
       </div>

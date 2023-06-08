@@ -128,25 +128,6 @@
               margin: 0;
             }
           }
-          &-author {
-            gap: 1.2rem;
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            span {
-              margin: 0;
-              font-size: 14px;
-              color: var(--primary);
-
-              @include respond(phone) {
-                display: none;
-              }
-            }
-            p {
-              font-size: 16px;
-              margin: 0;
-            }
-          }
         }
 
         &:hover

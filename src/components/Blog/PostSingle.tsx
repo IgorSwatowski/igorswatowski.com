@@ -3,7 +3,7 @@ import RichText from '../RichText';
 import React from 'react';
 
 const PostSingle = ({ post }: any) => {
-  const { title, date, content, author } = post.fields;
+  const { title, date, content } = post.fields;
 
   return (
     <main>
@@ -20,12 +20,6 @@ const PostSingle = ({ post }: any) => {
                   month: 'short',
                   year: 'numeric',
                 })}
-              </p>
-            </div>
-            <div className='post-wrapper-information-author'>
-              <span className='color-primary'>/</span>
-              <p className='paragraph-primary'>
-                Written by {author.fields.name}
               </p>
             </div>
           </div>
