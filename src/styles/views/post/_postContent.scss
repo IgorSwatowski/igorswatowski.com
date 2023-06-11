@@ -25,6 +25,17 @@
   p {
     font-size: 20px;
     margin: 3.2rem 0 0 0;
+
+    a {
+      color: var(--black);
+      font-weight: 600;
+      text-decoration: underline;
+      transition: 0.3s all ease-in-out;
+
+      &:hover {
+        color: var(--primary);
+      }
+    }
   }
 
   li {
