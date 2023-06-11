@@ -4,6 +4,13 @@ export type Post = {
   fields: PostFields;
 };
 
+export interface FAQ {
+  fields: {
+    question: string;
+    answer: string;
+  };
+}
+
 export interface PostFields {
   title: string;
   slug: string;
@@ -16,6 +23,7 @@ export interface PostFields {
       title: string;
     };
   };
+  faq: FAQ[];
   excerpt: string;
   content: Document;
   createdAt: string;

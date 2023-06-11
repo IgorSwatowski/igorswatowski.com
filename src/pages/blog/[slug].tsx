@@ -5,6 +5,7 @@ import PostSingle from '../../components/Blog/PostSingle';
 import React from 'react';
 import { GetStaticPaths, GetStaticProps } from 'next';
 import { Post } from '@/types/post';
+import { Helmet } from 'react-helmet';
 
 interface BlogPostProps {
   post?: Post;
@@ -18,15 +19,33 @@ const Post: React.FC<BlogPostProps> = ({ post, preview }) => {
     return <p>Loading...</p>;
   }
 
+  const faqJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: post.fields.faq?.map(faq => ({
+      '@type': 'Question',
+      name: faq.fields.question,
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: faq.fields.answer,
+      },
+    })),
+  };
+
   return (
-    <section className='section'>
-      {preview && <p>Preview mode enabled!</p>}
-      <div className='container'>
-        <article className='prose mx-auto'>
-          {router.isFallback ? <p>alert</p> : <PostSingle post={post} />}
-        </article>
-      </div>
-    </section>
+    <>
+      <Helmet>
+        <script type='application/ld+json'>{JSON.stringify(faqJsonLd)}</script>
+      </Helmet>
+      <section className='section'>
+        {preview && <p>Preview mode enabled!</p>}
+        <div className='container'>
+          <article className='prose mx-auto'>
+            {router.isFallback ? <p>alert</p> : <PostSingle post={post} />}
+          </article>
+        </div>
+      </section>
+    </>
   );
 };
 
