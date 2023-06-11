@@ -34,9 +34,13 @@
 
   blockquote {
     background-color: var(--white);
-    padding: 16px 64px;
+    padding: 2.4rem 3.2rem;
     border-left: 2px solid var(--primary);
     margin: 4.8rem 0 4.8rem 0;
+
+    p {
+      margin: 0;
+    }
   }
 
   h2 {
