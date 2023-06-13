@@ -6,6 +6,7 @@ import React from 'react';
 import { GetStaticPaths, GetStaticProps } from 'next';
 import { Post } from '@/types/post';
 import { Helmet } from 'react-helmet';
+import CTASecondSection from '@/components/Home/components/CTASecondSection';
 
 interface BlogPostProps {
   post?: Post;
@@ -42,6 +43,7 @@ const Post: React.FC<BlogPostProps> = ({ post, preview }) => {
         <div className='container'>
           <article className='prose mx-auto'>
             {router.isFallback ? <p>alert</p> : <PostSingle post={post} />}
+            <CTASecondSection />
           </article>
         </div>
       </section>
