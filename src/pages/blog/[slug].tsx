@@ -7,6 +7,7 @@ import { GetStaticPaths, GetStaticProps } from 'next';
 import { Post } from '@/types/post';
 import { Helmet } from 'react-helmet';
 import CTASecondSection from '@/components/Home/components/CTASecondSection';
+import { NextSeo } from 'next-seo';
 
 interface BlogPostProps {
   post?: Post;
@@ -35,6 +36,17 @@ const Post: React.FC<BlogPostProps> = ({ post, preview }) => {
 
   return (
     <>
+      <NextSeo
+        title={post.fields.title}
+        description={post.fields.excerpt}
+        canonical={`https://igorswatowski.com/blog/${post.fields.slug}`}
+        openGraph={{
+          url: `https://igorswatowski.com/blog/${post.fields.slug}`,
+          title: post.fields.title,
+          description: post.fields.excerpt,
+          site_name: 'Igor Swatowski | Web Designer & Developer',
+        }}
+      />
       <Helmet>
         <script type='application/ld+json'>{JSON.stringify(faqJsonLd)}</script>
       </Helmet>
