@@ -27,6 +27,7 @@ export interface PostFields {
   excerpt: string;
   content: Document;
   createdAt: string;
+  updatedAt: string;
   date: string;
   author: { fields: { name: string } };
 }

@@ -34,6 +34,27 @@ const Post: React.FC<BlogPostProps> = ({ post, preview }) => {
     })),
   };
 
+  const articleJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'BlogPosting',
+    mainEntityOfPage: {
+      '@type': 'WebPage',
+      '@id': `https://igorswatowski.com/blog/${post.fields.slug}`,
+    },
+    headline: post.fields.title,
+    description: post.fields.excerpt,
+    author: {
+      '@type': 'Person',
+      name: 'Igor Swatowski',
+    },
+    publisher: {
+      '@type': 'Person',
+      name: 'Igor Swatowski | Web Designer & Developer',
+    },
+    datePublished: post.fields.date,
+    dateModified: post.fields.date,
+  };
+
   return (
     <>
       <NextSeo
@@ -49,6 +70,9 @@ const Post: React.FC<BlogPostProps> = ({ post, preview }) => {
       />
       <Helmet>
         <script type='application/ld+json'>{JSON.stringify(faqJsonLd)}</script>
+        <script type='application/ld+json'>
+          {JSON.stringify(articleJsonLd)}
+        </script>
       </Helmet>
       <section className='section'>
         {preview && <p>Preview mode enabled!</p>}
