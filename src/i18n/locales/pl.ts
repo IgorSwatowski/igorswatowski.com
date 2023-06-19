@@ -12,7 +12,7 @@ const pl = {
   contactInformationText:
     'Jeśli masz jakieś pytania lub potrzebujesz dodatkowych informacji, zapraszam Cię do kontaktu ze mną.',
   phone: 'Telefon',
-  copyright: 'Copyright © 2022 . Igor Swatowski . Wszelkie prawa zastrzeżone.',
+  copyright: 'Copyright © 2023 . Igor Swatowski . Wszelkie prawa zastrzeżone.',
   menuHeading: 'Menu',
   followMeOn: 'Social',
 

@@ -12,7 +12,7 @@ const en = {
   contactInformationText:
     'Feel free to reach out to me any time. I prefer to talk over email, especially since we may be a few time zones away.',
   phone: 'Phone',
-  copyright: 'Copyright © 2022 . Igor Swatowski . All rights reserved.',
+  copyright: 'Copyright © 2023 . Igor Swatowski . All rights reserved.',
   menuHeading: 'Menu',
   followMeOn: 'Social',
 
