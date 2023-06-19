@@ -6,7 +6,6 @@ import React from 'react';
 import { en } from '@/i18n/locales/en';
 import { pl } from '@/i18n/locales/pl';
 
-import GammasoftLogo from '../../../assets/trusted/gammasoft.png';
 import AionlineLogo from '../../../assets/trusted/aionline.png';
 import MeImg from '../../../assets/me.png';
 import TriangleElement from '../../../assets/elements/triangle.png';
@@ -122,13 +121,6 @@ const HomeBanner = () => {
               {t.trustedBy}
             </span>
             <div className='banner-block-left-trusted-logos'>
-              <Image
-                src={GammasoftLogo}
-                alt='Gammasoft'
-                width={100}
-                height={100}
-                priority
-              />
               <Image
                 priority
                 src={AionlineLogo}
