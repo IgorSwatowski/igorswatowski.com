@@ -24,8 +24,6 @@ const TrustedBySection = () => {
           <Image loading='lazy' src={TrustedLinesImg} alt='' />
         </p>
         <div className='trusted-by-wrapper-companies'>
-          <Image loading='lazy' src={GammasoftLogo} alt='' data-aos='fade-in' />
-          <Image loading='lazy' src={CodemaLogo} alt='' data-aos='fade-in' />
           <Image loading='lazy' src={AionlineLogo} alt='' data-aos='fade-in' />
         </div>
       </div>
